@@ -1,4 +1,6 @@
 import * as constants from "./constants";
+import { questions } from "./data";
+import type { QuestionSummary } from "./models";
 
 class Api {
     baseURL: string;
@@ -16,11 +18,15 @@ class Api {
     }
 
     private getQuestionByIndex(index: number) {
-        // GET /questions/{index}
+        return questions.find((question) => question.index === index);
     }
 
-    private getAllQuestions() {
-        // GET /questions
-
+    private getAllQuestions(): QuestionSummary[] {
+        return questions.map(({ index, title, difficulty, subject }) => ({
+            index,
+            title,
+            difficulty,
+            subject,
+        }));
     }
 }
