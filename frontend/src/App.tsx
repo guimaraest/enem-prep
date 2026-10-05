@@ -3,22 +3,25 @@ import { Nav } from './components/Nav/Nav'
 
 function App() {
   return (
-    <main className="section">
+    <>
       <Nav
-        items={[
-          { label: 'home', url: '/' },
-          { label: 'questões', url: '/questions' },
-          { label: 'sobre', url: '/about' },
-        ]}
+          items={[
+            { label: 'home', url: '/' },
+          ]}
       />
-      <div className="section-container">
-        <div className="section-content">
-          <Question number={136} />
-          <Question number={137} />
-          <Question number={138} />
+      <main>
+        <div className="section">
+          <div className="section-container">
+            <h1>study tool</h1>
+            <div className="section-content">
+              <Question number={136} />
+              <Question number={137} />
+              <Question number={138} />
+            </div>
+          </div>
         </div>
-      </div>
-    </main>
+      </main>
+    </>
   )
 }
 

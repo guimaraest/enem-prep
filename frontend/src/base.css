@@ -178,6 +178,7 @@ hr {
   width: 100%;
   padding-inline: var(--section-padding-horizontal);
   padding-block: var(--section-padding-vertical);
+  gap: var(--space-5);
 }
 
 .section-content {
@@ -185,4 +186,5 @@ hr {
   max-width: var(--section-max-width);
   margin-inline: auto;
   gap: var(--space-4);
+  display: flex;
 }
