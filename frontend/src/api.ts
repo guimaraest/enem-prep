@@ -1,6 +1,6 @@
-import * as constants from "./constants";
-import { questions } from "./data";
-import type { QuestionSummary } from "./models";
+import * as constants from './constants';
+import { questions } from './data';
+import type { QuestionSummary } from './models';
 
 class Api {
     baseURL: string;
