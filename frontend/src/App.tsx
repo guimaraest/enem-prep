@@ -1,11 +1,16 @@
-import { useState } from 'react'
-
+import { Question } from './components/Question/Question'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <h1>hello world</h1>
+    <main className="section">
+      <div className="section-container">
+        <div className="section-content">
+          <Question number={136} />
+          <Question number={137} />
+          <Question number={138} />
+        </div>
+      </div>
+    </main>
   )
 }
 
