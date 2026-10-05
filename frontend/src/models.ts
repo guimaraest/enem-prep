@@ -35,6 +35,11 @@ export interface Question {
   content: QuestionContent
 }
 
-export interface Questions {
-
+export interface QuestionSummary {
+  index: number
+  title: string
+  difficulty: Difficulty
+  subject: Subject
 }
+
+export type Questions = QuestionSummary[]
