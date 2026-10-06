@@ -1,10 +1,10 @@
-import './Question.css'
+import './QuestionButton.css'
 
 interface QuestionProps {
   number: number
 }
 
-export function Question({ number }: QuestionProps) {
+export function QuestionButton({ number }: QuestionProps) {
   return (
     <div className="question">
       {number}
