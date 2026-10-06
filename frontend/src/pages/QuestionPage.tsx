@@ -3,21 +3,12 @@ import './QuestionPage.css';
 import { api } from '../api';
 
 import { useParams } from 'react-router';
+import { useState } from 'react';
 
 import * as constants from '../constants';
-import type { Difficulty } from '../models';
+import type { Alternative, Question } from '../models';
 
-interface QuestionHeaderProps {
-    question: {
-        label: string;
-        title: string;
-        source: string | null;
-        difficulty: Difficulty | null;
-        subject: string | null;
-    };
-}
-
-function QuestionHeader({ question }: QuestionHeaderProps) {
+function QuestionHeader({ question }: { question: Question }) {
     const difficulty =
         question.difficulty !== null
             ? constants.difficultyMap[question.difficulty]
@@ -25,37 +16,51 @@ function QuestionHeader({ question }: QuestionHeaderProps) {
 
     return (
         <div className="question-header">
-            <div className="row" style={{ gap: 'var(--space-4)' }}>
-                <span className="question-label">
-                    {question.label}
-                </span>
-
-                <div className="row" style={{ gap: 'var(--space-2)' }}>
-                    {question.source && (
-                        <span className="chip">
-                            {question.source}
-                        </span>
-                    )}
-
-                    {difficulty && (
-                        <span className={`chip ${difficulty.className}`}>
-                            {difficulty.label}
-                        </span>
-                    )}
-
-                    {question.subject && (
-                        <span className="chip">
-                            {question.subject}
-                        </span>
-                    )}
-                </div>
-            </div>
-
             <div className="row">
                 <h1 className="question-title">
-                    {question.title}
+                    <span className='question-label'>{question.label} - </span>{question.title}
                 </h1>
             </div>
+            <div className="row" style={{ gap: 'var(--space-2)' }}>
+                {question.source && (
+                    <span className="chip">
+                        {question.source}
+                    </span>
+                )}
+
+                {difficulty && (
+                    <span className={`chip ${difficulty.className}`}>
+                        {difficulty.label}
+                    </span>
+                )}
+
+                {question.subject && (
+                    <span className="chip">
+                        {question.subject}
+                    </span>
+                )}
+            </div>
+        </div>
+    );
+}
+
+function QuestionAlternative({ alternative }: { alternative: Alternative }) {
+    return (
+        <div className='alternative-parent'>
+            {alternative.index}) {alternative.text}
+        </div>
+    );
+}
+
+function AlternativeList({ question }: { question: Question }) {
+    return (
+        <div className='alternative-list'>
+            {question.content.alternatives.map((alternative) => (
+                <QuestionAlternative
+                    key={alternative.index}
+                    alternative={alternative}
+                />
+            ))}
         </div>
     );
 }
@@ -81,7 +86,7 @@ export function QuestionPage() {
                 <QuestionHeader question={question} />
 
                 <div>
-                    <p>{question.content.problem}</p>
+                    <p className='content'>{question.content.problem}</p>
 
                     {question.content.files.map((file) => (
                         <img
@@ -92,13 +97,7 @@ export function QuestionPage() {
                     ))}
                 </div>
 
-                <div>
-                    {question.content.alternatives.map((alternative) => (
-                        <div key={alternative.index}>
-                            {alternative.index}) {alternative.text}
-                        </div>
-                    ))}
-                </div>
+                <AlternativeList question={question} />
             </div>
         </section>
     );

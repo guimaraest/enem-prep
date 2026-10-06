@@ -2,19 +2,19 @@ export const BASEURL = 'api/';
 
 export const difficultyMap = {
     1: {
-        label: 'Easy',
+        label: 'fácil',
         className: 'difficulty-1',
     },
     2: {
-        label: 'Medium',
+        label: 'médio',
         className: 'difficulty-2',
     },
     3: {
-        label: 'Hard',
+        label: 'díficil',
         className: 'difficulty-3',
     },
     4: {
-        label: 'Very hard',
+        label: 'avançado',
         className: 'difficulty-4',
     },
 } as const;
