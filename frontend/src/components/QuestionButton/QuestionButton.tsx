@@ -2,16 +2,17 @@ import './QuestionButton.css';
 import { Link } from 'react-router';
 
 interface QuestionButtonProps {
-    questionIndex: number;
+    questionId: string;
+    label: string;
 }
 
-export function QuestionButton({ questionIndex }: QuestionButtonProps) {
+export function QuestionButton({ questionId, label }: QuestionButtonProps) {
     return (
         <Link
             className="question hover"
-            to={`/perguntas/${questionIndex}`}
+            to={`/perguntas/${questionId}`}
         >
-            {questionIndex}
+            {label}
         </Link>
     );
 }
