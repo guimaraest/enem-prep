@@ -30,6 +30,7 @@
 
 .alternative:hover,
 .alternative-selected {
+    cursor: pointer;
     background-color: var(--bg);
 }
 
@@ -118,7 +119,7 @@
 .alternative-correct {
     background-color: color-mix(
         in srgb,
-        var(--difficulty-2) 12%,
+        var(--correct) 12%,
         var(--bg-light)
     );
 }
@@ -127,7 +128,7 @@
 .alternative-correct.alternative-selected {
     background-color: color-mix(
         in srgb,
-        var(--difficulty-2) 18%,
+        var(--correct) 18%,
         var(--bg)
     );
 }
@@ -135,7 +136,7 @@
 .alternative-incorrect {
     background-color: color-mix(
         in srgb,
-        var(--difficulty-4) 12%,
+        var(--incorrect) 12%,
         var(--bg-light)
     );
 }
@@ -144,7 +145,7 @@
 .alternative-incorrect.alternative-selected {
     background-color: color-mix(
         in srgb,
-        var(--difficulty-4) 18%,
+        var(--incorrect) 18%,
         var(--bg)
     );
 }

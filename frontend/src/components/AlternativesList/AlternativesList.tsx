@@ -39,11 +39,29 @@ function QuestionAlternative({
         .join(' ');
 
     return (
-        <div className={className}>
+        <div
+            className={className}
+            onClick={select}
+            role="button"
+            tabIndex={0}
+            onKeyDown={(event) => {
+                if (
+                    event.key === 'Enter' ||
+                    event.key === ' '
+                ) {
+                    event.preventDefault();
+                    select();
+                }
+            }}
+            aria-pressed={state.selected}
+        >
             <button
                 type="button"
                 className="alternative-select"
-                onClick={select}
+                onClick={(event) => {
+                    event.stopPropagation();
+                    select();
+                }}
                 aria-label={`Selecionar alternativa ${alternative.index}`}
                 aria-pressed={state.selected}
             >
