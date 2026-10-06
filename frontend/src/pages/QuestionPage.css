@@ -4,6 +4,7 @@
     gap: var(--space-6);
 }
 
+
 .question-label {
     font-size: 3rem;
     font-weight: 900;
@@ -27,7 +28,7 @@
     color: var(--text-muted);
 }
 
-.top-card {
+.question-header {
     display: flex;
     flex-direction: column;
     gap: var(--space-3);
