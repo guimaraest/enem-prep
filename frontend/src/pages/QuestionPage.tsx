@@ -12,7 +12,7 @@ export function QuestionPage() {
     const question = id ? api.getQuestion(id) : undefined;
 
     if (!question) {
-        return <section><h1>ERRO: questão não encontrada</h1></section>;
+        return <section><div><h1>ERRO: questão não encontrada</h1></div></section>;
     }
 
     const difficulty =
@@ -22,42 +22,39 @@ export function QuestionPage() {
     
     return (
         <section>
-            <div>
+            <div className='question-parent'>
                 <div className='top-card'>
-                    <div className="chips-parent">
-                        <span className="heading-big">
+                    <div className="row" style={{gap: 'var(--space-4)' }}>
+                        <span className="question-label">
                             {question.label}
                         </span>
+                        <div className='row' style={{gap: 'var(--space-2)' }}>
+                            {question.source && (
+                                <span className="chip">
+                                    {question.source}
+                                </span>
+                            )}
 
-                        {question.source && (
-                            <span className="chip">
-                                {question.source}
-                            </span>
-                        )}
+                            {difficulty && (
+                                <span className={`chip ${difficulty.className}`}>
+                                    {difficulty.label}
+                                </span>
+                            )}
 
-                        {difficulty && (
-                            <span className={`chip ${difficulty.className}`}>
-                                {difficulty.label}
-                            </span>
-                        )}
-
-                        {question.subject && (
-                            <span className="chip">
-                                {question.subject}
-                            </span>
-                        )}
+                            {question.subject && (
+                                <span className="chip">
+                                    {question.subject}
+                                </span>
+                            )}
+                        </div>
                     </div>
-                    <div>
-                        <h1 className='question-title'>{question.title}</h1>
+                    <div className='row'>
+                        <h1 className="question-title">
+                            {question.title}
+                        </h1>
                     </div>
                 </div>
-                <p>
-                    Difficulty: {question.difficulty}
-                </p>
 
-                <p>
-                    Subject: {question.subject}
-                </p>
 
                 <div>
                     <p>{question.content.problem}</p>
@@ -69,6 +66,9 @@ export function QuestionPage() {
                             alt=""
                         />
                     ))}
+                
+                </div>
+                <div>
 
                     {question.content.alternatives.map((alternative) => (
                         <div key={alternative.index}>
@@ -76,10 +76,6 @@ export function QuestionPage() {
                         </div>
                     ))}
                 </div>
-
-                <p>
-                    Explanation: {question.content.explanation}
-                </p>
             </div>
         </section>
     );

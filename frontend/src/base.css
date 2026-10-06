@@ -6,7 +6,7 @@
     --bg-dark: hsl(0, 0%, 0%);
 
     --text: hsl(0, 0%, 95%);
-    --text-muted: hsl(0, 0%, 70%);
+    --text-muted: hsl(0, 0%, 75%);
 
     --primary: #247BA0;
 
@@ -33,7 +33,7 @@
     /* layout */
     --section-padding-horizontal: 160px;
     --section-padding-vertical: 60px;
-    --section-max-width: 1440px;
+    --section-max-width: 720px;
     --header-height: 60px;
 
 
@@ -54,13 +54,22 @@
     --radius-small: 10px;
 }
 
+@media (max-width: 768px) {
+  :root {
+    --section-padding-horizontal: 60px;
+    --section-padding-vertical: 40px;
+    --section-max-width: 720px;
+    --header-height: 40px;
+  }
+}
+
 html {
   font-size: 16px;
   scroll-behavior: smooth;
 }
 
 body {
-  font-family: "Roboto", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: "Roboto Mono", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: 1rem;
   line-height: 1.5;
   color: var(--text);
@@ -188,7 +197,7 @@ section,
   padding-block: var(--section-padding-vertical);
 }
 
-.section > div,
+section > div,
 .section-content {
   width: 100%;
   max-width: var(--section-max-width);
@@ -203,4 +212,10 @@ section,
 
 .hover:hover {
     transform: translateY(-3px);
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
 }

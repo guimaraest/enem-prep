@@ -3,7 +3,7 @@ import type { Question } from './models';
 export const questions: Question[] = [
     {
         id: 'test-1',
-        label: 't1',
+        label: '1',
         title: 'Função linear',
         source: 'test',
         difficulty: 1,
@@ -25,7 +25,7 @@ export const questions: Question[] = [
 
     {
         id: 'test-2',
-        label: 't2',
+        label: '2',
         title: 'Área de um triângulo',
         source: 'test',
         difficulty: 2,
@@ -49,7 +49,7 @@ export const questions: Question[] = [
 
     {
         id: 'test-3',
-        label: 't3',
+        label: '3',
         title: 'Probabilidade',
         source: 'test',
         difficulty: 3,

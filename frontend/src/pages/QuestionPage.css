@@ -1,40 +1,65 @@
-.question-title {
-    font-size: 2rem;
+.question-parent {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6);
 }
 
-.chips-parent {
-    display: flex;
-    gap: var(--space-4);
-    align-items: center;
+.question-label {
+    font-size: 3rem;
+    font-weight: 900;
+    font-variant-numeric: oldstyle-nums;
+}
+
+.question-title {
+    color: var(--text-muted);
+    font-size: 1.5rem;
 }
 
 .chip {
+    display: flex;
+    align-items: center;
     border-radius: var(--radius-small);
-    padding: var(--space-3);
+    padding: var(--space-1) var(--space-3);
     background-color: var(--bg-light);
     box-shadow: var(--shadow);
     height: fit-content;
+    gap: var(--space-2);
+    color: var(--text-muted);
 }
 
 .top-card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
     border-radius: var(--radius-big);
     padding: var(--space-5);
     background-color: var(--bg);
     box-shadow: var(--shadow);
 }
 
-.difficulty-1 {
-    color: var(--difficulty-1);
+.difficulty-1::before,
+.difficulty-2::before,
+.difficulty-3::before,
+.difficulty-4::before {
+    content: '';
+    display: inline-block;
+    width: var(--space-2);
+    height: var(--space-2);
+    border-radius: 50%;
 }
 
-.difficulty-2 {
-    color: var(--difficulty-2);
+.difficulty-1::before {
+    background: var(--difficulty-1);
 }
 
-.difficulty-3 {
-    color: var(--difficulty-3);
+.difficulty-2::before {
+    background: var(--difficulty-2);
 }
 
-.difficulty-4 {
-    color: var(--difficulty-4);
+.difficulty-3::before {
+    background: var(--difficulty-3);
+}
+
+.difficulty-4::before {
+    background: var(--difficulty-4);
 }
