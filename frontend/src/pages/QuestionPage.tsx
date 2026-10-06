@@ -3,10 +3,10 @@ import './QuestionPage.css';
 import { api } from '../api';
 
 import { useParams } from 'react-router';
-import { useState } from 'react';
 
+import { AlternativesList } from '../components/AlternativesList/AlternativesList';
 import * as constants from '../constants';
-import type { Alternative, Question } from '../models';
+import type { Question } from '../models';
 
 function QuestionHeader({ question }: { question: Question }) {
     const difficulty =
@@ -44,27 +44,6 @@ function QuestionHeader({ question }: { question: Question }) {
     );
 }
 
-function QuestionAlternative({ alternative }: { alternative: Alternative }) {
-    return (
-        <div className='alternative-parent'>
-            {alternative.index}) {alternative.text}
-        </div>
-    );
-}
-
-function AlternativeList({ question }: { question: Question }) {
-    return (
-        <div className='alternative-list'>
-            {question.content.alternatives.map((alternative) => (
-                <QuestionAlternative
-                    key={alternative.index}
-                    alternative={alternative}
-                />
-            ))}
-        </div>
-    );
-}
-
 export function QuestionPage() {
     const { id } = useParams();
 
@@ -97,7 +76,7 @@ export function QuestionPage() {
                     ))}
                 </div>
 
-                <AlternativeList question={question} />
+                <AlternativesList question={question} />
             </div>
         </section>
     );

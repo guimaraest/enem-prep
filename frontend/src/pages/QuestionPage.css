@@ -66,19 +66,3 @@
 .content {
     color: var(--text);
 }
-
-/* alternative */
-
-.alternative-list {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-3);
-}
-
-.alternative-parent {
-    width: 100%;
-    background-color: var(--bg);
-    box-shadow: var(--shadow);
-    border-radius: var(--radius-small);
-    padding: var(--space-3);
-}
