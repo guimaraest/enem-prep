@@ -37,7 +37,7 @@ function AppRoutes() {
                           </Layout>
                         } 
                       />
-                    <Route path="/perguntas/:index" element={
+                    <Route path="/perguntas/:id" element={
                           <Layout>
                             <QuestionPage/>
                           </Layout>

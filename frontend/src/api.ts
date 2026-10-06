@@ -11,28 +11,25 @@ class Api {
         this.baseURL = constants.BASEURL;
     }
 
-    getQuestions(): QuestionSummary[];
-    getQuestions(index: number): Question | undefined;
-
-    getQuestions(index?: number) {
-        if (index !== undefined) {
-            return this.getQuestionByIndex(index);
-        }
-
+    getQuestions(): QuestionSummary[] {
         return this.getAllQuestions();
     }
 
-    private getQuestionByIndex(index: number) {
-        return questions.find((question) => question.index === index);
+    getQuestion(id: string): Question | undefined {
+        return questions.find((question) => question.id === id);
     }
 
     private getAllQuestions(): QuestionSummary[] {
-        return questions.map(({ index, title, difficulty, subject }) => ({
-            index,
-            title,
-            difficulty,
-            subject,
-        }));
+        return questions.map(
+            ({ id, label, title, source, difficulty, subject }) => ({
+                id,
+                label,
+                title,
+                source,
+                difficulty,
+                subject,
+            }),
+        );
     }
 }
 

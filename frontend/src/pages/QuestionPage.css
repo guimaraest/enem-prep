@@ -1,0 +1,40 @@
+.question-title {
+    font-size: 2rem;
+}
+
+.chips-parent {
+    display: flex;
+    gap: var(--space-4);
+    align-items: center;
+}
+
+.chip {
+    border-radius: var(--radius-small);
+    padding: var(--space-3);
+    background-color: var(--bg-light);
+    box-shadow: var(--shadow);
+    height: fit-content;
+}
+
+.top-card {
+    border-radius: var(--radius-big);
+    padding: var(--space-5);
+    background-color: var(--bg);
+    box-shadow: var(--shadow);
+}
+
+.difficulty-1 {
+    color: var(--difficulty-1);
+}
+
+.difficulty-2 {
+    color: var(--difficulty-2);
+}
+
+.difficulty-3 {
+    color: var(--difficulty-3);
+}
+
+.difficulty-4 {
+    color: var(--difficulty-4);
+}

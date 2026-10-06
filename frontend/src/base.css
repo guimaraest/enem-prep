@@ -10,6 +10,13 @@
 
     --primary: #247BA0;
 
+    /* semantic colors*/
+
+    --difficulty-1: #2e7d32;
+    --difficulty-2: #f9a825;
+    --difficulty-3: #ef6c00;
+    --difficulty-4: #c62828;
+
 
     /* shadow */
 
@@ -43,8 +50,8 @@
 
 
     /* radius */
-    --radius-big: 16px;
-    --radius-small: 8px;
+    --radius-big: 20px;
+    --radius-small: 10px;
 }
 
 html {
@@ -122,18 +129,21 @@ h1, h2, h3, h4, h5, h6, p, small {
   box-shadow: var(--shadow);
 }
 
+.heading-big,
 h1 {
   font-size: 3rem;
   font-weight: 700;
   color: var(--text);
 }
 
+.heading-medium,
 h2 {
   font-size: 2.5rem;
   font-weight: 700;
   color: var(--text);
 }
 
+.heading-small,
 h3 {
   font-size: 1.5rem;
   font-weight: 500;

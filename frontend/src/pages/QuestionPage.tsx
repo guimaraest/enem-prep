@@ -1,22 +1,56 @@
 import './QuestionPage.css';
 
+import * as constants from '../constants';
 import { api } from '../api';
+
 import { useParams } from 'react-router';
+import type { Difficulty } from '../models';
 
 export function QuestionPage() {
-    const { index } = useParams();
+    const { id } = useParams();
 
-    const question = api.getQuestions(Number(index));
+    const question = id ? api.getQuestion(id) : undefined;
 
     if (!question) {
-        return <div>Question not found.</div>;
+        return <section><h1>ERRO: questão não encontrada</h1></section>;
     }
 
+    const difficulty =
+        question.difficulty !== null
+            ? constants.difficultyMap[question.difficulty]
+            : undefined;
+    
     return (
         <section>
             <div>
-                <h1>{question.title}</h1>
+                <div className='top-card'>
+                    <div className="chips-parent">
+                        <span className="heading-big">
+                            {question.label}
+                        </span>
 
+                        {question.source && (
+                            <span className="chip">
+                                {question.source}
+                            </span>
+                        )}
+
+                        {difficulty && (
+                            <span className={`chip ${difficulty.className}`}>
+                                {difficulty.label}
+                            </span>
+                        )}
+
+                        {question.subject && (
+                            <span className="chip">
+                                {question.subject}
+                            </span>
+                        )}
+                    </div>
+                    <div>
+                        <h1 className='question-title'>{question.title}</h1>
+                    </div>
+                </div>
                 <p>
                     Difficulty: {question.difficulty}
                 </p>
@@ -27,6 +61,14 @@ export function QuestionPage() {
 
                 <div>
                     <p>{question.content.problem}</p>
+
+                    {question.content.files.map((file) => (
+                        <img
+                            key={file.url}
+                            src={file.url}
+                            alt=""
+                        />
+                    ))}
 
                     {question.content.alternatives.map((alternative) => (
                         <div key={alternative.index}>
