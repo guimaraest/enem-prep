@@ -12,7 +12,7 @@ export function BankPage() {
             </div>
             <div>
               {questions.map((question) => (
-                  <QuestionButton key={question.index} questionIndex={question.index} />
+                  <QuestionButton key={question.label} questionIndex={question.label} />
               ))}
             </div>
         </section>

@@ -2,12 +2,15 @@ import type { Question } from './models';
 
 export const questions: Question[] = [
     {
-        index: 1,
+        id: 'test-1',
+        label: 'test-1',
         title: 'Função linear',
+        source: 'test',
         difficulty: 1,
         subject: 'functions',
         content: {
             problem: 'Uma função é definida por $f(x) = 2x + 3$. Qual é o valor de f(4)?',
+            files: [],
             alternatives: [
                 { index: 'a', text: '7' },
                 { index: 'b', text: '9' },
@@ -21,13 +24,16 @@ export const questions: Question[] = [
     },
 
     {
-        index: 2,
+        id: 'test-2',
+        label: 'test-2',
         title: 'Área de um triângulo',
+        source: 'test',
         difficulty: 2,
         subject: 'geometry',
         content: {
             problem:
                 'Um triângulo possui base de 8 cm e altura de 5 cm. Qual é sua área?',
+            files: [],
             alternatives: [
                 { index: 'a', text: '13 cm²' },
                 { index: 'b', text: '20 cm²' },
@@ -42,13 +48,16 @@ export const questions: Question[] = [
     },
 
     {
-        index: 3,
+        id: 'test-3',
+        label: 'test-3',
         title: 'Probabilidade',
+        source: 'test',
         difficulty: 3,
         subject: 'probability',
         content: {
             problem:
                 'Uma caixa contém 3 bolas vermelhas e 2 bolas azuis. Uma bola é retirada ao acaso. Qual é a probabilidade de ela ser azul?',
+            files: [],
             alternatives: [
                 { index: 'a', text: '1/5' },
                 { index: 'b', text: '2/5' },

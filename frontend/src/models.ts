@@ -12,14 +12,33 @@ export type Difficulty = 1 | 2 | 3 | 4
 
 export type AlternativeLetter = 'a' | 'b' | 'c' | 'd' | 'e'
 
-export interface Alternative {
-    index: AlternativeLetter;
-    text: string;
+export type QuestionSource =
+  | 'enem 2018'
+  | 'enem 2019'
+  | 'enem 2020'
+  | 'enem 2021'
+  | 'enem 2022'
+  | 'enem 2023'
+  | 'enem 2024'
+  | 'enem 2025'
+  | 'autoral'
+  | 'test'
+
+export interface File {
+  url: string
+  type: 'image'
 }
 
-export type Alternatives = Alternative[];
+export interface Alternative {
+  index: AlternativeLetter
+  text: string
+  file?: File
+}
+
+export type Alternatives = Alternative[]
 
 export interface QuestionContent {
+  files: File[]
   problem: string
   alternatives: Alternatives
   correctAlternative: AlternativeLetter
@@ -27,18 +46,22 @@ export interface QuestionContent {
 }
 
 export interface Question {
-  index: number
+  id: string
+  label: string
   title: string
-  difficulty: Difficulty
-  subject: Subject
+  source: QuestionSource
+  difficulty: Difficulty | null
+  subject: Subject | null
   content: QuestionContent
 }
 
 export interface QuestionSummary {
-  index: number
+  id: string
+  label: string
   title: string
-  difficulty: Difficulty
-  subject: Subject
+  source: QuestionSource
+  difficulty: Difficulty | null
+  subject: Subject | null
 }
 
 export type Questions = QuestionSummary[]
