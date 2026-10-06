@@ -15,7 +15,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
     <>
       <Nav
         items={[
-          { label: 'Perguntas', url: '/perguntas' },
+          { label: 'perguntas', url: '/perguntas' },
         ]}
       />
       <main>
@@ -37,7 +37,7 @@ function AppRoutes() {
                           </Layout>
                         } 
                       />
-                    <Route path="/perguntas/:id" element={
+                    <Route path="/perguntas/:index" element={
                           <Layout>
                             <QuestionPage/>
                           </Layout>

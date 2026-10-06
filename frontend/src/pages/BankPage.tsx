@@ -8,7 +8,7 @@ export function BankPage() {
   return (
         <section className="section">
             <div>
-                <h1>Stub bank page</h1>
+                <h1>stub bank page</h1>
             </div>
             <div>
               {questions.map((question) => (

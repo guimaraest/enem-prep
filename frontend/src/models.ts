@@ -10,20 +10,19 @@ export type Subject =
 
 export type Difficulty = 1 | 2 | 3 | 4
 
-export type Alternative = 'a' | 'b' | 'c' | 'd' | 'e'
+export type AlternativeLetter = 'a' | 'b' | 'c' | 'd' | 'e'
 
-export interface Alternatives {
-  a: string
-  b: string
-  c: string
-  d: string
-  e: string
+export interface Alternative {
+    index: AlternativeLetter;
+    text: string;
 }
+
+export type Alternatives = Alternative[];
 
 export interface QuestionContent {
   problem: string
   alternatives: Alternatives
-  correctAlternative: Alternative
+  correctAlternative: AlternativeLetter
   explanation: string
 }
 
