@@ -1,6 +1,8 @@
 import * as constants from './constants';
+
 import { questions } from './data';
-import type { QuestionSummary } from './models';
+
+import type { Question, QuestionSummary } from './models';
 
 class Api {
     baseURL: string;
@@ -8,6 +10,9 @@ class Api {
     constructor() {
         this.baseURL = constants.BASEURL;
     }
+
+    getQuestions(): QuestionSummary[];
+    getQuestions(index: number): Question | undefined;
 
     getQuestions(index?: number) {
         if (index !== undefined) {
@@ -30,3 +35,5 @@ class Api {
         }));
     }
 }
+
+export const api = new Api();

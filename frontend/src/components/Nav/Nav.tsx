@@ -1,6 +1,6 @@
 import './Nav.css'
 
-export function Nav({items, button,}: {
+export function Nav({items}: {
   items: { label: string; url: string }[]
 }) {
   return (

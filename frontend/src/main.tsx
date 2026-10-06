@@ -13,7 +13,11 @@ import { Nav } from './components/Nav/Nav'
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
     <>
-      
+      <Nav
+        items={[
+          { label: 'Perguntas', url: '/perguntas' },
+        ]}
+      />
       <main>
         {children}
       </main>

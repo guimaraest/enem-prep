@@ -170,21 +170,26 @@ hr {
     border-top: 2px solid var(--text-muted);
 }
 
+section,
 .section {
-  width: 100%;
-}
-
-.section-container {
   width: 100%;
   padding-inline: var(--section-padding-horizontal);
   padding-block: var(--section-padding-vertical);
-  gap: var(--space-5);
 }
 
+.section > div,
 .section-content {
   width: 100%;
   max-width: var(--section-max-width);
   margin-inline: auto;
-  gap: var(--space-4);
   display: flex;
+  gap: var(--space-4);
+}
+
+.hover {
+    transition: transform 0.15s ease;
+}
+
+.hover:hover {
+    transform: translateY(-3px);
 }

@@ -1,13 +1,17 @@
-import './QuestionButton.css'
+import './QuestionButton.css';
+import { Link } from 'react-router';
 
-interface QuestionProps {
-  number: number
+interface QuestionButtonProps {
+    questionIndex: number;
 }
 
-export function QuestionButton({ number }: QuestionProps) {
-  return (
-    <div className="question">
-      {number}
-    </div>
-  )
+export function QuestionButton({ questionIndex }: QuestionButtonProps) {
+    return (
+        <Link
+            className="question hover"
+            to={`/perguntas/${questionIndex}`}
+        >
+            {questionIndex}
+        </Link>
+    );
 }
