@@ -1,0 +1,10 @@
+.check-button {
+    background-color: var(--primary);
+    padding: var(--space-3) var(--space-6);
+    border-radius: var(--radius-small);
+    box-shadow: var(--shadow);
+    width: fit-content;
+    height: fit-content;
+    color: var(--text);
+    font-weight: 600;
+}

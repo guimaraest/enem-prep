@@ -176,15 +176,6 @@ export function AlternativesList({ question }: { question: Question }) {
                     }
                 />
             ))}
-
-            {/* Temporary test button */}
-            <button
-                type="button"
-                onClick={() => declareCorrect('a')}
-                disabled={correctIndex !== null}
-            >
-                Declare A correct
-            </button>
         </div>
     );
 }

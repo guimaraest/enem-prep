@@ -51,6 +51,7 @@ export interface Question {
   title: string
   source: QuestionSource
   difficulty: Difficulty | null
+  percentCorrect: number | null
   subject: Subject | null
   content: QuestionContent
 }
