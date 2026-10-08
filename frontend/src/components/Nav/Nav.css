@@ -50,3 +50,15 @@
   height: 100%;
   width: 100%;
 }
+
+.nav li .nav-link {
+  display: block;
+  color: var(--text);
+  transition: transform 0.15s ease
+}
+
+.nav li .nav-link:hover {
+  text-decoration: none;
+  transform: translateY(-3px);
+  cursor: pointer;
+}

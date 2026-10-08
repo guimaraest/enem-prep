@@ -11,7 +11,7 @@ export function Nav({items}: {
             <ul>
               {items.map((item) => (
                 <li key={item.url}>
-                  <a href={item.url} className="link">
+                  <a href={item.url} className="link nav-link hover">
                     {item.label}
                   </a>
                 </li>

@@ -208,16 +208,52 @@ section > div,
   gap: var(--space-4);
 }
 
+button {
+  all: unset;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+button,
 .hover {
     transition: transform 0.15s ease;
 }
 
+button:hover,
 .hover:hover {
     transform: translateY(-3px);
+    cursor: pointer;
 }
 
 .row {
   display: flex;
   align-items: center;
   gap: var(--space-3);
+}
+
+.link {
+  color: var(--primary);
+  font-weight: 600;
+  text-underline-offset: 2px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.link:visited {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+.link:hover {
+  text-decoration-thickness: 2px;
+  text-decoration: underline;
+}
+
+.link:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+.link:active {
+  color: var(--primary);
 }
