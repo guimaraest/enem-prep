@@ -1,6 +1,6 @@
 import './BankPage.css'
 import { api } from '../api';
-import { QuestionButton } from '../components/QuestionButton/QuestionButton';
+import { QuestionButton } from '../question/QuestionButton/QuestionButton';
 
 export function BankPage() {
   const questions = api.getQuestions();

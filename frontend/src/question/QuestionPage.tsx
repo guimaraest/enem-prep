@@ -4,8 +4,8 @@ import { api } from '../api';
 
 import { useParams } from 'react-router';
 
-import { AlternativesList } from '../components/AlternativesList/AlternativesList';
-import { CheckAnswerButton } from '../components/CheckAnswerButton/CheckAnswerButton';
+import { AlternativesList } from './AlternativesList/AlternativesList';
+import { CheckAnswerButton } from './CheckAnswerButton/CheckAnswerButton';
 
 import * as constants from '../constants';
 import type { Question } from '../models';

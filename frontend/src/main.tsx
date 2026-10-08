@@ -4,10 +4,10 @@ import './base.css'
 
 import { BrowserRouter, Routes, Route, Navigate } from "react-router";
 
-import { QuestionPage } from "./pages/QuestionPage";
-import { BankPage } from "./pages/BankPage";
+import { QuestionPage } from "./question";
+import { BankPage } from "./bank/BankPage";
 
-import { Nav } from './components/Nav/Nav'
+import { Nav } from './Nav/Nav'
 
 
 export function Layout({ children }: { children: React.ReactNode }) {
