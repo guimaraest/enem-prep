@@ -49,8 +49,6 @@ export function QuestionContainer({ question }: { question: Question }) {
     const [revealedIndex, setRevealedIndex] =
         useState<Alternative['index'] | null>(null);
 
-    const correctIndex = question.content.correctAlternative;
-
     function checkAnswer(): void {
         setRevealedIndex(selectedIndex);
     }

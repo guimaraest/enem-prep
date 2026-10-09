@@ -1,3 +1,5 @@
+// implementação temporária vibecodada, o permanente será uma db
+
 import type {
     QuestionSummary,
     QuestionAttempt,

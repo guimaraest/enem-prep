@@ -3,7 +3,6 @@ import { useState } from 'react';
 import type { Question, Alternative } from '../models';
 
 interface QuestionAlternativeProps {
-    key: Alternative['index'];
     question: Question;
     alternative: Alternative;
     selected: boolean;
@@ -12,14 +11,13 @@ interface QuestionAlternativeProps {
 }
 
 export function AnswerChoice({
-    key,
     question,
     alternative,
     selected,
     displayResult,
     onSelect,
 }: QuestionAlternativeProps) {
-    const [crossedOut, setCrossedOut] = useState(false);
+    const [crossedOut] = useState(false);
 
     const correctAlternative = question.content.correctAlternative;
     const isCorrect = alternative.index === correctAlternative;

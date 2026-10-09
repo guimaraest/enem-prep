@@ -3,7 +3,7 @@ import { api } from '../api';
 import { QuestionButton } from '../shared/QuestionButton/QuestionButton';
 
 export function BankPage() {
-  const questions = api.getQuestions();
+  const questions = api.questions.getAll();
 
   return (
         <section className="section">

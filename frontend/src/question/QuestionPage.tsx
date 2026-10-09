@@ -10,7 +10,7 @@ import { QuestionContainer } from './QuestionContainer';
 export function QuestionPage() {
     const { id } = useParams();
 
-    const question = id ? api.getQuestion(id) : undefined;
+    const question = id ? api.questions.getById(id) : undefined;
     
     if (!question) {
         return (

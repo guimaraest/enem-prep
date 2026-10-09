@@ -1,3 +1,5 @@
+// implementação temporária vibecodada, o permanente será um dir public/ servido pelo cdn do front
+
 import { questions } from './data';
 
 import type { Question, QuestionSummary } from '../models';
