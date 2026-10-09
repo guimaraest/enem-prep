@@ -1,4 +1,4 @@
-import type { Question } from './models';
+import type { Question } from '../models';
 
 export const questions: Question[] = [
     {
@@ -7,6 +7,7 @@ export const questions: Question[] = [
         title: 'Função linear',
         source: 'test',
         difficulty: 1,
+        percentCorrectRate: null,
         subject: 'functions',
         content: {
             problem: 'Uma função é definida por $f(x) = 2x + 3$. Qual é o valor de f(4)?',
@@ -29,6 +30,7 @@ export const questions: Question[] = [
         title: 'Área de um triângulo',
         source: 'test',
         difficulty: 2,
+        percentCorrectRate: null,
         subject: 'geometry',
         content: {
             problem:
@@ -53,6 +55,7 @@ export const questions: Question[] = [
         title: 'Probabilidade',
         source: 'test',
         difficulty: 3,
+        percentCorrectRate: null,
         subject: 'probability',
         content: {
             problem:

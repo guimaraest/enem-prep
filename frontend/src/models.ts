@@ -66,3 +66,16 @@ export interface QuestionSummary {
 }
 
 export type Questions = QuestionSummary[]
+
+export interface QuestionAttempt {
+  index: number;
+  selectedAlternativeIndex: Alternative['index'];
+  isCorrect: boolean;
+  attemptedAt: string;
+}
+
+export interface UserQuestionData {
+    questionId: string;
+    isBookmarked: boolean;
+    attempts: QuestionAttempt[];
+}
