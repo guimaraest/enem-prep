@@ -52,8 +52,8 @@
 
 
     /* radius */
-    --radius-big: 20px;
-    --radius-small: 10px;
+    --radius-big: 16px;
+    --radius-small: 12px;
 }
 
 @media (max-width: 768px) {
