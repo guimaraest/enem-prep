@@ -7,7 +7,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router";
 import { QuestionPage } from "./question";
 import { BankPage } from "./bank/BankPage";
 
-import { Nav } from './Nav/Nav'
+import { Nav } from './shared/Nav/Nav'
 
 
 export function Layout({ children }: { children: React.ReactNode }) {
