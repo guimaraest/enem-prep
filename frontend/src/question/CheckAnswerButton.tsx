@@ -1,6 +1,4 @@
-import './CheckAnswerButton.css';
-
-import type { Question } from '../../models';
+import type { Question } from '../models';
 
 interface CheckAnswerButtonProps {
     question: Question;
