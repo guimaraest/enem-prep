@@ -4,44 +4,36 @@ import { useState } from 'react';
 
 import type { Alternative, Question } from '../../models';
 
-type AlternativeResult =
-    | 'unchecked'
-    | 'correct'
-    | 'incorrect';
-
-interface AlternativeState {
-    selected: boolean;
-    crossedOut: boolean;
-    result: AlternativeResult;
-}
+type AlternativeResult = 'correct' | 'incorrect' | null;
 
 interface QuestionAlternativeProps {
     alternative: Alternative;
-    state: AlternativeState;
-    select: () => void;
-    toggleCrossOut: () => void;
+    selected: boolean;
+    result: AlternativeResult;
+    onSelect: () => void;
 }
 
 function QuestionAlternative({
     alternative,
-    state,
-    select,
-    toggleCrossOut,
+    selected,
+    result,
+    onSelect,
 }: QuestionAlternativeProps) {
-    const className = [
-        'alternative',
-        state.selected && 'alternative-selected',
-        state.crossedOut && 'alternative-crossed-out',
-        state.result === 'correct' && 'alternative-correct',
-        state.result === 'incorrect' && 'alternative-incorrect',
-    ]
-        .filter(Boolean)
-        .join(' ');
+    const [crossedOut, setCrossedOut] = useState(false);
+
+    const classNames = ['alternative'];
+
+    if (selected) classNames.push('alternative-selected');
+    if (crossedOut) classNames.push('alternative-crossed-out');
+    if (result === 'correct') classNames.push('alternative-correct');
+    if (result === 'incorrect') classNames.push('alternative-incorrect');
+
+    const className = classNames.join(' ');
 
     return (
         <div
             className={className}
-            onClick={select}
+            onClick={onSelect}
             role="button"
             tabIndex={0}
             onKeyDown={(event) => {
@@ -50,23 +42,23 @@ function QuestionAlternative({
                     event.key === ' '
                 ) {
                     event.preventDefault();
-                    select();
+                    onSelect();
                 }
             }}
-            aria-pressed={state.selected}
+            aria-pressed={selected}
         >
             <button
                 type="button"
                 className="alternative-select"
                 onClick={(event) => {
                     event.stopPropagation();
-                    select();
+                    onSelect();
                 }}
                 aria-label={`Selecionar alternativa ${alternative.index}`}
-                aria-pressed={state.selected}
+                aria-pressed={selected}
             >
                 <span className="alternative-circle">
-                    {state.selected && (
+                    {selected && (
                         <span className="alternative-circle-inner" />
                     )}
                 </span>
@@ -83,99 +75,42 @@ function QuestionAlternative({
     );
 }
 
-export function AlternativesList({ question }: { question: Question }) {
-    type AlternativeIndex = Alternative['index'];
+interface AlternativesListProps {
+    question: Question;
+    selectedIndex: Alternative['index'] | null;
+    isChecked: boolean;
+    isCorrect: boolean | null;
+    onSelectIndex: (index: Alternative['index']) => void;
+}
 
-    const [selectedIndex, setSelectedIndex] =
-        useState<AlternativeIndex | null>(null);
-
-    const [crossedOut, setCrossedOut] = useState<Set<AlternativeIndex>>(
-        () => new Set(),
-    );
-
-    const [correctIndex, setCorrectIndex] =
-        useState<AlternativeIndex | null>(null);
-
-    function select(index: AlternativeIndex) {
-        if (correctIndex !== null) {
-            return;
-        }
-
-        setSelectedIndex(index);
-    }
-
-    function toggleCrossOut(index: AlternativeIndex) {
-        if (correctIndex !== null) {
-            return;
-        }
-
-        setCrossedOut((current) => {
-            const next = new Set(current);
-
-            if (next.has(index)) {
-                next.delete(index);
-            } else {
-                next.add(index);
-            }
-
-            return next;
-        });
-    }
-
-    function declareCorrect(index: AlternativeIndex) {
-        if (selectedIndex === null) {
-            return;
-        }
-
-        setCorrectIndex(index);
-    }
-
-    function getAlternativeState(
-        alternative: Alternative,
-    ): AlternativeState {
-        const selected = selectedIndex === alternative.index;
-        const isCrossedOut = crossedOut.has(alternative.index);
-
-        if (correctIndex === null) {
-            return {
-                selected,
-                crossedOut: isCrossedOut,
-                result: 'unchecked',
-            };
-        }
-
-        // Only the selected alternative receives a result.
-        if (!selected) {
-            return {
-                selected: false,
-                crossedOut: false,
-                result: 'unchecked',
-            };
-        }
-
-        return {
-            selected: true,
-            crossedOut: false,
-            result:
-                correctIndex === selectedIndex
-                    ? 'correct'
-                    : 'incorrect',
-        };
-    }
-
+export function AlternativesList({
+    question,
+    selectedIndex,
+    isChecked,
+    isCorrect,
+    onSelectIndex,
+}: AlternativesListProps) {
     return (
         <div className="alternative-list">
-            {question.content.alternatives.map((alternative) => (
-                <QuestionAlternative
-                    key={alternative.index}
-                    alternative={alternative}
-                    state={getAlternativeState(alternative)}
-                    select={() => select(alternative.index)}
-                    toggleCrossOut={() =>
-                        toggleCrossOut(alternative.index)
-                    }
-                />
-            ))}
+            {question.content.alternatives.map((alternative) => {
+                const selected = selectedIndex === alternative.index;
+
+                let result: AlternativeResult = null;
+
+                if (isChecked && selected) {
+                    result = isCorrect ? 'correct' : 'incorrect';
+                }
+
+                return (
+                    <QuestionAlternative
+                        key={alternative.index}
+                        alternative={alternative}
+                        selected={selected}
+                        result={result}
+                        onSelect={() => onSelectIndex(alternative.index)}
+                    />
+                );
+            })}
         </div>
     );
 }
