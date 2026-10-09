@@ -5,6 +5,7 @@ class Api {
     readonly questions = {
         getAll: questionsImpl.getAllQuestions,
         getById: questionsImpl.getQuestionById,
+        getBySource: questionsImpl.getQuestionsBySource,
     };
 
     readonly userQuestions = {
