@@ -1,0 +1,43 @@
+{
+  "label": "2019-177",
+  "title": "Questão 177 - ENEM 2019",
+  "source": "enem 2019",
+  "difficulty": 3,
+  "percentCorrectRate": null,
+  "subject": "combinatorics",
+  "content": {
+    "files": [
+      {
+        "url": "images/000e6ab5-5267-4411-a21d-3c05d89f2832.png",
+        "type": "image"
+      }
+    ],
+    "problem": "Um grupo de engenheiros está projetando um motor cujo esquema de deslocamento vertical do pistão dentro da câmara de combustão esta representado na figura.\n\ndescreve como varia a altura h, medida em centímetro, da parte superior do pistão dentro da câmara de combustão, em função do tempo t, medido em segundo. Nas figuras estão indicadas as alturas do pistão em dois instantes distintos.\n\nO valor do parâmetro β, que é dado por um número inteiro positivo, está relacionado com a velocidade de deslocamento do pistão. Para que o motor tenha uma boa potência, é necessário e suficiente que, em menos de 4 segundos após o início do funcionamento (instante t = 0), a altura da base do pistão alcance por três vezes o valor de 6 cm.\n\nPara os cálculos, utilize 3 como aproximação para π.\n\n![](https://enem.dev/2019/questions/177/000e6ab5-5267-4411-a21d-3c05d89f2832.png)",
+    "command": "O menor valor inteiro a ser atribuído ao parâmetro β, de forma que o motor a ser construído tenha boa potência, é",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "1."
+      },
+      {
+        "index": "b",
+        "text": "2."
+      },
+      {
+        "index": "c",
+        "text": "4."
+      },
+      {
+        "index": "d",
+        "text": "5."
+      },
+      {
+        "index": "e",
+        "text": "8."
+      }
+    ],
+    "correctAlternative": "d",
+    "explanation": ""
+  },
+  "id": "enem-2019-177"
+}

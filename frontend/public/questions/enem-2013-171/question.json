@@ -1,0 +1,38 @@
+{
+  "label": "2013-171",
+  "title": "Questão 171 - ENEM 2013",
+  "source": "enem 2013",
+  "difficulty": 1,
+  "percentCorrectRate": null,
+  "subject": "functions",
+  "content": {
+    "files": [],
+    "problem": "",
+    "command": "Qual é a expressão que representa a relação entre X e Y",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "5X − 3Y + 15 = 0"
+      },
+      {
+        "index": "b",
+        "text": "5X − 2Y + 10 = 0"
+      },
+      {
+        "index": "c",
+        "text": "3X − 3Y + 15 = 0"
+      },
+      {
+        "index": "d",
+        "text": "3X − 2Y + 15 = 0"
+      },
+      {
+        "index": "e",
+        "text": "3X − 2Y + 10 = 0"
+      }
+    ],
+    "correctAlternative": "b",
+    "explanation": ""
+  },
+  "id": "enem-2013-171"
+}

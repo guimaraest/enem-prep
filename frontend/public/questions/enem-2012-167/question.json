@@ -1,0 +1,38 @@
+{
+  "label": "2012-167",
+  "title": "Questão 167 - ENEM 2012",
+  "source": "enem 2012",
+  "difficulty": 2,
+  "percentCorrectRate": null,
+  "subject": "arithmetic",
+  "content": {
+    "files": [],
+    "problem": "Nos shopping centers costumam existir parques com vários brinquedos e jogos. Os usuários colocam créditos em um cartão, que são descontados por cada período de tempo de uso dos jogos. Dependendo da pontuação da criança no jogo, ela recebe um certo número de tíquetes para trocar por produtos nas lojas dos parques. Suponha que o período de uso de um brinquedo em certo shopping custa R$ 3,00 e que uma bicicleta custa 9 200 tíquetes.",
+    "command": "Para uma criança que recebe 20 tíquetes por período de tempo que joga, o valor, em reais, gasto com créditos para obter a quantidade de tíquetes para trocar pela bicicleta é",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "153."
+      },
+      {
+        "index": "b",
+        "text": "460."
+      },
+      {
+        "index": "c",
+        "text": "1 218."
+      },
+      {
+        "index": "d",
+        "text": "1 380."
+      },
+      {
+        "index": "e",
+        "text": "3 066."
+      }
+    ],
+    "correctAlternative": "d",
+    "explanation": ""
+  },
+  "id": "enem-2012-167"
+}

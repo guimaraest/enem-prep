@@ -1,0 +1,38 @@
+{
+  "label": "2013-170",
+  "title": "Questão 170 - ENEM 2013",
+  "source": "enem 2013",
+  "difficulty": 1,
+  "percentCorrectRate": null,
+  "subject": "functions",
+  "content": {
+    "files": [],
+    "problem": "Nos Estados Unidos a unidade de medida de volume mais utilizada em latas de refrigerante é a onça fluida (fl oz), que equivale a aproximadamente 2,95 centilitros (cL).\n\nSabe-se que o centilitro é a centésima parte do litro e que a lata de refrigerante usualmente comercializada no Brasil tem capacidade de 355 mL.",
+    "command": "Assim, a medida do volume da lata de refrigerante de 355 mL, em onça fluida (fl oz), é mais próxima de",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "0,83"
+      },
+      {
+        "index": "b",
+        "text": "1,20"
+      },
+      {
+        "index": "c",
+        "text": "12,03"
+      },
+      {
+        "index": "d",
+        "text": "104,73"
+      },
+      {
+        "index": "e",
+        "text": "120,34"
+      }
+    ],
+    "correctAlternative": "c",
+    "explanation": ""
+  },
+  "id": "enem-2013-170"
+}

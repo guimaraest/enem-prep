@@ -1,0 +1,43 @@
+{
+  "label": "2013-179",
+  "title": "Questão 179 - ENEM 2013",
+  "source": "enem 2013",
+  "difficulty": 4,
+  "percentCorrectRate": null,
+  "subject": "probability",
+  "content": {
+    "files": [
+      {
+        "url": "images/b89b41c4-9cdd-4858-8d4d-69e4efbcf1cc.png",
+        "type": "image"
+      }
+    ],
+    "problem": "![](https://enem.dev/2013/questions/179/b89b41c4-9cdd-4858-8d4d-69e4efbcf1cc.png)",
+    "command": "Qual deve ser o valor do comprimento da haste EF?",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "1 m"
+      },
+      {
+        "index": "b",
+        "text": "2 m"
+      },
+      {
+        "index": "c",
+        "text": "2,4 m"
+      },
+      {
+        "index": "d",
+        "text": "3 m"
+      },
+      {
+        "index": "e",
+        "text": "2√6 m"
+      }
+    ],
+    "correctAlternative": "c",
+    "explanation": ""
+  },
+  "id": "enem-2013-179"
+}

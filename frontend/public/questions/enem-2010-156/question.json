@@ -1,0 +1,43 @@
+{
+  "label": "2010-156",
+  "title": "Questão 156 - ENEM 2010",
+  "source": "enem 2010",
+  "difficulty": 2,
+  "percentCorrectRate": null,
+  "subject": "geometry",
+  "content": {
+    "files": [
+      {
+        "url": "images/52ff9fbe-ace4-4e81-b2b0-5fa55642f382.jpg",
+        "type": "image"
+      }
+    ],
+    "problem": "![](https://enem.dev/2010/questions/156/52ff9fbe-ace4-4e81-b2b0-5fa55642f382.jpg)\n\nUm pequeno helicóptero usado para reconhecimento sobrevoa a região a partir do ponto X = (20; 60). O helicóptero segue o percurso:\n\n0,8°L→0,5°N→0,2°O→0,1°S→0,4°N→0,3°L\n\nAo final, desce verticalmente até pousar no solo.",
+    "command": "De acordo com as orientações, o helicóptero pousou em um local cuja altitude é",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "Menor ou igual a 200 m."
+      },
+      {
+        "index": "b",
+        "text": "Maior que 200 m e menor ou igual a 400 m."
+      },
+      {
+        "index": "c",
+        "text": "Maior que 400 m e menor ou igual a 600 m"
+      },
+      {
+        "index": "d",
+        "text": "Maior que 600 m e menor ou igual a 800 m."
+      },
+      {
+        "index": "e",
+        "text": "Maior que 800 m."
+      }
+    ],
+    "correctAlternative": "a",
+    "explanation": ""
+  },
+  "id": "enem-2010-156"
+}

@@ -1,0 +1,58 @@
+{
+  "label": "2021-179",
+  "title": "Questão 179 - ENEM 2021",
+  "source": "enem 2021",
+  "difficulty": 4,
+  "percentCorrectRate": null,
+  "subject": "financial_math",
+  "content": {
+    "files": [],
+    "problem": "Uma pessoa produzirá uma fantasia utilizando como materiais: 2 tipos de tecidos diferentes e 5 tipos distintos de pedras ornamentais. Essa pessoa tem à sua disposição 6 tecidos diferentes e 15 pedras ornamentais distintas.",
+    "command": "A quantidade de fantasias com materiais diferentes que podem ser produzidas é representada pela expressão",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "",
+        "file": {
+          "url": "images/7551285a-0dd2-404f-9756-f6153809bb6b.png",
+          "type": "image"
+        }
+      },
+      {
+        "index": "b",
+        "text": "",
+        "file": {
+          "url": "images/ec6aed66-8609-4de8-8e4e-e352f8504ff0.png",
+          "type": "image"
+        }
+      },
+      {
+        "index": "c",
+        "text": "",
+        "file": {
+          "url": "images/e7db8ec1-87ee-4181-8cdc-f3de1667bd46.png",
+          "type": "image"
+        }
+      },
+      {
+        "index": "d",
+        "text": "",
+        "file": {
+          "url": "images/7e9a8152-4cad-499f-a704-e336986e83a5.png",
+          "type": "image"
+        }
+      },
+      {
+        "index": "e",
+        "text": "",
+        "file": {
+          "url": "images/0e4dc469-3dcf-46e2-abb9-7218a2ae6fff.png",
+          "type": "image"
+        }
+      }
+    ],
+    "correctAlternative": "a",
+    "explanation": ""
+  },
+  "id": "enem-2021-179"
+}

@@ -1,0 +1,38 @@
+{
+  "label": "2023-128",
+  "title": "Questão 128 - ENEM 2023",
+  "source": "enem 2023",
+  "difficulty": 4,
+  "percentCorrectRate": null,
+  "subject": "arithmetic",
+  "content": {
+    "files": [],
+    "problem": "É comum em viagens de avião sermos solicitados a desligar aparelhos cujo funcionamento envolva a emissão ou a recepção de ondas eletromagnéticas, como celulares. A justificativa dada para esse procedimento é, entre outras coisas, a necessidade de eliminar fontes de sinais eletromagnéticos que possam interferir nas comunicações, via rádio, dos pilotos com a torre de controle.",
+    "command": "Essa interferência poderá ocorrer somente se as ondas emitidas pelo celular e as recebidas pelo rádio do avião",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "Forem ambas audíveis."
+      },
+      {
+        "index": "b",
+        "text": "Tiverem a mesma potência."
+      },
+      {
+        "index": "c",
+        "text": "Tiverem a mesma frequência."
+      },
+      {
+        "index": "d",
+        "text": "Tiverem a mesma intensidade."
+      },
+      {
+        "index": "e",
+        "text": "Propagarem-se com velocidades diferentes."
+      }
+    ],
+    "correctAlternative": "c",
+    "explanation": ""
+  },
+  "id": "enem-2023-128"
+}

@@ -1,0 +1,38 @@
+{
+  "label": "2012-142",
+  "title": "Questão 142 - ENEM 2012",
+  "source": "enem 2012",
+  "difficulty": 4,
+  "percentCorrectRate": null,
+  "subject": "financial_math",
+  "content": {
+    "files": [],
+    "problem": "A capacidade mínima, em BTU/h, de um aparelho de ar-condicionado, para ambientes sem exposição ao sol, pode ser determinada da seguinte forma:\n\n• 600 BTU/h por m2 , considerando-se até duas pessoas no ambiente;\n\n• para cada pessoa adicional nesse ambiente, acrescentar 600 BTU/h;\n\n• acrescentar mais 600 BTU/h para cada equipamento eletroeletrônico em funcionamento no ambiente.\n\nSerá instalado um aparelho de ar-condicionado em uma sala, sem exposição ao sol, de dimensões 4 m x 5 m, em que permaneçam quatro pessoas e possua um aparelho de televisão em funcionamento.",
+    "command": "A capacidade mínima, em BTU/h, desse aparelho de arcondicionado deve ser",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "12 000."
+      },
+      {
+        "index": "b",
+        "text": "12 600."
+      },
+      {
+        "index": "c",
+        "text": "13 200."
+      },
+      {
+        "index": "d",
+        "text": "13 800."
+      },
+      {
+        "index": "e",
+        "text": "15 000."
+      }
+    ],
+    "correctAlternative": "d",
+    "explanation": ""
+  },
+  "id": "enem-2012-142"
+}

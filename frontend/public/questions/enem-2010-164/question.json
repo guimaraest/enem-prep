@@ -1,0 +1,43 @@
+{
+  "label": "2010-164",
+  "title": "Questão 164 - ENEM 2010",
+  "source": "enem 2010",
+  "difficulty": 1,
+  "percentCorrectRate": null,
+  "subject": "combinatorics",
+  "content": {
+    "files": [
+      {
+        "url": "images/d7f10275-2a88-4791-b723-59fdae4f26d0.jpg",
+        "type": "image"
+      }
+    ],
+    "problem": "Uma metalúrgica recebeu uma encomenda para fabricar, em grande quantidade, uma peça com o formato de um prisma reto com base triangular, cujas dimensões da base são 6 cm, 8 cm e 10 cm e cuja altura é 10 cm. Tal peça deve ser vazada de tal maneira que a perfuração na forma de um cilindro circular reto seja tangente às suas faces laterais, conforme mostra a figura.\n\n![](https://enem.dev/2010/questions/164/d7f10275-2a88-4791-b723-59fdae4f26d0.jpg)",
+    "command": "O raio da perfuração da peça é igual a",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "1 cm."
+      },
+      {
+        "index": "b",
+        "text": "2 cm."
+      },
+      {
+        "index": "c",
+        "text": "3 cm."
+      },
+      {
+        "index": "d",
+        "text": "4 cm."
+      },
+      {
+        "index": "e",
+        "text": "5 cm."
+      }
+    ],
+    "correctAlternative": "b",
+    "explanation": ""
+  },
+  "id": "enem-2010-164"
+}

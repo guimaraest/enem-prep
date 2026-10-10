@@ -1,0 +1,47 @@
+{
+  "label": "2018-155",
+  "title": "Questão 155 - ENEM 2018",
+  "source": "enem 2018",
+  "difficulty": 2,
+  "percentCorrectRate": null,
+  "subject": "statistics",
+  "content": {
+    "files": [
+      {
+        "url": "images/f37e4605-4e3a-4335-beb3-c941cd9f8e05.png",
+        "type": "image"
+      },
+      {
+        "url": "images/8504e1af-d94a-4a73-96e9-f59d6b4fa9c4.png",
+        "type": "image"
+      }
+    ],
+    "problem": "O remo de assento deslizante é um esporte que faz uso de um barco e dois remos do mesmo tamanho. A figura mostra uma das posições de uma técnica chamada afastamento.\n\n![](https://enem.dev/2018/questions/155/f37e4605-4e3a-4335-beb3-c941cd9f8e05.png)\n\nNessa posição, os dois remos se encontram no ponto A e suas outras extremidades estão indicadas pelos pontos B e C. Esses três pontos formam um triângulo ABC cujo ângulo ![](https://enem.dev/2018/questions/155/8504e1af-d94a-4a73-96e9-f59d6b4fa9c4.png)  tem medida de 170°.",
+    "command": "O  tipo de triângulo com vértices nos pontos A, B e C, no momento em que o remador está nessa posição, é",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "Retângulo escaleno."
+      },
+      {
+        "index": "b",
+        "text": "Acutângulo escaleno."
+      },
+      {
+        "index": "c",
+        "text": "Acutângulo isósceles."
+      },
+      {
+        "index": "d",
+        "text": "Obtusângulo escaleno."
+      },
+      {
+        "index": "e",
+        "text": "Obtusângulo isósceles."
+      }
+    ],
+    "correctAlternative": "e",
+    "explanation": ""
+  },
+  "id": "enem-2018-155"
+}

@@ -1,0 +1,43 @@
+{
+  "label": "2012-175",
+  "title": "Questão 175 - ENEM 2012",
+  "source": "enem 2012",
+  "difficulty": 2,
+  "percentCorrectRate": null,
+  "subject": "functions",
+  "content": {
+    "files": [
+      {
+        "url": "images/8362025d-b302-483a-93b8-d628c12c46ae.png",
+        "type": "image"
+      }
+    ],
+    "problem": "![](https://enem.dev/2012/questions/175/8362025d-b302-483a-93b8-d628c12c46ae.png)\n\nUm paciente fez um exame de glicose nesse laboratório e comprovou que estava com hiperglicemia. Sua taxa de glicose era de 300 mg/dL. Seu médico prescreveu um tratamento em duas etapas. Na primeira etapa ele conseguiu reduzir sua taxa em 30% e na segunda etapa em 10%.",
+    "command": "Ao calcular sua taxa de glicose após as duas reduções, o paciente verificou que estava na categoria de",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "Hipoglicemia."
+      },
+      {
+        "index": "b",
+        "text": "Normal."
+      },
+      {
+        "index": "c",
+        "text": "Pré-diabetes."
+      },
+      {
+        "index": "d",
+        "text": "Diabetes melito."
+      },
+      {
+        "index": "e",
+        "text": "Hiperglicemia."
+      }
+    ],
+    "correctAlternative": "d",
+    "explanation": ""
+  },
+  "id": "enem-2012-175"
+}

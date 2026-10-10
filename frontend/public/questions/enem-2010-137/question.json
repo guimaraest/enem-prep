@@ -1,0 +1,38 @@
+{
+  "label": "2010-137",
+  "title": "Questão 137 - ENEM 2010",
+  "source": "enem 2010",
+  "difficulty": 2,
+  "percentCorrectRate": null,
+  "subject": "functions",
+  "content": {
+    "files": [],
+    "problem": "No monte de Cerro Armazones, no deserto de Atacama, no Chile, ficará o maior telescópio da superfície terrestre, o Telescópio Europeu Extremamente Grande (E-ELT). O E-ELT terá um espelho primário de 42 m de diâmetro, “o maior olho do mundo voltado para o céu”.\n\nDisponível em: http://www.estadao.com.br. Acesso em: 27 abr. 2010 (adaptado).\n\nAo ler esse texto em uma sala de aula, uma professora fez uma suposição de que o diâmetro do olho humano mede aproximadamente 2,1 cm.",
+    "command": "Qual a razão entre o diâmetro aproximado do olho humano, suposto pela professora, e o diâmetro do espelho primário do telescópio citado?",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "1 : 20"
+      },
+      {
+        "index": "b",
+        "text": "1 : 100"
+      },
+      {
+        "index": "c",
+        "text": "1 : 200"
+      },
+      {
+        "index": "d",
+        "text": "1 : 1 000"
+      },
+      {
+        "index": "e",
+        "text": "1 : 2 000"
+      }
+    ],
+    "correctAlternative": "e",
+    "explanation": ""
+  },
+  "id": "enem-2010-137"
+}

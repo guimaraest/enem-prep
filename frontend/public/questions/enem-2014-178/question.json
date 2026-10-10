@@ -1,0 +1,38 @@
+{
+  "label": "2014-178",
+  "title": "Questão 178 - ENEM 2014",
+  "source": "enem 2014",
+  "difficulty": 2,
+  "percentCorrectRate": null,
+  "subject": "functions",
+  "content": {
+    "files": [],
+    "problem": "",
+    "command": "Qual deve ser a ação desse proprietário para que ele atinja o seu objetivo?",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "Retirar 16 células."
+      },
+      {
+        "index": "b",
+        "text": "Retirar 40 células."
+      },
+      {
+        "index": "c",
+        "text": "Acrescentar 5 células."
+      },
+      {
+        "index": "d",
+        "text": "Acrescentar 20 células."
+      },
+      {
+        "index": "e",
+        "text": "Acrescentar 40 células."
+      }
+    ],
+    "correctAlternative": "a",
+    "explanation": ""
+  },
+  "id": "enem-2014-178"
+}

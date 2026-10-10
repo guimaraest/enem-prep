@@ -1,0 +1,43 @@
+{
+  "label": "2015-165",
+  "title": "Questão 165 - ENEM 2015",
+  "source": "enem 2015",
+  "difficulty": 2,
+  "percentCorrectRate": null,
+  "subject": "combinatorics",
+  "content": {
+    "files": [
+      {
+        "url": "images/0cf3eb67-f1f6-4a40-89fc-106ba00c5769.png",
+        "type": "image"
+      }
+    ],
+    "problem": "![](https://enem.dev/2015/questions/165/0cf3eb67-f1f6-4a40-89fc-106ba00c5769.png)\n\nO parque aquático já conta com uma piscina em formato retangular com dimensões 50 m x 24 m.\n\nO proprietário quer que a área ocupada pela nova piscina seja menor que a ocupada pela piscina já existente.\n\nConsidere 3,0 como aproximação para π.",
+    "command": "O maior valor possível para R, em metros, deverá ser",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "16."
+      },
+      {
+        "index": "b",
+        "text": "28."
+      },
+      {
+        "index": "c",
+        "text": "29."
+      },
+      {
+        "index": "d",
+        "text": "31."
+      },
+      {
+        "index": "e",
+        "text": "49."
+      }
+    ],
+    "correctAlternative": "b",
+    "explanation": ""
+  },
+  "id": "enem-2015-165"
+}

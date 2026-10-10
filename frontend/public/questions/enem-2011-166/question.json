@@ -1,0 +1,38 @@
+{
+  "label": "2011-166",
+  "title": "Questão 166 - ENEM 2011",
+  "source": "enem 2011",
+  "difficulty": 4,
+  "percentCorrectRate": null,
+  "subject": "probability",
+  "content": {
+    "files": [],
+    "problem": "Nos últimos cinco anos, 32 mil mulheres de 20 a 24 anos foram internadas nos hospitais do SUS por causa de AVC. Entre os homens da mesma faixa etária, houve 28 mil internações pelo mesmo motivo.\n\n**Época**.26 abr. 2010 (adaptado).\n\nSupondo que, nos próximos cinco anos, haja um acréscimo de 8 mil internações de mulheres e que o acréscimo de internações de homens por AVC ocorra na mesma proporção.",
+    "command": "De acordo com as informações dadas, o número de homens que seriam internados por AVC, nos próximos cinco anos, corresponderia a",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "4 mil."
+      },
+      {
+        "index": "b",
+        "text": "9 mil."
+      },
+      {
+        "index": "c",
+        "text": "21 mil."
+      },
+      {
+        "index": "d",
+        "text": "35 mil."
+      },
+      {
+        "index": "e",
+        "text": "39 mil."
+      }
+    ],
+    "correctAlternative": "d",
+    "explanation": ""
+  },
+  "id": "enem-2011-166"
+}

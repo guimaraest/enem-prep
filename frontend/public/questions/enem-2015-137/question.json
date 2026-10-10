@@ -1,0 +1,38 @@
+{
+  "label": "2015-137",
+  "title": "Questão 137 - ENEM 2015",
+  "source": "enem 2015",
+  "difficulty": 4,
+  "percentCorrectRate": null,
+  "subject": "probability",
+  "content": {
+    "files": [],
+    "problem": "Considere 1,7 como aproximação para √3.",
+    "command": "O tampo a ser escolhido será aquele cujo raio, em centímetros, é igual a",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "18"
+      },
+      {
+        "index": "b",
+        "text": "26"
+      },
+      {
+        "index": "c",
+        "text": "30"
+      },
+      {
+        "index": "d",
+        "text": "35"
+      },
+      {
+        "index": "e",
+        "text": "60"
+      }
+    ],
+    "correctAlternative": "a",
+    "explanation": ""
+  },
+  "id": "enem-2015-137"
+}

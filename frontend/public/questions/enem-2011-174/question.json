@@ -1,0 +1,38 @@
+{
+  "label": "2011-174",
+  "title": "Questão 174 - ENEM 2011",
+  "source": "enem 2011",
+  "difficulty": 4,
+  "percentCorrectRate": null,
+  "subject": "algebra",
+  "content": {
+    "files": [],
+    "problem": "O setor de recursos humanos de uma empresa vai realizar uma entrevista com 120 candidatos a uma vaga de contador. Por sorteio, eles pretendem atribuir a cada candidato um número, colocar a lista de números em ordem numérica crescente e usá-la para convocar  \nos interessados. Acontece que, por um defeito do computador, foram gerados números com 5 algarismos distintos e, em nenhum deles, apareceram dígitos pares.",
+    "command": "Em razão disso, a ordem de chamada do candidato que tiver recebido o número 75 913 é",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "24"
+      },
+      {
+        "index": "b",
+        "text": "31"
+      },
+      {
+        "index": "c",
+        "text": "32"
+      },
+      {
+        "index": "d",
+        "text": "88"
+      },
+      {
+        "index": "e",
+        "text": "89"
+      }
+    ],
+    "correctAlternative": "e",
+    "explanation": ""
+  },
+  "id": "enem-2011-174"
+}

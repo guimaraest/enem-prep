@@ -1,0 +1,43 @@
+{
+  "label": "2016-161",
+  "title": "Questão 161 - ENEM 2016",
+  "source": "enem 2016",
+  "difficulty": 3,
+  "percentCorrectRate": null,
+  "subject": "financial_math",
+  "content": {
+    "files": [
+      {
+        "url": "images/576da257-907a-462b-98b2-4d67f2679d3d.png",
+        "type": "image"
+      }
+    ],
+    "problem": "![](https://enem.dev/2016/questions/161/576da257-907a-462b-98b2-4d67f2679d3d.png)",
+    "command": "Suponha que ocorra um desastre quando o petroleiro se encontra com sua carga máxima: ele sofre um acidente que ocasiona um furo no fundo do compartimento C.\nPara fins de cálculo, considere desprezíveis as espessuras das placas divisórias.\nApós o fim do vazamento, o volume de petróleo derramado terá sido de",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "1,4 × 10³  m³"
+      },
+      {
+        "index": "b",
+        "text": "1,8 × 10³  m³"
+      },
+      {
+        "index": "c",
+        "text": "2,0 × 10³  m³"
+      },
+      {
+        "index": "d",
+        "text": "3,2 × 10³  m³"
+      },
+      {
+        "index": "e",
+        "text": "6,0 × 10³  m³"
+      }
+    ],
+    "correctAlternative": "d",
+    "explanation": ""
+  },
+  "id": "enem-2016-161"
+}

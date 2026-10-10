@@ -1,0 +1,38 @@
+{
+  "label": "2014-180",
+  "title": "Questão 180 - ENEM 2014",
+  "source": "enem 2014",
+  "difficulty": 1,
+  "percentCorrectRate": null,
+  "subject": "probability",
+  "content": {
+    "files": [],
+    "problem": "",
+    "command": "Para que o executivo chegue à cidade A no horário correto e admitindo que não haja atrasos, ele deve pegar um voo saindo da cidade B, em horário local de B, no máximo à(s)",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "16h."
+      },
+      {
+        "index": "b",
+        "text": "10h."
+      },
+      {
+        "index": "c",
+        "text": "7h."
+      },
+      {
+        "index": "d",
+        "text": "4h."
+      },
+      {
+        "index": "e",
+        "text": "1h."
+      }
+    ],
+    "correctAlternative": "d",
+    "explanation": ""
+  },
+  "id": "enem-2014-180"
+}

@@ -1,0 +1,43 @@
+{
+  "label": "2012-159",
+  "title": "Questão 159 - ENEM 2012",
+  "source": "enem 2012",
+  "difficulty": 2,
+  "percentCorrectRate": null,
+  "subject": "financial_math",
+  "content": {
+    "files": [
+      {
+        "url": "images/4889b43a-36e3-4b29-91b2-ab87fda455d7.png",
+        "type": "image"
+      }
+    ],
+    "problem": "![](https://enem.dev/2012/questions/159/4889b43a-36e3-4b29-91b2-ab87fda455d7.png)",
+    "command": "Avaliando-se todas as informações, serão necessários",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "Quatro unidades do tipo A e nenhuma unidade do tipo B."
+      },
+      {
+        "index": "b",
+        "text": "Três unidades do tipo A e uma unidade do tipo B."
+      },
+      {
+        "index": "c",
+        "text": "Duas unidades do tipo A e duas unidades do tipo B."
+      },
+      {
+        "index": "d",
+        "text": "Uma unidade do tipo A e três unidades do tipo B."
+      },
+      {
+        "index": "e",
+        "text": "Nenhuma unidade do tipo A e quatro unidades do tipo B."
+      }
+    ],
+    "correctAlternative": "c",
+    "explanation": ""
+  },
+  "id": "enem-2012-159"
+}

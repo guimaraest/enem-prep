@@ -1,0 +1,43 @@
+{
+  "label": "2015-175",
+  "title": "Questão 175 - ENEM 2015",
+  "source": "enem 2015",
+  "difficulty": 3,
+  "percentCorrectRate": null,
+  "subject": "probability",
+  "content": {
+    "files": [
+      {
+        "url": "images/6b6ae3c5-95b1-4a21-94b8-59bf5c0c470d.png",
+        "type": "image"
+      }
+    ],
+    "problem": "![](https://enem.dev/2015/questions/175/6b6ae3c5-95b1-4a21-94b8-59bf5c0c470d.png)\n\nConsidere que o volume aproximado dessa bola é dado por _V_ = 4_ab_².",
+    "command": "O volume dessa bola, em função apenas de b, é dado por",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "8b³"
+      },
+      {
+        "index": "b",
+        "text": "6b³"
+      },
+      {
+        "index": "c",
+        "text": "5b³"
+      },
+      {
+        "index": "d",
+        "text": "4b³"
+      },
+      {
+        "index": "e",
+        "text": "2b³"
+      }
+    ],
+    "correctAlternative": "b",
+    "explanation": ""
+  },
+  "id": "enem-2015-175"
+}

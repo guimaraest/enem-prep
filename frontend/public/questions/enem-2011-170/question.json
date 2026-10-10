@@ -1,0 +1,43 @@
+{
+  "label": "2011-170",
+  "title": "Questão 170 - ENEM 2011",
+  "source": "enem 2011",
+  "difficulty": 2,
+  "percentCorrectRate": null,
+  "subject": "combinatorics",
+  "content": {
+    "files": [
+      {
+        "url": "images/038f43e1-f843-49af-bdcd-da787662784d.png",
+        "type": "image"
+      }
+    ],
+    "problem": "![](https://enem.dev/2011/questions/170/038f43e1-f843-49af-bdcd-da787662784d.png)",
+    "command": "Escolhendo-se aleatoriamente uma pessoa atendida nesse posto de vacinação, a probabilidade de ela ser portadora de doença crônica é",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "8%."
+      },
+      {
+        "index": "b",
+        "text": "9%."
+      },
+      {
+        "index": "c",
+        "text": "11%."
+      },
+      {
+        "index": "d",
+        "text": "12%."
+      },
+      {
+        "index": "e",
+        "text": "22%."
+      }
+    ],
+    "correctAlternative": "c",
+    "explanation": ""
+  },
+  "id": "enem-2011-170"
+}

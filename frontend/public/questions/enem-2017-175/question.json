@@ -1,0 +1,58 @@
+{
+  "label": "2017-175",
+  "title": "Questão 175 - ENEM 2017",
+  "source": "enem 2017",
+  "difficulty": 1,
+  "percentCorrectRate": null,
+  "subject": "geometry",
+  "content": {
+    "files": [],
+    "problem": "",
+    "command": "Qual a probabilidade de que esta pessoa tenha observado exatamente um sinal na cor verde?",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "",
+        "file": {
+          "url": "images/76855355-588b-40de-adfa-78c67373b3cd.png",
+          "type": "image"
+        }
+      },
+      {
+        "index": "b",
+        "text": "",
+        "file": {
+          "url": "images/f0b54cb7-a0b0-4661-a2e2-afda4b8d2135.png",
+          "type": "image"
+        }
+      },
+      {
+        "index": "c",
+        "text": "",
+        "file": {
+          "url": "images/b7396163-6b89-41cf-b08b-473d800ef585.png",
+          "type": "image"
+        }
+      },
+      {
+        "index": "d",
+        "text": "",
+        "file": {
+          "url": "images/486162c7-f43b-49a2-9476-dddf8af7bdf4.png",
+          "type": "image"
+        }
+      },
+      {
+        "index": "e",
+        "text": "",
+        "file": {
+          "url": "images/744d3069-d18a-4930-9697-45171bee53b2.png",
+          "type": "image"
+        }
+      }
+    ],
+    "correctAlternative": "a",
+    "explanation": ""
+  },
+  "id": "enem-2017-175"
+}

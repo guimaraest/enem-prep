@@ -1,0 +1,38 @@
+{
+  "label": "2010-177",
+  "title": "Questão 177 - ENEM 2010",
+  "source": "enem 2010",
+  "difficulty": 1,
+  "percentCorrectRate": null,
+  "subject": "arithmetic",
+  "content": {
+    "files": [],
+    "problem": "Um dos grandes problemas da poluição dos mananciais (rios, córregos e outros) ocorre pelo hábito de jogar óleo utilizado em frituras nos encanamentos que estão interligados com o sistema de esgoto. Se isso ocorrer, cada 10 litros de óleo poderão contaminar 10 milhões (107) de litros de água potável.\n\nManual de etiqueta. Parte integrante das revistas Veja (ed. 2055), Cláudia (ed. 555), _National Geographic_ (ed. 93) e _Nova Escola_ (ed. 208) (adaptado).\n\nSuponha que todas as famílias de uma cidade descartem os óleos de frituras através dos encanamentos e consomem 1 000 litros de óleo em frituras por semana.",
+    "command": "Qual seria, em litros, a quantidade de água potável contaminada por semana nessa cidade?",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "10 -²"
+      },
+      {
+        "index": "b",
+        "text": "10³"
+      },
+      {
+        "index": "c",
+        "text": "10^4"
+      },
+      {
+        "index": "d",
+        "text": "10^6"
+      },
+      {
+        "index": "e",
+        "text": "10^9"
+      }
+    ],
+    "correctAlternative": "e",
+    "explanation": ""
+  },
+  "id": "enem-2010-177"
+}

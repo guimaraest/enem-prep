@@ -1,0 +1,38 @@
+{
+  "label": "2009-141",
+  "title": "Questão 141 - ENEM 2009",
+  "source": "enem 2009",
+  "difficulty": 4,
+  "percentCorrectRate": null,
+  "subject": "combinatorics",
+  "content": {
+    "files": [],
+    "problem": "Uma resolução do Conselho Nacional de Política Energética (CNPE) estabeleceu a obrigatoriedade de adição de biodiesel ao óleo diesel comercializado nos postos. A exigência é que, a partir de 1.º de julho de 2009, 4% do volume da mistura final seja formada por biodiesel. Até junho de 2009, esse percentual era de 3%. Essa medida estimula a demanda de biodiesel, bem como possibilita a redução da importação de dísel de petróleo.\n\nDisponível em: http://www1.folha.uol.com.br.  \nAcesso em: 12 jul. 2009 (adaptado).",
+    "command": "Estimativas indicam que, com a adição de 4% de biodiesel ao dísel, serão consumidos 925 milhões de litros de biodiesel no segundo semestre de 2009. Considerando-se essa estimativa, para o mesmo volume da mistura final dísel/biodiesel consumida no segundo semestre de 2009, qual seria o consumo de biodiesel com a adição de 3%?",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "27,75 milhões de litros."
+      },
+      {
+        "index": "b",
+        "text": "37,00 milhões de litros."
+      },
+      {
+        "index": "c",
+        "text": "231,25 milhões de litros."
+      },
+      {
+        "index": "d",
+        "text": "693,75 milhões de litros."
+      },
+      {
+        "index": "e",
+        "text": "888,00 milhões de litros."
+      }
+    ],
+    "correctAlternative": "d",
+    "explanation": ""
+  },
+  "id": "enem-2009-141"
+}

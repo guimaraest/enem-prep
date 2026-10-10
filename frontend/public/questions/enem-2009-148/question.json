@@ -1,0 +1,43 @@
+{
+  "label": "2009-148",
+  "title": "Questão 148 - ENEM 2009",
+  "source": "enem 2009",
+  "difficulty": 2,
+  "percentCorrectRate": null,
+  "subject": "statistics",
+  "content": {
+    "files": [
+      {
+        "url": "images/052af6e6-63f3-43e2-be36-96d0f5a48ab4.jpg",
+        "type": "image"
+      }
+    ],
+    "problem": "A tabela mostra alguns dados da emissão de dióxido de carbono de uma fábrica, em função do número de toneladas produzidas.\n\n![](https://enem.dev/2009/questions/148/052af6e6-63f3-43e2-be36-96d0f5a48ab4.jpg)",
+    "command": "Os dados na tabela indicam que a taxa média de variação entre a emissão de dióxido de carbono (em ppm) e a produção (em toneladas) é",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "Inferior a 0,18."
+      },
+      {
+        "index": "b",
+        "text": "Superior a 0,18 e inferior a 0,50."
+      },
+      {
+        "index": "c",
+        "text": "Superior a 0,50 e inferior a 1,50."
+      },
+      {
+        "index": "d",
+        "text": "Superior a 1,50 e inferior a 2,80."
+      },
+      {
+        "index": "e",
+        "text": "Superior a 2,80."
+      }
+    ],
+    "correctAlternative": "d",
+    "explanation": ""
+  },
+  "id": "enem-2009-148"
+}

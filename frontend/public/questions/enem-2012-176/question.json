@@ -1,0 +1,38 @@
+{
+  "label": "2012-176",
+  "title": "Questão 176 - ENEM 2012",
+  "source": "enem 2012",
+  "difficulty": 2,
+  "percentCorrectRate": null,
+  "subject": "combinatorics",
+  "content": {
+    "files": [],
+    "problem": "Um produtor de café irrigado em Minas Gerais recebeu um relatório de consultoria estatística, constando, entre outras informações, o desvio padrão das produções de uma safra dos talhões de sua propriedade. Os talhões têm a mesma área de 30 000 m² e o valor obtido para o desvio padrão foi de 90 kg/talhão. O produtor deve apresentar as informações sobre a produção e a variância dessas produções em sacas de 60 kg por hectare (10 000 m²).",
+    "command": "A variância das produções dos talhões expressa em (sacas/hectare)² é",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "20,25."
+      },
+      {
+        "index": "b",
+        "text": "4,50."
+      },
+      {
+        "index": "c",
+        "text": "0,71."
+      },
+      {
+        "index": "d",
+        "text": "0,50."
+      },
+      {
+        "index": "e",
+        "text": "0,25."
+      }
+    ],
+    "correctAlternative": "e",
+    "explanation": ""
+  },
+  "id": "enem-2012-176"
+}

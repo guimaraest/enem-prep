@@ -1,0 +1,38 @@
+{
+  "label": "2014-174",
+  "title": "Questão 174 - ENEM 2014",
+  "source": "enem 2014",
+  "difficulty": 2,
+  "percentCorrectRate": null,
+  "subject": "combinatorics",
+  "content": {
+    "files": [],
+    "problem": "O secretário de saúde comprará recipientes de um mesmo tipo, de modo a instalar 20 deles em cada escola, abastecidos com álcool em gel na sua capacidade máxima, de forma a utilizar todo o gel dos galões de uma só vez.",
+    "command": "Que tipo de recipiente o secretário de saúde deve comprar?",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "I"
+      },
+      {
+        "index": "b",
+        "text": "II"
+      },
+      {
+        "index": "c",
+        "text": "III"
+      },
+      {
+        "index": "d",
+        "text": "IV"
+      },
+      {
+        "index": "e",
+        "text": "V"
+      }
+    ],
+    "correctAlternative": "c",
+    "explanation": ""
+  },
+  "id": "enem-2014-174"
+}

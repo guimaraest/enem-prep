@@ -1,0 +1,43 @@
+{
+  "label": "2015-139",
+  "title": "Questão 139 - ENEM 2015",
+  "source": "enem 2015",
+  "difficulty": 2,
+  "percentCorrectRate": null,
+  "subject": "probability",
+  "content": {
+    "files": [
+      {
+        "url": "images/84f82cb3-3bd8-4fa1-8795-652c0c91fa30.png",
+        "type": "image"
+      }
+    ],
+    "problem": "![](https://enem.dev/2015/questions/139/84f82cb3-3bd8-4fa1-8795-652c0c91fa30.png)",
+    "command": "Segundo as regras do jogo, quantas cartas da mão desse jogador podem formar um par com a carta da mesa?",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "9"
+      },
+      {
+        "index": "b",
+        "text": "7"
+      },
+      {
+        "index": "c",
+        "text": "5"
+      },
+      {
+        "index": "d",
+        "text": "4"
+      },
+      {
+        "index": "e",
+        "text": "3"
+      }
+    ],
+    "correctAlternative": "e",
+    "explanation": ""
+  },
+  "id": "enem-2015-139"
+}

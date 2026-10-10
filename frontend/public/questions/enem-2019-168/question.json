@@ -1,0 +1,38 @@
+{
+  "label": "2019-168",
+  "title": "Questão 168 - ENEM 2019",
+  "source": "enem 2019",
+  "difficulty": 1,
+  "percentCorrectRate": null,
+  "subject": "arithmetic",
+  "content": {
+    "files": [],
+    "problem": "Uma empresa tem diversos funcionários. Um deles é o gerente, que recebe R$ 1000,00 por semana.  \nOs outros funcionários são diaristas. Cada um trabalha 2 dias por semana, recebendo R$ 80,00 por dia trabalhado.",
+    "command": "Chamando de X a quantidade total de funcionários da empresa, a quantia Y, em reais, que esta empresa gasta semanalmente para pagar seus funcionários é expressa por",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "Y = 80X + 920."
+      },
+      {
+        "index": "b",
+        "text": "Y = 80X + 1000."
+      },
+      {
+        "index": "c",
+        "text": "Y = 80X + 1080."
+      },
+      {
+        "index": "d",
+        "text": "Y = 160X + 840."
+      },
+      {
+        "index": "e",
+        "text": "Y = 160X + 1000."
+      }
+    ],
+    "correctAlternative": "d",
+    "explanation": ""
+  },
+  "id": "enem-2019-168"
+}

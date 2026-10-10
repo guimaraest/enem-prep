@@ -1,0 +1,43 @@
+{
+  "label": "2013-137",
+  "title": "Questão 137 - ENEM 2013",
+  "source": "enem 2013",
+  "difficulty": 4,
+  "percentCorrectRate": null,
+  "subject": "probability",
+  "content": {
+    "files": [
+      {
+        "url": "images/53209063-0069-498a-9bb1-2a6e28fcbaec.png",
+        "type": "image"
+      }
+    ],
+    "problem": "![](https://enem.dev/2013/questions/137/53209063-0069-498a-9bb1-2a6e28fcbaec.png)",
+    "command": "Utilizando um novo critério, essa banca avaliadora resolveu descartar a maior e a menor notas atribuídas ao professor. A nova média, em relação à média anterior, é",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "0,25 ponto maior."
+      },
+      {
+        "index": "b",
+        "text": "1,00 ponto maior."
+      },
+      {
+        "index": "c",
+        "text": "1,00 ponto menor."
+      },
+      {
+        "index": "d",
+        "text": "1,25 ponto maior."
+      },
+      {
+        "index": "e",
+        "text": "2,00 pontos menor."
+      }
+    ],
+    "correctAlternative": "b",
+    "explanation": ""
+  },
+  "id": "enem-2013-137"
+}

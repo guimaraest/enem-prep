@@ -1,0 +1,38 @@
+{
+  "label": "2020-141",
+  "title": "Questão 141 - ENEM 2020",
+  "source": "enem 2020",
+  "difficulty": 2,
+  "percentCorrectRate": null,
+  "subject": "algebra",
+  "content": {
+    "files": [],
+    "problem": "Um hotel de 3 andares está sendo construído. Cada andar terá 100 quartos. Os quartos serão numerados de 100 a 399 e cada um terá seu número afixado à porta. Cada número será composto por peças individuais, cada uma simbolizando um único algarismo.",
+    "command": "Qual a quantidade mínima de peças, simbolizando o algarismo 2, necessárias para identificar o número de todos os quartos?",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "160"
+      },
+      {
+        "index": "b",
+        "text": "157"
+      },
+      {
+        "index": "c",
+        "text": "130"
+      },
+      {
+        "index": "d",
+        "text": "120"
+      },
+      {
+        "index": "e",
+        "text": "60"
+      }
+    ],
+    "correctAlternative": "a",
+    "explanation": ""
+  },
+  "id": "enem-2020-141"
+}

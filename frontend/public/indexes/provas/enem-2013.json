@@ -1,0 +1,338 @@
+[
+  {
+    "id": "enem-2013-136",
+    "label": "2013-136",
+    "title": "Questão 136 - ENEM 2013",
+    "source": "enem 2013",
+    "difficulty": 4,
+    "subject": "financial_math"
+  },
+  {
+    "id": "enem-2013-137",
+    "label": "2013-137",
+    "title": "Questão 137 - ENEM 2013",
+    "source": "enem 2013",
+    "difficulty": 4,
+    "subject": "probability"
+  },
+  {
+    "id": "enem-2013-138",
+    "label": "2013-138",
+    "title": "Questão 138 - ENEM 2013",
+    "source": "enem 2013",
+    "difficulty": 3,
+    "subject": "statistics"
+  },
+  {
+    "id": "enem-2013-139",
+    "label": "2013-139",
+    "title": "Questão 139 - ENEM 2013",
+    "source": "enem 2013",
+    "difficulty": 2,
+    "subject": "algebra"
+  },
+  {
+    "id": "enem-2013-140",
+    "label": "2013-140",
+    "title": "Questão 140 - ENEM 2013",
+    "source": "enem 2013",
+    "difficulty": 3,
+    "subject": "probability"
+  },
+  {
+    "id": "enem-2013-141",
+    "label": "2013-141",
+    "title": "Questão 141 - ENEM 2013",
+    "source": "enem 2013",
+    "difficulty": 1,
+    "subject": "functions"
+  },
+  {
+    "id": "enem-2013-142",
+    "label": "2013-142",
+    "title": "Questão 142 - ENEM 2013",
+    "source": "enem 2013",
+    "difficulty": 2,
+    "subject": "geometry"
+  },
+  {
+    "id": "enem-2013-143",
+    "label": "2013-143",
+    "title": "Questão 143 - ENEM 2013",
+    "source": "enem 2013",
+    "difficulty": 2,
+    "subject": "algebra"
+  },
+  {
+    "id": "enem-2013-144",
+    "label": "2013-144",
+    "title": "Questão 144 - ENEM 2013",
+    "source": "enem 2013",
+    "difficulty": 4,
+    "subject": "combinatorics"
+  },
+  {
+    "id": "enem-2013-145",
+    "label": "2013-145",
+    "title": "Questão 145 - ENEM 2013",
+    "source": "enem 2013",
+    "difficulty": 1,
+    "subject": "financial_math"
+  },
+  {
+    "id": "enem-2013-146",
+    "label": "2013-146",
+    "title": "Questão 146 - ENEM 2013",
+    "source": "enem 2013",
+    "difficulty": 2,
+    "subject": "functions"
+  },
+  {
+    "id": "enem-2013-147",
+    "label": "2013-147",
+    "title": "Questão 147 - ENEM 2013",
+    "source": "enem 2013",
+    "difficulty": 3,
+    "subject": "financial_math"
+  },
+  {
+    "id": "enem-2013-148",
+    "label": "2013-148",
+    "title": "Questão 148 - ENEM 2013",
+    "source": "enem 2013",
+    "difficulty": 1,
+    "subject": "statistics"
+  },
+  {
+    "id": "enem-2013-149",
+    "label": "2013-149",
+    "title": "Questão 149 - ENEM 2013",
+    "source": "enem 2013",
+    "difficulty": 4,
+    "subject": "combinatorics"
+  },
+  {
+    "id": "enem-2013-150",
+    "label": "2013-150",
+    "title": "Questão 150 - ENEM 2013",
+    "source": "enem 2013",
+    "difficulty": 3,
+    "subject": "arithmetic"
+  },
+  {
+    "id": "enem-2013-151",
+    "label": "2013-151",
+    "title": "Questão 151 - ENEM 2013",
+    "source": "enem 2013",
+    "difficulty": 1,
+    "subject": "probability"
+  },
+  {
+    "id": "enem-2013-153",
+    "label": "2013-153",
+    "title": "Questão 153 - ENEM 2013",
+    "source": "enem 2013",
+    "difficulty": 3,
+    "subject": "arithmetic"
+  },
+  {
+    "id": "enem-2013-154",
+    "label": "2013-154",
+    "title": "Questão 154 - ENEM 2013",
+    "source": "enem 2013",
+    "difficulty": 1,
+    "subject": "algebra"
+  },
+  {
+    "id": "enem-2013-156",
+    "label": "2013-156",
+    "title": "Questão 156 - ENEM 2013",
+    "source": "enem 2013",
+    "difficulty": 2,
+    "subject": "arithmetic"
+  },
+  {
+    "id": "enem-2013-157",
+    "label": "2013-157",
+    "title": "Questão 157 - ENEM 2013",
+    "source": "enem 2013",
+    "difficulty": 4,
+    "subject": "functions"
+  },
+  {
+    "id": "enem-2013-158",
+    "label": "2013-158",
+    "title": "Questão 158 - ENEM 2013",
+    "source": "enem 2013",
+    "difficulty": 1,
+    "subject": "functions"
+  },
+  {
+    "id": "enem-2013-159",
+    "label": "2013-159",
+    "title": "Questão 159 - ENEM 2013",
+    "source": "enem 2013",
+    "difficulty": 4,
+    "subject": "statistics"
+  },
+  {
+    "id": "enem-2013-160",
+    "label": "2013-160",
+    "title": "Questão 160 - ENEM 2013",
+    "source": "enem 2013",
+    "difficulty": 1,
+    "subject": "functions"
+  },
+  {
+    "id": "enem-2013-161",
+    "label": "2013-161",
+    "title": "Questão 161 - ENEM 2013",
+    "source": "enem 2013",
+    "difficulty": 3,
+    "subject": "financial_math"
+  },
+  {
+    "id": "enem-2013-162",
+    "label": "2013-162",
+    "title": "Questão 162 - ENEM 2013",
+    "source": "enem 2013",
+    "difficulty": 3,
+    "subject": "arithmetic"
+  },
+  {
+    "id": "enem-2013-163",
+    "label": "2013-163",
+    "title": "Questão 163 - ENEM 2013",
+    "source": "enem 2013",
+    "difficulty": 2,
+    "subject": "geometry"
+  },
+  {
+    "id": "enem-2013-164",
+    "label": "2013-164",
+    "title": "Questão 164 - ENEM 2013",
+    "source": "enem 2013",
+    "difficulty": 3,
+    "subject": "algebra"
+  },
+  {
+    "id": "enem-2013-165",
+    "label": "2013-165",
+    "title": "Questão 165 - ENEM 2013",
+    "source": "enem 2013",
+    "difficulty": 2,
+    "subject": "algebra"
+  },
+  {
+    "id": "enem-2013-166",
+    "label": "2013-166",
+    "title": "Questão 166 - ENEM 2013",
+    "source": "enem 2013",
+    "difficulty": 4,
+    "subject": "geometry"
+  },
+  {
+    "id": "enem-2013-167",
+    "label": "2013-167",
+    "title": "Questão 167 - ENEM 2013",
+    "source": "enem 2013",
+    "difficulty": 3,
+    "subject": "statistics"
+  },
+  {
+    "id": "enem-2013-168",
+    "label": "2013-168",
+    "title": "Questão 168 - ENEM 2013",
+    "source": "enem 2013",
+    "difficulty": 4,
+    "subject": "combinatorics"
+  },
+  {
+    "id": "enem-2013-169",
+    "label": "2013-169",
+    "title": "Questão 169 - ENEM 2013",
+    "source": "enem 2013",
+    "difficulty": 2,
+    "subject": "arithmetic"
+  },
+  {
+    "id": "enem-2013-170",
+    "label": "2013-170",
+    "title": "Questão 170 - ENEM 2013",
+    "source": "enem 2013",
+    "difficulty": 1,
+    "subject": "functions"
+  },
+  {
+    "id": "enem-2013-171",
+    "label": "2013-171",
+    "title": "Questão 171 - ENEM 2013",
+    "source": "enem 2013",
+    "difficulty": 1,
+    "subject": "functions"
+  },
+  {
+    "id": "enem-2013-172",
+    "label": "2013-172",
+    "title": "Questão 172 - ENEM 2013",
+    "source": "enem 2013",
+    "difficulty": 3,
+    "subject": "algebra"
+  },
+  {
+    "id": "enem-2013-173",
+    "label": "2013-173",
+    "title": "Questão 173 - ENEM 2013",
+    "source": "enem 2013",
+    "difficulty": 1,
+    "subject": "algebra"
+  },
+  {
+    "id": "enem-2013-174",
+    "label": "2013-174",
+    "title": "Questão 174 - ENEM 2013",
+    "source": "enem 2013",
+    "difficulty": 1,
+    "subject": "financial_math"
+  },
+  {
+    "id": "enem-2013-175",
+    "label": "2013-175",
+    "title": "Questão 175 - ENEM 2013",
+    "source": "enem 2013",
+    "difficulty": 2,
+    "subject": "algebra"
+  },
+  {
+    "id": "enem-2013-176",
+    "label": "2013-176",
+    "title": "Questão 176 - ENEM 2013",
+    "source": "enem 2013",
+    "difficulty": 2,
+    "subject": "geometry"
+  },
+  {
+    "id": "enem-2013-177",
+    "label": "2013-177",
+    "title": "Questão 177 - ENEM 2013",
+    "source": "enem 2013",
+    "difficulty": 2,
+    "subject": "financial_math"
+  },
+  {
+    "id": "enem-2013-178",
+    "label": "2013-178",
+    "title": "Questão 178 - ENEM 2013",
+    "source": "enem 2013",
+    "difficulty": 1,
+    "subject": "algebra"
+  },
+  {
+    "id": "enem-2013-179",
+    "label": "2013-179",
+    "title": "Questão 179 - ENEM 2013",
+    "source": "enem 2013",
+    "difficulty": 4,
+    "subject": "probability"
+  }
+]

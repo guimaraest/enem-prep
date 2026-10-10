@@ -1,0 +1,38 @@
+{
+  "label": "2019-160",
+  "title": "Questão 160 - ENEM 2019",
+  "source": "enem 2019",
+  "difficulty": 2,
+  "percentCorrectRate": null,
+  "subject": "geometry",
+  "content": {
+    "files": [],
+    "problem": "O preparador físico de um time de basquete dispõe de um plantel de 20 jogadores, com média de altura igual a 1,80 m.  \nNo último treino antes da estreia em um campeonato, um dos jogadores desfalcou o time em razão de uma séria contusão, forçando o técnico a contratar outro jogador para recompor o grupo.",
+    "command": "Se o novo jogador é 0,20 m mais baixo que o anterior, qual é a média de altura, em metro, do novo grupo?",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "1,60."
+      },
+      {
+        "index": "b",
+        "text": "1,78."
+      },
+      {
+        "index": "c",
+        "text": "1,79."
+      },
+      {
+        "index": "d",
+        "text": "1,81."
+      },
+      {
+        "index": "e",
+        "text": "1,82."
+      }
+    ],
+    "correctAlternative": "c",
+    "explanation": ""
+  },
+  "id": "enem-2019-160"
+}

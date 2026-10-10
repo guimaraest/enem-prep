@@ -1,0 +1,38 @@
+{
+  "label": "2019-137",
+  "title": "Questão 137 - ENEM 2019",
+  "source": "enem 2019",
+  "difficulty": 4,
+  "percentCorrectRate": null,
+  "subject": "financial_math",
+  "content": {
+    "files": [],
+    "problem": "A _Hydrangea macrophyila_ é uma planta com flor azul ou cor-de-rosa, dependendo do pH do solo no qual está plantada. Em solo ácido (ou seja, com pH < 7) a flor é azul, enquanto que em solo alcalino (ou seja, com pH > 7) a flor é rosa. Considere que a _Hydrangea_ cor-de-rosa mais valorizada comercialmente numa determinada região seja aquela produzida em solo com pH inferior a 8.\n\nSabe-se que pH = – log10x, em que x é a concentração de íon hidrogênio (H+).",
+    "command": "Para produzir a Hydrangea cor-de-rosa de maior valor comercial, deve-se preparar o solo de modo que x assuma",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "Qualquer valor acima de 10^{-8}10​−8    \t​​."
+      },
+      {
+        "index": "b",
+        "text": "Qualquer valor positivo inferior a 10^{-7}10​−7​​."
+      },
+      {
+        "index": "c",
+        "text": "Valores maiores que 7 e menores que 8."
+      },
+      {
+        "index": "d",
+        "text": "Valores maiores que 70 e menores que 80."
+      },
+      {
+        "index": "e",
+        "text": "Valores maiores que 10^{-8}10​−8​​ e menores que 10^{-7}10​−7​​."
+      }
+    ],
+    "correctAlternative": "e",
+    "explanation": ""
+  },
+  "id": "enem-2019-137"
+}

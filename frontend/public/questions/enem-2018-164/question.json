@@ -1,0 +1,38 @@
+{
+  "label": "2018-164",
+  "title": "Questão 164 - ENEM 2018",
+  "source": "enem 2018",
+  "difficulty": 2,
+  "percentCorrectRate": null,
+  "subject": "financial_math",
+  "content": {
+    "files": [],
+    "problem": "Um edifício tem a numeração dos andares iniciando no térreo (T), e continuando com primeiro, segundo, terceiro, …, até o último andar. Uma criança entrou no elevador e, tocando no painel, seguiu uma sequência de andares, parando, abrindo e fechando a porta em diversos andares. A partir de onde entrou a criança, o elevador subiu sete andares, em seguida desceu dez, desceu mais treze, subiu nove, desceu quatro e parou no quinto andar, finalizando a sequência. Considere que, no trajeto seguido pela criança, o elevador parou uma vez no último andar do edifício.",
+    "command": "De acordo com as informações dadas, o último andar do edifício é o",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "16º"
+      },
+      {
+        "index": "b",
+        "text": "22º"
+      },
+      {
+        "index": "c",
+        "text": "23º"
+      },
+      {
+        "index": "d",
+        "text": "25º"
+      },
+      {
+        "index": "e",
+        "text": "32º"
+      }
+    ],
+    "correctAlternative": "c",
+    "explanation": ""
+  },
+  "id": "enem-2018-164"
+}

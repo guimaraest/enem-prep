@@ -1,0 +1,38 @@
+{
+  "label": "2022-163",
+  "title": "Questão 163 - ENEM 2022",
+  "source": "enem 2022",
+  "difficulty": 3,
+  "percentCorrectRate": null,
+  "subject": "functions",
+  "content": {
+    "files": [],
+    "problem": "Em uma universidade, atuam professores que estão enquadrados funcionalmente pela sua maior titulação: mestre ou doutor. Nela há, atualmente, 60 mestres e 40 doutores. Os salários mensais dos professores mestres e dos doutores são, respectivamente, R$ 8 000,00 e  \nR$ 12 000,00.  \nA diretoria da instituição pretende proporcionar um aumento salarial diferenciado para o ano seguinte, de tal forma que o salário médio mensal dos professores dessa instituição não ultrapasse R$ 12 240,00. A universidade já estabeleceu que o aumento salarial será de 25% para os mestres e precisa ainda definir o percentual de reajuste para os doutores.",
+    "command": "Mantido o número atual de professores com suas atuais titulações, o aumento salarial, em porcentagem, a ser concedido aos doutores deverá ser de, no máximo,",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "14,4."
+      },
+      {
+        "index": "b",
+        "text": "20,7."
+      },
+      {
+        "index": "c",
+        "text": "22,0."
+      },
+      {
+        "index": "d",
+        "text": "30,0."
+      },
+      {
+        "index": "e",
+        "text": "37,5"
+      }
+    ],
+    "correctAlternative": "d",
+    "explanation": ""
+  },
+  "id": "enem-2022-163"
+}

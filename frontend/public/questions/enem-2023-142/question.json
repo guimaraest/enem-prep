@@ -1,0 +1,38 @@
+{
+  "label": "2023-142",
+  "title": "Questão 142 - ENEM 2023",
+  "source": "enem 2023",
+  "difficulty": 1,
+  "percentCorrectRate": null,
+  "subject": "probability",
+  "content": {
+    "files": [],
+    "problem": "",
+    "command": "Qual é a quantidade mínima de água, em litro, que cada morador, em média, deverá economizar por dia, de modo que o reservatório não fique sem água nos próximos 10 dias?",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "50"
+      },
+      {
+        "index": "b",
+        "text": "60"
+      },
+      {
+        "index": "c",
+        "text": "80"
+      },
+      {
+        "index": "d",
+        "text": "140"
+      },
+      {
+        "index": "e",
+        "text": "150"
+      }
+    ],
+    "correctAlternative": "a",
+    "explanation": ""
+  },
+  "id": "enem-2023-142"
+}

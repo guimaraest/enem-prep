@@ -1,0 +1,38 @@
+{
+  "label": "2016-175",
+  "title": "Questão 175 - ENEM 2016",
+  "source": "enem 2016",
+  "difficulty": 1,
+  "percentCorrectRate": null,
+  "subject": "combinatorics",
+  "content": {
+    "files": [],
+    "problem": "",
+    "command": "Segundo a classificação dos polígonos, quais deles são possíveis de serem obtidos pelo artista plástico?",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "Quadrados, apenas"
+      },
+      {
+        "index": "b",
+        "text": "Triângulos e quadrados, apenas"
+      },
+      {
+        "index": "c",
+        "text": "Triângulos, quadrados e trapézios, apenas"
+      },
+      {
+        "index": "d",
+        "text": "Triângulos, quadrados, trapézios e quadriláteros irregulares, apenas."
+      },
+      {
+        "index": "e",
+        "text": "Triângulos, quadrados, trapézios, quadriláteros irregulares e pentágonos, apenas."
+      }
+    ],
+    "correctAlternative": "e",
+    "explanation": ""
+  },
+  "id": "enem-2016-175"
+}

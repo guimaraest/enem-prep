@@ -1,0 +1,59 @@
+{
+  "label": "2021-156",
+  "title": "Questão 156 - ENEM 2021",
+  "source": "enem 2021",
+  "difficulty": 2,
+  "percentCorrectRate": null,
+  "subject": "functions",
+  "content": {
+    "files": [
+      {
+        "url": "images/22072ec1-3b3b-4ad6-a4b6-dffd6253a376.png",
+        "type": "image"
+      },
+      {
+        "url": "images/86b2ce7b-d131-40db-9629-e618470679c7.png",
+        "type": "image"
+      },
+      {
+        "url": "images/f1cfe3fa-6396-47ed-b60b-48d48194225e.png",
+        "type": "image"
+      },
+      {
+        "url": "images/38bd8acb-9ed5-402c-a6df-271fb1614213.png",
+        "type": "image"
+      },
+      {
+        "url": "images/9e69ba46-7bc0-40c9-b81e-bdae664b1ae1.png",
+        "type": "image"
+      }
+    ],
+    "problem": "Uma mola é solta da posição distendida conforme a figura. A figura à direita representa o gráfico da posição _P_ (em cm) da massa m em função do tempo _t_ (em segundo) em um sistema de coordenadas cartesianas. Esse movimento periódico é descrito por uma expressão do tipo P(t) = ![](https://enem.dev/2021/questions/156/22072ec1-3b3b-4ad6-a4b6-dffd6253a376.png) ou P(t) = ![](https://enem.dev/2021/questions/156/86b2ce7b-d131-40db-9629-e618470679c7.png), em que A>0 é a amplitude de deslocamento máximo e ![](https://enem.dev/2021/questions/156/f1cfe3fa-6396-47ed-b60b-48d48194225e.png) é a frequência, que se relaciona com o período T pela fórmula ![](https://enem.dev/2021/questions/156/38bd8acb-9ed5-402c-a6df-271fb1614213.png).\n\nConsidere a ausência de quaisquer forças dissipativas.\n\n![](https://enem.dev/2021/questions/156/9e69ba46-7bc0-40c9-b81e-bdae664b1ae1.png)",
+    "command": "A expressão algébrica que representa as posições P(t) da massa m, ao longo do tempo, no gráfico, é",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "-3 cos (2t)"
+      },
+      {
+        "index": "b",
+        "text": "-3 sen (2t)"
+      },
+      {
+        "index": "c",
+        "text": "3 cos (2t)"
+      },
+      {
+        "index": "d",
+        "text": "-6 cos (2t)"
+      },
+      {
+        "index": "e",
+        "text": "6 cos (2t)"
+      }
+    ],
+    "correctAlternative": "a",
+    "explanation": ""
+  },
+  "id": "enem-2021-156"
+}

@@ -1,0 +1,58 @@
+{
+  "label": "2021-161",
+  "title": "Questão 161 - ENEM 2021",
+  "source": "enem 2021",
+  "difficulty": 3,
+  "percentCorrectRate": null,
+  "subject": "statistics",
+  "content": {
+    "files": [],
+    "problem": "O administrador de um teatro percebeu que, com o ingresso do evento a R$20,00, um show conseguia atrair 200 pessoas e que, a cada R$1,00 de redução no preço do ingresso, o número de pessoas aumentava em 40. Ele sabe que os donos do teatro só admitem trabalhar com valores inteiros para os ingressos, pela dificuldade de disponibilizar troco, e pretende convencê-los a diminuir o preço do ingresso. Assim, apresentará um gráfico da arrecadação em função do valor do desconto no preço atual do ingresso.",
+    "command": "O gráfico que mais se assemelha ao que deve ser elaborado pelo administrador é",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "",
+        "file": {
+          "url": "images/71c29cd7-d512-4f07-a66b-d9c7384ebcf1.png",
+          "type": "image"
+        }
+      },
+      {
+        "index": "b",
+        "text": "",
+        "file": {
+          "url": "images/a22cdccd-2be3-48b7-b37e-3253586d2fe0.png",
+          "type": "image"
+        }
+      },
+      {
+        "index": "c",
+        "text": "",
+        "file": {
+          "url": "images/13b92c32-cd4b-4f3c-9699-3d0916f6d516.png",
+          "type": "image"
+        }
+      },
+      {
+        "index": "d",
+        "text": "",
+        "file": {
+          "url": "images/83ffed50-3e9d-46d0-9cb6-5acf0cd42d98.png",
+          "type": "image"
+        }
+      },
+      {
+        "index": "e",
+        "text": "",
+        "file": {
+          "url": "images/9536b3b7-3d03-40b4-abea-658166fee917.png",
+          "type": "image"
+        }
+      }
+    ],
+    "correctAlternative": "e",
+    "explanation": ""
+  },
+  "id": "enem-2021-161"
+}

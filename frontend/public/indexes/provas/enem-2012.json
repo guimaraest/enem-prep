@@ -1,0 +1,338 @@
+[
+  {
+    "id": "enem-2012-136",
+    "label": "2012-136",
+    "title": "Questão 136 - ENEM 2012",
+    "source": "enem 2012",
+    "difficulty": 4,
+    "subject": "algebra"
+  },
+  {
+    "id": "enem-2012-137",
+    "label": "2012-137",
+    "title": "Questão 137 - ENEM 2012",
+    "source": "enem 2012",
+    "difficulty": 4,
+    "subject": "financial_math"
+  },
+  {
+    "id": "enem-2012-138",
+    "label": "2012-138",
+    "title": "Questão 138 - ENEM 2012",
+    "source": "enem 2012",
+    "difficulty": 2,
+    "subject": "geometry"
+  },
+  {
+    "id": "enem-2012-139",
+    "label": "2012-139",
+    "title": "Questão 139 - ENEM 2012",
+    "source": "enem 2012",
+    "difficulty": 2,
+    "subject": "algebra"
+  },
+  {
+    "id": "enem-2012-141",
+    "label": "2012-141",
+    "title": "Questão 141 - ENEM 2012",
+    "source": "enem 2012",
+    "difficulty": 3,
+    "subject": "algebra"
+  },
+  {
+    "id": "enem-2012-142",
+    "label": "2012-142",
+    "title": "Questão 142 - ENEM 2012",
+    "source": "enem 2012",
+    "difficulty": 4,
+    "subject": "financial_math"
+  },
+  {
+    "id": "enem-2012-143",
+    "label": "2012-143",
+    "title": "Questão 143 - ENEM 2012",
+    "source": "enem 2012",
+    "difficulty": 3,
+    "subject": "combinatorics"
+  },
+  {
+    "id": "enem-2012-144",
+    "label": "2012-144",
+    "title": "Questão 144 - ENEM 2012",
+    "source": "enem 2012",
+    "difficulty": 3,
+    "subject": "functions"
+  },
+  {
+    "id": "enem-2012-145",
+    "label": "2012-145",
+    "title": "Questão 145 - ENEM 2012",
+    "source": "enem 2012",
+    "difficulty": 2,
+    "subject": "probability"
+  },
+  {
+    "id": "enem-2012-146",
+    "label": "2012-146",
+    "title": "Questão 146 - ENEM 2012",
+    "source": "enem 2012",
+    "difficulty": 4,
+    "subject": "functions"
+  },
+  {
+    "id": "enem-2012-147",
+    "label": "2012-147",
+    "title": "Questão 147 - ENEM 2012",
+    "source": "enem 2012",
+    "difficulty": 2,
+    "subject": "functions"
+  },
+  {
+    "id": "enem-2012-148",
+    "label": "2012-148",
+    "title": "Questão 148 - ENEM 2012",
+    "source": "enem 2012",
+    "difficulty": 3,
+    "subject": "functions"
+  },
+  {
+    "id": "enem-2012-149",
+    "label": "2012-149",
+    "title": "Questão 149 - ENEM 2012",
+    "source": "enem 2012",
+    "difficulty": 1,
+    "subject": "algebra"
+  },
+  {
+    "id": "enem-2012-150",
+    "label": "2012-150",
+    "title": "Questão 150 - ENEM 2012",
+    "source": "enem 2012",
+    "difficulty": 3,
+    "subject": "financial_math"
+  },
+  {
+    "id": "enem-2012-151",
+    "label": "2012-151",
+    "title": "Questão 151 - ENEM 2012",
+    "source": "enem 2012",
+    "difficulty": 4,
+    "subject": "combinatorics"
+  },
+  {
+    "id": "enem-2012-152",
+    "label": "2012-152",
+    "title": "Questão 152 - ENEM 2012",
+    "source": "enem 2012",
+    "difficulty": 4,
+    "subject": "functions"
+  },
+  {
+    "id": "enem-2012-153",
+    "label": "2012-153",
+    "title": "Questão 153 - ENEM 2012",
+    "source": "enem 2012",
+    "difficulty": 1,
+    "subject": "algebra"
+  },
+  {
+    "id": "enem-2012-154",
+    "label": "2012-154",
+    "title": "Questão 154 - ENEM 2012",
+    "source": "enem 2012",
+    "difficulty": 3,
+    "subject": "statistics"
+  },
+  {
+    "id": "enem-2012-155",
+    "label": "2012-155",
+    "title": "Questão 155 - ENEM 2012",
+    "source": "enem 2012",
+    "difficulty": 4,
+    "subject": "statistics"
+  },
+  {
+    "id": "enem-2012-156",
+    "label": "2012-156",
+    "title": "Questão 156 - ENEM 2012",
+    "source": "enem 2012",
+    "difficulty": 1,
+    "subject": "algebra"
+  },
+  {
+    "id": "enem-2012-157",
+    "label": "2012-157",
+    "title": "Questão 157 - ENEM 2012",
+    "source": "enem 2012",
+    "difficulty": 2,
+    "subject": "geometry"
+  },
+  {
+    "id": "enem-2012-158",
+    "label": "2012-158",
+    "title": "Questão 158 - ENEM 2012",
+    "source": "enem 2012",
+    "difficulty": 2,
+    "subject": "geometry"
+  },
+  {
+    "id": "enem-2012-159",
+    "label": "2012-159",
+    "title": "Questão 159 - ENEM 2012",
+    "source": "enem 2012",
+    "difficulty": 2,
+    "subject": "financial_math"
+  },
+  {
+    "id": "enem-2012-160",
+    "label": "2012-160",
+    "title": "Questão 160 - ENEM 2012",
+    "source": "enem 2012",
+    "difficulty": 4,
+    "subject": "combinatorics"
+  },
+  {
+    "id": "enem-2012-161",
+    "label": "2012-161",
+    "title": "Questão 161 - ENEM 2012",
+    "source": "enem 2012",
+    "difficulty": 1,
+    "subject": "geometry"
+  },
+  {
+    "id": "enem-2012-163",
+    "label": "2012-163",
+    "title": "Questão 163 - ENEM 2012",
+    "source": "enem 2012",
+    "difficulty": 1,
+    "subject": "geometry"
+  },
+  {
+    "id": "enem-2012-165",
+    "label": "2012-165",
+    "title": "Questão 165 - ENEM 2012",
+    "source": "enem 2012",
+    "difficulty": 4,
+    "subject": "combinatorics"
+  },
+  {
+    "id": "enem-2012-166",
+    "label": "2012-166",
+    "title": "Questão 166 - ENEM 2012",
+    "source": "enem 2012",
+    "difficulty": 3,
+    "subject": "arithmetic"
+  },
+  {
+    "id": "enem-2012-167",
+    "label": "2012-167",
+    "title": "Questão 167 - ENEM 2012",
+    "source": "enem 2012",
+    "difficulty": 2,
+    "subject": "arithmetic"
+  },
+  {
+    "id": "enem-2012-168",
+    "label": "2012-168",
+    "title": "Questão 168 - ENEM 2012",
+    "source": "enem 2012",
+    "difficulty": 1,
+    "subject": "arithmetic"
+  },
+  {
+    "id": "enem-2012-169",
+    "label": "2012-169",
+    "title": "Questão 169 - ENEM 2012",
+    "source": "enem 2012",
+    "difficulty": 2,
+    "subject": "algebra"
+  },
+  {
+    "id": "enem-2012-170",
+    "label": "2012-170",
+    "title": "Questão 170 - ENEM 2012",
+    "source": "enem 2012",
+    "difficulty": 3,
+    "subject": "statistics"
+  },
+  {
+    "id": "enem-2012-171",
+    "label": "2012-171",
+    "title": "Questão 171 - ENEM 2012",
+    "source": "enem 2012",
+    "difficulty": 3,
+    "subject": "functions"
+  },
+  {
+    "id": "enem-2012-172",
+    "label": "2012-172",
+    "title": "Questão 172 - ENEM 2012",
+    "source": "enem 2012",
+    "difficulty": 4,
+    "subject": "geometry"
+  },
+  {
+    "id": "enem-2012-173",
+    "label": "2012-173",
+    "title": "Questão 173 - ENEM 2012",
+    "source": "enem 2012",
+    "difficulty": 3,
+    "subject": "statistics"
+  },
+  {
+    "id": "enem-2012-174",
+    "label": "2012-174",
+    "title": "Questão 174 - ENEM 2012",
+    "source": "enem 2012",
+    "difficulty": 4,
+    "subject": "combinatorics"
+  },
+  {
+    "id": "enem-2012-175",
+    "label": "2012-175",
+    "title": "Questão 175 - ENEM 2012",
+    "source": "enem 2012",
+    "difficulty": 2,
+    "subject": "functions"
+  },
+  {
+    "id": "enem-2012-176",
+    "label": "2012-176",
+    "title": "Questão 176 - ENEM 2012",
+    "source": "enem 2012",
+    "difficulty": 2,
+    "subject": "combinatorics"
+  },
+  {
+    "id": "enem-2012-177",
+    "label": "2012-177",
+    "title": "Questão 177 - ENEM 2012",
+    "source": "enem 2012",
+    "difficulty": 3,
+    "subject": "algebra"
+  },
+  {
+    "id": "enem-2012-178",
+    "label": "2012-178",
+    "title": "Questão 178 - ENEM 2012",
+    "source": "enem 2012",
+    "difficulty": 3,
+    "subject": "financial_math"
+  },
+  {
+    "id": "enem-2012-179",
+    "label": "2012-179",
+    "title": "Questão 179 - ENEM 2012",
+    "source": "enem 2012",
+    "difficulty": 4,
+    "subject": "geometry"
+  },
+  {
+    "id": "enem-2012-180",
+    "label": "2012-180",
+    "title": "Questão 180 - ENEM 2012",
+    "source": "enem 2012",
+    "difficulty": 4,
+    "subject": "probability"
+  }
+]

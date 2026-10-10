@@ -1,0 +1,63 @@
+{
+  "label": "2010-136",
+  "title": "Questão 136 - ENEM 2010",
+  "source": "enem 2010",
+  "difficulty": 4,
+  "percentCorrectRate": null,
+  "subject": "arithmetic",
+  "content": {
+    "files": [
+      {
+        "url": "images/47193c33-4847-4a88-be44-8155d78d2e2f.png",
+        "type": "image"
+      }
+    ],
+    "problem": "![](https://enem.dev/2010/questions/136/47193c33-4847-4a88-be44-8155d78d2e2f.png)\n\nAlgum tempo depois, o professor apagou a lousa por completo e, adotando um procedimento semelhante ao anterior, voltou a preenchê-la, mas, dessa vez, utilizando 40% do espaço dela.",
+    "command": "Uma representação possível para essa segunda situação é",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "",
+        "file": {
+          "url": "images/62533d8a-dc15-4e88-acc9-280abe85ac95.png",
+          "type": "image"
+        }
+      },
+      {
+        "index": "b",
+        "text": "",
+        "file": {
+          "url": "images/f995e6dc-9f76-4292-805f-24d4069434ba.png",
+          "type": "image"
+        }
+      },
+      {
+        "index": "c",
+        "text": "",
+        "file": {
+          "url": "images/0c6f6086-63db-4277-a849-4aee33636ada.png",
+          "type": "image"
+        }
+      },
+      {
+        "index": "d",
+        "text": "",
+        "file": {
+          "url": "images/4409150d-509d-4c99-8ad7-3f02d3c82a53.png",
+          "type": "image"
+        }
+      },
+      {
+        "index": "e",
+        "text": "",
+        "file": {
+          "url": "images/d9647bc4-b883-40d6-aab2-568a995ed96e.png",
+          "type": "image"
+        }
+      }
+    ],
+    "correctAlternative": "c",
+    "explanation": ""
+  },
+  "id": "enem-2010-136"
+}

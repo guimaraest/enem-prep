@@ -1,0 +1,43 @@
+{
+  "label": "2015-136",
+  "title": "Questão 136 - ENEM 2015",
+  "source": "enem 2015",
+  "difficulty": 2,
+  "percentCorrectRate": null,
+  "subject": "geometry",
+  "content": {
+    "files": [
+      {
+        "url": "images/84935bca-6121-4afe-b517-3d0bce9ed500.png",
+        "type": "image"
+      }
+    ],
+    "problem": "![](https://enem.dev/2015/questions/136/84935bca-6121-4afe-b517-3d0bce9ed500.png)",
+    "command": "Quantas operações o investidor fez naquele dia?",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "3"
+      },
+      {
+        "index": "b",
+        "text": "4"
+      },
+      {
+        "index": "c",
+        "text": "5"
+      },
+      {
+        "index": "d",
+        "text": "6"
+      },
+      {
+        "index": "e",
+        "text": "7"
+      }
+    ],
+    "correctAlternative": "b",
+    "explanation": ""
+  },
+  "id": "enem-2015-136"
+}

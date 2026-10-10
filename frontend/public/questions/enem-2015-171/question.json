@@ -1,0 +1,38 @@
+{
+  "label": "2015-171",
+  "title": "Questão 171 - ENEM 2015",
+  "source": "enem 2015",
+  "difficulty": 1,
+  "percentCorrectRate": null,
+  "subject": "geometry",
+  "content": {
+    "files": [],
+    "problem": "Utilize 3,0 como aproximação para π.",
+    "command": "O índice pluviométrico da região, durante o período do temporal, em milímetros, é de",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "10,8."
+      },
+      {
+        "index": "b",
+        "text": "12,0."
+      },
+      {
+        "index": "c",
+        "text": "32,4."
+      },
+      {
+        "index": "d",
+        "text": "108,0."
+      },
+      {
+        "index": "e",
+        "text": "324,0."
+      }
+    ],
+    "correctAlternative": "d",
+    "explanation": ""
+  },
+  "id": "enem-2015-171"
+}

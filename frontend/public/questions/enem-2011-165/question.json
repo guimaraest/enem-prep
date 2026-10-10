@@ -1,0 +1,43 @@
+{
+  "label": "2011-165",
+  "title": "Questão 165 - ENEM 2011",
+  "source": "enem 2011",
+  "difficulty": 2,
+  "percentCorrectRate": null,
+  "subject": "financial_math",
+  "content": {
+    "files": [
+      {
+        "url": "images/9f872841-f893-4cc4-bd7c-3356d7d73f0e.png",
+        "type": "image"
+      }
+    ],
+    "problem": "![](https://enem.dev/2011/questions/165/9f872841-f893-4cc4-bd7c-3356d7d73f0e.png)",
+    "command": "Se os atletas partissem do mesmo ponto, dando uma volta completa, em qual das raias o corredor estaria sendo beneficiado?",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "1"
+      },
+      {
+        "index": "b",
+        "text": "4"
+      },
+      {
+        "index": "c",
+        "text": "5"
+      },
+      {
+        "index": "d",
+        "text": "7"
+      },
+      {
+        "index": "e",
+        "text": "8"
+      }
+    ],
+    "correctAlternative": "a",
+    "explanation": ""
+  },
+  "id": "enem-2011-165"
+}

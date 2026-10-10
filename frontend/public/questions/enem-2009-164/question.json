@@ -1,0 +1,43 @@
+{
+  "label": "2009-164",
+  "title": "Questão 164 - ENEM 2009",
+  "source": "enem 2009",
+  "difficulty": 2,
+  "percentCorrectRate": null,
+  "subject": "combinatorics",
+  "content": {
+    "files": [
+      {
+        "url": "images/fbf84d66-498d-4521-8b27-9a164c60237d.jpg",
+        "type": "image"
+      }
+    ],
+    "problem": "Ao morrer, o pai de João, Pedro e José deixou como herança um terreno retangular de 3 km x 2 km que contém uma área de extração de ouro delimitada por um quarto de círculo de raio 1 km a partir do canto inferior esquerdo da propriedade. Dado o maior valor da área de extração de ouro, os irmãos acordaram em repartir a propriedade de modo que cada um ficasse com a terça parte da área de extração, conforme mostra a figura.\n\n![](https://enem.dev/2009/questions/164/fbf84d66-498d-4521-8b27-9a164c60237d.jpg)",
+    "command": "Em relação à partilha proposta, constata-se que a porcentagem da área do terreno que coube a João corresponde, aproximadamente, a\n(considere  √3/3 = 0,58)",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "50%."
+      },
+      {
+        "index": "b",
+        "text": "43%"
+      },
+      {
+        "index": "c",
+        "text": "37%"
+      },
+      {
+        "index": "d",
+        "text": "33%"
+      },
+      {
+        "index": "e",
+        "text": "19%"
+      }
+    ],
+    "correctAlternative": "e",
+    "explanation": ""
+  },
+  "id": "enem-2009-164"
+}

@@ -1,0 +1,38 @@
+{
+  "label": "2020-160",
+  "title": "Questão 160 - ENEM 2020",
+  "source": "enem 2020",
+  "difficulty": 4,
+  "percentCorrectRate": null,
+  "subject": "algebra",
+  "content": {
+    "files": [],
+    "problem": "Um motociclista planeja realizar uma viagem cujo destino fica a 500 km de sua casa. Sua moto consome 5 litros de gasolina para cada 100 km rodados, e o tanque da moto tem capacidade para 22 litros. Pelo mapa, observou que no trajeto da viagem o último posto disponível para reabastecimento, chamado Estrela, fica a 80 km do seu destino. Ele pretende partir com o tanque da moto cheio e planeja fazer somente duas paradas para reabastecimento, uma na ida e outra na volta, ambas no posto Estrela. No reabastecimento para a viagem de ida, deve considerar também combustível suficiente para se deslocar por 200 km no seu destino.",
+    "command": "A quantidade mínima de combustível, em litro, que esse motociclista deve reabastecer no posto Estrela na viagem de ida, que seja suficiente para fazer o segundo reabastecimento, é",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "13."
+      },
+      {
+        "index": "b",
+        "text": "14."
+      },
+      {
+        "index": "c",
+        "text": "17."
+      },
+      {
+        "index": "d",
+        "text": "18."
+      },
+      {
+        "index": "e",
+        "text": "21."
+      }
+    ],
+    "correctAlternative": "c",
+    "explanation": ""
+  },
+  "id": "enem-2020-160"
+}

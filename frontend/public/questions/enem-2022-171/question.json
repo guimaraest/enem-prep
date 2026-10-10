@@ -1,0 +1,43 @@
+{
+  "label": "2022-171",
+  "title": "Questão 171 - ENEM 2022",
+  "source": "enem 2022",
+  "difficulty": 2,
+  "percentCorrectRate": null,
+  "subject": "statistics",
+  "content": {
+    "files": [
+      {
+        "url": "images/45b098d3-26d2-49c5-a129-40e85febb05b.png",
+        "type": "image"
+      }
+    ],
+    "problem": "Nos cinco jogos finais da última temporada, com uma média de 18 pontos por jogo, um jogador foi eleito o melhor do campeonato de basquete. Na atual temporada, cinco jogadores têm a chance de igualar ou melhorar essa média. No quadro estão registradas as pontuações desses cinco jogadores nos quatro primeiros jogos das finais deste ano.\n\n![](https://enem.dev/2022/questions/171/45b098d3-26d2-49c5-a129-40e85febb05b.png)\n\nO quinto e último jogo será realizado para decidir a equipe campeã e qual o melhor jogador da temporada.",
+    "command": "O jogador que precisa fazer a menor quantidade de pontos no quinto jogo, para igualar a média de pontos do melhor jogador da temporada passada, é o",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "I."
+      },
+      {
+        "index": "b",
+        "text": "II."
+      },
+      {
+        "index": "c",
+        "text": "III."
+      },
+      {
+        "index": "d",
+        "text": "IV."
+      },
+      {
+        "index": "e",
+        "text": "V."
+      }
+    ],
+    "correctAlternative": "a",
+    "explanation": ""
+  },
+  "id": "enem-2022-171"
+}

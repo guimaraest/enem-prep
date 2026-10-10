@@ -1,0 +1,43 @@
+{
+  "label": "2010-153",
+  "title": "Questão 153 - ENEM 2010",
+  "source": "enem 2010",
+  "difficulty": 2,
+  "percentCorrectRate": null,
+  "subject": "combinatorics",
+  "content": {
+    "files": [
+      {
+        "url": "images/7db49675-d757-4e05-8e06-1458c1c566f9.png",
+        "type": "image"
+      }
+    ],
+    "problem": "![](https://enem.dev/2010/questions/153/7db49675-d757-4e05-8e06-1458c1c566f9.png)",
+    "command": "Qual dos tanques deverá ser escolhido pelo dono do posto? (Considere p π ≅ 3)",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "I, pela relação área/capacidade de armazenamento de 1/3"
+      },
+      {
+        "index": "b",
+        "text": "I, pela relação área/capacidade de armazenamento de 4/3"
+      },
+      {
+        "index": "c",
+        "text": "II, pela relação área/capacidade de armazenamento de 3/4"
+      },
+      {
+        "index": "d",
+        "text": "III, pela relação área/capacidade de armazenamento de 2/3"
+      },
+      {
+        "index": "e",
+        "text": "III, pela relação área/capacidade de armazenamento de 7/12"
+      }
+    ],
+    "correctAlternative": "d",
+    "explanation": ""
+  },
+  "id": "enem-2010-153"
+}

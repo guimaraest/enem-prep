@@ -1,0 +1,38 @@
+{
+  "label": "2016-165",
+  "title": "Questão 165 - ENEM 2016",
+  "source": "enem 2016",
+  "difficulty": 3,
+  "percentCorrectRate": null,
+  "subject": "probability",
+  "content": {
+    "files": [],
+    "problem": "",
+    "command": "Qual é o número de andares desse edifício?",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "40"
+      },
+      {
+        "index": "b",
+        "text": "60"
+      },
+      {
+        "index": "c",
+        "text": "100"
+      },
+      {
+        "index": "d",
+        "text": "115"
+      },
+      {
+        "index": "e",
+        "text": "120"
+      }
+    ],
+    "correctAlternative": "d",
+    "explanation": ""
+  },
+  "id": "enem-2016-165"
+}

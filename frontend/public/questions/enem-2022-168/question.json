@@ -1,0 +1,43 @@
+{
+  "label": "2022-168",
+  "title": "Questão 168 - ENEM 2022",
+  "source": "enem 2022",
+  "difficulty": 1,
+  "percentCorrectRate": null,
+  "subject": "probability",
+  "content": {
+    "files": [
+      {
+        "url": "images/5c7c6e9a-c900-4910-a9d0-af84f8f5b8c4.png",
+        "type": "image"
+      }
+    ],
+    "problem": "Uma pessoa precisa se deslocar de automóvel do ponto P para o ponto Q, indicados na figura, na qual as linhas verticais e horizontais simbolizam ruas\n\n![](https://enem.dev/2022/questions/168/5c7c6e9a-c900-4910-a9d0-af84f8f5b8c4.png)\n\nPor causa do sentido de tráfego nessas ruas, o caminho poligonal destacado é a possibilidade mais curta de efetuar esse deslocamento. Para descrevê-lo, deve-se especificar qual o sentido a ser tomado em cada cruzamento de ruas, em relação à direção de deslocamento do automóvel, que se movimentará continuamente. Para isso, empregam-se as letras E, F e D para indicar  \n“vire à esquerda”, “siga em frente” e “vire à direita”, respectivamente.",
+    "command": "A sequência de letras que descreve o caminho poligonal destacado é",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "DDEFDDEEFFD."
+      },
+      {
+        "index": "b",
+        "text": "DFEFDDDEFFD."
+      },
+      {
+        "index": "c",
+        "text": "DFEFDDEEFFD."
+      },
+      {
+        "index": "d",
+        "text": "EFDFEEDDFFE."
+      },
+      {
+        "index": "e",
+        "text": "EFDFEEEDFFE."
+      }
+    ],
+    "correctAlternative": "c",
+    "explanation": ""
+  },
+  "id": "enem-2022-168"
+}

@@ -1,0 +1,43 @@
+{
+  "label": "2014-161",
+  "title": "Questão 161 - ENEM 2014",
+  "source": "enem 2014",
+  "difficulty": 4,
+  "percentCorrectRate": null,
+  "subject": "probability",
+  "content": {
+    "files": [
+      {
+        "url": "images/46f3d644-43b0-4dfc-9d1e-e688725abdaa.png",
+        "type": "image"
+      }
+    ],
+    "problem": "![](https://enem.dev/2014/questions/161/46f3d644-43b0-4dfc-9d1e-e688725abdaa.png)",
+    "command": "Levando-se em consideração os experimentos feitos, o reagente que atende às expectativas do pesquisador é o",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "1."
+      },
+      {
+        "index": "b",
+        "text": "2."
+      },
+      {
+        "index": "c",
+        "text": "3."
+      },
+      {
+        "index": "d",
+        "text": "4."
+      },
+      {
+        "index": "e",
+        "text": "5."
+      }
+    ],
+    "correctAlternative": "b",
+    "explanation": ""
+  },
+  "id": "enem-2014-161"
+}

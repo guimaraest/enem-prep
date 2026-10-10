@@ -1,0 +1,58 @@
+{
+  "label": "2023-141",
+  "title": "Questão 141 - ENEM 2023",
+  "source": "enem 2023",
+  "difficulty": 4,
+  "percentCorrectRate": null,
+  "subject": "combinatorics",
+  "content": {
+    "files": [],
+    "problem": "",
+    "command": "Qual a probabilidade de o vencedor do sorteio ser um estudante do terceiro ano?",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "",
+        "file": {
+          "url": "images/e698edb1-adc0-416b-9370-c20a7e878259.jpg",
+          "type": "image"
+        }
+      },
+      {
+        "index": "b",
+        "text": "",
+        "file": {
+          "url": "images/b5f5bdf5-2251-4326-9877-ce9c2d831600.jpg",
+          "type": "image"
+        }
+      },
+      {
+        "index": "c",
+        "text": "",
+        "file": {
+          "url": "images/d241fadb-6516-4ca8-aa9b-e72fff314881.jpg",
+          "type": "image"
+        }
+      },
+      {
+        "index": "d",
+        "text": "",
+        "file": {
+          "url": "images/1dcce683-4ef7-4862-b554-3e3c66de54c3.jpg",
+          "type": "image"
+        }
+      },
+      {
+        "index": "e",
+        "text": "",
+        "file": {
+          "url": "images/7b4de18d-92ca-488f-8419-ec95d852a135.jpg",
+          "type": "image"
+        }
+      }
+    ],
+    "correctAlternative": "e",
+    "explanation": ""
+  },
+  "id": "enem-2023-141"
+}

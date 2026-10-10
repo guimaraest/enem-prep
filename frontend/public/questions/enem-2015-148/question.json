@@ -1,0 +1,43 @@
+{
+  "label": "2015-148",
+  "title": "Questão 148 - ENEM 2015",
+  "source": "enem 2015",
+  "difficulty": 4,
+  "percentCorrectRate": null,
+  "subject": "financial_math",
+  "content": {
+    "files": [
+      {
+        "url": "images/971eb9cd-abf9-48be-994d-d1e0f2bdcc60.png",
+        "type": "image"
+      }
+    ],
+    "problem": "![](https://enem.dev/2015/questions/148/971eb9cd-abf9-48be-994d-d1e0f2bdcc60.png)\n\nDe acordo com as normas desse porto, os contêineres deverão ser empilhados de forma a não sobrarem espaços nem ultrapassarem a área delimitada",
+    "command": "Após o empilhamento total da carga e atendendo à norma do porto, a altura mínima a ser atingida por essa pilha de contêineres é",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "12,5 m."
+      },
+      {
+        "index": "b",
+        "text": "17,5 m."
+      },
+      {
+        "index": "c",
+        "text": "25,0 m."
+      },
+      {
+        "index": "d",
+        "text": "22,5 m."
+      },
+      {
+        "index": "e",
+        "text": "32,5 m."
+      }
+    ],
+    "correctAlternative": "a",
+    "explanation": ""
+  },
+  "id": "enem-2015-148"
+}

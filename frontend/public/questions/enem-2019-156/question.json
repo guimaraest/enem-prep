@@ -1,0 +1,38 @@
+{
+  "label": "2019-156",
+  "title": "Questão 156 - ENEM 2019",
+  "source": "enem 2019",
+  "difficulty": 2,
+  "percentCorrectRate": null,
+  "subject": "geometry",
+  "content": {
+    "files": [],
+    "problem": "Durante suas férias, oito amigos, dos quais dois são canhotos, decidem realizar um torneio de vôlei de praia.\n\nEles precisam formar quatro duplas para a realização do torneio. Nenhuma dupla pode ser formada por dois jogadores canhotos.",
+    "command": "De quantas maneiras diferentes podem ser formadas essas quatro duplas?",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "69"
+      },
+      {
+        "index": "b",
+        "text": "70"
+      },
+      {
+        "index": "c",
+        "text": "90"
+      },
+      {
+        "index": "d",
+        "text": "104"
+      },
+      {
+        "index": "e",
+        "text": "105"
+      }
+    ],
+    "correctAlternative": "c",
+    "explanation": ""
+  },
+  "id": "enem-2019-156"
+}

@@ -1,0 +1,43 @@
+{
+  "label": "2018-171",
+  "title": "Questão 171 - ENEM 2018",
+  "source": "enem 2018",
+  "difficulty": 4,
+  "percentCorrectRate": null,
+  "subject": "probability",
+  "content": {
+    "files": [
+      {
+        "url": "images/17c9e8b1-0b8b-49a5-80c9-d7b32e25a0b3.png",
+        "type": "image"
+      }
+    ],
+    "problem": "A rosa dos ventos é uma figura que representa oito sentidos, que dividem o círculo em partes iguais.\n\n![](https://enem.dev/2018/questions/171/17c9e8b1-0b8b-49a5-80c9-d7b32e25a0b3.png)\n\nUma câmera de vigilância está fixada no teto de um shopping e sua lente pode ser direcionada remotamente, através de um controlador, para qualquer sentido. A lente da câmera está apontada inicialmente no sentido Oeste e o seu controlador efetua três mudanças consecutivas, a saber:  \n• 1ª mudança: 135° no sentido anti-horário;  \n• 2ª mudança: 60° no sentido horário;  \n• 3ª mudança: 45° no sentido anti-horário.  \nApós a 3ª mudança, ele é orientado a reposicionar a câmera, com a menor amplitude possível, no sentido Noroeste (_NO_) devido a um movimento suspeito de um cliente.",
+    "command": "Qual mudança de sentido o controlador deve efetuar para reposicionar a câmera?",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "75° no sentido horário."
+      },
+      {
+        "index": "b",
+        "text": "105° no sentido anti-horário."
+      },
+      {
+        "index": "c",
+        "text": "120° no sentido anti-horário."
+      },
+      {
+        "index": "d",
+        "text": "135° no sentido anti-horário."
+      },
+      {
+        "index": "e",
+        "text": "165° no sentido horário."
+      }
+    ],
+    "correctAlternative": "e",
+    "explanation": ""
+  },
+  "id": "enem-2018-171"
+}

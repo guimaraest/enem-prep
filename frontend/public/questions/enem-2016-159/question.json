@@ -1,0 +1,38 @@
+{
+  "label": "2016-159",
+  "title": "Questão 159 - ENEM 2016",
+  "source": "enem 2016",
+  "difficulty": 4,
+  "percentCorrectRate": null,
+  "subject": "combinatorics",
+  "content": {
+    "files": [],
+    "problem": "",
+    "command": "Para atender essas condições, a quantidade de vacinas contra febre amarela que o posto de saúde deve adquirir no início do sexto mês é",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "156"
+      },
+      {
+        "index": "b",
+        "text": "180"
+      },
+      {
+        "index": "c",
+        "text": "192"
+      },
+      {
+        "index": "d",
+        "text": "264"
+      },
+      {
+        "index": "e",
+        "text": "288"
+      }
+    ],
+    "correctAlternative": "b",
+    "explanation": ""
+  },
+  "id": "enem-2016-159"
+}

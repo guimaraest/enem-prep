@@ -1,0 +1,38 @@
+{
+  "label": "2017-144",
+  "title": "Questão 144 - ENEM 2017",
+  "source": "enem 2017",
+  "difficulty": 3,
+  "percentCorrectRate": null,
+  "subject": "arithmetic",
+  "content": {
+    "files": [],
+    "problem": "Uma empresa especializada em conservação de piscinas utiliza um produto para tratamento da água cujas especificações técnicas sugerem que seja adicionado 1,5 mL desse produto para cada 1 000 L de água da piscina. Essa empresa foi contratada para cuidar de uma piscina de base retangular, de profundidade constante igual a 1,7 m, com largura e comprimento iguais a 3 m e 5 m, respectivamente. O nível da lâmina d’água dessa piscina é mantido a 50 cm da borda da piscina.",
+    "command": "A quantidade desse produto, em mililitro, que deve ser adicionada a essa piscina de modo a atender às suas especificações técnicas é",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "11,25."
+      },
+      {
+        "index": "b",
+        "text": "27,00."
+      },
+      {
+        "index": "c",
+        "text": "28,80."
+      },
+      {
+        "index": "d",
+        "text": "32,25."
+      },
+      {
+        "index": "e",
+        "text": "49,50."
+      }
+    ],
+    "correctAlternative": "b",
+    "explanation": ""
+  },
+  "id": "enem-2017-144"
+}

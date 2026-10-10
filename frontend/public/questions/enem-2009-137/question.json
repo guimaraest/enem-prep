@@ -1,0 +1,43 @@
+{
+  "label": "2009-137",
+  "title": "Questão 137 - ENEM 2009",
+  "source": "enem 2009",
+  "difficulty": 1,
+  "percentCorrectRate": null,
+  "subject": "arithmetic",
+  "content": {
+    "files": [
+      {
+        "url": "images/d56b6567-20da-46f3-92e0-42b14796b37b.jpg",
+        "type": "image"
+      }
+    ],
+    "problem": "O mapa ao lado representa um bairro de determinada cidade, no qual as flechas indicam o sentido das mãos do tráfego. Sabe-se que esse bairro foi planejado e que cada quadra representada na figura é um terreno quadrado, de lado igual a 200 metros.\n\n![](https://enem.dev/2009/questions/137/d56b6567-20da-46f3-92e0-42b14796b37b.jpg)",
+    "command": "Desconsiderando-se a largura das ruas, qual seria o tempo, em minutos, que um ônibus, em velocidade constante e igual a 40 km/h, partindo do ponto X, demoraria para chegar até o ponto Y?",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "25 min."
+      },
+      {
+        "index": "b",
+        "text": "15 min."
+      },
+      {
+        "index": "c",
+        "text": "2,5 min."
+      },
+      {
+        "index": "d",
+        "text": "1,5 min."
+      },
+      {
+        "index": "e",
+        "text": "0,15 min."
+      }
+    ],
+    "correctAlternative": "d",
+    "explanation": ""
+  },
+  "id": "enem-2009-137"
+}

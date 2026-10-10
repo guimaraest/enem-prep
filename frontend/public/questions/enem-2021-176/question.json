@@ -1,0 +1,38 @@
+{
+  "label": "2021-176",
+  "title": "Questão 176 - ENEM 2021",
+  "source": "enem 2021",
+  "difficulty": 2,
+  "percentCorrectRate": null,
+  "subject": "statistics",
+  "content": {
+    "files": [],
+    "problem": "O sistema de numeração romano ainda é utilizado na indicação de capítulos e volumes de livros, na designação de séculos e, em ordem cronológica, de papas e reis de mesmo nome. São utilizadas sete letras do alfabeto:  \nQuatro fundamentais: I (vale 1); X (vale 10); C (vale 100) e M (vale 1 000).  \nTrês secundárias: V (vale 5); L (vale 50); e D (vale 500).\n\nAs regras para escrever números romanos são:  \n1\\. Não existe símbolo correspondente ao zero;  \n2\\. Os símbolos fundamentais podem ser repetidos até três vezes e seus valores são adicionados. Exemplo: XXX = 30;  \n3\\. Uma letra posta à esquerda de outra de maior valor indica subtração dos respectivos valores. Exemplo: IX = 10 – 1 = 9;  \n4\\. Uma letra posta à direita de outra de maior valor indica adição dos respectivos valores. Exemplo: XI = 10 + 1 = 11\n\nEm uma cidade europeia há uma placa indicando o ano de sua fundação: MCDLXIX.",
+    "command": "Quantos anos de fundação essa cidade comemorará em 2050?",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "379"
+      },
+      {
+        "index": "b",
+        "text": "381"
+      },
+      {
+        "index": "c",
+        "text": "579"
+      },
+      {
+        "index": "d",
+        "text": "581"
+      },
+      {
+        "index": "e",
+        "text": "601"
+      }
+    ],
+    "correctAlternative": "d",
+    "explanation": ""
+  },
+  "id": "enem-2021-176"
+}

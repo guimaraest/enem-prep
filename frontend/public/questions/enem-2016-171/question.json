@@ -1,0 +1,43 @@
+{
+  "label": "2016-171",
+  "title": "Questão 171 - ENEM 2016",
+  "source": "enem 2016",
+  "difficulty": 1,
+  "percentCorrectRate": null,
+  "subject": "statistics",
+  "content": {
+    "files": [
+      {
+        "url": "images/27a2aa79-e89f-40f4-a7ef-46822e39123c.png",
+        "type": "image"
+      }
+    ],
+    "problem": "![](https://enem.dev/2016/questions/171/27a2aa79-e89f-40f4-a7ef-46822e39123c.png)",
+    "command": "O valor mais próximo do percentual que descreve o aumento da população nas capitais da Região Nordeste é",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "125%"
+      },
+      {
+        "index": "b",
+        "text": "231%"
+      },
+      {
+        "index": "c",
+        "text": "331%"
+      },
+      {
+        "index": "d",
+        "text": "700%"
+      },
+      {
+        "index": "e",
+        "text": "800%"
+      }
+    ],
+    "correctAlternative": "d",
+    "explanation": ""
+  },
+  "id": "enem-2016-171"
+}

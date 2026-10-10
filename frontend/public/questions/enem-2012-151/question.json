@@ -1,0 +1,43 @@
+{
+  "label": "2012-151",
+  "title": "Questão 151 - ENEM 2012",
+  "source": "enem 2012",
+  "difficulty": 4,
+  "percentCorrectRate": null,
+  "subject": "combinatorics",
+  "content": {
+    "files": [
+      {
+        "url": "images/d4cbd8c7-f9da-48aa-9108-72f611ce5370.png",
+        "type": "image"
+      }
+    ],
+    "problem": "![](https://enem.dev/2012/questions/151/d4cbd8c7-f9da-48aa-9108-72f611ce5370.png)",
+    "command": "Com base no gráfico e nas informações do texto, é possível inferir que houve maior aquecimento global em",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "1995."
+      },
+      {
+        "index": "b",
+        "text": "1998."
+      },
+      {
+        "index": "c",
+        "text": "2000."
+      },
+      {
+        "index": "d",
+        "text": "2005."
+      },
+      {
+        "index": "e",
+        "text": "2007."
+      }
+    ],
+    "correctAlternative": "e",
+    "explanation": ""
+  },
+  "id": "enem-2012-151"
+}

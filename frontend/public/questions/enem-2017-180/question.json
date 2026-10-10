@@ -1,0 +1,38 @@
+{
+  "label": "2017-180",
+  "title": "Questão 180 - ENEM 2017",
+  "source": "enem 2017",
+  "difficulty": 4,
+  "percentCorrectRate": null,
+  "subject": "financial_math",
+  "content": {
+    "files": [],
+    "problem": "",
+    "command": "O instante em que a água dessa piscina terminar de escoar completamente está compreendido entre",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "19 h 30 min e 20 h 10 min."
+      },
+      {
+        "index": "b",
+        "text": "19 h 20 min e 19 h 30 min."
+      },
+      {
+        "index": "c",
+        "text": "19 h 10 min e 19 h 20 min."
+      },
+      {
+        "index": "d",
+        "text": "19 h e 19 h 10 min."
+      },
+      {
+        "index": "e",
+        "text": "18 h 40 min e 19 h."
+      }
+    ],
+    "correctAlternative": "d",
+    "explanation": ""
+  },
+  "id": "enem-2017-180"
+}

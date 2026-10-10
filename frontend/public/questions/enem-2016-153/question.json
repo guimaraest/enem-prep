@@ -1,0 +1,43 @@
+{
+  "label": "2016-153",
+  "title": "Questão 153 - ENEM 2016",
+  "source": "enem 2016",
+  "difficulty": 4,
+  "percentCorrectRate": null,
+  "subject": "arithmetic",
+  "content": {
+    "files": [
+      {
+        "url": "images/5ba13490-30b2-456d-9bd4-754e04e288c3.png",
+        "type": "image"
+      }
+    ],
+    "problem": "![](https://enem.dev/2016/questions/153/5ba13490-30b2-456d-9bd4-754e04e288c3.png)\n\nA prefeitura optou pela seguinte distribuição dos funcionários a serem contratados:\n\nI. 10 funcionários para cada região da cidade cujo número de casos seja maior que a média dos casos confirmados.  \nII. 7 funcionários para cada região da cidade cujo número de casos seja menor ou igual à média dos casos confirmados.",
+    "command": "Quantos funcionários a prefeitura deverá contratar para efetivar a ação?",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "59"
+      },
+      {
+        "index": "b",
+        "text": "65"
+      },
+      {
+        "index": "c",
+        "text": "68"
+      },
+      {
+        "index": "d",
+        "text": "71"
+      },
+      {
+        "index": "e",
+        "text": "80"
+      }
+    ],
+    "correctAlternative": "d",
+    "explanation": ""
+  },
+  "id": "enem-2016-153"
+}

@@ -1,0 +1,43 @@
+{
+  "label": "2014-137",
+  "title": "Questão 137 - ENEM 2014",
+  "source": "enem 2014",
+  "difficulty": 2,
+  "percentCorrectRate": null,
+  "subject": "financial_math",
+  "content": {
+    "files": [
+      {
+        "url": "images/40cf73c4-388a-4323-84f9-62bdaccf835b.png",
+        "type": "image"
+      }
+    ],
+    "problem": "![](https://enem.dev/2014/questions/137/40cf73c4-388a-4323-84f9-62bdaccf835b.png)\n\nSuponha que a variação percentual relativa na taxa de fecundidade no período de 2000 a 2010 se repita no período de 2010 a 2020.",
+    "command": "Nesse caso, em 2020 a taxa de fecundidade no Brasil estará mais próxima de",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "1,14."
+      },
+      {
+        "index": "b",
+        "text": "1,42."
+      },
+      {
+        "index": "c",
+        "text": "1,52."
+      },
+      {
+        "index": "d",
+        "text": "1,70."
+      },
+      {
+        "index": "e",
+        "text": "1,80."
+      }
+    ],
+    "correctAlternative": "c",
+    "explanation": ""
+  },
+  "id": "enem-2014-137"
+}

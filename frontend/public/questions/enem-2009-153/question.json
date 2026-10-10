@@ -1,0 +1,43 @@
+{
+  "label": "2009-153",
+  "title": "Questão 153 - ENEM 2009",
+  "source": "enem 2009",
+  "difficulty": 3,
+  "percentCorrectRate": null,
+  "subject": "functions",
+  "content": {
+    "files": [
+      {
+        "url": "images/0aaaf8f3-e87d-435c-901f-40781e411de9.jpg",
+        "type": "image"
+      }
+    ],
+    "problem": "Suponha que, na escultura do artista Emanoel Araújo, mostrada na figura a seguir, todos os prismas numerados em algarismos romanos são retos, com bases triangulares, e que as faces laterais do poliedro II são perpendiculares à sua própria face superior, que, por sua vez, é um triângulo congruente ao triângulo base dos prismas. Além disso, considere que os prismas I e III são perpendiculares ao prisma IV e ao poliedro II.\n\n![](https://enem.dev/2009/questions/153/0aaaf8f3-e87d-435c-901f-40781e411de9.jpg)",
+    "command": "Imagine um plano paralelo à face α do prisma I, mas que passe pelo ponto P pertencente à aresta do poliedro II, indicado na figura. A interseção desse plano imaginário com a escultura contém",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "Dois triângulos congruentes com lados correspondentes paralelos."
+      },
+      {
+        "index": "b",
+        "text": "Dois retângulos congruentes e com lados correspondentes paralelos."
+      },
+      {
+        "index": "c",
+        "text": "Dois trapézios congruentes com lados correspondentes perpendiculares."
+      },
+      {
+        "index": "d",
+        "text": "Dois paralelogramos congruentes com lados correspondentes paralelos."
+      },
+      {
+        "index": "e",
+        "text": "Dois quadriláteros congruentes com lados correspondentes perpendiculares."
+      }
+    ],
+    "correctAlternative": "a",
+    "explanation": ""
+  },
+  "id": "enem-2009-153"
+}

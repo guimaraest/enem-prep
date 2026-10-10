@@ -1,0 +1,43 @@
+{
+  "label": "2013-161",
+  "title": "Questão 161 - ENEM 2013",
+  "source": "enem 2013",
+  "difficulty": 3,
+  "percentCorrectRate": null,
+  "subject": "financial_math",
+  "content": {
+    "files": [
+      {
+        "url": "images/71e7f83b-c1a9-4a5f-af6f-5060240c73b6.png",
+        "type": "image"
+      }
+    ],
+    "problem": "![](https://enem.dev/2013/questions/161/71e7f83b-c1a9-4a5f-af6f-5060240c73b6.png)\n\nDisponível em: www.correios.com.br. Acesso em: 2 ago. 2012 (adaptado).",
+    "command": "O valor total gasto, em reais, para postar essas cartas é de",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "8,35"
+      },
+      {
+        "index": "b",
+        "text": "12,50"
+      },
+      {
+        "index": "c",
+        "text": "14,40"
+      },
+      {
+        "index": "d",
+        "text": "15,35"
+      },
+      {
+        "index": "e",
+        "text": "18,05"
+      }
+    ],
+    "correctAlternative": "d",
+    "explanation": ""
+  },
+  "id": "enem-2013-161"
+}

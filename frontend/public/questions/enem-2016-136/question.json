@@ -1,0 +1,43 @@
+{
+  "label": "2016-136",
+  "title": "Questão 136 - ENEM 2016",
+  "source": "enem 2016",
+  "difficulty": 1,
+  "percentCorrectRate": null,
+  "subject": "geometry",
+  "content": {
+    "files": [
+      {
+        "url": "images/27018caf-dac3-4dce-9379-fb0c5bd5416d.png",
+        "type": "image"
+      }
+    ],
+    "problem": "![](https://enem.dev/2016/questions/136/27018caf-dac3-4dce-9379-fb0c5bd5416d.png)",
+    "command": "Utilize 3 como aproximação para π.\nO número mínimo de viagens que o caminhão precisará fazer para transportar todo o volume de grãos armazenados no silo é",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "6"
+      },
+      {
+        "index": "b",
+        "text": "16"
+      },
+      {
+        "index": "c",
+        "text": "17"
+      },
+      {
+        "index": "d",
+        "text": "18"
+      },
+      {
+        "index": "e",
+        "text": "21"
+      }
+    ],
+    "correctAlternative": "d",
+    "explanation": ""
+  },
+  "id": "enem-2016-136"
+}

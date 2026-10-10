@@ -1,0 +1,43 @@
+{
+  "label": "2009-138",
+  "title": "Questão 138 - ENEM 2009",
+  "source": "enem 2009",
+  "difficulty": 4,
+  "percentCorrectRate": null,
+  "subject": "functions",
+  "content": {
+    "files": [
+      {
+        "url": "images/2f19ef3b-7481-42c2-9c55-03664846dacc.jpg",
+        "type": "image"
+      }
+    ],
+    "problem": "A população mundial está ficando mais velha, os índices de natalidade diminuíram e a expectativa de vida aumentou. No gráfico seguinte, são apresentados dados obtidos por pesquisa realizada pela Organização das Nações Unidas (ONU), a respeito da quantidade de pessoas com 60 anos ou mais em todo o mundo. Os números da coluna da direita representam as faixas percentuais. Por exemplo, em 1950 havia 95 milhões de pessoas com 60 anos ou mais nos países desenvolvidos, número entre 10% e 15% da população total nos países desenvolvidos.\n\n![](https://enem.dev/2009/questions/138/2f19ef3b-7481-42c2-9c55-03664846dacc.jpg)\n\nSuponha que o modelo exponencial y = 363e0,03x, em que x = 0 corresponde ao ano 2000, x = 1 corresponde ao ano 2001, e assim sucessivamente, e que y é a população em milhões de habitantes no ano x, seja usado para estimar essa população com 60 anos ou mais de idade nos países em desenvolvimento entre 2010 e 2050.",
+    "command": "Desse modo, considerando e0,3 = 1,35, estima-se que a população com 60 anos ou mais estará, em 2030, entre",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "490 e 510 milhões."
+      },
+      {
+        "index": "b",
+        "text": "550 e 620 milhões."
+      },
+      {
+        "index": "c",
+        "text": "780 e 800 milhões."
+      },
+      {
+        "index": "d",
+        "text": "810 e 860 milhões."
+      },
+      {
+        "index": "e",
+        "text": "870 e 910 milhões."
+      }
+    ],
+    "correctAlternative": "e",
+    "explanation": ""
+  },
+  "id": "enem-2009-138"
+}

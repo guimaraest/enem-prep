@@ -1,0 +1,38 @@
+{
+  "label": "2016-154",
+  "title": "Questão 154 - ENEM 2016",
+  "source": "enem 2016",
+  "difficulty": 2,
+  "percentCorrectRate": null,
+  "subject": "arithmetic",
+  "content": {
+    "files": [],
+    "problem": "• Marca A: 2 g de fibras a cada 50 g de pão;  \n• Marca B: 5 g de fibras a cada 40 g de pão;  \n• Marca C: 5 g de fibras a cada 100 g de pão;  \n• Marca D: 6 g de fibras a cada 90 g de pão;  \n• Marca E: 7 g de fibras a cada 70 g de pão.\n\nRecomenda-se a ingestão do pão que possui a maior concentração de fibras.\n\nDisponível em: www.blog.saude.gov.br. Acesso em: 25 fev. 2013.",
+    "command": "A marca a ser escolhida é",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "A"
+      },
+      {
+        "index": "b",
+        "text": "B"
+      },
+      {
+        "index": "c",
+        "text": "C"
+      },
+      {
+        "index": "d",
+        "text": "D"
+      },
+      {
+        "index": "e",
+        "text": "E"
+      }
+    ],
+    "correctAlternative": "b",
+    "explanation": ""
+  },
+  "id": "enem-2016-154"
+}

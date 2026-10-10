@@ -1,0 +1,43 @@
+{
+  "label": "2012-149",
+  "title": "Questão 149 - ENEM 2012",
+  "source": "enem 2012",
+  "difficulty": 1,
+  "percentCorrectRate": null,
+  "subject": "algebra",
+  "content": {
+    "files": [
+      {
+        "url": "images/1c6c7b68-7082-4bde-97d1-7095071d775c.png",
+        "type": "image"
+      }
+    ],
+    "problem": "![](https://enem.dev/2012/questions/149/1c6c7b68-7082-4bde-97d1-7095071d775c.png)",
+    "command": "Quais serão os sólidos geométricos que Maria obterá a partir dessas planificações?",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "Cilindro, prisma de base pentagonal e pirâmide."
+      },
+      {
+        "index": "b",
+        "text": "Cone, prisma de base pentagonal e pirâmide."
+      },
+      {
+        "index": "c",
+        "text": "Cone, tronco de pirâmide e pirâmide."
+      },
+      {
+        "index": "d",
+        "text": "Cilindro, tronco de pirâmide e prisma."
+      },
+      {
+        "index": "e",
+        "text": "Cilindro, prisma e tronco de cone."
+      }
+    ],
+    "correctAlternative": "a",
+    "explanation": ""
+  },
+  "id": "enem-2012-149"
+}
