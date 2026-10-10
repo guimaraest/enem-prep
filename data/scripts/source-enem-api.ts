@@ -7,7 +7,7 @@ import {
   writeFile,
 } from 'node:fs/promises'
 import path from 'node:path'
-import type { Question } from '../../frontend/src/models'
+import type { Question } from '../../frontend/src/models.js'
 
 type SourceAlternative = {
   letter: string

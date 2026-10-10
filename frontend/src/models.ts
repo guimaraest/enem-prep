@@ -1,14 +1,19 @@
-export type Subject =
-  | 'algebra'
-  | 'geometry'
-  | 'statistics'
-  | 'probability'
-  | 'functions'
-  | 'financial_math'
-  | 'combinatorics'
-  | 'arithmetic'
+export const SUBJECTS = [
+  'algebra',
+  'geometry',
+  'statistics',
+  'probability',
+  'functions',
+  'financial_math',
+  'combinatorics',
+  'arithmetic',
+] as const
 
-export type Difficulty = 1 | 2 | 3 | 4
+export type Subject = (typeof SUBJECTS)[number]
+
+export const DIFFICULTIES = [1, 2, 3, 4] as const
+
+export type Difficulty = (typeof DIFFICULTIES)[number]
 
 export type AlternativeLetter = 'a' | 'b' | 'c' | 'd' | 'e'
 

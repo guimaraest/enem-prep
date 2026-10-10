@@ -1,0 +1,251 @@
+import {
+  appendFile,
+  mkdir,
+  readFile,
+  readdir,
+  rename,
+  rm,
+  writeFile,
+} from 'node:fs/promises'
+import path from 'node:path'
+import type {
+  Question,
+  QuestionSummary,
+  Subject,
+  Difficulty,
+} from '../../frontend/src/models.js'
+import {
+  SUBJECTS,
+  DIFFICULTIES,
+} from '../../frontend/src/models.js'
+
+type NormalizedQuestion = Omit<Question, 'id'>
+
+type IndexOptions = {
+  logPath: string
+  normalizedQuestionsDir: string
+  finalQuestionsDir: string
+  indexesOutputDir: string
+}
+
+async function log(logPath: string, message: string): Promise<void> {
+  await mkdir(path.dirname(logPath), { recursive: true })
+  await appendFile(
+    logPath,
+    `[${new Date().toISOString()}] ${message}\n`,
+  )
+}
+
+function isRecord(value: unknown): value is Record<string, unknown> {
+  return typeof value === 'object' && value !== null && !Array.isArray(value)
+}
+
+function isNormalizedQuestion(value: unknown): value is NormalizedQuestion {
+  if (!isRecord(value) || !isRecord(value.content)) return false
+
+  return (
+    typeof value.label === 'string' &&
+    typeof value.title === 'string' &&
+    typeof value.source === 'string' &&
+    Array.isArray(value.content.files) &&
+    typeof value.content.problem === 'string' &&
+    Array.isArray(value.content.alternatives)
+  )
+}
+
+function createCanonicalId(source: string, directoryName: string): string {
+  // ENEM directories already use the year-question format, e.g. 2015-1.
+  if (
+    /^enem \d{4}$/.test(source) &&
+    directoryName.startsWith(`${source.slice(5)}-`)
+  ) {
+    return `enem-${directoryName}`
+  }
+
+  const sourceSlug = source.toLowerCase().replace(/[^a-z0-9]+/g, '-')
+  const directorySlug = directoryName.toLowerCase().replace(/[^a-z0-9]+/g, '-')
+
+  return `${sourceSlug}-${directorySlug}`
+}
+
+function toSummary(question: Question): QuestionSummary {
+  return {
+    id: question.id,
+    label: question.label,
+    title: question.title,
+    source: question.source,
+    difficulty: question.difficulty,
+    subject: question.subject,
+  }
+}
+
+export async function generateIndexes({
+  logPath,
+  normalizedQuestionsDir,
+  finalQuestionsDir,
+  indexesOutputDir,
+}: IndexOptions): Promise<void> {
+  await mkdir(finalQuestionsDir, { recursive: true })
+
+  const existingFinalDirs = new Set(
+    await readdir(finalQuestionsDir),
+  )
+  const usedIds = new Set(existingFinalDirs)
+  const summaries: QuestionSummary[] = []
+  const seenSourceDirs = new Set<string>()
+
+  let entries
+
+  try {
+    entries = await readdir(normalizedQuestionsDir, {
+      withFileTypes: true,
+    })
+  } catch (error) {
+    await log(logPath, `ERROR: Cannot read normalized directory: ${String(error)}`)
+    throw error
+  }
+
+  for (const entry of entries) {
+    if (!entry.isDirectory()) continue
+
+    const sourceDir = path.join(normalizedQuestionsDir, entry.name)
+    const questionPath = path.join(sourceDir, 'question.json')
+
+    try {
+      const raw: unknown = JSON.parse(
+        await readFile(questionPath, 'utf8'),
+      )
+
+      if (!isNormalizedQuestion(raw)) {
+        await log(logPath, `ERROR: Invalid normalized question: ${questionPath}`)
+        continue
+      }
+
+      const normalized = raw
+      const id = createCanonicalId(normalized.source, entry.name)
+
+      if (usedIds.has(id)) {
+        await log(
+          logPath,
+          `ERROR: Canonical ID collision "${id}" for ${questionPath}`,
+        )
+        continue
+      }
+
+      if (seenSourceDirs.has(entry.name)) {
+        await log(logPath, `ERROR: Duplicate normalized directory "${entry.name}"`)
+        continue
+      }
+
+      const question: Question = { ...normalized, id }
+      const destinationDir = path.join(finalQuestionsDir, id)
+
+      // Persist the canonical ID before moving the question directory.
+      await writeFile(
+        questionPath,
+        JSON.stringify(question, null, 2),
+      )
+
+      await rename(sourceDir, destinationDir)
+
+      usedIds.add(id)
+      seenSourceDirs.add(entry.name)
+      summaries.push(toSummary(question))
+    } catch (error) {
+      await log(
+        logPath,
+        `ERROR: Failed to process "${questionPath}": ${String(error)}`,
+      )
+    }
+  }
+
+  // Sort consistently so generated indexes are deterministic.
+  summaries.sort((a, b) => a.id.localeCompare(b.id))
+
+  const exams = new Map<string, QuestionSummary[]>()
+
+  for (const question of summaries) {
+    if (!question.source.startsWith('enem ')) continue
+
+    const year = question.source.slice(5)
+    if (!/^\d{4}$/.test(year)) {
+      await log(logPath, `WARNING: Unexpected ENEM source "${question.source}"`)
+      continue
+    }
+
+    const examFile = `enem-${year}.json`
+    const group = exams.get(examFile) ?? []
+    group.push(question)
+    exams.set(examFile, group)
+  }
+
+  const byDifficulty: Record<string, QuestionSummary[]> = {}
+  const bySubject: Record<string, QuestionSummary[]> = {}
+
+  for (const difficulty of DIFFICULTIES) {
+    byDifficulty[difficulty] = []
+  }
+
+  for (const subject of SUBJECTS) {
+    bySubject[subject] = []
+  }
+
+  for (const question of summaries) {
+    if (
+      question.difficulty !== null &&
+      DIFFICULTIES.includes(question.difficulty as Difficulty)
+    ) {
+      byDifficulty[question.difficulty].push(question)
+    } else if (question.difficulty !== null) {
+      await log(
+        logPath,
+        `WARNING: Unknown difficulty "${question.difficulty}" on "${question.id}"`,
+      )
+    }
+
+    if (
+      question.subject !== null &&
+      SUBJECTS.includes(question.subject as Subject)
+    ) {
+      bySubject[question.subject].push(question)
+    } else if (question.subject !== null) {
+      await log(
+        logPath,
+        `WARNING: Unknown subject "${question.subject}" on "${question.id}"`,
+      )
+    }
+  }
+
+  // Rebuild generated indexes to remove stale files from previous runs.
+  await rm(indexesOutputDir, { recursive: true, force: true })
+  await mkdir(path.join(indexesOutputDir, 'provas'), { recursive: true })
+
+  await writeJson(
+    path.join(indexesOutputDir, 'allQuestions.json'),
+    summaries,
+  )
+  await writeJson(
+    path.join(indexesOutputDir, 'difficulty.json'),
+    byDifficulty,
+  )
+  await writeJson(
+    path.join(indexesOutputDir, 'subject.json'),
+    bySubject,
+  )
+
+  for (const [filename, questions] of exams) {
+    await writeJson(
+      path.join(indexesOutputDir, 'provas', filename),
+      questions,
+    )
+  }
+
+  await log(
+    logPath,
+    `INFO: Indexed ${summaries.length} questions across ${exams.size} ENEM exam indexes.`,
+  )
+}
+
+async function writeJson(filePath: string, data: unknown): Promise<void> {
+  await writeFile(filePath, JSON.stringify(data, null, 2))
+}
