@@ -26,9 +26,9 @@ export function BankPage() {
   return (
     <section className="section">
       <div>
-        <h1>stub bank page</h1>
+        <h1>temporário</h1>
       </div>
-      <div>
+      <div className='bank-grid'>
         {questions.map((question) => (
           <QuestionButton
             key={question.id}

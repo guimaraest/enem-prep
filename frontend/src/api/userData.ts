@@ -105,7 +105,9 @@ export function getBookmarks(): QuestionSummary[] {
             .map((data) => data.questionId),
     );
 
-    return getAllQuestions().filter(
+    const questions = await getAllQuestions()
+
+    return questions.filter(
         (question) => bookmarkedIds.has(question.id),
     );
 }
