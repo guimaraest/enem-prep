@@ -13,7 +13,7 @@ const tempDir = path.join(dataDir, 'temp')
 const sourceDir = path.join(dataDir, 'sources', 'enem-api')
 const normalizationOutputDir = path.join(tempDir, 'normalized')
 
-const publicDir = path.join(projectRoot, 'frontend/src/public')
+const publicDir = path.join(projectRoot, 'frontend/public')
 const finalQuestionsDir = path.join(publicDir, 'questions')
 const indexesOutputDir = path.join(publicDir, 'indexes')
 
