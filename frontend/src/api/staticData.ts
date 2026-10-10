@@ -1,24 +1,44 @@
-// implementação temporária vibecodada, o permanente será um dir public/ servido pelo cdn do front
+import type { Question, QuestionSummary } from '../models'
 
-import { questions } from './data';
+const INDEXES_BASE_URL = '/indexes'
+const QUESTIONS_BASE_URL = '/questions'
 
-import type { Question, QuestionSummary } from '../models';
+let allQuestionsPromise: Promise<QuestionSummary[]> | null = null
 
-export function getAllQuestions(): QuestionSummary[] {
-    return questions.map(
-        ({ id, label, title, source, difficulty, subject }) => ({
-            id,
-            label,
-            title,
-            source,
-            difficulty,
-            subject,
-        }),
-    );
+export async function getAllQuestions(): Promise<QuestionSummary[]> {
+  if (!allQuestionsPromise) {
+    allQuestionsPromise = fetchJson<QuestionSummary[]>(
+      `${INDEXES_BASE_URL}/allQuestions.json`,
+    ).catch((error: unknown) => {
+      allQuestionsPromise = null
+      throw error
+    })
+  }
+
+  return allQuestionsPromise
 }
 
-export function getQuestionById(
-    id: string,
-): Question | undefined {
-    return questions.find((question) => question.id === id);
+export async function getQuestionById(
+  id: string,
+): Promise<Question | undefined> {
+  const questions = await getAllQuestions()
+  const exists = questions.some((question) => question.id === id)
+
+  if (!exists) return undefined
+
+  return fetchJson<Question>(
+    `${QUESTIONS_BASE_URL}/${encodeURIComponent(id)}/question.json`,
+  )
+}
+
+async function fetchJson<T>(url: string): Promise<T> {
+  const response = await fetch(url)
+
+  if (!response.ok) {
+    throw new Error(
+      `Failed to fetch ${url}: ${response.status} ${response.statusText}`,
+    )
+  }
+
+  return response.json() as Promise<T>
 }
