@@ -96,7 +96,7 @@ export function setQuestionBookmarked(
     }));
 }
 
-export function getBookmarks(): QuestionSummary[] {
+export async function getBookmarks(): Promise<QuestionSummary[]> {
     const userQuestions = readUserQuestions();
 
     const bookmarkedIds = new Set(
