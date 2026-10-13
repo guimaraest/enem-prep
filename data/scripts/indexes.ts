@@ -19,8 +19,6 @@ import {
   DIFFICULTIES,
 } from '../../frontend/src/models.js'
 
-type NormalizedQuestion = Omit<Question, 'id'>
-
 type IndexOptions = {
   logPath: string
   normalizedQuestionsDir: string
@@ -40,32 +38,21 @@ function isRecord(value: unknown): value is Record<string, unknown> {
   return typeof value === 'object' && value !== null && !Array.isArray(value)
 }
 
-function isNormalizedQuestion(value: unknown): value is NormalizedQuestion {
+function isIndexedQuestion(value: unknown): value is Question {
   if (!isRecord(value) || !isRecord(value.content)) return false
 
   return (
-    typeof value.label === 'string' &&
+    typeof value.id === 'string' &&
+    /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(value.id) &&
+    typeof value.label === 'number' &&
+    Number.isInteger(value.label) &&
+    value.label > 0 &&
     typeof value.title === 'string' &&
     typeof value.source === 'string' &&
     Array.isArray(value.content.files) &&
     typeof value.content.problem === 'string' &&
     Array.isArray(value.content.alternatives)
   )
-}
-
-function createCanonicalId(source: string, directoryName: string): string {
-  // ENEM directories already use the year-question format, e.g. 2015-1.
-  if (
-    /^enem \d{4}$/.test(source) &&
-    directoryName.startsWith(`${source.slice(5)}-`)
-  ) {
-    return `enem-${directoryName}`
-  }
-
-  const sourceSlug = source.toLowerCase().replace(/[^a-z0-9]+/g, '-')
-  const directorySlug = directoryName.toLowerCase().replace(/[^a-z0-9]+/g, '-')
-
-  return `${sourceSlug}-${directorySlug}`
 }
 
 function toSummary(question: Question): QuestionSummary {
@@ -75,7 +62,10 @@ function toSummary(question: Question): QuestionSummary {
     title: question.title,
     source: question.source,
     difficulty: question.difficulty,
+    percentCorrectRate: question.percentCorrectRate,
     subject: question.subject,
+    isMissed: false,
+    isBookmarked: false,
   }
 }
 
@@ -87,9 +77,7 @@ export async function generateIndexes({
 }: IndexOptions): Promise<void> {
   await mkdir(finalQuestionsDir, { recursive: true })
 
-  const existingFinalDirs = new Set(
-    await readdir(finalQuestionsDir),
-  )
+  const existingFinalDirs = new Set(await readdir(finalQuestionsDir))
   const usedIds = new Set(existingFinalDirs)
   const summaries: QuestionSummary[] = []
   const seenSourceDirs = new Set<string>()
@@ -105,6 +93,8 @@ export async function generateIndexes({
     throw error
   }
 
+  entries.sort((left, right) => left.name.localeCompare(right.name))
+
   for (const entry of entries) {
     if (!entry.isDirectory()) continue
 
@@ -116,13 +106,13 @@ export async function generateIndexes({
         await readFile(questionPath, 'utf8'),
       )
 
-      if (!isNormalizedQuestion(raw)) {
-        await log(logPath, `ERROR: Invalid normalized question: ${questionPath}`)
+      if (!isIndexedQuestion(raw)) {
+        await log(logPath, `ERROR: Invalid UUID-assigned question: ${questionPath}`)
         continue
       }
 
-      const normalized = raw
-      const id = createCanonicalId(normalized.source, entry.name)
+      const question = raw
+      const id = question.id
 
       if (usedIds.has(id)) {
         await log(
@@ -137,7 +127,6 @@ export async function generateIndexes({
         continue
       }
 
-      const question: Question = { ...normalized, id }
       const destinationDir = path.join(finalQuestionsDir, id)
 
       // Persist the canonical ID before moving the question directory.

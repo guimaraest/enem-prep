@@ -199,7 +199,7 @@ export async function enemApiSourceEntry(
         )
 
         const question: Omit<Question, 'id'> = {
-          label: relativeOutput,
+          label: 0,
           title: source.title,
           source: `enem ${source.year}` as Question['source'],
           difficulty: null,
