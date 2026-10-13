@@ -5,7 +5,7 @@ import './base.css'
 import { BrowserRouter, Routes, Route, Navigate } from "react-router";
 
 import { QuestionPage } from "./question";
-import { BankPage } from "./bank/BankPage";
+import { BankRoute } from "./bank/BankPage";
 
 import { Nav } from './shared/Nav/Nav'
 
@@ -33,7 +33,7 @@ function AppRoutes() {
                     <Route path="/" element={<Navigate to="/perguntas" replace />}  />
                     <Route path="/perguntas" element={
                           <Layout>
-                            <BankPage/>
+                            <BankRoute />
                           </Layout>
                         } 
                       />
