@@ -109,7 +109,7 @@ export async function assignQuestionUUIDs(
   const seenKeys = new Set<string>()
   const seenIds = new Set<string>()
 
-  for (const [index, entry] of questions.entries()) {
+  for (const entry of questions) {
     const id = createQuestionUUID(entry.canonicalKey)
 
     if (seenKeys.has(entry.canonicalKey) || seenIds.has(id)) {
@@ -127,7 +127,6 @@ export async function assignQuestionUUIDs(
     const question: Question = {
       ...entry.question,
       id,
-      label: index + 1,
     }
 
     await writeFile(entry.filePath, JSON.stringify(question, null, 2))
@@ -135,6 +134,6 @@ export async function assignQuestionUUIDs(
 
   await appendFile(
     logPath,
-    `[${new Date().toISOString()}] INFO: Assigned stable UUIDs and global labels to ${questions.length} questions.\n`,
+    `[${new Date().toISOString()}] INFO: Assigned stable UUIDs to ${questions.length} questions.\n`,
   )
 }

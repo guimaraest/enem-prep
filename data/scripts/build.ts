@@ -5,6 +5,7 @@ import { enemApiSourceEntry } from './source-enem-api.ts'
 import { generateIndexes } from './indexes.js'
 import { fillTemporaryMetadata } from './fill-temporary-metadata.js'
 import { assignQuestionUUIDs } from './uuid-factory.js'
+import { assignQuestionLabels } from './labels.js'
 
 const scriptDir = path.dirname(fileURLToPath(import.meta.url))
 const projectRoot = path.resolve(scriptDir, '../..')
@@ -41,8 +42,11 @@ async function build(): Promise<void> {
   console.log('filling temporary metadata')
   await fillTemporaryMetadata(normalizationOutputDir, logPath)
 
-  console.log('assigning stable question UUIDs and labels')
+  console.log('assigning stable question UUIDs')
   await assignQuestionUUIDs(normalizationOutputDir, logPath)
+
+  console.log('assigning question labels by subject and difficulty')
+  await assignQuestionLabels(normalizationOutputDir, logPath)
 
   console.log('generating indexes')
   await generateIndexes({
