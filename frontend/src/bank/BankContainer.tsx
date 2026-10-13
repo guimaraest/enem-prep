@@ -1,7 +1,7 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { api } from '../api'
 import { DIFFICULTIES, SUBJECTS } from '../models'
-import type { QuestionSummary, UserQuestionData } from '../models'
+import type { QuestionSummary } from '../models'
 import { Dropdown } from '../shared/Dropdown/Dropdown'
 import type { DropdownOption } from '../shared/Dropdown/Dropdown'
 import { QuestionButton } from '../shared/QuestionButton/QuestionButton'
@@ -9,11 +9,9 @@ import { difficultyMap, subjectMap } from '../constants'
 
 type FilterSetting = 'subject' | 'difficulty' | 'missed' | 'bookmarked'
 
-type DynamicQuestion = QuestionSummary & UserQuestionData
-
 interface QuestionGroup {
   label: string
-  questions: DynamicQuestion[]
+  questions: QuestionSummary[]
 }
 
 interface BankContainerProps {
@@ -33,7 +31,7 @@ function isFilterSetting(value: string): value is FilterSetting {
 
 function getFilteredContext(
   filterSetting: FilterSetting,
-  fullContext: DynamicQuestion[],
+  fullContext: QuestionSummary[],
 ): QuestionGroup[] {
   switch (filterSetting) {
     case 'subject': {
@@ -61,9 +59,7 @@ function getFilteredContext(
     case 'missed':
       return [{
         label: 'missed',
-        questions: fullContext.filter((question) =>
-          question.attempts.some((attempt) => !attempt.isCorrect),
-        ),
+        questions: fullContext.filter((question) => question.isMissed),
       }]
     case 'bookmarked':
       return [{
@@ -75,18 +71,18 @@ function getFilteredContext(
 
 export function BankContainer({ questions }: BankContainerProps) {
   const [filterSetting, setFilterSetting] = useState<FilterSetting>('subject')
-  const filterSettingRef = useRef(filterSetting)
-  const [fullContext, setFullContext] = useState<DynamicQuestion[]>([])
-  const [filteredContext, setFilteredContext] = useState<QuestionGroup[]>([])
+  const [fullContext, setFullContext] = useState<QuestionSummary[]>([])
   const [loadingUserData, setLoadingUserData] = useState(true)
   const [userDataError, setUserDataError] = useState(false)
+  const filteredContext = useMemo(
+    () => getFilteredContext(filterSetting, fullContext),
+    [filterSetting, fullContext],
+  )
 
   function handleFilterChange(value: string) {
     if (!isFilterSetting(value)) return
 
-    filterSettingRef.current = value
     setFilterSetting(value)
-    setFilteredContext(getFilteredContext(value, fullContext))
   }
 
   useEffect(() => {
@@ -96,18 +92,22 @@ export function BankContainer({ questions }: BankContainerProps) {
       setLoadingUserData(true)
       setUserDataError(false)
       setFullContext([])
-      setFilteredContext([])
 
       try {
-        const enrichedQuestions = await Promise.all(
-          questions.map(async (question) => ({
-            ...question,
-            ...await api.userQuestions.getById(question.id),
-          })),
-        )
+        const [bookmarkedQuestions, missedQuestions] = await Promise.all([
+          api.userIndexes.getBookmarkedQuestions(),
+          api.userIndexes.getMissedQuestions(),
+        ])
+        const bookmarkedIds = new Set(bookmarkedQuestions.map((question) => question.id))
+        const missedIds = new Set(missedQuestions.map((question) => question.id))
+        const enrichedQuestions = questions.map((question) => ({
+          ...question,
+          isBookmarked: bookmarkedIds.has(question.id),
+          isMissed: missedIds.has(question.id),
+        }))
+
         if (!cancelled) {
           setFullContext(enrichedQuestions)
-          setFilteredContext(getFilteredContext(filterSettingRef.current, enrichedQuestions))
         }
       } catch (cause: unknown) {
         console.error('failed to load question user data:', cause)
