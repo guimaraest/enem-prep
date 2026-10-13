@@ -78,6 +78,8 @@ export interface QuestionSummary {
   source: QuestionSource
   difficulty: Difficulty | null
   subject: Subject | null
+  isMissed: boolean | null
+  isBookmarked: boolean | null
 }
 
 export type Questions = QuestionSummary[]

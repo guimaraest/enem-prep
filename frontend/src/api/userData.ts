@@ -64,6 +64,10 @@ export function getUserQuestionData(
     };
 }
 
+export function getAllUserQuestionData(): UserQuestionData[] {
+    return Object.values(readUserQuestions());
+}
+
 function updateUserQuestionData(
     id: string,
     update: (data: UserQuestionData) => UserQuestionData,
@@ -96,7 +100,7 @@ export function setQuestionBookmarked(
     }));
 }
 
-export async function getBookmarks(): Promise<QuestionSummary[]> {
+export async function getBookmarkedQuestions(): Promise<QuestionSummary[]> {
     const userQuestions = readUserQuestions();
 
     const bookmarkedIds = new Set(
@@ -109,6 +113,22 @@ export async function getBookmarks(): Promise<QuestionSummary[]> {
 
     return questions.filter(
         (question) => bookmarkedIds.has(question.id),
+    );
+}
+
+export async function getMissedQuestions(): Promise<QuestionSummary[]> {
+    const userQuestions = readUserQuestions();
+
+    const missedIds = new Set(
+        Object.values(userQuestions)
+            .filter((data) => data.attempts.some((attempt) => !attempt.isCorrect))
+            .map((data) => data.questionId),
+    );
+
+    const questions = await getAllQuestions();
+
+    return questions.filter(
+        (question) => missedIds.has(question.id),
     );
 }
 
