@@ -1,7 +1,9 @@
-import './QuestionPage.css';
+import './question.css';
 
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
+
+import { Loading } from '../shared/Loading/Loading'
 
 import { api } from '../api';
 import type { Question } from '../models'
@@ -9,7 +11,7 @@ import { QuestionContainer } from './QuestionContainer';
 
 
 
-export function QuestionPage() {
+export function QuestionRoute() {
   const { id } = useParams()
 
   const [question, setQuestion] = useState<Question | undefined>()
@@ -53,39 +55,20 @@ export function QuestionPage() {
     }
   }, [id])
 
-  if (loading) {
-    return <section>
-        <div>
-            <h1>carregando</h1>
-        </div>
-    </section>
-  }
-
-  if (error) {
-    return (
-        <section>
-            <div>
-                <h1>{error}</h1>
-            </div>
-        </section>
-    )
-  }
-
-  if (!question) {
-    return (
-        <section>
-            <div>
-                <h1>questão não encontrada</h1>
-            </div>
-        </section>
-    )
-  }
-
+  
   return (
-    <section>
-      <div className="question-parent">
-        <QuestionContainer question={question} />
-      </div>
-    </section>
+    <Loading
+      loading={loading}
+      error={error}
+      empty={!question}
+      loadingMessage="Carregando questão"
+      emptyMessage="Questão não encontrada"
+    >
+      <section>
+        <div className="question-parent">
+          <QuestionContainer question={question!} />
+        </div>
+      </section>
+    </Loading>
   )
 }
