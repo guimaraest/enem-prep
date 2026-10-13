@@ -5,6 +5,7 @@ import type { QuestionSummary, UserQuestionData } from '../models'
 import { Dropdown } from '../shared/Dropdown/Dropdown'
 import type { DropdownOption } from '../shared/Dropdown/Dropdown'
 import { QuestionButton } from '../shared/QuestionButton/QuestionButton'
+import { difficultyMap, subjectMap } from '../constants'
 
 type FilterSetting = 'subject' | 'difficulty' | 'missed' | 'bookmarked'
 
@@ -37,23 +38,23 @@ function getFilteredContext(
   switch (filterSetting) {
     case 'subject': {
       const groups = SUBJECTS.map((subject) => ({
-        label: subject.replaceAll('_', ' '),
+        label: `${subjectMap[subject].label}`,
         questions: fullContext.filter((question) => question.subject === subject),
       }))
       const unassigned = fullContext.filter((question) => question.subject === null)
       if (unassigned.length > 0) {
-        groups.push({ label: 'unspecified', questions: unassigned })
+        groups.push({ label: 'null', questions: unassigned })
       }
       return groups
     }
     case 'difficulty': {
       const groups = DIFFICULTIES.map((difficulty) => ({
-        label: `difficulty ${difficulty}`,
+        label: `${difficultyMap[difficulty].label}`,
         questions: fullContext.filter((question) => question.difficulty === difficulty),
       }))
       const unrated = fullContext.filter((question) => question.difficulty === null)
       if (unrated.length > 0) {
-        groups.push({ label: 'not rated', questions: unrated })
+        groups.push({ label: 'null', questions: unrated })
       }
       return groups
     }

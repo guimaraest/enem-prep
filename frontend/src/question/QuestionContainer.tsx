@@ -12,6 +12,11 @@ function QuestionHeader({ question }: { question: Question }) {
             ? constants.difficultyMap[question.difficulty]
             : undefined;
 
+    const subject =
+        question.subject !== null
+            ? constants.subjectMap[question.subject]
+            : undefined;
+
     return (
         <div className="question-header">
             <div className="row">
@@ -32,9 +37,9 @@ function QuestionHeader({ question }: { question: Question }) {
                     </span>
                 )}
 
-                {question.subject && (
-                    <span className="chip">
-                        {question.subject}
+                {subject && (
+                    <span className={`chip ${subject.className}`}>
+                        {subject.label}
                     </span>
                 )}
             </div>
