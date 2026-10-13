@@ -1,0 +1,38 @@
+{
+  "label": 28,
+  "title": "Questão 165 - ENEM 2009",
+  "source": "enem 2009",
+  "difficulty": 4,
+  "percentCorrectRate": null,
+  "subject": "statistics",
+  "content": {
+    "files": [],
+    "problem": "Doze times se inscreveram em um torneio de futebol amador. O jogo de abertura do torneio foi escolhido da seguinte forma: primeiro foram sorteados 4 times para compor o Grupo A. Em seguida, entre os times do Grupo A, foram sorteados 2 times para realizar o jogo de abertura do torneio, sendo que o primeiro deles jogaria em seu próprio campo, e o segundo seria o time visitante.",
+    "command": "A quantidade total de escolhas possíveis para o Grupo A e a quantidade total de escolhas dos times do jogo de abertura podem ser calculadas através de",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "Uma combinação e um arranjo, respectivamente."
+      },
+      {
+        "index": "b",
+        "text": "Um arranjo e uma combinação, respectivamente."
+      },
+      {
+        "index": "c",
+        "text": "Um arranjo e uma permutação, respectivamente."
+      },
+      {
+        "index": "d",
+        "text": "Duas combinações."
+      },
+      {
+        "index": "e",
+        "text": "Dois arranjos."
+      }
+    ],
+    "correctAlternative": "a",
+    "explanation": ""
+  },
+  "id": "241c5954-d1fe-56b6-9e52-7bca4e9fdf4c"
+}

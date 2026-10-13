@@ -1,0 +1,38 @@
+{
+  "label": 108,
+  "title": "Questão 162 - ENEM 2011",
+  "source": "enem 2011",
+  "difficulty": 2,
+  "percentCorrectRate": null,
+  "subject": "arithmetic",
+  "content": {
+    "files": [],
+    "problem": "O número mensal de passagens de uma determinada empresa aérea aumentou no ano passado nas seguintes condições: em janeiro foram vendidas 33 000 passagens; em fevereiro, 34 500; em março, 36 000. Esse padrão de crescimento se mantém para os meses subsequentes.",
+    "command": "Quantas passagens foram vendidas por essa empresa em julho do ano passado?",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "38 000"
+      },
+      {
+        "index": "b",
+        "text": "40 500"
+      },
+      {
+        "index": "c",
+        "text": "41 000"
+      },
+      {
+        "index": "d",
+        "text": "42 000"
+      },
+      {
+        "index": "e",
+        "text": "48 000"
+      }
+    ],
+    "correctAlternative": "d",
+    "explanation": ""
+  },
+  "id": "8201bb2a-2678-532c-963a-536d2f9ac198"
+}

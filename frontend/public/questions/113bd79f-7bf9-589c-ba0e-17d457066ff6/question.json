@@ -1,0 +1,43 @@
+{
+  "label": 4,
+  "title": "Questão 139 - ENEM 2009",
+  "source": "enem 2009",
+  "difficulty": 3,
+  "percentCorrectRate": null,
+  "subject": "combinatorics",
+  "content": {
+    "files": [
+      {
+        "url": "images/ce6a3e69-a428-4ce0-9247-80452dcdca20.jpg",
+        "type": "image"
+      }
+    ],
+    "problem": "A população mundial está ficando mais velha, os índices de natalidade diminuíram e a expectativa de vida aumentou. No gráfico seguinte, são apresentados dados obtidos por pesquisa realizada pela Organização das Nações Unidas (ONU), a respeito da quantidade de pessoas com 60 anos ou mais em todo o mundo. Os números da coluna da direita representam as faixas percentuais. Por exemplo, em 1950 havia 95 milhões de pessoas com 60 anos ou mais nos países desenvolvidos, número entre 10% e 15% da população total nos países desenvolvidos.\n\n![](https://enem.dev/2009/questions/139/ce6a3e69-a428-4ce0-9247-80452dcdca20.jpg)",
+    "command": "Em 2050, a probabilidade de se escolher, aleatoriamente, uma pessoa com 60 anos ou mais de idade, na população dos países desenvolvidos, será um número mais próximo de",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "1/2."
+      },
+      {
+        "index": "b",
+        "text": "7/20."
+      },
+      {
+        "index": "c",
+        "text": "8/25."
+      },
+      {
+        "index": "d",
+        "text": "1/5."
+      },
+      {
+        "index": "e",
+        "text": "3/25."
+      }
+    ],
+    "correctAlternative": "c",
+    "explanation": ""
+  },
+  "id": "113bd79f-7bf9-589c-ba0e-17d457066ff6"
+}

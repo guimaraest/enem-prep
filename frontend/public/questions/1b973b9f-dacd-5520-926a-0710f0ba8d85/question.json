@@ -1,0 +1,38 @@
+{
+  "label": 189,
+  "title": "Questão 159 - ENEM 2013",
+  "source": "enem 2013",
+  "difficulty": 1,
+  "percentCorrectRate": null,
+  "subject": "functions",
+  "content": {
+    "files": [],
+    "problem": "Para se construir um contrapiso, é comum, na constituição do concreto, se utilizar cimento, areia e brita, na seguinte proporção: 1 parte de cimento, 4 partes de  \nareia e 2 partes de brita. Para construir o contrapiso de uma garagem, uma construtora encomendou um caminhão betoneira com 14 m³ de concreto.",
+    "command": "Qual é o volume de cimento, em m³, na carga de concreto trazido pela betoneira?",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "1,75"
+      },
+      {
+        "index": "b",
+        "text": "2,00"
+      },
+      {
+        "index": "c",
+        "text": "2,33"
+      },
+      {
+        "index": "d",
+        "text": "4,00"
+      },
+      {
+        "index": "e",
+        "text": "8,00"
+      }
+    ],
+    "correctAlternative": "b",
+    "explanation": ""
+  },
+  "id": "1b973b9f-dacd-5520-926a-0710f0ba8d85"
+}

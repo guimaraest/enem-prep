@@ -1,0 +1,38 @@
+{
+  "label": 97,
+  "title": "Questão 145 - ENEM 2011",
+  "source": "enem 2011",
+  "difficulty": 4,
+  "percentCorrectRate": null,
+  "subject": "arithmetic",
+  "content": {
+    "files": [],
+    "problem": "O consumo atingiu o maior nível da história no ano passado: os brasileiros beberam o equivalente a 331 bilhões de xícaras.\n\nVeja. Ed. 2158, 31 mar. 2010.\n\nConsidere que a xícara citada na notícia seja equivalente a, aproximadamente, 120 mL de café. Suponha que em 2010 os brasileiros bebam ainda mais café, aumentando o consumo em 1/5 do que foi consumido no ano anterior.",
+    "command": "De acordo com essas informações, qual a previsão mais aproximada para consumo de café em 2010?",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "8 bilhões de litros."
+      },
+      {
+        "index": "b",
+        "text": "16 bilhões de litros."
+      },
+      {
+        "index": "c",
+        "text": "32 bilhões de litros."
+      },
+      {
+        "index": "d",
+        "text": "40 bilhões de litros."
+      },
+      {
+        "index": "e",
+        "text": "48 bilhões de litros."
+      }
+    ],
+    "correctAlternative": "e",
+    "explanation": ""
+  },
+  "id": "46b45e47-3b80-5d38-be00-d02d607d3d83"
+}

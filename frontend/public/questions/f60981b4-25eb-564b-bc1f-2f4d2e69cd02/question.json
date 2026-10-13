@@ -1,0 +1,47 @@
+{
+  "label": 474,
+  "title": "Questão 139 - ENEM 2020",
+  "source": "enem 2020",
+  "difficulty": 1,
+  "percentCorrectRate": null,
+  "subject": "arithmetic",
+  "content": {
+    "files": [
+      {
+        "url": "images/21679558-7757-4d62-8aa4-f22647acf6d6.png",
+        "type": "image"
+      },
+      {
+        "url": "images/f2008e36-2cc8-4d8e-8a86-89023b091a80.png",
+        "type": "image"
+      }
+    ],
+    "problem": "Os gráficos representam a produção de peças em uma indústria e as horas trabalhadas dos funcionários no período de cinco dias. Em cada dia, o gerente de produção aplica uma metodologia diferente de trabalho. Seu objetivo é avaliar a metodologia mais eficiente para utilizá-la como modelo nos próximos períodos. Sabe-se que, neste caso, quanto maior for a razão entre o número de peças produzidas e o número de horas trabalhadas, maior será a eficiência da metodologia.\n\n![](https://enem.dev/2020/questions/139/21679558-7757-4d62-8aa4-f22647acf6d6.png)\n\n![](https://enem.dev/2020/questions/139/f2008e36-2cc8-4d8e-8a86-89023b091a80.png)",
+    "command": "Em qual dia foi aplicada a metodologia mais eficiente?",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "1"
+      },
+      {
+        "index": "b",
+        "text": "2"
+      },
+      {
+        "index": "c",
+        "text": "3"
+      },
+      {
+        "index": "d",
+        "text": "4"
+      },
+      {
+        "index": "e",
+        "text": "5"
+      }
+    ],
+    "correctAlternative": "c",
+    "explanation": ""
+  },
+  "id": "f60981b4-25eb-564b-bc1f-2f4d2e69cd02"
+}

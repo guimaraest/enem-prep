@@ -1,0 +1,43 @@
+{
+  "label": 205,
+  "title": "Questão 175 - ENEM 2013",
+  "source": "enem 2013",
+  "difficulty": 2,
+  "percentCorrectRate": null,
+  "subject": "combinatorics",
+  "content": {
+    "files": [
+      {
+        "url": "images/eb855bec-d0a6-4b05-b8d8-fcff4deae0a7.png",
+        "type": "image"
+      }
+    ],
+    "problem": "![](https://enem.dev/2013/questions/175/eb855bec-d0a6-4b05-b8d8-fcff4deae0a7.png)\n\nA torre deve estar situada em um local equidistante das três antenas.",
+    "command": "O local adequado para a construção dessa torre corresponde ao ponto de coordenadas",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "(65 ; 35)."
+      },
+      {
+        "index": "b",
+        "text": "(53 ; 30)."
+      },
+      {
+        "index": "c",
+        "text": "(45 ; 35)."
+      },
+      {
+        "index": "d",
+        "text": "(50 ; 20)."
+      },
+      {
+        "index": "e",
+        "text": "(50 ; 30)."
+      }
+    ],
+    "correctAlternative": "e",
+    "explanation": ""
+  },
+  "id": "ec4da794-a731-5749-baf1-c9725a8deb03"
+}

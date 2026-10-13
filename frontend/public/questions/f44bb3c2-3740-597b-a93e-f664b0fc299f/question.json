@@ -1,0 +1,43 @@
+{
+  "label": 175,
+  "title": "Questão 143 - ENEM 2013",
+  "source": "enem 2013",
+  "difficulty": 1,
+  "percentCorrectRate": null,
+  "subject": "probability",
+  "content": {
+    "files": [
+      {
+        "url": "images/99ee084f-6759-467b-b6fc-c898787ae9c4.png",
+        "type": "image"
+      }
+    ],
+    "problem": "![](https://enem.dev/2013/questions/143/99ee084f-6759-467b-b6fc-c898787ae9c4.png)",
+    "command": "Quantos quilômetros esse aluno percorreu na fase de implantação do programa?",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "4"
+      },
+      {
+        "index": "b",
+        "text": "8"
+      },
+      {
+        "index": "c",
+        "text": "16"
+      },
+      {
+        "index": "d",
+        "text": "20"
+      },
+      {
+        "index": "e",
+        "text": "40"
+      }
+    ],
+    "correctAlternative": "e",
+    "explanation": ""
+  },
+  "id": "f44bb3c2-3740-597b-a93e-f664b0fc299f"
+}

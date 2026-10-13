@@ -1,0 +1,43 @@
+{
+  "label": 215,
+  "title": "Questão 141 - ENEM 2014",
+  "source": "enem 2014",
+  "difficulty": 2,
+  "percentCorrectRate": null,
+  "subject": "algebra",
+  "content": {
+    "files": [
+      {
+        "url": "images/ed992f8e-53a4-461c-8d93-6d5c402836e3.png",
+        "type": "image"
+      }
+    ],
+    "problem": "![](https://enem.dev/2014/questions/141/ed992f8e-53a4-461c-8d93-6d5c402836e3.png)",
+    "command": "Segundo o edital de seleção, o candidato aprovado será aquele para o qual a mediana das notas obtidas por ele nas quatro disciplinas for a maior. O candidato aprovado será",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "K."
+      },
+      {
+        "index": "b",
+        "text": "L."
+      },
+      {
+        "index": "c",
+        "text": "M."
+      },
+      {
+        "index": "d",
+        "text": "N."
+      },
+      {
+        "index": "e",
+        "text": "P."
+      }
+    ],
+    "correctAlternative": "d",
+    "explanation": ""
+  },
+  "id": "5b6a3195-0793-5dc9-bb10-d5333a3a5ef0"
+}

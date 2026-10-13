@@ -1,0 +1,43 @@
+{
+  "label": 305,
+  "title": "Questão 144 - ENEM 2016",
+  "source": "enem 2016",
+  "difficulty": 1,
+  "percentCorrectRate": null,
+  "subject": "probability",
+  "content": {
+    "files": [
+      {
+        "url": "images/3c5cca0b-8c29-4ca2-9a1f-eba9121870b2.png",
+        "type": "image"
+      }
+    ],
+    "problem": "![](https://enem.dev/2016/questions/144/3c5cca0b-8c29-4ca2-9a1f-eba9121870b2.png)\n\nAvaliando os resultados, o conselho diretor da empresa decidiu comprar, nos dois meses subsequentes, a mesma quantidade de matéria-prima comprada no mês em que o lucro mais se aproximou da média dos lucros mensais dessa empresa nesse período de sete meses.",
+    "command": "Nos próximos dois meses, essa empresa deverá comprar a mesma quantidade de matéria-prima comprada no mês",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "I"
+      },
+      {
+        "index": "b",
+        "text": "II"
+      },
+      {
+        "index": "c",
+        "text": "IV"
+      },
+      {
+        "index": "d",
+        "text": "V"
+      },
+      {
+        "index": "e",
+        "text": "VII"
+      }
+    ],
+    "correctAlternative": "d",
+    "explanation": ""
+  },
+  "id": "427c85fd-ca7e-59a6-9bbf-754198351c3e"
+}

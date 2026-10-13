@@ -1,0 +1,38 @@
+{
+  "label": 543,
+  "title": "Questão 171 - ENEM 2021",
+  "source": "enem 2021",
+  "difficulty": 4,
+  "percentCorrectRate": null,
+  "subject": "combinatorics",
+  "content": {
+    "files": [],
+    "problem": "O dono de uma loja pretende usar cartões imantados para a sua divulgação de sua loja. A empresa que fornecerá o serviço lhe informa que o custo de fabricação do cartão é de R$0,01 por centímetro quadrado e que disponibiliza modelos tendo como faces úteis para impressão:\n\n*   um triângulo equilátero de lado 12 cm;\n*   um quadrado de lado 8 cm;\n*   um retângulo de lados 11 cm e 8 cm;\n*   um hexágono regular de lado 6cm;\n*   um círculo de diâmetro 10 cm.\n\nO dono da loja está disposto a pagar, no máximo, R$0,80 por cartão. Ele escolherá, dentro desse limite de preço, o modelo que tiver maior área de impressão.\n\nUse 3 como aproximação para π e use 1,7 como aproximação para √3.",
+    "command": "Nessas condições, o modelo que deverá ser escolhido tem como face útil para impressão um",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "Triângulo"
+      },
+      {
+        "index": "b",
+        "text": "Quadrado"
+      },
+      {
+        "index": "c",
+        "text": "Retângulo"
+      },
+      {
+        "index": "d",
+        "text": "Hexágono"
+      },
+      {
+        "index": "e",
+        "text": "Círculo"
+      }
+    ],
+    "correctAlternative": "e",
+    "explanation": ""
+  },
+  "id": "3488b775-d1f0-5289-bdb2-9032857655c2"
+}

@@ -1,0 +1,43 @@
+{
+  "label": 491,
+  "title": "Questão 159 - ENEM 2020",
+  "source": "enem 2020",
+  "difficulty": 4,
+  "percentCorrectRate": null,
+  "subject": "financial_math",
+  "content": {
+    "files": [
+      {
+        "url": "images/e08bbc57-85b1-4682-92b2-26297de393f7.png",
+        "type": "image"
+      }
+    ],
+    "problem": "Uma pessoa precisa comprar 15 sacos de cimento para uma reforma em sua casa. Faz pesquisa de preço em cinco depósitos que vendem o cimento de sua preferência e cobram frete para entrega do material, conforme a distância do depósito à sua casa. As informações sobre preço do cimento, valor do frete e distância do depósito até a casa dessa pessoa estão apresentadas no quadro.\n\n![](https://enem.dev/2020/questions/159/e08bbc57-85b1-4682-92b2-26297de393f7.png)\n\nA pessoa escolherá um desses depósitos para realizar sua compra, considerando os preços do cimento e do frete oferecidos em cada opção.",
+    "command": "Se a pessoa decidir pela opção mais econômica, o depósito escolhido para a realização dessa compra será o",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "A."
+      },
+      {
+        "index": "b",
+        "text": "B."
+      },
+      {
+        "index": "c",
+        "text": "C."
+      },
+      {
+        "index": "d",
+        "text": "D."
+      },
+      {
+        "index": "e",
+        "text": "E."
+      }
+    ],
+    "correctAlternative": "c",
+    "explanation": ""
+  },
+  "id": "fb2ec1ed-da8c-5871-a258-8b29a81889ce"
+}

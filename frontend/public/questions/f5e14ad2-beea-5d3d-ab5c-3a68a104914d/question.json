@@ -1,0 +1,43 @@
+{
+  "label": 190,
+  "title": "Questão 160 - ENEM 2013",
+  "source": "enem 2013",
+  "difficulty": 2,
+  "percentCorrectRate": null,
+  "subject": "geometry",
+  "content": {
+    "files": [
+      {
+        "url": "images/c7425191-f428-4a64-bb30-70e95b899200.png",
+        "type": "image"
+      }
+    ],
+    "problem": "![](https://enem.dev/2013/questions/160/c7425191-f428-4a64-bb30-70e95b899200.png)",
+    "command": "O empresário decidiu comprar a empresa",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "F"
+      },
+      {
+        "index": "b",
+        "text": "G"
+      },
+      {
+        "index": "c",
+        "text": "H"
+      },
+      {
+        "index": "d",
+        "text": "M"
+      },
+      {
+        "index": "e",
+        "text": "P"
+      }
+    ],
+    "correctAlternative": "b",
+    "explanation": ""
+  },
+  "id": "f5e14ad2-beea-5d3d-ab5c-3a68a104914d"
+}

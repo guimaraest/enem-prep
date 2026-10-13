@@ -1,0 +1,38 @@
+{
+  "label": 321,
+  "title": "Questão 160 - ENEM 2016",
+  "source": "enem 2016",
+  "difficulty": 2,
+  "percentCorrectRate": null,
+  "subject": "functions",
+  "content": {
+    "files": [],
+    "problem": "",
+    "command": "Use 0,477 como aproximação para log10 3 e 1,041 como aproximação para log10 11.\nO tempo decorrido, em hora, até que a liga atinja 30℃ é mais próximo de",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "22"
+      },
+      {
+        "index": "b",
+        "text": "50"
+      },
+      {
+        "index": "c",
+        "text": "100"
+      },
+      {
+        "index": "d",
+        "text": "200"
+      },
+      {
+        "index": "e",
+        "text": "400"
+      }
+    ],
+    "correctAlternative": "d",
+    "explanation": ""
+  },
+  "id": "96f1d0bb-66c1-5ce1-a4cf-d79ac4192b84"
+}

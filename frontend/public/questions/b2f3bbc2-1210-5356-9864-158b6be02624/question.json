@@ -1,0 +1,38 @@
+{
+  "label": 384,
+  "title": "Questão 180 - ENEM 2017",
+  "source": "enem 2017",
+  "difficulty": 2,
+  "percentCorrectRate": null,
+  "subject": "geometry",
+  "content": {
+    "files": [],
+    "problem": "",
+    "command": "O instante em que a água dessa piscina terminar de escoar completamente está compreendido entre",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "19 h 30 min e 20 h 10 min."
+      },
+      {
+        "index": "b",
+        "text": "19 h 20 min e 19 h 30 min."
+      },
+      {
+        "index": "c",
+        "text": "19 h 10 min e 19 h 20 min."
+      },
+      {
+        "index": "d",
+        "text": "19 h e 19 h 10 min."
+      },
+      {
+        "index": "e",
+        "text": "18 h 40 min e 19 h."
+      }
+    ],
+    "correctAlternative": "d",
+    "explanation": ""
+  },
+  "id": "b2f3bbc2-1210-5356-9864-158b6be02624"
+}

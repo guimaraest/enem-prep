@@ -1,0 +1,58 @@
+{
+  "label": 430,
+  "title": "Questão 139 - ENEM 2019",
+  "source": "enem 2019",
+  "difficulty": 2,
+  "percentCorrectRate": null,
+  "subject": "arithmetic",
+  "content": {
+    "files": [],
+    "problem": "Uma empresa presta serviço de abastecimento de água em uma cidade. O valor mensal a pagar por esse serviço é determinado pela aplicação de tarifas, por faixas de consumo de água, sendo obtido pela adição dos valores correspondentes a cada faixa.\n\n**•** Faixa 1: para consumo de até 6 m², valor fixo de R$12,00;\n\n**•** Faixa 2: para consumo superior a 6 m³ e até 10 m³, tarifa de R$ 3,00 por metro cúbico ao que exceder a 6m³;\n\n**•** Faixa 3: para consumo superior a 10 m³, tarifa de R$ 6,00 por metro cúbico ao que exceder a 10 m³. Sabe-se que nessa cidade o consumo máximo de água por residência é de 15 m² por mês.",
+    "command": "O gráfico que melhor descreve o valor P, em real, a ser pago por mês, em função do volume V de água consumido, em metro cúbico, é",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "",
+        "file": {
+          "url": "images/de1f40fe-ace0-453b-8b47-506e0bbd1e76.png",
+          "type": "image"
+        }
+      },
+      {
+        "index": "b",
+        "text": "",
+        "file": {
+          "url": "images/498952c5-4133-4895-a958-a5bb5a11da9b.png",
+          "type": "image"
+        }
+      },
+      {
+        "index": "c",
+        "text": "",
+        "file": {
+          "url": "images/2b93a78d-1ed0-42e1-ba89-342c53c8aed2.png",
+          "type": "image"
+        }
+      },
+      {
+        "index": "d",
+        "text": "",
+        "file": {
+          "url": "images/fd969b0c-70d7-4e15-b7c7-ebb4b413b6fe.png",
+          "type": "image"
+        }
+      },
+      {
+        "index": "e",
+        "text": "",
+        "file": {
+          "url": "images/8ebb5528-ddb8-4a6a-b8e7-c15a497c088c.png",
+          "type": "image"
+        }
+      }
+    ],
+    "correctAlternative": "a",
+    "explanation": ""
+  },
+  "id": "50a1d28d-561b-5e55-b6dd-d116d9e63132"
+}

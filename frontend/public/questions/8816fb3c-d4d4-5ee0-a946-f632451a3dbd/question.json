@@ -1,0 +1,63 @@
+{
+  "label": 356,
+  "title": "Questão 152 - ENEM 2017",
+  "source": "enem 2017",
+  "difficulty": 4,
+  "percentCorrectRate": null,
+  "subject": "functions",
+  "content": {
+    "files": [
+      {
+        "url": "images/8a5c8c84-dc4a-434c-95d8-ac7e8a188f0b.png",
+        "type": "image"
+      }
+    ],
+    "problem": "A água para o abastecimento de um prédio é armazenada em um sistema formado por dois reservatórios idênticos, em formato de bloco retangular, ligados entre si por um cano igual ao cano de entrada, conforme ilustra a figura.\n\n![](https://enem.dev/2017/questions/152/8a5c8c84-dc4a-434c-95d8-ac7e8a188f0b.png)\n\nA água entra no sistema pelo cano de entrada no Reservatório 1 a uma vazão constante e, ao atingir o nível do cano de ligação, passa a abastecer o Reservatório 2. Suponha que, inicialmente, os dois reservatórios estejam vazios.",
+    "command": "Qual dos gráficos melhor descreverá a altura h do nível da água no Reservatório 1, em função do volume V de água no sistema?",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "",
+        "file": {
+          "url": "images/f4cd2fd5-8ffc-4cb7-91ae-2c3bd3f73900.png",
+          "type": "image"
+        }
+      },
+      {
+        "index": "b",
+        "text": "",
+        "file": {
+          "url": "images/da408f74-0165-4374-94f7-4efc3ba68756.png",
+          "type": "image"
+        }
+      },
+      {
+        "index": "c",
+        "text": "",
+        "file": {
+          "url": "images/73c9ec1b-6c30-4e0e-8c6a-baf78b10dbb8.png",
+          "type": "image"
+        }
+      },
+      {
+        "index": "d",
+        "text": "",
+        "file": {
+          "url": "images/29e329de-44fe-4da6-8f85-d63e8b31cadd.png",
+          "type": "image"
+        }
+      },
+      {
+        "index": "e",
+        "text": "",
+        "file": {
+          "url": "images/f4376ddd-f5cb-46ff-b7d6-f95ac887e91c.png",
+          "type": "image"
+        }
+      }
+    ],
+    "correctAlternative": "d",
+    "explanation": ""
+  },
+  "id": "8816fb3c-d4d4-5ee0-a946-f632451a3dbd"
+}

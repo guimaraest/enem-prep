@@ -1,0 +1,43 @@
+{
+  "label": 69,
+  "title": "Questão 162 - ENEM 2010",
+  "source": "enem 2010",
+  "difficulty": 1,
+  "percentCorrectRate": null,
+  "subject": "combinatorics",
+  "content": {
+    "files": [
+      {
+        "url": "images/3a48f3aa-f9b3-457a-9ffc-a48f280a2e19.jpg",
+        "type": "image"
+      }
+    ],
+    "problem": "O jornal de certa cidade publicou em uma página inteira a seguinte divulgação de seu caderno de classificados\n\n![](https://enem.dev/2010/questions/162/3a48f3aa-f9b3-457a-9ffc-a48f280a2e19.jpg)",
+    "command": "Para que a propaganda seja fidedigna à porcentagem da área que aparece na divulgação, a medida do lado do retângulo que representa os 4%, deve ser de aproximadamente",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "1 mm."
+      },
+      {
+        "index": "b",
+        "text": "10 mm."
+      },
+      {
+        "index": "c",
+        "text": "17 mm."
+      },
+      {
+        "index": "d",
+        "text": "160 mm."
+      },
+      {
+        "index": "e",
+        "text": "167 mm."
+      }
+    ],
+    "correctAlternative": "d",
+    "explanation": ""
+  },
+  "id": "ff1ba033-62d5-50d0-a7e3-cbd3f83496fd"
+}

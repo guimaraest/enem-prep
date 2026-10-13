@@ -1,0 +1,43 @@
+{
+  "label": 176,
+  "title": "Questão 144 - ENEM 2013",
+  "source": "enem 2013",
+  "difficulty": 4,
+  "percentCorrectRate": null,
+  "subject": "geometry",
+  "content": {
+    "files": [
+      {
+        "url": "images/f2d1f08e-1240-4175-ab48-38b49a301a01.png",
+        "type": "image"
+      }
+    ],
+    "problem": "![](https://enem.dev/2013/questions/144/f2d1f08e-1240-4175-ab48-38b49a301a01.png)",
+    "command": "Analisando os dados percentuais do gráfico, qual a diferença entre o maior e o menor centro em crescimento no polo das indústrias?",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "75,28"
+      },
+      {
+        "index": "b",
+        "text": "64,09"
+      },
+      {
+        "index": "c",
+        "text": "56,95"
+      },
+      {
+        "index": "d",
+        "text": "45,76"
+      },
+      {
+        "index": "e",
+        "text": "30,07"
+      }
+    ],
+    "correctAlternative": "c",
+    "explanation": ""
+  },
+  "id": "9c22eec3-ef28-5a5e-b005-250a2e6d3b13"
+}

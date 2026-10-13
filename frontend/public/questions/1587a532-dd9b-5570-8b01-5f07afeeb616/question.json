@@ -1,0 +1,43 @@
+{
+  "label": 300,
+  "title": "Questão 139 - ENEM 2016",
+  "source": "enem 2016",
+  "difficulty": 1,
+  "percentCorrectRate": null,
+  "subject": "geometry",
+  "content": {
+    "files": [
+      {
+        "url": "images/c748d750-cec7-42af-8fb1-4690aee8d9a8.png",
+        "type": "image"
+      }
+    ],
+    "problem": "![](https://enem.dev/2016/questions/139/c748d750-cec7-42af-8fb1-4690aee8d9a8.png)",
+    "command": "Qual é a vazão, em litro por hora, da bomba que foi ligada no início da segunda hora?",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "1 000"
+      },
+      {
+        "index": "b",
+        "text": "1 250"
+      },
+      {
+        "index": "c",
+        "text": "1 500"
+      },
+      {
+        "index": "d",
+        "text": "2 000"
+      },
+      {
+        "index": "e",
+        "text": "2 500"
+      }
+    ],
+    "correctAlternative": "c",
+    "explanation": ""
+  },
+  "id": "1587a532-dd9b-5570-8b01-5f07afeeb616"
+}

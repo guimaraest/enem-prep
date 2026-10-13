@@ -1,0 +1,38 @@
+{
+  "label": 622,
+  "title": "Questão 159 - ENEM 2023",
+  "source": "enem 2023",
+  "difficulty": 2,
+  "percentCorrectRate": null,
+  "subject": "algebra",
+  "content": {
+    "files": [],
+    "problem": "Um agricultor é informado sobre um método de proteção para sua lavoura que consiste em inserir larvas específicas, de rápida reprodução. A reprodução dessas larvas faz com que sua população multiplique-se por 10 a cada 3 dias e, para evitar eventuais desequilíbrios, é possível cessar essa reprodução aplicando-se um produto X. O agricultor decide iniciar esse método com 100 larvas e dispõe de 5 litros do produto X, cuja aplicação recomendada é de exatamente 1 litro para cada população de 200 000 larvas. A quantidade total do produto X de que ele dispõe deverá ser aplicada de uma única vez.",
+    "command": "Quantos dias após iniciado esse método o agricultor deverá aplicar o produto X?",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "2"
+      },
+      {
+        "index": "b",
+        "text": "4"
+      },
+      {
+        "index": "c",
+        "text": "6"
+      },
+      {
+        "index": "d",
+        "text": "12"
+      },
+      {
+        "index": "e",
+        "text": "18"
+      }
+    ],
+    "correctAlternative": "d",
+    "explanation": ""
+  },
+  "id": "e44b031d-2feb-51cc-9c7c-fe342c72b33a"
+}

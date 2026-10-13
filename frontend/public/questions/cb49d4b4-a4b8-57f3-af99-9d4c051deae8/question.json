@@ -1,0 +1,58 @@
+{
+  "label": 631,
+  "title": "Questão 168 - ENEM 2023",
+  "source": "enem 2023",
+  "difficulty": 4,
+  "percentCorrectRate": null,
+  "subject": "functions",
+  "content": {
+    "files": [],
+    "problem": "Em um colégio público, a admissão no primeiro ano se dá por sorteio. Neste ano há 55 candidatos, cujas inscrições são numeradas de 01 a 55. O sorteio de cada número de inscrição será realizado em etapas, utilizando-se duas urnas. Da primeira urna será sorteada uma bola, dentre bolas numeradas de 0 a 9, que representará o algarismo das unidades do número de inscrição a ser sorteado e, em seguida, da segunda urna, será sorteada uma bola para representar o algarismo das dezenas desse número. Depois do primeiro sorteio, e antes de se sortear o algarismo das dezenas, as bolas que estarão presentes na segunda urna serão apenas aquelas cujos números formam, com o algarismo já sorteado, um número de 01 a 55.",
+    "command": "As probabilidades de os candidatos de inscrição número 50 e 02 serem sorteados são, respectivamente,",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "",
+        "file": {
+          "url": "images/a5689a77-7cbd-4f5f-b548-eef2a3fee87f.png",
+          "type": "image"
+        }
+      },
+      {
+        "index": "b",
+        "text": "",
+        "file": {
+          "url": "images/67248715-8948-439d-9770-a652c76ac110.png",
+          "type": "image"
+        }
+      },
+      {
+        "index": "c",
+        "text": "",
+        "file": {
+          "url": "images/4d9a67e0-9136-42e4-855e-c72b0b876d28.png",
+          "type": "image"
+        }
+      },
+      {
+        "index": "d",
+        "text": "",
+        "file": {
+          "url": "images/24184847-9c76-40d3-9c78-44a35f0600e8.png",
+          "type": "image"
+        }
+      },
+      {
+        "index": "e",
+        "text": "",
+        "file": {
+          "url": "images/adeb932f-030f-4190-9b20-33a4a5f968f5.png",
+          "type": "image"
+        }
+      }
+    ],
+    "correctAlternative": "a",
+    "explanation": ""
+  },
+  "id": "cb49d4b4-a4b8-57f3-af99-9d4c051deae8"
+}

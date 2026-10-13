@@ -1,0 +1,43 @@
+{
+  "label": 48,
+  "title": "Questão 141 - ENEM 2010",
+  "source": "enem 2010",
+  "difficulty": 3,
+  "percentCorrectRate": null,
+  "subject": "probability",
+  "content": {
+    "files": [
+      {
+        "url": "images/97f889c7-0bdb-4cc7-9148-5a7d0623d977.png",
+        "type": "image"
+      }
+    ],
+    "problem": "![](https://enem.dev/2010/questions/141/97f889c7-0bdb-4cc7-9148-5a7d0623d977.png)",
+    "command": "Supondo-se que, no Sudeste, 14 900 estudantes foram entrevistados nessa pesquisa, quantos deles possuíam telefone móvel celular?",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "5 513"
+      },
+      {
+        "index": "b",
+        "text": "6 556"
+      },
+      {
+        "index": "c",
+        "text": "7 450"
+      },
+      {
+        "index": "d",
+        "text": "8 344"
+      },
+      {
+        "index": "e",
+        "text": "9 536"
+      }
+    ],
+    "correctAlternative": "d",
+    "explanation": ""
+  },
+  "id": "07a9e008-f4d8-5b85-a2a2-6416d9666111"
+}

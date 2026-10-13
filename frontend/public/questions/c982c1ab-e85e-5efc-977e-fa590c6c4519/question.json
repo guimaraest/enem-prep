@@ -1,0 +1,43 @@
+{
+  "label": 166,
+  "title": "Questão 179 - ENEM 2012",
+  "source": "enem 2012",
+  "difficulty": 3,
+  "percentCorrectRate": null,
+  "subject": "geometry",
+  "content": {
+    "files": [
+      {
+        "url": "images/19738eb9-509c-4c48-8ea2-cd4ec4a9116c.png",
+        "type": "image"
+      }
+    ],
+    "problem": "![](https://enem.dev/2012/questions/179/19738eb9-509c-4c48-8ea2-cd4ec4a9116c.png)",
+    "command": "Com base no gráfico, o valor da parte inteira da mediana dos empregos formais surgidos no período é",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "212 952."
+      },
+      {
+        "index": "b",
+        "text": "229 913."
+      },
+      {
+        "index": "c",
+        "text": "240 621."
+      },
+      {
+        "index": "d",
+        "text": "255 496."
+      },
+      {
+        "index": "e",
+        "text": "298 041."
+      }
+    ],
+    "correctAlternative": "b",
+    "explanation": ""
+  },
+  "id": "c982c1ab-e85e-5efc-977e-fa590c6c4519"
+}

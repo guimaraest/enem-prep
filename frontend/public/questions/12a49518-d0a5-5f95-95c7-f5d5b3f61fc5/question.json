@@ -1,0 +1,43 @@
+{
+  "label": 30,
+  "title": "Questão 168 - ENEM 2009",
+  "source": "enem 2009",
+  "difficulty": 1,
+  "percentCorrectRate": null,
+  "subject": "algebra",
+  "content": {
+    "files": [
+      {
+        "url": "images/f683544b-94d1-456c-bdfb-f2e964881776.jpg",
+        "type": "image"
+      }
+    ],
+    "problem": "Na tabela, são apresentados dados da cotação mensal do ovo extra branco vendido no atacado, em Brasília, em reais, por caixa de 30 dúzias de ovos, em alguns meses dos anos 2007 e 2008.\n\n![](https://enem.dev/2009/questions/168/f683544b-94d1-456c-bdfb-f2e964881776.jpg)",
+    "command": "De acordo com esses dados, o valor da mediana das cotações mensais do ovo extra branco nesse período era igual a",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "R$ 73,10."
+      },
+      {
+        "index": "b",
+        "text": "R$ 81,50."
+      },
+      {
+        "index": "c",
+        "text": "R$ 82,00."
+      },
+      {
+        "index": "d",
+        "text": "R$ 83,00."
+      },
+      {
+        "index": "e",
+        "text": "R$ 85,30."
+      }
+    ],
+    "correctAlternative": "d",
+    "explanation": ""
+  },
+  "id": "12a49518-d0a5-5f95-95c7-f5d5b3f61fc5"
+}

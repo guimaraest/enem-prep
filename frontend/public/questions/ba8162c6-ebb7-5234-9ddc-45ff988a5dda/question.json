@@ -1,0 +1,43 @@
+{
+  "label": 250,
+  "title": "Questão 176 - ENEM 2014",
+  "source": "enem 2014",
+  "difficulty": 1,
+  "percentCorrectRate": null,
+  "subject": "arithmetic",
+  "content": {
+    "files": [
+      {
+        "url": "images/26bc065f-aefd-4edc-9fec-d2a1027ddf48.png",
+        "type": "image"
+      }
+    ],
+    "problem": "![](https://enem.dev/2014/questions/176/26bc065f-aefd-4edc-9fec-d2a1027ddf48.png)",
+    "command": "Em que dia dessa semana a quantidade total de bactérias nesse ambiente de cultura foi máxima?",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "Terça-feira."
+      },
+      {
+        "index": "b",
+        "text": "Quarta-feira."
+      },
+      {
+        "index": "c",
+        "text": "Quinta-feira."
+      },
+      {
+        "index": "d",
+        "text": "Sexta-feira."
+      },
+      {
+        "index": "e",
+        "text": "Domingo."
+      }
+    ],
+    "correctAlternative": "a",
+    "explanation": ""
+  },
+  "id": "ba8162c6-ebb7-5234-9ddc-45ff988a5dda"
+}

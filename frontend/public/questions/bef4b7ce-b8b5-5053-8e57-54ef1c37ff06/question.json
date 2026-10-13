@@ -1,0 +1,38 @@
+{
+  "label": 113,
+  "title": "Questão 167 - ENEM 2011",
+  "source": "enem 2011",
+  "difficulty": 1,
+  "percentCorrectRate": null,
+  "subject": "financial_math",
+  "content": {
+    "files": [],
+    "problem": "É possível usar água ou comida para atrair as aves e observá-las. Muitas pessoas costumam usar água com açúcar, por exemplo, para atrair beija-flores. Mas é importante saber que, na hora de fazer a mistura, você deve sempre usar uma parte de açúcar para cinco  partes de água. Além disso, em dias quentes, precisa trocar a água de duas a três vezes, pois com o calor ela pode fermentar e, se for ingerida pela ave, pode deixá-la doente. O excesso de açúcar, ao cristalizar, também pode manter o bico da ave fechado, impedindo-a de se alimentar. Isso pode até matá-la.\n\n**Ciência Hoje das Crianças**. FNDE; Instituto Ciência Hoje, ano 19, n.166, mar.1996\n\nPretende-se encher completamente um copo com a mistura para atrais beija-flores.",
+    "command": "O copo tem formato cilíndrico, e suas medidas são 10 cm de altura e 4 cm de diâmetro. A quantidade de água que deve ser utilizada na mistura é cerca de (utilize π = 3)",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "20 mL."
+      },
+      {
+        "index": "b",
+        "text": "24 mL."
+      },
+      {
+        "index": "c",
+        "text": "100 mL."
+      },
+      {
+        "index": "d",
+        "text": "120 mL."
+      },
+      {
+        "index": "e",
+        "text": "600 mL."
+      }
+    ],
+    "correctAlternative": "c",
+    "explanation": ""
+  },
+  "id": "bef4b7ce-b8b5-5053-8e57-54ef1c37ff06"
+}

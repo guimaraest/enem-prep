@@ -1,0 +1,43 @@
+{
+  "label": 173,
+  "title": "Questão 141 - ENEM 2013",
+  "source": "enem 2013",
+  "difficulty": 2,
+  "percentCorrectRate": null,
+  "subject": "financial_math",
+  "content": {
+    "files": [
+      {
+        "url": "images/3cf638d1-7d15-4696-b092-de676c4e6701.png",
+        "type": "image"
+      }
+    ],
+    "problem": "![](https://enem.dev/2013/questions/141/3cf638d1-7d15-4696-b092-de676c4e6701.png)",
+    "command": "Utilize 1,7 como aproximação para √3\nO valor de R, em centímetros, é igual a",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "64,0"
+      },
+      {
+        "index": "b",
+        "text": "65,5"
+      },
+      {
+        "index": "c",
+        "text": "74,0"
+      },
+      {
+        "index": "d",
+        "text": "81,0"
+      },
+      {
+        "index": "e",
+        "text": "91,0"
+      }
+    ],
+    "correctAlternative": "c",
+    "explanation": ""
+  },
+  "id": "5de4fec1-3e84-5872-98c4-30d6d33a870e"
+}

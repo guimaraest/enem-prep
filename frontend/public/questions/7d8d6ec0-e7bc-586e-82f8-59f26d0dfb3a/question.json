@@ -1,0 +1,38 @@
+{
+  "label": 592,
+  "title": "Questão 175 - ENEM 2022",
+  "source": "enem 2022",
+  "difficulty": 1,
+  "percentCorrectRate": null,
+  "subject": "geometry",
+  "content": {
+    "files": [],
+    "problem": "Ao escutar a notícia de que um filme recém-lançado arrecadou, no primeiro mês de lançamento, R$ 1,35 bilhão em bilheteria, um estudante escreveu corretamente o número que representa essa quantia, com todos os seus  \nalgarismos.",
+    "command": "O número escrito pelo estudante foi",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "135 000,00."
+      },
+      {
+        "index": "b",
+        "text": "1 350 000,00."
+      },
+      {
+        "index": "c",
+        "text": "13 500 000,00."
+      },
+      {
+        "index": "d",
+        "text": "135 000 000,00."
+      },
+      {
+        "index": "e",
+        "text": "1 350 000 000,00"
+      }
+    ],
+    "correctAlternative": "e",
+    "explanation": ""
+  },
+  "id": "7d8d6ec0-e7bc-586e-82f8-59f26d0dfb3a"
+}

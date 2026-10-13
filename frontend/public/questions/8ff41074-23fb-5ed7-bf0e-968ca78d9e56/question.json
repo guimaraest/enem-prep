@@ -1,0 +1,47 @@
+{
+  "label": 127,
+  "title": "Questão 137 - ENEM 2012",
+  "source": "enem 2012",
+  "difficulty": 4,
+  "percentCorrectRate": null,
+  "subject": "geometry",
+  "content": {
+    "files": [
+      {
+        "url": "images/5720ed4d-1330-4139-8e45-4161901d1ed3.png",
+        "type": "image"
+      },
+      {
+        "url": "images/232bcbe6-caaa-44af-a96a-317187b14850.png",
+        "type": "image"
+      }
+    ],
+    "problem": "![](https://enem.dev/2012/questions/137/5720ed4d-1330-4139-8e45-4161901d1ed3.png)\n\nDobrando-se o raio de duas das circunferências centradas em vértices opostos do losango e ainda mantendo-se a configuração das tangências, obtém-se uma situação conforme ilustrada pela Figura 2.\n\n![](https://enem.dev/2012/questions/137/232bcbe6-caaa-44af-a96a-317187b14850.png)",
+    "command": "O perímetro do losango da Figura 2, quando comparado ao perímetro do losango da Figura 1, teve um aumento de",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "300%."
+      },
+      {
+        "index": "b",
+        "text": "200%."
+      },
+      {
+        "index": "c",
+        "text": "150%."
+      },
+      {
+        "index": "d",
+        "text": "100%."
+      },
+      {
+        "index": "e",
+        "text": "50%."
+      }
+    ],
+    "correctAlternative": "e",
+    "explanation": ""
+  },
+  "id": "8ff41074-23fb-5ed7-bf0e-968ca78d9e56"
+}

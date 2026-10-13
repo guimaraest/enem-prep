@@ -1,0 +1,43 @@
+{
+  "label": 318,
+  "title": "Questão 157 - ENEM 2016",
+  "source": "enem 2016",
+  "difficulty": 2,
+  "percentCorrectRate": null,
+  "subject": "algebra",
+  "content": {
+    "files": [
+      {
+        "url": "images/a509eb59-7fd2-4a42-a356-e1be71c628f2.png",
+        "type": "image"
+      }
+    ],
+    "problem": "![](https://enem.dev/2016/questions/157/a509eb59-7fd2-4a42-a356-e1be71c628f2.png)",
+    "command": "Qual deve ser o lucro mínimo da empresa no mês de junho, em milhares de reais, para o gerente continuar no cargo no próximo semestre?",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "26"
+      },
+      {
+        "index": "b",
+        "text": "29"
+      },
+      {
+        "index": "c",
+        "text": "30"
+      },
+      {
+        "index": "d",
+        "text": "31"
+      },
+      {
+        "index": "e",
+        "text": "35"
+      }
+    ],
+    "correctAlternative": "e",
+    "explanation": ""
+  },
+  "id": "e994000d-e59c-5e44-9341-cc1ad9675acd"
+}

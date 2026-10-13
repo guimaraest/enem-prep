@@ -1,0 +1,38 @@
+{
+  "label": 424,
+  "title": "Questão 178 - ENEM 2018",
+  "source": "enem 2018",
+  "difficulty": 2,
+  "percentCorrectRate": null,
+  "subject": "functions",
+  "content": {
+    "files": [],
+    "problem": "Durante uma festa de colégio, um grupo de alunos organizou uma rifa. Oitenta alunos faltaram à festa e não participaram da rifa. Entre os que compareceram, alguns compraram três bilhetes, 45 compraram 2 bilhetes, e muitos compraram apenas um. O total de alunos que comprou um único bilhete era 20% do número total de bilhetes vendidos, e o total de bilhetes vendidos excedeu em 33 o número total de alunos do colégio.",
+    "command": "Quantos alunos compraram somente um bilhete?",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "34"
+      },
+      {
+        "index": "b",
+        "text": "42"
+      },
+      {
+        "index": "c",
+        "text": "47"
+      },
+      {
+        "index": "d",
+        "text": "48"
+      },
+      {
+        "index": "e",
+        "text": "79"
+      }
+    ],
+    "correctAlternative": "d",
+    "explanation": ""
+  },
+  "id": "229429fa-18b3-54ba-ad9b-45be7f7eca45"
+}

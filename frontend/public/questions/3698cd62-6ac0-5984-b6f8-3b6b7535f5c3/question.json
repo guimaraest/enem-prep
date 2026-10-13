@@ -1,0 +1,38 @@
+{
+  "label": 307,
+  "title": "Questão 146 - ENEM 2016",
+  "source": "enem 2016",
+  "difficulty": 1,
+  "percentCorrectRate": null,
+  "subject": "arithmetic",
+  "content": {
+    "files": [],
+    "problem": "",
+    "command": "Para atingir seu objetivo, e supondo que todos os picolés disponíveis foram vendidos no segundo dia, o valor de venda de cada picolé, no segundo dia, deve ser",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "R$ 0,96"
+      },
+      {
+        "index": "b",
+        "text": "R$ 1,00"
+      },
+      {
+        "index": "c",
+        "text": "R$ 1,40"
+      },
+      {
+        "index": "d",
+        "text": "R$ 1,50"
+      },
+      {
+        "index": "e",
+        "text": "R$ 1,56"
+      }
+    ],
+    "correctAlternative": "c",
+    "explanation": ""
+  },
+  "id": "3698cd62-6ac0-5984-b6f8-3b6b7535f5c3"
+}

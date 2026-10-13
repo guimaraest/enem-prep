@@ -1,0 +1,38 @@
+{
+  "label": 429,
+  "title": "Questão 138 - ENEM 2019",
+  "source": "enem 2019",
+  "difficulty": 1,
+  "percentCorrectRate": null,
+  "subject": "combinatorics",
+  "content": {
+    "files": [],
+    "problem": " Uma pessoa, que perdeu um objeto pessoal quando visitou uma cidade, pretende divulgar nos meios de comunicação informações a respeito da perda desse objeto e de seu contato para eventual devolução. No entanto, ela lembra que, de acordo com o Art. 1 234 do Código Civil, poderá ter que pagar pelas despesas do transporte desse objeto até sua cidade e poderá ter que recompensar a pessoa que lhe restituir o objeto em, pelo menos, 5% do valor do objeto.\n\nEla sabe que o custo com transporte será de um quinto do valor atual do objeto e, como ela tem muito interesse em reavê-lo, pretende ofertar o maior percentual possível de recompensa, desde que o gasto total com as despesas não ultrapasse o valor atual do objeto.",
+    "command": "Nessas condições, o percentual sobre o valor do objeto, dado como recompensa, que ela deverá ofertar é igual a",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "20%"
+      },
+      {
+        "index": "b",
+        "text": "25%"
+      },
+      {
+        "index": "c",
+        "text": "40%"
+      },
+      {
+        "index": "d",
+        "text": "60%"
+      },
+      {
+        "index": "e",
+        "text": "80%"
+      }
+    ],
+    "correctAlternative": "e",
+    "explanation": ""
+  },
+  "id": "29e73078-06ed-542b-b97e-a4648940183e"
+}

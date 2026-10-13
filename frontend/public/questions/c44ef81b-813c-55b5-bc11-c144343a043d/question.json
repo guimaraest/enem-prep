@@ -1,0 +1,38 @@
+{
+  "label": 226,
+  "title": "Questão 152 - ENEM 2014",
+  "source": "enem 2014",
+  "difficulty": 1,
+  "percentCorrectRate": null,
+  "subject": "combinatorics",
+  "content": {
+    "files": [],
+    "problem": "",
+    "command": "Se o volume de esgoto gerado permanecer o mesmo e a meta dessa campanha se concretizar, o percentual de esgoto tratado passará a ser",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "72%"
+      },
+      {
+        "index": "b",
+        "text": "68%"
+      },
+      {
+        "index": "c",
+        "text": "64%"
+      },
+      {
+        "index": "d",
+        "text": "54%"
+      },
+      {
+        "index": "e",
+        "text": "18%"
+      }
+    ],
+    "correctAlternative": "b",
+    "explanation": ""
+  },
+  "id": "c44ef81b-813c-55b5-bc11-c144343a043d"
+}

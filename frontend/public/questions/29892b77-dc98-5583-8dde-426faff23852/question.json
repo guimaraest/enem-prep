@@ -1,0 +1,43 @@
+{
+  "label": 232,
+  "title": "Questão 158 - ENEM 2014",
+  "source": "enem 2014",
+  "difficulty": 1,
+  "percentCorrectRate": null,
+  "subject": "financial_math",
+  "content": {
+    "files": [
+      {
+        "url": "images/f3fb8087-ffc9-4624-9550-cb84254ac99f.png",
+        "type": "image"
+      }
+    ],
+    "problem": "![](https://enem.dev/2014/questions/158/f3fb8087-ffc9-4624-9550-cb84254ac99f.png)\n\nBENSEÑOR, I. M.; LOTUFO, P. A. **Epidemologia**: abordagem prática.\n\nSão Paulo: Sarvier, 2011 (adaptado).",
+    "command": "Conforme o quadro do teste proposto, a sensibilidade dele é de",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "47,5%."
+      },
+      {
+        "index": "b",
+        "text": "85,0%."
+      },
+      {
+        "index": "c",
+        "text": "86,3%."
+      },
+      {
+        "index": "d",
+        "text": "94,4%."
+      },
+      {
+        "index": "e",
+        "text": "95,0%."
+      }
+    ],
+    "correctAlternative": "e",
+    "explanation": ""
+  },
+  "id": "29892b77-dc98-5583-8dde-426faff23852"
+}

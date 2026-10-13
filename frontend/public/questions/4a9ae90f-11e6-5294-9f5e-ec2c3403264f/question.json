@@ -1,0 +1,58 @@
+{
+  "label": 394,
+  "title": "Questão 148 - ENEM 2018",
+  "source": "enem 2018",
+  "difficulty": 2,
+  "percentCorrectRate": null,
+  "subject": "probability",
+  "content": {
+    "files": [],
+    "problem": "Uma empresa deseja iniciar uma campanha publicitária divulgando uma promoção para seus possíveis consumidores. Para esse tipo de campanha, os meios mais viáveis são a distribuição de panfletos na rua e anúncios na rádio local. Considera-se que a população alcançada pela distribuição de panfletos seja igual ã quantidade de panfletos distribuídos, enquanto que a alcançada por um anúncio na rádio seja igual à quantidade de ouvintes desse anúncio. O custo de cada anúncio na rádio é de R$ 120,00, e a estimativa é de que seja ouvido por 1 500 pessoas. Já a produção e a distribuição dos panfletos custam R$ 180,00 cada 1 000 unidades. Considerando que cada pessoa será alcançada por um único desses meios de divulgação, a empresa pretende investir em ambas as mídias.\n\nConsidere X e Y os valores (em real) gastos em anúncios na rádio e com panfletos, respectivamente.",
+    "command": "O número de pessoas alcançadas pela campanha será dado pela expressão",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "",
+        "file": {
+          "url": "images/815e56d4-7cf2-461e-b709-d3b3cc046213.png",
+          "type": "image"
+        }
+      },
+      {
+        "index": "b",
+        "text": "",
+        "file": {
+          "url": "images/a81a1d03-16e2-4934-8f48-901d1c2c8d0a.png",
+          "type": "image"
+        }
+      },
+      {
+        "index": "c",
+        "text": "",
+        "file": {
+          "url": "images/3b53ea9e-c3b3-47f1-a112-d94a02a89929.png",
+          "type": "image"
+        }
+      },
+      {
+        "index": "d",
+        "text": "",
+        "file": {
+          "url": "images/69efff97-2140-4f41-a084-51cb3aa9d1fb.png",
+          "type": "image"
+        }
+      },
+      {
+        "index": "e",
+        "text": "",
+        "file": {
+          "url": "images/4f37fa96-41c0-48d4-b071-319fe84388a3.png",
+          "type": "image"
+        }
+      }
+    ],
+    "correctAlternative": "a",
+    "explanation": ""
+  },
+  "id": "4a9ae90f-11e6-5294-9f5e-ec2c3403264f"
+}

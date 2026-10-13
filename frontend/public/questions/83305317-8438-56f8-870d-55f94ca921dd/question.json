@@ -1,0 +1,38 @@
+{
+  "label": 261,
+  "title": "Questão 142 - ENEM 2015",
+  "source": "enem 2015",
+  "difficulty": 1,
+  "percentCorrectRate": null,
+  "subject": "arithmetic",
+  "content": {
+    "files": [],
+    "problem": "",
+    "command": "Qual é a probabilidade de a senha sorteada ser um número de 1 a 20?",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "1/100"
+      },
+      {
+        "index": "b",
+        "text": "19/100"
+      },
+      {
+        "index": "c",
+        "text": "20/100"
+      },
+      {
+        "index": "d",
+        "text": "21/100"
+      },
+      {
+        "index": "e",
+        "text": "80/100"
+      }
+    ],
+    "correctAlternative": "c",
+    "explanation": ""
+  },
+  "id": "83305317-8438-56f8-870d-55f94ca921dd"
+}

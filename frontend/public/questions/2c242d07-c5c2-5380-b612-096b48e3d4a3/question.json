@@ -1,0 +1,43 @@
+{
+  "label": 251,
+  "title": "Questão 177 - ENEM 2014",
+  "source": "enem 2014",
+  "difficulty": 4,
+  "percentCorrectRate": null,
+  "subject": "statistics",
+  "content": {
+    "files": [
+      {
+        "url": "images/0a4df606-c0a5-4bac-b988-67ea996fa475.png",
+        "type": "image"
+      }
+    ],
+    "problem": "![](https://enem.dev/2014/questions/177/0a4df606-c0a5-4bac-b988-67ea996fa475.png)",
+    "command": "Quantos minutos essa torneira levará para encher completamente o restante do depósito?",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "8"
+      },
+      {
+        "index": "b",
+        "text": "10"
+      },
+      {
+        "index": "c",
+        "text": "16"
+      },
+      {
+        "index": "d",
+        "text": "18"
+      },
+      {
+        "index": "e",
+        "text": "24"
+      }
+    ],
+    "correctAlternative": "b",
+    "explanation": ""
+  },
+  "id": "2c242d07-c5c2-5380-b612-096b48e3d4a3"
+}

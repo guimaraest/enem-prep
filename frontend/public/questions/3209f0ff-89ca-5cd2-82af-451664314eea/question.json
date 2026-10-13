@@ -1,0 +1,43 @@
+{
+  "label": 517,
+  "title": "Questão 144 - ENEM 2021",
+  "source": "enem 2021",
+  "difficulty": 3,
+  "percentCorrectRate": null,
+  "subject": "combinatorics",
+  "content": {
+    "files": [
+      {
+        "url": "images/0f754876-c1f5-41b1-bea6-3935cb1a5304.png",
+        "type": "image"
+      }
+    ],
+    "problem": "Uma pessoa realizou uma pesquisa com alguns alunos de uma escola, coletando suas idades, e organizou esses dados no gráfico.\n\n![](https://enem.dev/2021/questions/144/0f754876-c1f5-41b1-bea6-3935cb1a5304.png)",
+    "command": "Qual é a média das idades, em ano, desses alunos?",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "9"
+      },
+      {
+        "index": "b",
+        "text": "12"
+      },
+      {
+        "index": "c",
+        "text": "18"
+      },
+      {
+        "index": "d",
+        "text": "19"
+      },
+      {
+        "index": "e",
+        "text": "27"
+      }
+    ],
+    "correctAlternative": "d",
+    "explanation": ""
+  },
+  "id": "3209f0ff-89ca-5cd2-82af-451664314eea"
+}

@@ -1,0 +1,43 @@
+{
+  "label": 613,
+  "title": "Questão 146 - ENEM 2023",
+  "source": "enem 2023",
+  "difficulty": 2,
+  "percentCorrectRate": null,
+  "subject": "financial_math",
+  "content": {
+    "files": [
+      {
+        "url": "images/74e0c851-b2af-410d-9f19-3348dd8f883a.jpg",
+        "type": "image"
+      }
+    ],
+    "problem": "![](https://enem.dev/2023/questions/146/74e0c851-b2af-410d-9f19-3348dd8f883a.jpg)",
+    "command": "Considere que os números colocados nos vértices do triângulo estejam em progressão aritmética de razão igual a 2.\nNas condições propostas, quais as possíveis soluções para as somas dos números que formam os lados do triângulo?",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "Há somente uma solução possível, e as somas em cada lado do triângulo são iguais a 7."
+      },
+      {
+        "index": "b",
+        "text": "Há somente uma solução possível, e as somas em cada lado do triângulo são iguais a 9."
+      },
+      {
+        "index": "c",
+        "text": "Há somente duas soluções possíveis, uma em que as somas em cada lado do triângulo são iguais a 7 e outra em que as somas são iguais a 9."
+      },
+      {
+        "index": "d",
+        "text": "Há somente duas soluções possíveis, uma em que as somas em cada lado do triângulo são iguais a 9 e outra em que as somas são iguais a 12."
+      },
+      {
+        "index": "e",
+        "text": "Há somente duas soluções possíveis, uma em que as somas em cada lado do triângulo são iguais a 10 e outra em que as somas são iguais a 11."
+      }
+    ],
+    "correctAlternative": "e",
+    "explanation": ""
+  },
+  "id": "3a2e8751-1bdb-5058-ba02-306b8b504ecd"
+}

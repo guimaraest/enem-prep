@@ -1,0 +1,38 @@
+{
+  "label": 193,
+  "title": "Questão 163 - ENEM 2013",
+  "source": "enem 2013",
+  "difficulty": 4,
+  "percentCorrectRate": null,
+  "subject": "financial_math",
+  "content": {
+    "files": [],
+    "problem": "Para aumentar as vendas no início do ano, uma loja de departamentos remarcou os preços de seus produtos 20% abaixo do preço original. Quando chegam ao caixa, os clientes que possuem o cartão fidelidade da loja têm direito a um desconto adicional de 10% sobre o valor total de suas compras.\n\nUm cliente deseja comprar um produto que custava R$ 50,00 antes da remarcação de preços. Ele não possui o cartão fidelidade da loja.",
+    "command": "Caso esse cliente possuísse o cartão fidelidade da loja, a economia adicional que obteria ao efetuar a compra, em reais, seria de",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "15,00"
+      },
+      {
+        "index": "b",
+        "text": "14,00"
+      },
+      {
+        "index": "c",
+        "text": "10,00"
+      },
+      {
+        "index": "d",
+        "text": "5,00"
+      },
+      {
+        "index": "e",
+        "text": "4,00"
+      }
+    ],
+    "correctAlternative": "e",
+    "explanation": ""
+  },
+  "id": "57befedd-350e-5bdc-b474-661fbe74a566"
+}

@@ -1,0 +1,63 @@
+{
+  "label": 282,
+  "title": "Questão 164 - ENEM 2015",
+  "source": "enem 2015",
+  "difficulty": 3,
+  "percentCorrectRate": null,
+  "subject": "functions",
+  "content": {
+    "files": [
+      {
+        "url": "images/143503ba-442f-4e6e-b47f-56b581a76e04.png",
+        "type": "image"
+      }
+    ],
+    "problem": "![](https://enem.dev/2015/questions/164/143503ba-442f-4e6e-b47f-56b581a76e04.png)\n\nDisponível em: www.gebh.net. Acesso em: 30 out. 2013 (adaptado).",
+    "command": "O número de formas distintas de se acomodar a família nesse voo é calculado por",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "",
+        "file": {
+          "url": "images/0869442c-5c3e-44b3-b332-405996495c75.png",
+          "type": "image"
+        }
+      },
+      {
+        "index": "b",
+        "text": "",
+        "file": {
+          "url": "images/9300da4b-9267-4ae3-86bb-2ff393573382.png",
+          "type": "image"
+        }
+      },
+      {
+        "index": "c",
+        "text": "",
+        "file": {
+          "url": "images/a2f657c8-2181-405d-8964-6929347b8647.png",
+          "type": "image"
+        }
+      },
+      {
+        "index": "d",
+        "text": "",
+        "file": {
+          "url": "images/d4c33e90-1fde-4706-814b-0cb3afbe24ca.png",
+          "type": "image"
+        }
+      },
+      {
+        "index": "e",
+        "text": "",
+        "file": {
+          "url": "images/e060a6cb-eecc-42c4-813e-99f1d3f9ebe3.png",
+          "type": "image"
+        }
+      }
+    ],
+    "correctAlternative": "a",
+    "explanation": ""
+  },
+  "id": "d1b91351-c5b8-5ba4-a37d-3ad2fed4629f"
+}

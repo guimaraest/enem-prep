@@ -1,0 +1,43 @@
+{
+  "label": 374,
+  "title": "Questão 170 - ENEM 2017",
+  "source": "enem 2017",
+  "difficulty": 2,
+  "percentCorrectRate": null,
+  "subject": "probability",
+  "content": {
+    "files": [
+      {
+        "url": "images/7264cbc1-0ae7-4f5d-976a-228c6d2e1184.png",
+        "type": "image"
+      }
+    ],
+    "problem": "Neste modelo de termômetro, os filetes na cor preta registram as temperaturas mínima e máxima do dia anterior e os filetes na cor cinza registram a temperatura ambiente atual, ou seja, no momento da leitura do termômetro.\n\n![](https://enem.dev/2017/questions/170/7264cbc1-0ae7-4f5d-976a-228c6d2e1184.png)\n\nPor isso ele tem duas colunas. Na da esquerda, os números estão em ordem crescente, de cima para baixo, de -30 °C até 50 °C. Na coluna da direita, os números estão ordenados de forma crescente, de baixo para cima, de -30 °C até 50 °C.\n\nA leitura é feita da seguinte maneira:  \n• a temperatura mínima é indicada pelo nível inferior do filete preto na coluna da esquerda;  \n• a temperatura máxima é indicada pelo nível inferior do filete preto na coluna da direita;  \n• a temperatura atual é indicada pelo nível superior dos filetes cinza nas duas colunas.\n\nDisponível em: www.if.ufrgs.br. Acesso em: 28 ago. 2014 (adaptado).",
+    "command": "Qual é a temperatura máxima mais aproximada registrada nesse termômetro?",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "5 °C"
+      },
+      {
+        "index": "b",
+        "text": "7 °C"
+      },
+      {
+        "index": "c",
+        "text": "13 °C"
+      },
+      {
+        "index": "d",
+        "text": "15 °C"
+      },
+      {
+        "index": "e",
+        "text": "19 °C"
+      }
+    ],
+    "correctAlternative": "e",
+    "explanation": ""
+  },
+  "id": "17a34932-d419-5de5-a936-7b06baf9b715"
+}

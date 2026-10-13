@@ -1,0 +1,38 @@
+{
+  "label": 280,
+  "title": "Questão 162 - ENEM 2015",
+  "source": "enem 2015",
+  "difficulty": 1,
+  "percentCorrectRate": null,
+  "subject": "financial_math",
+  "content": {
+    "files": [],
+    "problem": "",
+    "command": "Atendendo o pedido do arquiteto, o carpinteiro deverá produzir",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "105 peças."
+      },
+      {
+        "index": "b",
+        "text": "120 peças."
+      },
+      {
+        "index": "c",
+        "text": "210 peças."
+      },
+      {
+        "index": "d",
+        "text": "243 peças."
+      },
+      {
+        "index": "e",
+        "text": "420 peças."
+      }
+    ],
+    "correctAlternative": "e",
+    "explanation": ""
+  },
+  "id": "67ac96da-b15a-5060-ada6-0783838b50c0"
+}

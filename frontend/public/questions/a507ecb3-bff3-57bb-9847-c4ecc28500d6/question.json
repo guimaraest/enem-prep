@@ -1,0 +1,38 @@
+{
+  "label": 158,
+  "title": "Questão 171 - ENEM 2012",
+  "source": "enem 2012",
+  "difficulty": 1,
+  "percentCorrectRate": null,
+  "subject": "algebra",
+  "content": {
+    "files": [],
+    "problem": "Em 20 de fevereiro de 2011 ocorreu a grande erupção do vulcão Bulusan nas Filipinas. A sua localização geográfica no globo terrestre é dada pelo GPS (sigla em inglês para Sistema de Posicionamento Global) com longitude de 124° 3’ 0” a leste do Meridiano de Greenwich.\n\nDado: 1° equivale a 60’ e 1’ equivale a 60”.\n\nPAVARIN, G. Galileu, fev. 2012 (adaptado).",
+    "command": "A representação angular da localização do vulcão com relação a sua longitude na forma decimal é",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "124,02°."
+      },
+      {
+        "index": "b",
+        "text": "124,05°."
+      },
+      {
+        "index": "c",
+        "text": "124,20°."
+      },
+      {
+        "index": "d",
+        "text": "124,30°."
+      },
+      {
+        "index": "e",
+        "text": "124,50°."
+      }
+    ],
+    "correctAlternative": "b",
+    "explanation": ""
+  },
+  "id": "a507ecb3-bff3-57bb-9847-c4ecc28500d6"
+}

@@ -1,0 +1,58 @@
+{
+  "label": 535,
+  "title": "Questão 163 - ENEM 2021",
+  "source": "enem 2021",
+  "difficulty": 3,
+  "percentCorrectRate": null,
+  "subject": "probability",
+  "content": {
+    "files": [],
+    "problem": "A relação de Newton-Laplace estabelece que o módulo volumétrico de um fluído é diretamente proporcional ao quadrado da velocidade do som (em metro por segundo) no fluido e à sua densidade (em quilograma por meto cúbico), com uma constante de proporcionalidade adimensional.",
+    "command": "Nessa relação, a unidade de medida adequada para o módulo volumétrico é",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "",
+        "file": {
+          "url": "images/b08497a6-4df2-4f61-96f2-f125293d21a4.png",
+          "type": "image"
+        }
+      },
+      {
+        "index": "b",
+        "text": "",
+        "file": {
+          "url": "images/e8929184-06b7-4b2c-a7bf-8682d4d92231.png",
+          "type": "image"
+        }
+      },
+      {
+        "index": "c",
+        "text": "",
+        "file": {
+          "url": "images/381b63e2-88a8-405f-ab1e-ae5e1ef6b266.png",
+          "type": "image"
+        }
+      },
+      {
+        "index": "d",
+        "text": "",
+        "file": {
+          "url": "images/ef0b4b69-a758-420e-a3fa-b7b5e0a2b06c.png",
+          "type": "image"
+        }
+      },
+      {
+        "index": "e",
+        "text": "",
+        "file": {
+          "url": "images/2770886b-3ccc-4ff7-8e35-59674a921fa9.png",
+          "type": "image"
+        }
+      }
+    ],
+    "correctAlternative": "b",
+    "explanation": ""
+  },
+  "id": "144a8a9a-f585-5e19-b850-cb6c088b3a74"
+}

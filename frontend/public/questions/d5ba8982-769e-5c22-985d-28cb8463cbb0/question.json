@@ -1,0 +1,58 @@
+{
+  "label": 308,
+  "title": "Questão 147 - ENEM 2016",
+  "source": "enem 2016",
+  "difficulty": 3,
+  "percentCorrectRate": null,
+  "subject": "probability",
+  "content": {
+    "files": [],
+    "problem": "",
+    "command": "Qual o número de possibilidades de escolha dos tenistas para a partida de exibição?",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "",
+        "file": {
+          "url": "images/b312c7db-dd7d-4633-af66-83c020de8340.png",
+          "type": "image"
+        }
+      },
+      {
+        "index": "b",
+        "text": "",
+        "file": {
+          "url": "images/6eea6a39-3b2d-4b06-8f22-3fb8b3354049.png",
+          "type": "image"
+        }
+      },
+      {
+        "index": "c",
+        "text": "",
+        "file": {
+          "url": "images/e5274b9d-58c1-47d8-80c4-9ba8ea7db58f.png",
+          "type": "image"
+        }
+      },
+      {
+        "index": "d",
+        "text": "",
+        "file": {
+          "url": "images/9ed4324a-682b-4a89-b93b-ce8035218bc6.png",
+          "type": "image"
+        }
+      },
+      {
+        "index": "e",
+        "text": "",
+        "file": {
+          "url": "images/3f06a01b-fdec-4bb2-affb-45cf27b74bfd.png",
+          "type": "image"
+        }
+      }
+    ],
+    "correctAlternative": "a",
+    "explanation": ""
+  },
+  "id": "d5ba8982-769e-5c22-985d-28cb8463cbb0"
+}

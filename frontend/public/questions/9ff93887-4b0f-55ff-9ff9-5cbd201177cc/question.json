@@ -1,0 +1,63 @@
+{
+  "label": 142,
+  "title": "Questão 153 - ENEM 2012",
+  "source": "enem 2012",
+  "difficulty": 1,
+  "percentCorrectRate": null,
+  "subject": "geometry",
+  "content": {
+    "files": [
+      {
+        "url": "images/fa4fd7b5-9f57-4575-b0d7-efd5da168ad2.png",
+        "type": "image"
+      }
+    ],
+    "problem": "![](https://enem.dev/2012/questions/153/fa4fd7b5-9f57-4575-b0d7-efd5da168ad2.png)\n\nNa Figura 2, o ponto A está no plano do chão onde está colocado o globo da morte e o segmento AB passa pelo centro da esfera e é perpendicular ao plano do chão. Suponha que há um foco de luz direcionado para o chão colocado no ponto B e que um motoqueiro faça um trajeto dentro da esfera, percorrendo uma circunferência que passa pelos pontos A e B.",
+    "command": "A imagem do trajeto feito pelo motoqueiro no plano do chão é melhor representada por",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "",
+        "file": {
+          "url": "images/4407a6d1-8bea-4593-a271-4d67fae4f8ea.png",
+          "type": "image"
+        }
+      },
+      {
+        "index": "b",
+        "text": "",
+        "file": {
+          "url": "images/c5a84103-a02d-4576-9326-bb4cc62998e1.png",
+          "type": "image"
+        }
+      },
+      {
+        "index": "c",
+        "text": "",
+        "file": {
+          "url": "images/4442f0fa-2803-46d7-bf5c-6e73037f198e.png",
+          "type": "image"
+        }
+      },
+      {
+        "index": "d",
+        "text": "",
+        "file": {
+          "url": "images/568e9422-3b06-416a-9021-dbd0345427cc.png",
+          "type": "image"
+        }
+      },
+      {
+        "index": "e",
+        "text": "",
+        "file": {
+          "url": "images/6485f40e-a5f1-4426-9075-1bc63b0c4a87.png",
+          "type": "image"
+        }
+      }
+    ],
+    "correctAlternative": "e",
+    "explanation": ""
+  },
+  "id": "9ff93887-4b0f-55ff-9ff9-5cbd201177cc"
+}

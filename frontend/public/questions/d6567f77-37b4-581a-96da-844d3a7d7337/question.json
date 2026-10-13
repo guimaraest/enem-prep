@@ -1,0 +1,38 @@
+{
+  "label": 228,
+  "title": "Questão 154 - ENEM 2014",
+  "source": "enem 2014",
+  "difficulty": 4,
+  "percentCorrectRate": null,
+  "subject": "functions",
+  "content": {
+    "files": [],
+    "problem": "",
+    "command": "Qual desses jogadores apresentou maior desempenho?",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "I"
+      },
+      {
+        "index": "b",
+        "text": "II"
+      },
+      {
+        "index": "c",
+        "text": "III"
+      },
+      {
+        "index": "d",
+        "text": "IV"
+      },
+      {
+        "index": "e",
+        "text": "V"
+      }
+    ],
+    "correctAlternative": "d",
+    "explanation": ""
+  },
+  "id": "d6567f77-37b4-581a-96da-844d3a7d7337"
+}

@@ -1,0 +1,63 @@
+{
+  "label": 339,
+  "title": "Questão 178 - ENEM 2016",
+  "source": "enem 2016",
+  "difficulty": 4,
+  "percentCorrectRate": null,
+  "subject": "combinatorics",
+  "content": {
+    "files": [
+      {
+        "url": "images/9dd54a28-fb1e-492d-85a3-60f05af05d97.png",
+        "type": "image"
+      }
+    ],
+    "problem": "![](https://enem.dev/2016/questions/178/9dd54a28-fb1e-492d-85a3-60f05af05d97.png)",
+    "command": "A projeção ortogonal, no plano α, do caminho traçado no globo pode ser representada por",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "",
+        "file": {
+          "url": "images/61295cd7-dbbd-4c5b-a020-38fe0d4ff8e8.png",
+          "type": "image"
+        }
+      },
+      {
+        "index": "b",
+        "text": "",
+        "file": {
+          "url": "images/72e0c12c-006b-4bc6-aaa6-6613a78850e7.png",
+          "type": "image"
+        }
+      },
+      {
+        "index": "c",
+        "text": "",
+        "file": {
+          "url": "images/9e017368-a37a-4646-8617-6931fcb8a553.png",
+          "type": "image"
+        }
+      },
+      {
+        "index": "d",
+        "text": "",
+        "file": {
+          "url": "images/d3cc0e36-2585-409c-91b9-1e911c184f39.png",
+          "type": "image"
+        }
+      },
+      {
+        "index": "e",
+        "text": "",
+        "file": {
+          "url": "images/441c5d19-71f8-48ed-96c3-897298ff37c9.png",
+          "type": "image"
+        }
+      }
+    ],
+    "correctAlternative": "e",
+    "explanation": ""
+  },
+  "id": "5857560b-41ec-5955-b148-de40eb738320"
+}

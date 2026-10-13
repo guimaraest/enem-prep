@@ -1,0 +1,43 @@
+{
+  "label": 53,
+  "title": "Questão 146 - ENEM 2010",
+  "source": "enem 2010",
+  "difficulty": 1,
+  "percentCorrectRate": null,
+  "subject": "probability",
+  "content": {
+    "files": [
+      {
+        "url": "images/217b7bc8-833f-4177-870c-d2adbf301246.png",
+        "type": "image"
+      }
+    ],
+    "problem": "![](https://enem.dev/2010/questions/146/217b7bc8-833f-4177-870c-d2adbf301246.png)",
+    "command": "O produto das três dimensões indicadas na peça resultaria na medida da grandeza",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "Massa."
+      },
+      {
+        "index": "b",
+        "text": "Volume."
+      },
+      {
+        "index": "c",
+        "text": "Superfície."
+      },
+      {
+        "index": "d",
+        "text": "Capacidade."
+      },
+      {
+        "index": "e",
+        "text": "Comprimento."
+      }
+    ],
+    "correctAlternative": "b",
+    "explanation": ""
+  },
+  "id": "dd3c4fdf-57b3-5ba0-a36f-5adb6d7c0221"
+}

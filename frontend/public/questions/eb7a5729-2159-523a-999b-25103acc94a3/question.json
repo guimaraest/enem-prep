@@ -1,0 +1,38 @@
+{
+  "label": 83,
+  "title": "Questão 176 - ENEM 2010",
+  "source": "enem 2010",
+  "difficulty": 3,
+  "percentCorrectRate": null,
+  "subject": "arithmetic",
+  "content": {
+    "files": [],
+    "problem": "A disparidade de volume entre os planetas é tão grande que seria possível colocá-los uns dentro dos outros. O planeta Mercúrio é o menor de todos. Marte é o segundo menor: dentro dele cabem três Mercúrios. Terra é o único com vida: dentro dela cabem sete Martes. Netuno é o quarto maior: dentro dele cabem 58 Terras. Júpiter é o maior dos planetas: dentro dele cabem 23 Netunos.\n\n**Revista Veja.** Ano 41, no 25, 25 jun. 2008 (adaptado).",
+    "command": "Seguindo o raciocínio proposto, quantas Terras cabem dentro de Júpiter?",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "406"
+      },
+      {
+        "index": "b",
+        "text": "1 334"
+      },
+      {
+        "index": "c",
+        "text": "4 002"
+      },
+      {
+        "index": "d",
+        "text": "9 338"
+      },
+      {
+        "index": "e",
+        "text": "28 014"
+      }
+    ],
+    "correctAlternative": "b",
+    "explanation": ""
+  },
+  "id": "eb7a5729-2159-523a-999b-25103acc94a3"
+}

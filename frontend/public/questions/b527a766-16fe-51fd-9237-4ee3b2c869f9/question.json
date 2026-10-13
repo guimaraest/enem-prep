@@ -1,0 +1,43 @@
+{
+  "label": 207,
+  "title": "Questão 177 - ENEM 2013",
+  "source": "enem 2013",
+  "difficulty": 2,
+  "percentCorrectRate": null,
+  "subject": "algebra",
+  "content": {
+    "files": [
+      {
+        "url": "images/1c2ff438-889a-4dcc-8cd6-cf02757f4b17.png",
+        "type": "image"
+      }
+    ],
+    "problem": "![](https://enem.dev/2013/questions/177/1c2ff438-889a-4dcc-8cd6-cf02757f4b17.png)",
+    "command": "Dos países com notas abaixo da média nesse exame, aquele que apresenta maior quantidade de horas de estudo é",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "Finlândia."
+      },
+      {
+        "index": "b",
+        "text": "Holanda."
+      },
+      {
+        "index": "c",
+        "text": "Israel."
+      },
+      {
+        "index": "d",
+        "text": "México."
+      },
+      {
+        "index": "e",
+        "text": "Rússia."
+      }
+    ],
+    "correctAlternative": "c",
+    "explanation": ""
+  },
+  "id": "b527a766-16fe-51fd-9237-4ee3b2c869f9"
+}

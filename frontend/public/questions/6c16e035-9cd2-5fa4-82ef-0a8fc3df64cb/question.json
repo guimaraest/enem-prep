@@ -1,0 +1,43 @@
+{
+  "label": 21,
+  "title": "Questão 158 - ENEM 2009",
+  "source": "enem 2009",
+  "difficulty": 2,
+  "percentCorrectRate": null,
+  "subject": "combinatorics",
+  "content": {
+    "files": [
+      {
+        "url": "images/ee2af503-e5d1-45f8-b7f1-372e3cec5e11.jpg",
+        "type": "image"
+      }
+    ],
+    "problem": "A figura a seguir mostra as medidas reais de uma aeronave que será fabricada para utilização por companhias de transporte aéreo. Um engenheiro precisa fazer o desenho desse avião em escala de 1:150.\n\n![](https://enem.dev/2009/questions/158/ee2af503-e5d1-45f8-b7f1-372e3cec5e11.jpg)",
+    "command": "Para o engenheiro fazer esse desenho em uma folha de papel, deixando uma margem de 1 cm em relação às bordas da folha, quais as dimensões mínimas, em centímetros, que essa folha deverá ter?",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "2,9 cm × 3,4 cm."
+      },
+      {
+        "index": "b",
+        "text": "3,9 cm × 4,4 cm."
+      },
+      {
+        "index": "c",
+        "text": "20 cm × 25 cm."
+      },
+      {
+        "index": "d",
+        "text": "21 cm × 26 cm."
+      },
+      {
+        "index": "e",
+        "text": "192 cm × 242 cm."
+      }
+    ],
+    "correctAlternative": "d",
+    "explanation": ""
+  },
+  "id": "6c16e035-9cd2-5fa4-82ef-0a8fc3df64cb"
+}

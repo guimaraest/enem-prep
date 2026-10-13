@@ -1,0 +1,58 @@
+{
+  "label": 157,
+  "title": "Questão 170 - ENEM 2012",
+  "source": "enem 2012",
+  "difficulty": 3,
+  "percentCorrectRate": null,
+  "subject": "statistics",
+  "content": {
+    "files": [],
+    "problem": "Existem no mercado chuveiros elétricos de diferentes potências, que representam consumos e custos diversos. A potência (P) de um chuveiro elétrico é dada pelo produto entre sua resistência elétrica (R) e o quadrado da corrente elétrica (i) que por ele circula. O consumo de energia elétrica (E), por sua vez, é diretamente proporcional à potência do aparelho.",
+    "command": "Considerando as características apresentadas, qual dos gráficos a seguir representa a relação entre a energia consumida (E) por um chuveiro elétrico e a corrente elétrica (i) que circula por ele?",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "",
+        "file": {
+          "url": "images/715a4076-666c-46a9-ae05-2a83d355296e.png",
+          "type": "image"
+        }
+      },
+      {
+        "index": "b",
+        "text": "",
+        "file": {
+          "url": "images/4ac7fc20-5185-4cae-9a82-77ae7491d0ab.png",
+          "type": "image"
+        }
+      },
+      {
+        "index": "c",
+        "text": "",
+        "file": {
+          "url": "images/4c3ff5e4-57b9-480b-be2f-3753e095d212.png",
+          "type": "image"
+        }
+      },
+      {
+        "index": "d",
+        "text": "",
+        "file": {
+          "url": "images/d73bdaba-0aea-49f9-89e1-74929848eba9.png",
+          "type": "image"
+        }
+      },
+      {
+        "index": "e",
+        "text": "",
+        "file": {
+          "url": "images/4680b091-1ae6-4487-a721-e8fcc1265f13.png",
+          "type": "image"
+        }
+      }
+    ],
+    "correctAlternative": "d",
+    "explanation": ""
+  },
+  "id": "544a91bf-5f41-5825-84b3-962e140a80c4"
+}

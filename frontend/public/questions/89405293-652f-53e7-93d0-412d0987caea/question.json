@@ -1,0 +1,43 @@
+{
+  "label": 178,
+  "title": "Questão 146 - ENEM 2013",
+  "source": "enem 2013",
+  "difficulty": 3,
+  "percentCorrectRate": null,
+  "subject": "geometry",
+  "content": {
+    "files": [
+      {
+        "url": "images/573a432a-fdf5-4f17-8e42-d8337154d0aa.png",
+        "type": "image"
+      }
+    ],
+    "problem": "![](https://enem.dev/2013/questions/146/573a432a-fdf5-4f17-8e42-d8337154d0aa.png)",
+    "command": "A loja sorteará um brinde entre os compradores do produto A e outro brinde entre os compradores do produto B.\nQual a probabilidade de que os dois sorteados tenham feito suas compras em fevereiro de 2012?",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "1/20"
+      },
+      {
+        "index": "b",
+        "text": "3/242"
+      },
+      {
+        "index": "c",
+        "text": "5/22"
+      },
+      {
+        "index": "d",
+        "text": "6/25"
+      },
+      {
+        "index": "e",
+        "text": "7/15"
+      }
+    ],
+    "correctAlternative": "a",
+    "explanation": ""
+  },
+  "id": "89405293-652f-53e7-93d0-412d0987caea"
+}

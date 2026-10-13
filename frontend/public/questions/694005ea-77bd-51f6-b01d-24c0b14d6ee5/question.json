@@ -1,0 +1,43 @@
+{
+  "label": 616,
+  "title": "Questão 151 - ENEM 2023",
+  "source": "enem 2023",
+  "difficulty": 2,
+  "percentCorrectRate": null,
+  "subject": "combinatorics",
+  "content": {
+    "files": [
+      {
+        "url": "images/276495a3-e5f2-4e4c-83b0-3473512a5274.png",
+        "type": "image"
+      }
+    ],
+    "problem": "Um investidor iniciante observou o gráfico que apresenta a evolução dos valores de duas criptomoedas A e B em relação ao tempo.\n\n![](https://enem.dev/2023/questions/151/276495a3-e5f2-4e4c-83b0-3473512a5274.png)\n\nDurante horas consecutivas, esses valores foram observados em nove instantes, representados por horas exatas.",
+    "command": "Em quantos desses instantes a criptomoeda A estava mais valorizada do que a criptomoeda B?",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "3"
+      },
+      {
+        "index": "b",
+        "text": "4"
+      },
+      {
+        "index": "c",
+        "text": "6"
+      },
+      {
+        "index": "d",
+        "text": "7"
+      },
+      {
+        "index": "e",
+        "text": "9"
+      }
+    ],
+    "correctAlternative": "b",
+    "explanation": ""
+  },
+  "id": "694005ea-77bd-51f6-b01d-24c0b14d6ee5"
+}

@@ -1,0 +1,38 @@
+{
+  "label": 233,
+  "title": "Questão 159 - ENEM 2014",
+  "source": "enem 2014",
+  "difficulty": 4,
+  "percentCorrectRate": null,
+  "subject": "algebra",
+  "content": {
+    "files": [],
+    "problem": "",
+    "command": "O número máximo de mudas que essa pessoa poderá plantar no espaço disponível é",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "4."
+      },
+      {
+        "index": "b",
+        "text": "8."
+      },
+      {
+        "index": "c",
+        "text": "9."
+      },
+      {
+        "index": "d",
+        "text": "12."
+      },
+      {
+        "index": "e",
+        "text": "20."
+      }
+    ],
+    "correctAlternative": "c",
+    "explanation": ""
+  },
+  "id": "3ffff6b2-1f36-57ac-b134-4fe79f69b178"
+}

@@ -1,0 +1,43 @@
+{
+  "label": 469,
+  "title": "Questão 179 - ENEM 2019",
+  "source": "enem 2019",
+  "difficulty": 4,
+  "percentCorrectRate": null,
+  "subject": "arithmetic",
+  "content": {
+    "files": [
+      {
+        "url": "images/3c23edf9-5531-4ae5-b328-9b0a6b31fdc1.png",
+        "type": "image"
+      }
+    ],
+    "problem": "Nos seis cômodos de uma casa há sensores de presença posicionados de forma que a luz de cada cômodo acende assim que uma pessoa nele adentra, e apaga assim que a pessoa se retira desse cômodo. Suponha que o acendimento e o desligamento sejam instantâneos.\n\nO morador dessa casa visitou alguns desses cômodos, ficando exatamente um minuto em cada um deles. O gráfico descreve o consumo acumulado de energia, em watt x minuto, em função do tempo t, em minuto, das lâmpadas de LED dessa casa, enquanto a figura apresenta a planta baixa da casa, na qual os cômodos estão numerados de 1 a 6, com as potências das respectivas lâmpadas indicadas.\n\n![](https://enem.dev/2019/questions/179/3c23edf9-5531-4ae5-b328-9b0a6b31fdc1.png)",
+    "command": "A sequência de deslocamento pelos cômodos, conforme o consumo de energia apresentado no gráfico, é",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "1 → 4 → 5 → 4 → 1 → 6 → 1 → 4"
+      },
+      {
+        "index": "b",
+        "text": "1 → 2 → 3 → 1 → 4 → 1 → 4 → 4"
+      },
+      {
+        "index": "c",
+        "text": "1 → 4 → 5 → 4 → 1 → 6 → 1 → 2 → 3"
+      },
+      {
+        "index": "d",
+        "text": "1 → 2 → 3 → 5 → 4 → 1 → 6 → 1 → 4"
+      },
+      {
+        "index": "e",
+        "text": "1 → 4 → 2 → 3 → 5 → 1 → 6 → 1 → 4"
+      }
+    ],
+    "correctAlternative": "a",
+    "explanation": ""
+  },
+  "id": "6e4b08b8-a762-5932-9055-6a288206d9af"
+}

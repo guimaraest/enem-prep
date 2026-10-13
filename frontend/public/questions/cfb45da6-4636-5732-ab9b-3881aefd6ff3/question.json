@@ -1,0 +1,43 @@
+{
+  "label": 265,
+  "title": "Questão 147 - ENEM 2015",
+  "source": "enem 2015",
+  "difficulty": 2,
+  "percentCorrectRate": null,
+  "subject": "functions",
+  "content": {
+    "files": [
+      {
+        "url": "images/09fe1110-3444-4a3d-b60c-d86c6f3d705a.png",
+        "type": "image"
+      }
+    ],
+    "problem": "![](https://enem.dev/2015/questions/147/09fe1110-3444-4a3d-b60c-d86c6f3d705a.png)",
+    "command": "Quantas configurações distintas das notas a serem atribuídas pelo jurado B no quesito Bateria tornariam campeã a Escola II?",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "21"
+      },
+      {
+        "index": "b",
+        "text": "90"
+      },
+      {
+        "index": "c",
+        "text": "750"
+      },
+      {
+        "index": "d",
+        "text": "1 250"
+      },
+      {
+        "index": "e",
+        "text": "3 125"
+      }
+    ],
+    "correctAlternative": "c",
+    "explanation": ""
+  },
+  "id": "cfb45da6-4636-5732-ab9b-3881aefd6ff3"
+}

@@ -1,0 +1,38 @@
+{
+  "label": 306,
+  "title": "Questão 145 - ENEM 2016",
+  "source": "enem 2016",
+  "difficulty": 1,
+  "percentCorrectRate": null,
+  "subject": "statistics",
+  "content": {
+    "files": [],
+    "problem": "_Art. 93. A empresa com 100 (cem) ou mais empregados está obrigada a preencher de 2% (dois por cento) a 5% (cinco por cento) dos seus cargos com beneficiários reabilitados ou pessoas com deficiência, habilitadas, na seguinte proporção:_  \n_I. até 200 empregados……………….. 2%;_  \n_II. de 201 a 500 empregados…………… 3%;_  \n_III. de 501 a 1 000 empregados………… 4%;_  \n_IV. de 1 001 em diante………………. 5%._\n\nDisponível em: www.planalto.gov.br. Acesso em: 3 fev. 2015.\n\nConstatou-se que a empresa possui 1 200 funcionários, dos quais 10 são reabilitados ou com deficiência, habilitados.\n\nPara adequar-se à referida lei, a empresa contratará apenas empregados que atendem ao perfil indicado no artigo 93.",
+    "command": "O número mínimo de empregados reabilitados ou com deficiência, habilitados, que deverá ser contratado pela empresa é",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "74"
+      },
+      {
+        "index": "b",
+        "text": "70"
+      },
+      {
+        "index": "c",
+        "text": "64"
+      },
+      {
+        "index": "d",
+        "text": "60"
+      },
+      {
+        "index": "e",
+        "text": "53"
+      }
+    ],
+    "correctAlternative": "e",
+    "explanation": ""
+  },
+  "id": "2929b746-7306-57d4-a29c-67e3ac3ec4e6"
+}

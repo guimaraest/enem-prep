@@ -1,0 +1,43 @@
+{
+  "label": 287,
+  "title": "Questão 169 - ENEM 2015",
+  "source": "enem 2015",
+  "difficulty": 4,
+  "percentCorrectRate": null,
+  "subject": "financial_math",
+  "content": {
+    "files": [
+      {
+        "url": "images/fed74b1c-7354-40bc-8c64-834a528c49d7.png",
+        "type": "image"
+      }
+    ],
+    "problem": "![](https://enem.dev/2015/questions/169/fed74b1c-7354-40bc-8c64-834a528c49d7.png)",
+    "command": "De acordo com os gráficos, a quantidade de embalagens PET recicladas destinadas à produção de tecidos e malhas, em kton, é mais aproximada de",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "16,0."
+      },
+      {
+        "index": "b",
+        "text": "22,9."
+      },
+      {
+        "index": "c",
+        "text": "32,0."
+      },
+      {
+        "index": "d",
+        "text": "84,6."
+      },
+      {
+        "index": "e",
+        "text": "106,6."
+      }
+    ],
+    "correctAlternative": "c",
+    "explanation": ""
+  },
+  "id": "03522fdf-4858-5780-b964-ec8c637fcf5a"
+}

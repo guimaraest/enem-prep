@@ -1,0 +1,43 @@
+{
+  "label": 470,
+  "title": "Questão 180 - ENEM 2019",
+  "source": "enem 2019",
+  "difficulty": 3,
+  "percentCorrectRate": null,
+  "subject": "combinatorics",
+  "content": {
+    "files": [
+      {
+        "url": "images/8813c78d-9c4b-4850-bbd4-f5591bd28537.png",
+        "type": "image"
+      }
+    ],
+    "problem": "Um casal planejou uma viagem e definiu como teto para o gasto diário um valor de até R$ 1 000,00. Antes de decidir o destino da viagem, fizeram uma pesquisa sobre a taxa de câmbio vigente para as moedas de cinco países que desejavam visitar e também sobre as estimativas de gasto diário em cada um, com o objetivo de escolher o destino que apresentasse o menor custo diário em real.\n\nO quadro mostra os resultados obtidos com a pesquisa realizada.\n\n![](https://enem.dev/2019/questions/180/8813c78d-9c4b-4850-bbd4-f5591bd28537.png)",
+    "command": "Nessas condições, qual será o destino escolhido para a viagem?",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "Austrália."
+      },
+      {
+        "index": "b",
+        "text": "Canadá."
+      },
+      {
+        "index": "c",
+        "text": "EUA."
+      },
+      {
+        "index": "d",
+        "text": "França."
+      },
+      {
+        "index": "e",
+        "text": "Reino Unido."
+      }
+    ],
+    "correctAlternative": "a",
+    "explanation": ""
+  },
+  "id": "961ffbd9-0edc-5218-85c3-470e84aaa294"
+}

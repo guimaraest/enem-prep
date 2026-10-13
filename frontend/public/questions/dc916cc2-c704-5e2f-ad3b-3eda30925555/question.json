@@ -1,0 +1,43 @@
+{
+  "label": 240,
+  "title": "Questão 166 - ENEM 2014",
+  "source": "enem 2014",
+  "difficulty": 2,
+  "percentCorrectRate": null,
+  "subject": "financial_math",
+  "content": {
+    "files": [
+      {
+        "url": "images/9eb6c121-ac40-452b-b439-1b2261d6e950.png",
+        "type": "image"
+      }
+    ],
+    "problem": "![](https://enem.dev/2014/questions/166/9eb6c121-ac40-452b-b439-1b2261d6e950.png)\n\nEssa pessoa pretende gastar exatamente R$ 30,00 por mês com telefone.",
+    "command": "Dos planos telefônicos apresentados, qual é o mais vantajoso, em tempo de chamada, para o gasto previsto para essa pessoa?",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "A"
+      },
+      {
+        "index": "b",
+        "text": "B"
+      },
+      {
+        "index": "c",
+        "text": "C"
+      },
+      {
+        "index": "d",
+        "text": "D"
+      },
+      {
+        "index": "e",
+        "text": "E"
+      }
+    ],
+    "correctAlternative": "c",
+    "explanation": ""
+  },
+  "id": "dc916cc2-c704-5e2f-ad3b-3eda30925555"
+}

@@ -1,0 +1,43 @@
+{
+  "label": 313,
+  "title": "Questão 152 - ENEM 2016",
+  "source": "enem 2016",
+  "difficulty": 1,
+  "percentCorrectRate": null,
+  "subject": "geometry",
+  "content": {
+    "files": [
+      {
+        "url": "images/b9f02657-5528-4c2c-8687-9a8db0f4a232.png",
+        "type": "image"
+      }
+    ],
+    "problem": "![](https://enem.dev/2016/questions/152/b9f02657-5528-4c2c-8687-9a8db0f4a232.png)\n\nSuponha que relativamente a cada ramificação, as opções existentes de percurso pelos caminhos apresentem iguais probabilidades de escolha, que a caminhada foi feita escolhendo ao acaso os caminhos existentes e que, ao tomar um caminho que chegue a uma área distinta da IV, o adolescente necessariamente passa por ela ou retorna.",
+    "command": "Nessas condições, a probabilidade de ele chegar à área IV sem passar por outras áreas e sem\nretornar é igual a",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "1/96"
+      },
+      {
+        "index": "b",
+        "text": "1/64"
+      },
+      {
+        "index": "c",
+        "text": "5/24"
+      },
+      {
+        "index": "d",
+        "text": "1/4"
+      },
+      {
+        "index": "e",
+        "text": "5/12"
+      }
+    ],
+    "correctAlternative": "c",
+    "explanation": ""
+  },
+  "id": "df359251-ac6a-5f9c-9c03-5315a9ab5cae"
+}

@@ -1,0 +1,43 @@
+{
+  "label": 8,
+  "title": "Questão 144 - ENEM 2009",
+  "source": "enem 2009",
+  "difficulty": 3,
+  "percentCorrectRate": null,
+  "subject": "geometry",
+  "content": {
+    "files": [
+      {
+        "url": "images/e592d2d8-7aca-4cb8-8a1c-3d01b64706a6.jpg",
+        "type": "image"
+      }
+    ],
+    "problem": "A música e a matemática se encontram na representação dos tempos das notas musicais, conforme a figura seguinte.\n\n![](https://enem.dev/2009/questions/144/e592d2d8-7aca-4cb8-8a1c-3d01b64706a6.jpg)\n\nUm compasso é uma unidade musical composta por determinada quantidade de notas musicais em que a soma das durações coincide com a fração indicada como fórmula do compasso. Por exemplo, se a fórmula de compasso for 1/2 , poderia ter um compasso ou com duas semínimas ou uma mínima ou quatro colcheias, sendo possível a combinação de diferentes figuras.",
+    "command": "Um trecho musical de oito compassos, cuja fórmula é 3/4 , poderia ser preenchido com",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "24 fusas."
+      },
+      {
+        "index": "b",
+        "text": "3 semínimas."
+      },
+      {
+        "index": "c",
+        "text": "8 semínimas."
+      },
+      {
+        "index": "d",
+        "text": "24 colcheias e 12 semínimas."
+      },
+      {
+        "index": "e",
+        "text": "16 semínimas e 8 semicolcheias."
+      }
+    ],
+    "correctAlternative": "d",
+    "explanation": ""
+  },
+  "id": "d12b49c6-63d8-5eba-97eb-8bf216043af9"
+}

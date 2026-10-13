@@ -1,0 +1,38 @@
+{
+  "label": 448,
+  "title": "Questão 158 - ENEM 2019",
+  "source": "enem 2019",
+  "difficulty": 4,
+  "percentCorrectRate": null,
+  "subject": "financial_math",
+  "content": {
+    "files": [],
+    "problem": "Comum em lançamentos de empreendimentos imobiliários, as maquetes de condomínios funcionam como uma ótima ferramenta de marketing para as construtoras, pois, além de encantar clientes, auxiliam de maneira significativa os corretores na negociação e venda de imóveis.\n\nUm condomínio está sendo lançado em um novo bairro de uma cidade. Na maquete projetada pela construtora, em escala de 1 : 200, existe um reservatório de água com capacidade de 45 cm³.\n\nQuando todas as famílias estiverem residindo no condomínio, a estimativa é que, por dia, sejam consumidos 30.000 litros de água.",
+    "command": "Em uma eventual falta de água, o reservatório cheio será suficiente para abastecer o condomínio por quantos dias?",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "30"
+      },
+      {
+        "index": "b",
+        "text": "15"
+      },
+      {
+        "index": "c",
+        "text": "12"
+      },
+      {
+        "index": "d",
+        "text": "6"
+      },
+      {
+        "index": "e",
+        "text": "3"
+      }
+    ],
+    "correctAlternative": "c",
+    "explanation": ""
+  },
+  "id": "c90fd9f8-07ef-5ff3-8003-7ca574a791dc"
+}

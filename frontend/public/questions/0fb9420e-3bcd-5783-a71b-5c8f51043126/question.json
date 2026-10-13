@@ -1,0 +1,43 @@
+{
+  "label": 416,
+  "title": "Questão 170 - ENEM 2018",
+  "source": "enem 2018",
+  "difficulty": 3,
+  "percentCorrectRate": null,
+  "subject": "statistics",
+  "content": {
+    "files": [
+      {
+        "url": "images/b84e9f23-d18e-4f36-9917-643beaf719e3.png",
+        "type": "image"
+      }
+    ],
+    "problem": "Em 2014 foi inaugurada a maior roda-gigante do mundo, a _High Roller_, situada em Las Vegas. A figura representa um esboço dessa roda-gigante, no qual o ponto A representa uma de suas cadeiras:\n\n![](https://enem.dev/2018/questions/170/b84e9f23-d18e-4f36-9917-643beaf719e3.png)\n\nA partir da posição indicada, em que o segmento _OA_ se encontra paralelo ao plano do solo, rotaciona-se a _High Roller_ no sentido anti-horário, em torno do ponto _O_. Sejam _t_ o ângulo determinado pelo segmento _OA_ em relação à sua posição inicial, e _f_ a função que descreve a altura do ponto _A_, em relação ao solo, em função de _t_. Após duas voltas completas, _f_ tem o seguinte gráfico:",
+    "command": "A expressão da função altura é dada por",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "F(t) = 80sen(t) + 88"
+      },
+      {
+        "index": "b",
+        "text": "F(t) = 80cos(t) + 8 8"
+      },
+      {
+        "index": "c",
+        "text": "F(t) = 88cos(t) + 168"
+      },
+      {
+        "index": "d",
+        "text": "F(t) = 168sen(t) + 88cos(t)"
+      },
+      {
+        "index": "e",
+        "text": "F(t) = 88sen(t) + 168cos(t)"
+      }
+    ],
+    "correctAlternative": "a",
+    "explanation": ""
+  },
+  "id": "0fb9420e-3bcd-5783-a71b-5c8f51043126"
+}

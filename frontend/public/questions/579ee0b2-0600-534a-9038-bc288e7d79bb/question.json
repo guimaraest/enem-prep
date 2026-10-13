@@ -1,0 +1,38 @@
+{
+  "label": 408,
+  "title": "Questão 162 - ENEM 2018",
+  "source": "enem 2018",
+  "difficulty": 2,
+  "percentCorrectRate": null,
+  "subject": "algebra",
+  "content": {
+    "files": [],
+    "problem": "Torneios de tênis, em geral, são disputados em sistema de eliminatória simples. Nesse sistema, são disputadas partidas entre dois competidores, com a eliminação do perdedor e promoção do vencedor para a fase seguinte. Dessa forma, se na 1ª fase o torneio conta com 2_n_ competidores, então na 2ª fase restarão _n_ competidores, e assim sucessivamente até a partida final.  \nEm um torneio de tênis, disputado nesse sistema, participam 128 tenistas.",
+    "command": "Para se definir o campeão desse torneio, o número de partidas necessárias é dado por",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "2 X 128"
+      },
+      {
+        "index": "b",
+        "text": "64 + 32 + 16 + 8 + 4 + 2"
+      },
+      {
+        "index": "c",
+        "text": "128 + 64 + 32 + 16 + 8 + 4 + 2 + 1"
+      },
+      {
+        "index": "d",
+        "text": "128 + 64 + 32 + 16 + 8 + 4 + 2"
+      },
+      {
+        "index": "e",
+        "text": "64 + 32 + 16 + 8+ 4 + 2+ 1"
+      }
+    ],
+    "correctAlternative": "e",
+    "explanation": ""
+  },
+  "id": "579ee0b2-0600-534a-9038-bc288e7d79bb"
+}

@@ -1,0 +1,43 @@
+{
+  "label": 461,
+  "title": "Questão 171 - ENEM 2019",
+  "source": "enem 2019",
+  "difficulty": 3,
+  "percentCorrectRate": null,
+  "subject": "probability",
+  "content": {
+    "files": [
+      {
+        "url": "images/c821eb9f-30e3-4fe1-84e7-8522a706223d.png",
+        "type": "image"
+      }
+    ],
+    "problem": "Uma empresa confecciona e comercializa um brinquedo formado por uma locomotiva, pintada na cor preta, mais 12 vagões de iguais formato e tamanho, numerados de 1 a 12. Dos 12 vagões, 4 são pintados na cor vermelha, 3 na cor azul, 3 na cor verde e 2 na cor amarela. O trem é montado utilizando-se uma locomotiva e 12 vagões, ordenados crescentemente segundo suas  numerações, conforme ilustrado na figura.\n\n![](https://enem.dev/2019/questions/171/c821eb9f-30e3-4fe1-84e7-8522a706223d.png)",
+    "command": "De acordo com as possíveis variações nas colorações dos vagões, a quantidade de trens que podem ser montados, expressa por meio de combinações, é dada por",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "C412 x C312 x C312 x C212"
+      },
+      {
+        "index": "b",
+        "text": "C412 + C38 + C35 + C22"
+      },
+      {
+        "index": "c",
+        "text": "C412 x 2 x C38 x C25"
+      },
+      {
+        "index": "d",
+        "text": "C412 + 2 + C312 + C312"
+      },
+      {
+        "index": "e",
+        "text": "C412 x C38 x C35 x C22"
+      }
+    ],
+    "correctAlternative": "e",
+    "explanation": ""
+  },
+  "id": "d3d0942c-15f2-539d-92a8-090a1b5bed0b"
+}

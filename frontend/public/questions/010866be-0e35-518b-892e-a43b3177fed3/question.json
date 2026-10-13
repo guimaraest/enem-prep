@@ -1,0 +1,43 @@
+{
+  "label": 376,
+  "title": "Questão 172 - ENEM 2017",
+  "source": "enem 2017",
+  "difficulty": 3,
+  "percentCorrectRate": null,
+  "subject": "statistics",
+  "content": {
+    "files": [
+      {
+        "url": "images/3cab013f-abdc-4a51-8c74-6c0771ab0c6e.png",
+        "type": "image"
+      }
+    ],
+    "problem": "![](https://enem.dev/2017/questions/172/3cab013f-abdc-4a51-8c74-6c0771ab0c6e.png)",
+    "command": "O número de horas em que os dois reservatórios contêm a mesma quantidade de água é",
+    "alternatives": [
+      {
+        "index": "a",
+        "text": "1."
+      },
+      {
+        "index": "b",
+        "text": "2."
+      },
+      {
+        "index": "c",
+        "text": "4."
+      },
+      {
+        "index": "d",
+        "text": "5."
+      },
+      {
+        "index": "e",
+        "text": "6."
+      }
+    ],
+    "correctAlternative": "a",
+    "explanation": ""
+  },
+  "id": "010866be-0e35-518b-892e-a43b3177fed3"
+}
