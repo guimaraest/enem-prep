@@ -13,9 +13,9 @@ export interface Api {
         getById: (id: string) => Promise<Question | undefined>;
     };
     readonly userQuestions: {
-        getById: (id: string) => UserQuestionData;
-        getAll: () => UserQuestionData[];
-        setBookmarked: (id: string, isBookmarked: boolean) => void;
+        getById: (id: string) => Promise<UserQuestionData>;
+        getAll: () => Promise<UserQuestionData[]>;
+        setBookmarked: (id: string, isBookmarked: boolean) => Promise<void>;
     };
     readonly userIndexes: {
         getBookmarkedQuestions: () => Promise<QuestionSummary[]>;
@@ -25,8 +25,8 @@ export interface Api {
         record: (
             id: string,
             attempt: Pick<QuestionAttempt, 'selectedAlternativeIndex' | 'isCorrect'>,
-        ) => QuestionAttempt;
-        getByQuestionId: (id: string) => QuestionAttempt[];
+        ) => Promise<QuestionAttempt>;
+        getByQuestionId: (id: string) => Promise<QuestionAttempt[]>;
     };
 }
 

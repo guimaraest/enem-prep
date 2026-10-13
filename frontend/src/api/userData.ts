@@ -52,7 +52,7 @@ function writeUserQuestions(
     );
 }
 
-export function getUserQuestionData(
+function readUserQuestionData(
     id: string,
 ): UserQuestionData {
     const userQuestions = readUserQuestions();
@@ -64,8 +64,14 @@ export function getUserQuestionData(
     };
 }
 
-export function getAllUserQuestionData(): UserQuestionData[] {
-    return Object.values(readUserQuestions());
+export function getUserQuestionData(
+    id: string,
+): Promise<UserQuestionData> {
+    return Promise.resolve().then(() => readUserQuestionData(id));
+}
+
+export function getAllUserQuestionData(): Promise<UserQuestionData[]> {
+    return Promise.resolve().then(() => Object.values(readUserQuestions()));
 }
 
 function updateUserQuestionData(
@@ -93,11 +99,13 @@ function updateUserQuestionData(
 export function setQuestionBookmarked(
     id: string,
     isBookmarked: boolean,
-): void {
-    updateUserQuestionData(id, (data) => ({
-        ...data,
-        isBookmarked,
-    }));
+): Promise<void> {
+    return Promise.resolve().then(() => {
+        updateUserQuestionData(id, (data) => ({
+            ...data,
+            isBookmarked,
+        }));
+    });
 }
 
 export async function getBookmarkedQuestions(): Promise<QuestionSummary[]> {
@@ -135,24 +143,26 @@ export async function getMissedQuestions(): Promise<QuestionSummary[]> {
 export function recordAttempt(
     id: string,
     attempt: QuestionAttemptInput,
-): QuestionAttempt {
-    const recordedAttempt: QuestionAttempt = {
-        index: getUserQuestionData(id).attempts.length,
-        selectedAlternativeIndex: attempt.selectedAlternativeIndex,
-        isCorrect: attempt.isCorrect,
-        attemptedAt: new Date().toISOString(),
-    };
+): Promise<QuestionAttempt> {
+    return Promise.resolve().then(() => {
+        const recordedAttempt: QuestionAttempt = {
+            index: readUserQuestionData(id).attempts.length,
+            selectedAlternativeIndex: attempt.selectedAlternativeIndex,
+            isCorrect: attempt.isCorrect,
+            attemptedAt: new Date().toISOString(),
+        };
 
-    updateUserQuestionData(id, (data) => ({
-        ...data,
-        attempts: [...data.attempts, recordedAttempt],
-    }));
+        updateUserQuestionData(id, (data) => ({
+            ...data,
+            attempts: [...data.attempts, recordedAttempt],
+        }));
 
-    return recordedAttempt;
+        return recordedAttempt;
+    });
 }
 
 export function getAttemptsByQuestionId(
     id: string,
-): QuestionAttempt[] {
-    return getUserQuestionData(id).attempts;
+): Promise<QuestionAttempt[]> {
+    return Promise.resolve().then(() => readUserQuestionData(id).attempts);
 }
