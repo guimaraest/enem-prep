@@ -11,12 +11,12 @@ import type {
 export interface Api {
     readonly questions: {
         getAll: () => Promise<QuestionSummary[]>;
-        getById: (id: string) => Promise<Question | undefined>;
+        getById: (id: QuestionId) => Promise<Question | undefined>;
     };
     readonly userQuestions: {
         getAll: () => Promise<UserQuestionData[]>;
-        getById: (id: string) => Promise<UserQuestionData>;       
-        setBookmarked: (id: string, isBookmarked: boolean) => Promise<void>;
+        getById: (id: QuestionId) => Promise<UserQuestionData>;
+        setBookmarked: (id: QuestionId, isBookmarked: boolean) => Promise<void>;
     };
     readonly userIndexes: {
         getBookmarkedQuestions: () => Promise<QuestionId[]>;
@@ -24,10 +24,10 @@ export interface Api {
     };
     readonly attempts: {
         record: (
-            id: string,
+            id: QuestionId,
             attempt: Pick<QuestionAttempt, 'selectedAlternativeIndex' | 'isCorrect'>,
         ) => Promise<QuestionAttempt>;
-        getByQuestionId: (id: string) => Promise<QuestionAttempt[]>;
+        getByQuestionId: (id: QuestionId) => Promise<QuestionAttempt[]>;
     };
 }
 

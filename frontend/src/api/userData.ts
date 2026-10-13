@@ -1,12 +1,10 @@
 // implementação temporária vibecodada, o permanente será uma db
 
 import type {
-    QuestionSummary,
+    QuestionId,
     QuestionAttempt,
     UserQuestionData,
 } from '../models';
-
-import { getAllQuestions } from './staticData';
 
 // User-specific models
 
@@ -17,7 +15,7 @@ type QuestionAttemptInput = Pick<
 
 // Storage implementation
 
-const STORAGE_KEY = 'quiz:userQuestions:v1';
+const STORAGE_KEY = 'quiz:userQuestions:v2';
 
 type StoredUserQuestions = Record<string, UserQuestionData>;
 
@@ -53,7 +51,7 @@ function writeUserQuestions(
 }
 
 function readUserQuestionData(
-    id: string,
+    id: QuestionId,
 ): UserQuestionData {
     const userQuestions = readUserQuestions();
 
@@ -65,7 +63,7 @@ function readUserQuestionData(
 }
 
 export function getUserQuestionData(
-    id: string,
+    id: QuestionId,
 ): Promise<UserQuestionData> {
     return Promise.resolve().then(() => readUserQuestionData(id));
 }
@@ -75,7 +73,7 @@ export function getAllUserQuestionData(): Promise<UserQuestionData[]> {
 }
 
 function updateUserQuestionData(
-    id: string,
+    id: QuestionId,
     update: (data: UserQuestionData) => UserQuestionData,
 ): UserQuestionData {
     const userQuestions = readUserQuestions();
@@ -97,7 +95,7 @@ function updateUserQuestionData(
 }
 
 export function setQuestionBookmarked(
-    id: string,
+    id: QuestionId,
     isBookmarked: boolean,
 ): Promise<void> {
     return Promise.resolve().then(() => {
@@ -108,40 +106,28 @@ export function setQuestionBookmarked(
     });
 }
 
-export async function getBookmarkedQuestions(): Promise<QuestionSummary[]> {
+export function getBookmarkedQuestions(): Promise<QuestionId[]> {
     const userQuestions = readUserQuestions();
 
-    const bookmarkedIds = new Set(
+    return Promise.resolve(
         Object.values(userQuestions)
             .filter((data) => data.isBookmarked)
             .map((data) => data.questionId),
     );
-
-    const questions = await getAllQuestions()
-
-    return questions.filter(
-        (question) => bookmarkedIds.has(question.id),
-    );
 }
 
-export async function getMissedQuestions(): Promise<QuestionSummary[]> {
+export function getMissedQuestions(): Promise<QuestionId[]> {
     const userQuestions = readUserQuestions();
 
-    const missedIds = new Set(
+    return Promise.resolve(
         Object.values(userQuestions)
             .filter((data) => data.attempts.some((attempt) => !attempt.isCorrect))
             .map((data) => data.questionId),
     );
-
-    const questions = await getAllQuestions();
-
-    return questions.filter(
-        (question) => missedIds.has(question.id),
-    );
 }
 
 export function recordAttempt(
-    id: string,
+    id: QuestionId,
     attempt: QuestionAttemptInput,
 ): Promise<QuestionAttempt> {
     return Promise.resolve().then(() => {
@@ -162,7 +148,7 @@ export function recordAttempt(
 }
 
 export function getAttemptsByQuestionId(
-    id: string,
+    id: QuestionId,
 ): Promise<QuestionAttempt[]> {
     return Promise.resolve().then(() => readUserQuestionData(id).attempts);
 }

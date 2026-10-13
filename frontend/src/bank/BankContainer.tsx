@@ -98,8 +98,8 @@ export function BankContainer({ questions }: BankContainerProps) {
           api.userIndexes.getBookmarkedQuestions(),
           api.userIndexes.getMissedQuestions(),
         ])
-        const bookmarkedIds = new Set(bookmarkedQuestions.map((question) => question.id))
-        const missedIds = new Set(missedQuestions.map((question) => question.id))
+        const bookmarkedIds = new Set(bookmarkedQuestions)
+        const missedIds = new Set(missedQuestions)
         const enrichedQuestions = questions.map((question) => ({
           ...question,
           isBookmarked: bookmarkedIds.has(question.id),
