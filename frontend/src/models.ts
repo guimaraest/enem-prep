@@ -1,3 +1,15 @@
+export type UUID = string & { readonly __brand: 'UUID' };
+
+export function parseUUID(value: string): UUID {
+  if (
+    !/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(value)
+  ) {
+    throw new Error('Invalid UUID');
+  }
+
+  return value as UUID;
+}
+
 export const SUBJECTS = [
   'algebra',
   'geometry',
@@ -14,8 +26,6 @@ export type Subject = (typeof SUBJECTS)[number]
 export const DIFFICULTIES = [1, 2, 3, 4] as const
 
 export type Difficulty = (typeof DIFFICULTIES)[number]
-
-export type AlternativeLetter = 'a' | 'b' | 'c' | 'd' | 'e'
 
 export type QuestionSource =
   | 'enem 2009'
@@ -43,26 +53,26 @@ export interface File {
   type: 'image'
 }
 
+export type AlternativeLetter = 'a' | 'b' | 'c' | 'd' | 'e'
+
 export interface Alternative {
   index: AlternativeLetter
   text: string
   file?: File
 }
 
-export type Alternatives = Alternative[]
-
 export interface QuestionContent {
   files: File[]
   problem: string
   command: string | null
-  alternatives: Alternatives
+  alternatives: Alternative[]
   correctAlternative: AlternativeLetter
   explanation: string
 }
 
 export interface Question {
-  id: string
-  label: string
+  id: UUID
+  label: number
   title: string
   source: QuestionSource
   difficulty: Difficulty | null
@@ -71,18 +81,10 @@ export interface Question {
   content: QuestionContent
 }
 
-export interface QuestionSummary {
-  id: string
-  label: string
-  title: string
-  source: QuestionSource
-  difficulty: Difficulty | null
-  subject: Subject | null
-  isMissed: boolean | null
-  isBookmarked: boolean | null
-}
-
-export type Questions = QuestionSummary[]
+export type QuestionSummary = Omit<Question, 'content'> & {
+  isMissed: boolean;
+  isBookmarked: boolean;
+};
 
 export interface QuestionAttempt {
   index: number;
@@ -92,7 +94,7 @@ export interface QuestionAttempt {
 }
 
 export interface UserQuestionData {
-    questionId: string;
+    questionId: UUID;
     isBookmarked: boolean;
     attempts: QuestionAttempt[];
 }

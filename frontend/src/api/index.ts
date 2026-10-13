@@ -2,6 +2,7 @@ import * as questionsImpl from './staticData';
 import * as userDataImpl from './userData.ts';
 import type {
     Question,
+    QuestionId,
     QuestionAttempt,
     QuestionSummary,
     UserQuestionData,
@@ -13,13 +14,13 @@ export interface Api {
         getById: (id: string) => Promise<Question | undefined>;
     };
     readonly userQuestions: {
-        getById: (id: string) => Promise<UserQuestionData>;
         getAll: () => Promise<UserQuestionData[]>;
+        getById: (id: string) => Promise<UserQuestionData>;       
         setBookmarked: (id: string, isBookmarked: boolean) => Promise<void>;
     };
     readonly userIndexes: {
-        getBookmarkedQuestions: () => Promise<QuestionSummary[]>;
-        getMissedQuestions: () => Promise<QuestionSummary[]>;
+        getBookmarkedQuestions: () => Promise<QuestionId[]>;
+        getMissedQuestions: () => Promise<QuestionId[]>;
     };
     readonly attempts: {
         record: (
@@ -36,8 +37,8 @@ export const api: Api = {
         getById: questionsImpl.getQuestionById,
     },
     userQuestions: {
-        getById: userDataImpl.getUserQuestionData,
         getAll: userDataImpl.getAllUserQuestionData,
+        getById: userDataImpl.getUserQuestionData,
         setBookmarked: userDataImpl.setQuestionBookmarked,
     },
     userIndexes: {
