@@ -130,7 +130,8 @@
     height: auto;
     object-fit: contain;
     margin: var(--space-3) auto;
-    outline: 3px solid var(--bg-light);
+    outline: 3px solid hsl(0 0% 30%);
+    border-radius: 1px;
 }
 
 .alternative .question-image {
