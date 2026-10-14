@@ -1,5 +1,6 @@
 import * as questionsImpl from './staticData';
 import * as userDataImpl from './userData.ts';
+import * as contextImpl from './context';
 import type {
     Question,
     QuestionId,
@@ -13,6 +14,14 @@ export interface Api {
         getAll: () => Promise<QuestionSummary[]>;
         getById: (id: QuestionId) => Promise<Question | undefined>;
     };
+    readonly context: {
+        initialize: (force?: boolean) => Promise<void>;
+        getSnapshot: typeof contextImpl.getContextSnapshot;
+        subscribe: typeof contextImpl.subscribeToContext;
+        setFilterSetting: typeof contextImpl.setFilterSetting;
+    };
+    readonly nextQuestion: typeof contextImpl.nextQuestion;
+    readonly previousQuestion: typeof contextImpl.previousQuestion;
     readonly userQuestions: {
         getAll: () => Promise<UserQuestionData[]>;
         getById: (id: QuestionId) => Promise<UserQuestionData>;
@@ -34,8 +43,19 @@ export interface Api {
 export const api: Api = {
     questions: {
         getAll: questionsImpl.getAllQuestions,
-        getById: questionsImpl.getQuestionById,
+        getById: (id) => {
+            contextImpl.setCurrentQuestion(id);
+            return questionsImpl.getQuestionById(id);
+        },
     },
+    context: {
+        initialize: contextImpl.initializeContext,
+        getSnapshot: contextImpl.getContextSnapshot,
+        subscribe: contextImpl.subscribeToContext,
+        setFilterSetting: contextImpl.setFilterSetting,
+    },
+    nextQuestion: contextImpl.nextQuestion,
+    previousQuestion: contextImpl.previousQuestion,
     userQuestions: {
         getAll: userDataImpl.getAllUserQuestionData,
         getById: userDataImpl.getUserQuestionData,
