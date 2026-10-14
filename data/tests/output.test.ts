@@ -126,7 +126,7 @@ test('every output question title has a question number from 136 to 180', async 
 })
 
 test('warns when an ENEM year does not have all 45 mathematics questions', async (t) => {
-  const sourceDir = path.join(dataDir, 'sources', 'enem-api')
+  const sourceDir = path.join(dataDir, 'sources', 'enemSourceQuestions')
   const sourceYears = await readdir(sourceDir, { withFileTypes: true })
   const questionsDir = path.join(outputDir, 'questions')
   const outputQuestionDirs = (await readdir(questionsDir, { withFileTypes: true }))
@@ -183,6 +183,8 @@ test('every UUID question has its required content fields populated', async () =
 
     assert.ok(isRecord(question), `${questionPath} must contain a question object`)
     assert.equal(question.id, entry.name, `${questionPath} UUID must match its directory`)
+    assert.equal(question.difficulty, null, `${questionPath} difficulty must remain unset`)
+    assert.equal(question.subject, null, `${questionPath} subject must remain unset`)
     assert.ok(isRecord(question.content), `${questionPath} must contain question content`)
 
     const content = question.content

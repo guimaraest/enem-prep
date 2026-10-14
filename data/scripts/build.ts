@@ -1,9 +1,8 @@
 import { cp, rm, mkdir } from 'node:fs/promises'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
-import { enemApiSourceEntry } from './source-enem-api.ts'
+import { enemSourceQuestionsEntry } from './enemSourceQuestions.ts'
 import { generateIndexes } from './indexes.js'
-import { fillTemporaryMetadata } from './fill-temporary-metadata.js'
 import { assignQuestionUUIDs } from './uuid-factory.js'
 import { assignQuestionLabels } from './labels.js'
 
@@ -12,7 +11,7 @@ const projectRoot = path.resolve(scriptDir, '../..')
 
 const dataDir = path.join(projectRoot, 'data')
 const tempDir = path.join(dataDir, 'temp')
-const sourceDir = path.join(dataDir, 'sources', 'enem-api')
+const sourceDir = path.join(dataDir, 'sources', 'enemSourceQuestions')
 const normalizationOutputDir = path.join(tempDir, 'normalized')
 const outputDir = path.join(dataDir, 'output')
 const finalQuestionsDir = path.join(outputDir, 'questions')
@@ -42,11 +41,8 @@ async function build(): Promise<void> {
     mkdir(publicIndexesDir, { recursive: true }),
   ])
 
-  console.log('normalizing enem api questions')
-  await enemApiSourceEntry(sourceDir, normalizationOutputDir, logPath)
-
-  console.log('filling temporary metadata')
-  await fillTemporaryMetadata(normalizationOutputDir, logPath)
+  console.log('normalizing ENEM source questions')
+  await enemSourceQuestionsEntry(sourceDir, normalizationOutputDir, logPath)
 
   console.log('assigning stable question UUIDs')
   await assignQuestionUUIDs(normalizationOutputDir, logPath)
