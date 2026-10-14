@@ -12,14 +12,15 @@ export function parseUUID(value: string): UUID {
 }
 
 export const SUBJECTS = [
-  'algebra',
-  'geometry',
-  'statistics',
-  'probability',
-  'functions',
-  'financial_math',
-  'combinatorics',
-  'arithmetic',
+  "arithmetic_and_fundamentals",
+  "statistics_and_data_interpretation",
+  "algebra_and_equations",
+  "functions",
+  "logarithms_and_exponentials",
+  "trigonometry",
+  "plane_geometry",
+  "solid_and_analytic_geometry",
+  "combinatorics_and_probability",
 ] as const
 
 export type Subject = (typeof SUBJECTS)[number]
