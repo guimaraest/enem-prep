@@ -19,7 +19,6 @@ type SourceQuestion = {
   title: string
   index: number
   year: number
-  discipline: string
   context: string | null
   files: string[]
   correctAlternative: string
@@ -59,7 +58,6 @@ export async function enemApiSourceEntry(
       typeof value.title === 'string' &&
       Number.isInteger(value.index) &&
       Number.isInteger(value.year) &&
-      typeof value.discipline === 'string' &&
       (typeof value.context === 'string' || value.context === null) &&
       Array.isArray(value.files) &&
       value.files.every((file) => typeof file === 'string') &&
@@ -138,7 +136,19 @@ export async function enemApiSourceEntry(
 
       const source = parsed
 
-      if (source.discipline !== 'matematica') continue
+      const titleNumber = source.title.match(/^Questão (\d+)\b/)
+      const questionNumber = titleNumber ? Number(titleNumber[1]) : NaN
+
+      if (
+        !Number.isInteger(questionNumber) ||
+        questionNumber < 136 ||
+        questionNumber > 180
+      ) {
+        await log(
+          `WARNING: Skipping question with unsupported title "${source.title}" in "${detailsPath}"`,
+        )
+        continue
+      }
 
       if (String(source.year) !== yearEntry.name) {
         await log(
@@ -266,7 +276,7 @@ async function copyImages(
       .filter(
         (entry) =>
           entry.isFile() &&
-          /\.(png|jpe?g|gif|webp|svg|bmp)$/i.test(entry.name),
+          /\.(png|jpe?g|gif|webp|svg|bmp|latex)$/i.test(entry.name),
       )
       .map((entry) => entry.name),
   )
