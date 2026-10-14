@@ -1,6 +1,7 @@
 import { useState } from 'react';
 
 import type { Question, Alternative } from '../models';
+import { QuestionImage } from './QuestionImage';
 
 interface QuestionAlternativeProps {
     question: Question;
@@ -49,7 +50,10 @@ export function AnswerChoice({
                 <span className="alternative-index">{alternative.index})</span>
             </span>
 
-            <span className="alternative-text">{alternative.text}</span>
+            <span className="alternative-text">
+                {alternative.text}
+                {alternative.file && <QuestionImage file={alternative.file} questionId={question.id} alt={`Imagem da alternativa ${alternative.index}`} />}
+            </span>
         </button>
     );
 }

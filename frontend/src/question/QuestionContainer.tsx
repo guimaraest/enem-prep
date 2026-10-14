@@ -4,6 +4,7 @@ import { PrimaryButton } from '../shared/PrimaryButton/PrimaryButton';
 import { AnswerChoice } from './AnswerChoice';
 import { UserControls } from './UserControls';
 import { QuestionNav } from './QuestionNav';
+import { QuestionImage } from './QuestionImage';
 
 import * as constants from '../constants';
 import type { Question, Alternative, QuestionId } from '../models';
@@ -81,16 +82,33 @@ export function QuestionContainer({ question, onAttempt, previousId, nextId, nav
         setSelectedIndex(index);
     }
 
+    const embeddedImages = [...question.content.problem.matchAll(/!\[[^\]]*\]\(([^)]+)\)/g)];
+    const remainingFiles = question.content.files.filter((file) =>
+        !embeddedImages.some((match) => match[1]?.split('/').at(-1) === file.url.split('/').at(-1)),
+    );
+    const problemParts = question.content.problem.split(/(!\[[^\]]*\]\([^)]+\))/g);
+
     return (
         <>
             <QuestionHeader question={question} {...userControls} />
 
             <div>
-                <p className="content">{question.content.problem}</p>
-
-                {question.content.files.map((file) => (
-                    <img key={file.url} src={file.url} alt="" />
-                ))}
+                <div className="content">
+                    {problemParts.map((part, index) => {
+                        const imageMatch = /^!\[([^\]]*)\]\(([^)]+)\)$/.exec(part);
+                        if (imageMatch) {
+                            const file = question.content.files.find((candidate) =>
+                                candidate.url.split('/').at(-1) === imageMatch[2]?.split('/').at(-1),
+                            ) ?? { url: imageMatch[2], type: 'image' as const };
+                            return <QuestionImage key={`${file.url}-${index}`} file={file} questionId={question.id} alt={imageMatch[1] || 'Imagem da questão'} />;
+                        }
+                        return part.trim() ? <p key={index}>{part}</p> : null;
+                    })}
+                    {remainingFiles.map((file) => (
+                        <QuestionImage key={file.url} file={file} questionId={question.id} alt="Imagem da questão" />
+                    ))}
+                </div>
+                {question.content.command && <p className="content">{question.content.command}</p>}
             </div>
 
             <div className="alternative-list">
