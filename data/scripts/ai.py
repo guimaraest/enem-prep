@@ -1,6 +1,8 @@
 import argparse
+from email.utils import parsedate_to_datetime
 import json
 import logging
+import math
 from datetime import datetime, timezone
 from pathlib import Path
 import time
@@ -14,6 +16,8 @@ from ai_token import OPENROUTER_API_KEY
 API_URL = "https://openrouter.ai/api/v1/chat/completions"
 MODEL = "liquid/lfm-2.5-2.6b:free"
 TEMPERATURE = 0.1
+REQUEST_INTERVAL_SECONDS = 5
+RETRY_MAX_BACKOFF_SECONDS = 300
 SOURCE_QUESTIONS_DIR = (
     Path(__file__).resolve().parents[1] / "sources" / "enemSourceQuestions"
 )
@@ -184,6 +188,48 @@ def question_prompt(question: dict[str, Any]) -> str:
     )
 
 
+def rate_limit_retry_delay(
+    response: requests.Response,
+    error_detail: Any,
+    retry_number: int,
+) -> float:
+    retry_after = response.headers.get("Retry-After")
+    if retry_after is not None:
+        try:
+            delay = float(retry_after)
+        except ValueError:
+            try:
+                retry_at = parsedate_to_datetime(retry_after)
+            except (TypeError, ValueError, OverflowError):
+                pass
+            else:
+                if retry_at.tzinfo is None:
+                    retry_at = retry_at.replace(tzinfo=timezone.utc)
+                delay = (retry_at - datetime.now(timezone.utc)).total_seconds()
+                return max(float(REQUEST_INTERVAL_SECONDS), delay)
+        else:
+            if math.isfinite(delay):
+                return max(float(REQUEST_INTERVAL_SECONDS), delay)
+
+    if isinstance(error_detail, dict):
+        error = error_detail.get("error")
+        metadata = error.get("metadata") if isinstance(error, dict) else None
+        if isinstance(metadata, dict):
+            retry_after = metadata.get("retry_after_seconds")
+            try:
+                delay = float(retry_after)
+            except (TypeError, ValueError):
+                pass
+            else:
+                if math.isfinite(delay):
+                    return max(float(REQUEST_INTERVAL_SECONDS), delay)
+
+    return min(
+        REQUEST_INTERVAL_SECONDS * 2 ** (retry_number - 1),
+        RETRY_MAX_BACKOFF_SECONDS,
+    )
+
+
 def request_labels(
     question: dict[str, Any],
     file_path: Path,
@@ -230,6 +276,7 @@ def request_labels(
             },
             json=request_body,
             timeout=60,
+            stream=True,
         ) as response:
             status_code = response.status_code
             logger.info(
@@ -352,9 +399,16 @@ def request_labels(
                 "error": f"{type(error).__name__}: {error}",
             },
         )
-        logger.exception(
-            "Request %s failed for %s", request_id, question_path
-        )
+        if isinstance(error, (requests.RequestException, ValueError)):
+            logger.warning(
+                "Request %s failed for %s: %s: %s",
+                request_id,
+                question_path,
+                type(error).__name__,
+                error,
+            )
+        else:
+            logger.exception("Request %s failed for %s", request_id, question_path)
         raise
 
     append_jsonl(
@@ -378,6 +432,54 @@ def request_labels(
         labels["difficulty"],
     )
     return labels["subject"], labels["difficulty"], request_id
+
+
+def request_labels_with_rate_limit_retry(
+    question: dict[str, Any],
+    file_path: Path,
+) -> tuple[str, int, str]:
+    retry_number = 0
+    question_path = file_path.relative_to(SOURCE_QUESTIONS_DIR).as_posix()
+    while True:
+        try:
+            return request_labels(question, file_path)
+        except (requests.RequestException, ValueError) as error:
+            response = getattr(error, "response", None)
+            retry_number += 1
+            error_detail: Any = None
+            if response is not None:
+                try:
+                    error_detail = response.json()
+                except ValueError:
+                    error_detail = response.text
+            retry_delay = (
+                rate_limit_retry_delay(response, error_detail, retry_number)
+                if response is not None
+                else min(
+                    REQUEST_INTERVAL_SECONDS * 2 ** (retry_number - 1),
+                    RETRY_MAX_BACKOFF_SECONDS,
+                )
+            )
+            logger.warning(
+                "Request for %s failed (%s); retrying in %.2f seconds "
+                "(retry %d, unlimited)",
+                question_path,
+                error,
+                retry_delay,
+                retry_number,
+            )
+            append_jsonl(
+                REQUEST_LOG_PATH,
+                {
+                    "event": "request_retry_scheduled",
+                    "timestamp": utc_timestamp(),
+                    "question_file": question_path,
+                    "retry_number": retry_number,
+                    "retry_after_seconds": retry_delay,
+                    "error": f"{type(error).__name__}: {error}",
+                },
+            )
+            time.sleep(retry_delay)
 
 
 def label_source_questions(max_requests: int) -> int:
@@ -407,7 +509,12 @@ def label_source_questions(max_requests: int) -> int:
         if requests_made >= max_requests:
             break
 
-        subject, difficulty, request_id = request_labels(question, file_path)
+        subject, difficulty, request_id = request_labels_with_rate_limit_retry(
+            question,
+            file_path,
+        )
+        if requests_made + 1 < max_requests:
+            time.sleep(REQUEST_INTERVAL_SECONDS)
         question["subject"] = subject
         question["difficulty"] = difficulty
         file_path.write_text(
@@ -449,7 +556,10 @@ def main() -> None:
         "--max-requests",
         type=positive_int,
         required=True,
-        help="maximum number of OpenRouter requests to make",
+        help=(
+            "maximum number of questions to label successfully; failed requests "
+            "are retried until they succeed"
+        ),
     )
     args = parser.parse_args()
 
