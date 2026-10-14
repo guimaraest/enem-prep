@@ -8,9 +8,8 @@ from ai_token import OPENROUTER_API_KEY
 
 
 API_URL = "https://openrouter.ai/api/v1/chat/completions"
-MODEL = "liquid/lfm-2.5-2.6b"
+MODEL = "liquid/lfm-2.5-2.6b:free"
 TEMPERATURE = 0.1
-MAX_COMPLETION_TOKENS = 100
 SOURCE_QUESTIONS_DIR = (
     Path(__file__).resolve().parents[1] / "sources" / "enemSourceQuestions"
 )
@@ -92,7 +91,7 @@ def question_prompt(question: dict[str, Any]) -> str:
 
 
 def request_labels(question: dict[str, Any]) -> tuple[str, int]:
-    response = requests.post(
+    with requests.post(
         API_URL,
         headers={
             "Authorization": f"Bearer {OPENROUTER_API_KEY}",
@@ -104,20 +103,60 @@ def request_labels(question: dict[str, Any]) -> tuple[str, int]:
                 {"role": "system", "content": SYSTEM_PROMPT},
                 {"role": "user", "content": question_prompt(question)},
             ],
+            "stream": True,
             "temperature": TEMPERATURE,
-            "max_completion_tokens": MAX_COMPLETION_TOKENS,
             "response_format": {"type": "json_object"},
         },
         timeout=60,
-    )
-    response.raise_for_status()
-    completion = response.json()
-    try:
-        content = completion["choices"][0]["message"]["content"]
-    except (KeyError, IndexError, TypeError) as error:
-        raise ValueError("OpenRouter response did not contain a completion") from error
-    if not isinstance(content, str):
-        raise ValueError("OpenRouter completion content was not text")
+    ) as response:
+        if not response.ok:
+            try:
+                error_detail = response.json()
+            except ValueError:
+                error_detail = response.text
+            raise requests.HTTPError(
+                f"OpenRouter request failed with HTTP {response.status_code}: "
+                f"{error_detail}",
+                response=response,
+            )
+
+        content_parts = []
+        finish_reason = None
+        for raw_line in response.iter_lines():
+            line = (
+                raw_line.decode("utf-8")
+                if isinstance(raw_line, bytes)
+                else raw_line
+            )
+            if not line or not line.startswith("data:"):
+                continue
+            data = line.removeprefix("data:").strip()
+            if data == "[DONE]":
+                break
+
+            try:
+                chunk = json.loads(data)
+            except json.JSONDecodeError as error:
+                raise ValueError("OpenRouter returned an invalid stream chunk") from error
+            if "error" in chunk:
+                raise ValueError(f"OpenRouter stream error: {chunk['error']}")
+            try:
+                choice = chunk["choices"][0]
+            except (KeyError, IndexError, TypeError):
+                continue
+            delta = choice.get("delta", {})
+            text = delta.get("content")
+            if isinstance(text, str):
+                content_parts.append(text)
+            if choice.get("finish_reason") is not None:
+                finish_reason = choice["finish_reason"]
+
+    content = "".join(content_parts).strip()
+    if not content:
+        raise ValueError(
+            "OpenRouter stream contained no answer text "
+            f"(finish_reason={finish_reason!r})"
+        )
 
     try:
         labels = json.loads(content)
