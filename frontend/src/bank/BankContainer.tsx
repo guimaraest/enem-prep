@@ -29,6 +29,19 @@ function isFilterSetting(value: string): value is FilterSetting {
   return filterOptions.some((option) => option.value === value)
 }
 
+function sortGroups(groups: QuestionGroup[]): QuestionGroup[] {
+  return groups
+    .map((group) => ({
+      ...group,
+      questions: [...group.questions].sort(
+        (a, b) => a.label - b.label,
+      ),
+    }))
+    .sort((a, b) =>
+      a.label.localeCompare(b.label, undefined, { numeric: true }),
+    )
+}
+
 function getFilteredContext(
   filterSetting: FilterSetting,
   fullContext: QuestionSummary[],
@@ -43,7 +56,7 @@ function getFilteredContext(
       if (unassigned.length > 0) {
         groups.push({ label: 'null', questions: unassigned })
       }
-      return groups
+      return sortGroups(groups);
     }
     case 'difficulty': {
       const groups = DIFFICULTIES.map((difficulty) => ({
@@ -54,18 +67,18 @@ function getFilteredContext(
       if (unrated.length > 0) {
         groups.push({ label: 'null', questions: unrated })
       }
-      return groups
+      return sortGroups(groups);
     }
     case 'missed':
-      return [{
+      return sortGroups([{
         label: 'missed',
         questions: fullContext.filter((question) => question.isMissed),
-      }]
+      }])
     case 'bookmarked':
-      return [{
+      return sortGroups([{
         label: 'bookmarked',
         questions: fullContext.filter((question) => question.isBookmarked),
-      }]
+      }])
   }
 }
 
