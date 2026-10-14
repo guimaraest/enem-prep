@@ -39,14 +39,10 @@ let loadPromise: Promise<void> | null = null;
 const listeners = new Set<() => void>();
 
 function sortGroups(groups: QuestionGroup[]): QuestionGroup[] {
-    return groups
-        .map((group) => ({
+    return groups.map((group) => ({
             ...group,
             questions: [...group.questions].sort((a, b) => a.label - b.label),
-        }))
-        .sort((a, b) =>
-            a.label.localeCompare(b.label, undefined, { numeric: true }),
-        );
+        }));
 }
 
 function getFilteredContext(
