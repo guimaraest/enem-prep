@@ -14,6 +14,7 @@ interface QuestionContainerProps {
     savingBookmark: boolean;
     bookmarkError: string | null;
     onToggleBookmark: () => void;
+    onAttempt: (selected: Alternative['index'], isCorrect: boolean) => void;
     previousId?: QuestionId;
     nextId?: QuestionId;
     navigationLoading: boolean;
@@ -62,7 +63,7 @@ function QuestionHeader({ question, bookmarked, savingBookmark, bookmarkError, o
     );
 }
 
-export function QuestionContainer({ question, previousId, nextId, navigationLoading, navigationError, ...userControls }: QuestionContainerProps) {
+export function QuestionContainer({ question, onAttempt, previousId, nextId, navigationLoading, navigationError, ...userControls }: QuestionContainerProps) {
     const [selectedIndex, setSelectedIndex] =
         useState<Alternative['index'] | null>(null);
 
@@ -71,6 +72,9 @@ export function QuestionContainer({ question, previousId, nextId, navigationLoad
 
     function checkAnswer(): void {
         setRevealedIndex(selectedIndex);
+        if (selectedIndex !== null) {
+            onAttempt(selectedIndex, selectedIndex === question.content.correctAlternative);
+        }
     }
 
     function onSelectIndex(index: Alternative['index']): void {

@@ -7,7 +7,7 @@ import { Loading } from '../shared/Loading/Loading'
 
 import { api } from '../api';
 import { parseUUID } from '../models'
-import type { Question, QuestionId } from '../models'
+import type { Alternative, Question, QuestionId } from '../models'
 import { QuestionContainer } from './QuestionContainer';
 
 
@@ -106,6 +106,15 @@ export function QuestionRoute() {
     }
   }, [bookmarked, question, savingBookmark])
 
+  const onAttempt = useCallback(async (selectedAlternativeIndex: Alternative['index'], isCorrect: boolean) => {
+    if (!question) return
+    try {
+      await api.attempts.record(question.id, { selectedAlternativeIndex, isCorrect })
+    } catch (cause) {
+      console.error('failed to record question attempt:', cause)
+    }
+  }, [question])
+
   
   return (
     <Loading
@@ -123,6 +132,7 @@ export function QuestionRoute() {
             savingBookmark={savingBookmark}
             bookmarkError={bookmarkError}
             onToggleBookmark={() => void onToggleBookmark()}
+            onAttempt={(selected, isCorrect) => void onAttempt(selected, isCorrect)}
             previousId={previousId}
             nextId={nextId}
             navigationLoading={navigationLoading}
