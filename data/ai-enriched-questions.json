@@ -1,0 +1,259 @@
+{
+  "version": 1,
+  "questions": [
+    {
+      "file": "2009/questions/136/details.json",
+      "year": 2009,
+      "index": 136,
+      "title": "Questão 136 - ENEM 2009",
+      "subject": "statistics_and_data_interpretation",
+      "difficulty": 2,
+      "model": "liquid/lfm-2.5-2.6b:free",
+      "request_id": "97c761d1-93ac-4065-9498-e9f47c4cb85e",
+      "enriched_at": "2026-10-14T18:05:30.985314+00:00"
+    },
+    {
+      "file": "2009/questions/137/details.json",
+      "year": 2009,
+      "index": 137,
+      "title": "Questão 137 - ENEM 2009",
+      "subject": "plane_geometry",
+      "difficulty": 2,
+      "model": "liquid/lfm-2.5-2.6b:free",
+      "request_id": "06a2662e-f5a7-4ce6-8649-b3b04d074d19",
+      "enriched_at": "2026-10-14T18:05:35.876235+00:00"
+    },
+    {
+      "file": "2009/questions/138/details.json",
+      "year": 2009,
+      "index": 138,
+      "title": "Questão 138 - ENEM 2009",
+      "subject": "functions",
+      "difficulty": 2,
+      "model": "liquid/lfm-2.5-2.6b:free",
+      "request_id": "8a9b2b59-f2df-4ac1-bbd4-746614ba984b",
+      "enriched_at": "2026-10-14T18:05:41.459199+00:00"
+    },
+    {
+      "file": "2009/questions/139/details.json",
+      "year": 2009,
+      "index": 139,
+      "title": "Questão 139 - ENEM 2009",
+      "subject": "statistics_and_data_interpretation",
+      "difficulty": 2,
+      "model": "liquid/lfm-2.5-2.6b:free",
+      "request_id": "1871d29a-be53-42b4-a710-8262f28f9efd",
+      "enriched_at": "2026-10-14T18:07:52.712854+00:00"
+    },
+    {
+      "file": "2009/questions/140/details.json",
+      "year": 2009,
+      "index": 140,
+      "title": "Questão 140 - ENEM 2009",
+      "subject": "plane_geometry",
+      "difficulty": 2,
+      "model": "liquid/lfm-2.5-2.6b:free",
+      "request_id": "e65679ec-fde5-40cb-a274-f820d96d112a",
+      "enriched_at": "2026-10-14T18:07:55.908745+00:00"
+    },
+    {
+      "file": "2009/questions/141/details.json",
+      "year": 2009,
+      "index": 141,
+      "title": "Questão 141 - ENEM 2009",
+      "subject": "algebra_and_equations",
+      "difficulty": 2,
+      "model": "liquid/lfm-2.5-2.6b:free",
+      "request_id": "51d60b9f-0582-496a-abfb-e0eba3905034",
+      "enriched_at": "2026-10-14T18:07:59.217762+00:00"
+    },
+    {
+      "file": "2009/questions/142/details.json",
+      "year": 2009,
+      "index": 142,
+      "title": "Questão 142 - ENEM 2009",
+      "subject": "statistics_and_data_interpretation",
+      "difficulty": 2,
+      "model": "liquid/lfm-2.5-2.6b:free",
+      "request_id": "dcfe897d-c34c-4e05-87be-36d32af01ead",
+      "enriched_at": "2026-10-14T18:08:03.584216+00:00"
+    },
+    {
+      "file": "2009/questions/143/details.json",
+      "year": 2009,
+      "index": 143,
+      "title": "Questão 143 - ENEM 2009",
+      "subject": "arithmetic_and_fundamentals",
+      "difficulty": 2,
+      "model": "liquid/lfm-2.5-2.6b:free",
+      "request_id": "2c72e85c-63b3-4af6-997f-d36f9c2938f4",
+      "enriched_at": "2026-10-14T18:08:06.737488+00:00"
+    },
+    {
+      "file": "2009/questions/144/details.json",
+      "year": 2009,
+      "index": 144,
+      "title": "Questão 144 - ENEM 2009",
+      "subject": "arithmetic_and_fundamentals",
+      "difficulty": 2,
+      "model": "liquid/lfm-2.5-2.6b:free",
+      "request_id": "387546a3-832d-4ddd-8bcb-dbe0d3c6f6f3",
+      "enriched_at": "2026-10-14T18:08:09.385332+00:00"
+    },
+    {
+      "file": "2009/questions/145/details.json",
+      "year": 2009,
+      "index": 145,
+      "title": "Questão 145 - ENEM 2009",
+      "subject": "statistics_and_data_interpretation",
+      "difficulty": 2,
+      "model": "liquid/lfm-2.5-2.6b:free",
+      "request_id": "9cdf4c10-bb4c-42e7-ad03-27b8e8ca843f",
+      "enriched_at": "2026-10-14T18:08:12.476378+00:00"
+    },
+    {
+      "file": "2009/questions/146/details.json",
+      "year": 2009,
+      "index": 146,
+      "title": "Questão 146 - ENEM 2009",
+      "subject": "arithmetic_and_fundamentals",
+      "difficulty": 2,
+      "model": "liquid/lfm-2.5-2.6b:free",
+      "request_id": "40a2de9e-1e86-4cd6-88c5-d2dd8a6eac5f",
+      "enriched_at": "2026-10-14T18:08:15.680690+00:00"
+    },
+    {
+      "file": "2009/questions/147/details.json",
+      "year": 2009,
+      "index": 147,
+      "title": "Questão 147 - ENEM 2009",
+      "subject": "plane_geometry",
+      "difficulty": 2,
+      "model": "liquid/lfm-2.5-2.6b:free",
+      "request_id": "502a381a-e0c2-4409-82d9-5be2fdb690bd",
+      "enriched_at": "2026-10-14T18:08:18.220858+00:00"
+    },
+    {
+      "file": "2009/questions/148/details.json",
+      "year": 2009,
+      "index": 148,
+      "title": "Questão 148 - ENEM 2009",
+      "subject": "statistics_and_data_interpretation",
+      "difficulty": 2,
+      "model": "liquid/lfm-2.5-2.6b:free",
+      "request_id": "3cc7e014-91bd-47e6-90b0-68a6a255e3cc",
+      "enriched_at": "2026-10-14T18:08:23.296021+00:00"
+    },
+    {
+      "file": "2009/questions/149/details.json",
+      "year": 2009,
+      "index": 149,
+      "title": "Questão 149 - ENEM 2009",
+      "subject": "plane_geometry",
+      "difficulty": 2,
+      "model": "liquid/lfm-2.5-2.6b:free",
+      "request_id": "3458f1a6-2d9e-454d-b1a2-9df791b821f9",
+      "enriched_at": "2026-10-14T18:08:26.850622+00:00"
+    },
+    {
+      "file": "2009/questions/150/details.json",
+      "year": 2009,
+      "index": 150,
+      "title": "Questão 150 - ENEM 2009",
+      "subject": "statistics_and_data_interpretation",
+      "difficulty": 2,
+      "model": "liquid/lfm-2.5-2.6b:free",
+      "request_id": "bc14a1d5-9a2c-4c7f-a676-ac65436ee694",
+      "enriched_at": "2026-10-14T18:08:28.769482+00:00"
+    },
+    {
+      "file": "2009/questions/151/details.json",
+      "year": 2009,
+      "index": 151,
+      "title": "Questão 151 - ENEM 2009",
+      "subject": "arithmetic_and_fundamentals",
+      "difficulty": 2,
+      "model": "liquid/lfm-2.5-2.6b:free",
+      "request_id": "6f0a5329-6c59-40af-bab5-3daa97a292f9",
+      "enriched_at": "2026-10-14T18:08:36.271223+00:00"
+    },
+    {
+      "file": "2009/questions/152/details.json",
+      "year": 2009,
+      "index": 152,
+      "title": "Questão 152 - ENEM 2009",
+      "subject": "arithmetic_and_fundamentals",
+      "difficulty": 2,
+      "model": "liquid/lfm-2.5-2.6b:free",
+      "request_id": "e37c6190-7d87-48f0-8b35-590122dd93f0",
+      "enriched_at": "2026-10-14T18:08:41.611542+00:00"
+    },
+    {
+      "file": "2009/questions/153/details.json",
+      "year": 2009,
+      "index": 153,
+      "title": "Questão 153 - ENEM 2009",
+      "subject": "plane_geometry",
+      "difficulty": 2,
+      "model": "liquid/lfm-2.5-2.6b:free",
+      "request_id": "664a365a-dfd7-4cf1-8556-4ef852ba979a",
+      "enriched_at": "2026-10-14T18:08:45.279644+00:00"
+    },
+    {
+      "file": "2009/questions/154/details.json",
+      "year": 2009,
+      "index": 154,
+      "title": "Questão 154 - ENEM 2009",
+      "subject": "arithmetic_and_fundamentals",
+      "difficulty": 2,
+      "model": "liquid/lfm-2.5-2.6b:free",
+      "request_id": "6d153030-2d4b-40e2-adb1-b12247fb10b2",
+      "enriched_at": "2026-10-14T18:08:49.565197+00:00"
+    },
+    {
+      "file": "2009/questions/155/details.json",
+      "year": 2009,
+      "index": 155,
+      "title": "Questão 155 - ENEM 2009",
+      "subject": "algebra_and_equations",
+      "difficulty": 2,
+      "model": "liquid/lfm-2.5-2.6b:free",
+      "request_id": "a9c6119f-2589-44da-8f1a-7d7a3f5839d6",
+      "enriched_at": "2026-10-14T18:08:54.919589+00:00"
+    },
+    {
+      "file": "2009/questions/156/details.json",
+      "year": 2009,
+      "index": 156,
+      "title": "Questão 156 - ENEM 2009",
+      "subject": "arithmetic_and_fundamentals",
+      "difficulty": 2,
+      "model": "liquid/lfm-2.5-2.6b:free",
+      "request_id": "ce4f026c-af90-4042-af97-824490b2ad46",
+      "enriched_at": "2026-10-14T18:08:59.149392+00:00"
+    },
+    {
+      "file": "2009/questions/157/details.json",
+      "year": 2009,
+      "index": 157,
+      "title": "Questão 157 - ENEM 2009",
+      "subject": "solid_and_analytic_geometry",
+      "difficulty": 2,
+      "model": "liquid/lfm-2.5-2.6b:free",
+      "request_id": "83c12198-31c7-4dbb-8550-4f03d8120e78",
+      "enriched_at": "2026-10-14T18:09:03.770396+00:00"
+    },
+    {
+      "file": "2009/questions/158/details.json",
+      "year": 2009,
+      "index": 158,
+      "title": "Questão 158 - ENEM 2009",
+      "subject": "arithmetic_and_fundamentals",
+      "difficulty": 2,
+      "model": "liquid/lfm-2.5-2.6b:free",
+      "request_id": "fa4391d7-60c4-440a-a49d-a1bba683a438",
+      "enriched_at": "2026-10-14T18:09:08.028379+00:00"
+    }
+  ],
+  "updated_at": "2026-10-14T18:09:08.028403+00:00"
+}

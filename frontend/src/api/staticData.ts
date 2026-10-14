@@ -1,4 +1,5 @@
-import type { Question, QuestionSummary } from '../models'
+import { parseUUID } from '../models'
+import type { Question, QuestionId, QuestionSummary } from '../models'
 
 const INDEXES_BASE_URL = '/indexes'
 const QUESTIONS_BASE_URL = '/questions'
@@ -9,26 +10,38 @@ export async function getAllQuestions(): Promise<QuestionSummary[]> {
   if (!allQuestionsPromise) {
     allQuestionsPromise = fetchJson<QuestionSummary[]>(
       `${INDEXES_BASE_URL}/allQuestions.json`,
-    ).catch((error: unknown) => {
-      allQuestionsPromise = null
-      throw error
-    })
+    )
+      .then((questions) =>
+        questions.map((question) => ({
+          ...question,
+          id: parseUUID(question.id),
+        })),
+      )
+      .catch((error: unknown) => {
+        allQuestionsPromise = null
+        throw error
+      })
   }
 
   return allQuestionsPromise
 }
 
 export async function getQuestionById(
-  id: string,
+  id: QuestionId,
 ): Promise<Question | undefined> {
   const questions = await getAllQuestions()
   const exists = questions.some((question) => question.id === id)
 
   if (!exists) return undefined
 
-  return fetchJson<Question>(
+  const question = await fetchJson<Question>(
     `${QUESTIONS_BASE_URL}/${encodeURIComponent(id)}/question.json`,
   )
+
+  return {
+    ...question,
+    id: parseUUID(question.id),
+  }
 }
 
 async function fetchJson<T>(url: string): Promise<T> {

@@ -1,9 +1,10 @@
 import './QuestionButton.css';
 import { Link } from 'react-router';
+import type { QuestionId } from '../../models';
 
 interface QuestionButtonProps {
-    questionId: string;
-    label: string;
+    questionId: QuestionId;
+    label: number;
 }
 
 export function QuestionButton({ questionId, label }: QuestionButtonProps) {

@@ -6,6 +6,7 @@ import { useParams } from 'react-router';
 import { Loading } from '../shared/Loading/Loading'
 
 import { api } from '../api';
+import { parseUUID } from '../models'
 import type { Question } from '../models'
 import { QuestionContainer } from './QuestionContainer';
 
@@ -32,7 +33,7 @@ export function QuestionRoute() {
       }
 
       try {
-        const result = await api.questions.getById(id)
+        const result = await api.questions.getById(parseUUID(id))
 
         if (!cancelled) {
           setQuestion(result)

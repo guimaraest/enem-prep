@@ -2,6 +2,8 @@ import { useState } from 'react';
 
 import { PrimaryButton } from '../shared/PrimaryButton/PrimaryButton';
 import { AnswerChoice } from './AnswerChoice';
+import { UserControls } from './UserControls';
+import { QuestionNav } from './QuestionNav';
 
 import * as constants from '../constants';
 import type { Question, Alternative } from '../models';
@@ -19,10 +21,11 @@ function QuestionHeader({ question }: { question: Question }) {
 
     return (
         <div className="question-header">
-            <div className="row">
+            <div className="row top-row">
                 <h1 className="question-title">
                     <span className='question-label'>{question.label} - </span>{question.title}
                 </h1>
+                <UserControls questionId={question.id} />
             </div>
             <div className="row" style={{ gap: 'var(--space-2)' }}>
                 {question.source && (
@@ -91,11 +94,15 @@ export function QuestionContainer({ question }: { question: Question }) {
                     );
                 })}
             </div>
+            
+            <div className='row bottom-row'>
+                <PrimaryButton
+                    text={'conferir'}
+                    onPress={checkAnswer}
+                />
 
-            <PrimaryButton
-                text={'conferir'}
-                onPress={checkAnswer}
-            />
+                <QuestionNav questionId={question.id} />
+            </div>
         </>
     );
 }

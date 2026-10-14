@@ -1,17 +1,7 @@
 # data sources
 
-## enem-api
+## enemSourceQuestions
 
-**repo**: https://github.com/yunger7/enem-api/tree/main/public
-
-```bash
-git clone --depth 1 --filter=blob:none --sparse https://github.com/yunger7/enem-api.git enem-api
-cd enem-api
-git sparse-checkout set public
-find . -mindepth 1 -maxdepth 1 ! -name '.git' ! -name 'public' -exec rm -rf -- {} +
-rm -rf .git
-shopt -s dotglob nullglob
-mv public/* ./
-rmdir public
-shopt -u dotglob nullglob
-```
+Curated ENEM source questions are stored in `data/sources/enemSourceQuestions`.
+Only question directories numbered 136–180 are retained; missing questions are
+represented by empty `details.json` placeholders until their content is added.

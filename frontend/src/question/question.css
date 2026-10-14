@@ -61,6 +61,55 @@
     background: var(--difficulty-4);
 }
 
+.row.bottom-row,
+.row.top-row {
+    justify-content: space-between;
+}
+
+.question-nav {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+}
+
+.question-nav-link {
+    display: inline-block;
+}
+
+.question-nav-disabled {
+    opacity: 0.4;
+    cursor: default;
+    pointer-events: none;
+    text-decoration: none;
+    transform: none;
+}
+
+.question-nav-status {
+    color: var(--text-muted);
+    font-size: 0.75rem;
+}
+
+.user-controls {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+}
+
+.bookmark-control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-2);
+    border-radius: var(--radius-small);
+    color: var(--text-muted);
+}
+
+.bookmark-control:disabled {
+    cursor: wait;
+    opacity: 0.6;
+}
+
+
 /* content */
 
 .content {

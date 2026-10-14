@@ -1,3 +1,9 @@
 node_modules/
 temp/
+output/
+.env
+!.env.example
 build.log
+
+scripts/__pycache__
+scripts/ai_token.py

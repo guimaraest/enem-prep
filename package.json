@@ -1,0 +1,21 @@
+{
+  "name": "enem-prep-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "data",
+    "frontend"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace=enem-prep",
+    "dev:frontend": "npm run dev --workspace=enem-prep",
+    "build:data": "npm run build --workspace=data",
+    "build:frontend": "npm run build --workspace=enem-prep",
+    "build": "npm run build:data && npm run build:frontend",
+    "test:data": "npm run test --workspace=data",
+    "test:frontend": "npm run test --workspace=enem-prep",
+    "test": "npm run test --workspaces --if-present",
+    "lint": "npm run lint --workspaces --if-present"
+  }
+}
