@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { PrimaryButton } from '../shared/PrimaryButton/PrimaryButton';
 import { AnswerChoice } from './AnswerChoice';
 import { UserControls } from './UserControls';
+import { QuestionNav } from './QuestionNav';
 
 import * as constants from '../constants';
 import type { Question, Alternative } from '../models';
@@ -93,11 +94,15 @@ export function QuestionContainer({ question }: { question: Question }) {
                     );
                 })}
             </div>
+            
+            <div className='row bottom-row'>
+                <PrimaryButton
+                    text={'conferir'}
+                    onPress={checkAnswer}
+                />
 
-            <PrimaryButton
-                text={'conferir'}
-                onPress={checkAnswer}
-            />
+                <QuestionNav questionId={question.id} />
+            </div>
         </>
     );
 }
