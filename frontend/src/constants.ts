@@ -28,37 +28,41 @@ export const difficultyMap = {
 >;
 
 export const subjectMap = {
-  algebra: {
-    label: 'Álgebra',
-    className: 'subject-algebra',
+  arithmetic_and_fundamentals: {
+    label: 'Aritmética e fundamentos',
+    className: 'subject-arithmetic-and-fundamentals',
   },
-  geometry: {
-    label: 'Geometria',
-    className: 'subject-geometry',
+  statistics_and_data_interpretation: {
+    label: 'Estatística e interpretação de dados',
+    className: 'subject-statistics-and-data-interpretation',
   },
-  statistics: {
-    label: 'Estatística',
-    className: 'subject-statistics',
-  },
-  probability: {
-    label: 'Probabilidade',
-    className: 'subject-probability',
+  algebra_and_equations: {
+    label: 'Álgebra e equações',
+    className: 'subject-algebra-and-equations',
   },
   functions: {
     label: 'Funções',
     className: 'subject-functions',
   },
-  financial_math: {
-    label: 'Matemática financeira',
-    className: 'subject-financial-math',
+  logarithms_and_exponentials: {
+    label: 'Logaritmos e exponenciais',
+    className: 'subject-logarithms-and-exponentials',
   },
-  combinatorics: {
-    label: 'Combinatória',
-    className: 'subject-combinatorics',
+  trigonometry: {
+    label: 'Trigonometria',
+    className: 'subject-trigonometry',
   },
-  arithmetic: {
-    label: 'Aritmética',
-    className: 'subject-arithmetic',
+  plane_geometry: {
+    label: 'Geometria plana',
+    className: 'subject-plane-geometry',
+  },
+  solid_and_analytic_geometry: {
+    label: 'Geometria espacial e analítica',
+    className: 'subject-solid-and-analytic-geometry',
+  },
+  combinatorics_and_probability: {
+    label: 'Combinatória e probabilidade',
+    className: 'subject-combinatorics-and-probability',
   },
 } as const satisfies Record<
   Subject,
