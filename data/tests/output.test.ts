@@ -3,6 +3,7 @@ import { readFile, readdir } from 'node:fs/promises'
 import path from 'node:path'
 import test from 'node:test'
 import { fileURLToPath } from 'node:url'
+import { DIFFICULTIES, SUBJECTS } from '../../frontend/src/models.js'
 
 const dataDir = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const outputDir = path.join(dataDir, 'output')
@@ -177,15 +178,36 @@ test('every UUID question has its required content fields populated', async () =
 
   assert.ok(questionDirs.length > 0, 'expected generated output questions')
 
+  const failures: string[] = []
+
   for (const entry of questionDirs) {
     const questionPath = path.join(questionsDir, entry.name, 'question.json')
     const question: unknown = JSON.parse(await readFile(questionPath, 'utf8'))
 
-    assert.ok(isRecord(question), `${questionPath} must contain a question object`)
-    assert.equal(question.id, entry.name, `${questionPath} UUID must match its directory`)
-    assert.equal(question.difficulty, null, `${questionPath} difficulty must remain unset`)
-    assert.equal(question.subject, null, `${questionPath} subject must remain unset`)
-    assert.ok(isRecord(question.content), `${questionPath} must contain question content`)
+    if (!isRecord(question)) {
+      failures.push(`${entry.name} (label unavailable): must contain a question object`)
+      continue
+    }
+
+    const label =
+      typeof question.label === 'number' ? String(question.label) : 'unavailable'
+    const report = (condition: boolean, message: string): void => {
+      if (!condition) failures.push(`${entry.name} (label ${label}): ${message}`)
+    }
+
+    report(question.id === entry.name, 'UUID must match its directory')
+    report(
+      question.difficulty === null ||
+        DIFFICULTIES.some((difficulty) => difficulty === question.difficulty),
+      'difficulty must be null or a supported difficulty',
+    )
+    report(
+      question.subject === null ||
+        SUBJECTS.some((subject) => subject === question.subject),
+      'subject must be null or a supported subject',
+    )
+    report(isRecord(question.content), 'must contain question content')
+    if (!isRecord(question.content)) continue
 
     const content = question.content
     for (const field of [
@@ -195,71 +217,81 @@ test('every UUID question has its required content fields populated', async () =
       'correctAlternative',
       'explanation',
     ]) {
-      assert.ok(
+      report(
         Object.hasOwn(content, field),
-        `${questionPath} is missing content.${field}`,
+        `is missing content.${field}`,
       )
     }
 
-    assert.ok(
+    report(
       typeof content.problem === 'string',
-      `${questionPath} problem must be text`,
+      'problem must be text',
     )
-    assert.ok(
-      content.problem.trim().length > 0 ||
+    report(
+      (typeof content.problem === 'string' && content.problem.trim().length > 0) ||
         (typeof content.command === 'string' && content.command.trim().length > 0),
-      `${questionPath} must contain question text in its problem or command`,
+      'must contain question text in its problem or command',
     )
-    assert.ok(
+    report(
       content.command === null || typeof content.command === 'string',
-      `${questionPath} command must be text or null`,
+      'command must be text or null',
     )
-    assert.ok(
+    report(
       Array.isArray(content.alternatives) && content.alternatives.length > 0,
-      `${questionPath} must contain alternatives`,
+      'must contain alternatives',
     )
-    assert.ok(
+    report(
       typeof content.correctAlternative === 'string' &&
         /^[a-e]$/.test(content.correctAlternative),
-      `${questionPath} must have a valid correct alternative`,
+      'must have a valid correct alternative',
     )
-    assert.equal(
-      typeof content.explanation,
-      'string',
-      `${questionPath} explanation must be text`,
+    report(
+      typeof content.explanation === 'string',
+      'explanation must be text',
     )
 
     if (Object.hasOwn(content, 'files')) {
-      assert.ok(Array.isArray(content.files), `${questionPath} files must be an array`)
+      report(Array.isArray(content.files), 'files must be an array')
     }
 
     let hasCorrectAlternative = false
-    for (const [index, alternative] of content.alternatives.entries()) {
-      assert.ok(
-        isRecord(alternative),
-        `${questionPath} alternative ${index + 1} must be an object`,
-      )
-      assert.ok(
+    const alternatives = Array.isArray(content.alternatives)
+      ? content.alternatives
+      : []
+    for (const [index, alternative] of alternatives.entries()) {
+      if (!isRecord(alternative)) {
+        report(false, `alternative ${index + 1} must be an object`)
+        continue
+      }
+      report(
         typeof alternative.index === 'string' &&
           /^[a-e]$/.test(alternative.index),
-        `${questionPath} alternative ${index + 1} must have a valid index`,
+        `alternative ${index + 1} must have a valid index`,
       )
-      assert.ok(
+      report(
         typeof alternative.text === 'string',
-        `${questionPath} alternative ${index + 1} text must be present`,
+        `alternative ${index + 1} text must be present`,
       )
-      assert.ok(
-        alternative.text.trim().length > 0 || isRecord(alternative.file),
-        `${questionPath} alternative ${index + 1} must have text or an image`,
+      report(
+        (typeof alternative.text === 'string' &&
+          alternative.text.trim().length > 0) ||
+          isRecord(alternative.file),
+        `alternative ${index + 1} must have text or an image`,
       )
       if (alternative.index === content.correctAlternative) {
         hasCorrectAlternative = true
       }
     }
 
-    assert.ok(
+    report(
       hasCorrectAlternative,
-      `${questionPath} correct alternative must exist in the alternatives`,
+      'correct alternative must exist in the alternatives',
     )
   }
+
+  assert.deepEqual(
+    failures,
+    [],
+    `Questions with invalid content (UUID and label):\n${failures.join('\n')}`,
+  )
 })

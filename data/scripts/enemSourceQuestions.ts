@@ -7,7 +7,13 @@ import {
   writeFile,
 } from 'node:fs/promises'
 import path from 'node:path'
-import type { Question } from '../../frontend/src/models.js'
+import {
+  DIFFICULTIES,
+  SUBJECTS,
+  type Difficulty,
+  type Question,
+  type Subject,
+} from '../../frontend/src/models.js'
 
 type SourceAlternative = {
   letter: string
@@ -19,8 +25,8 @@ type SourceQuestion = {
   title: string
   index: number
   year: number
-  difficulty: null
-  subject: null
+  difficulty: Difficulty | null
+  subject: Subject | null
   context: string | null
   files: string[]
   correctAlternative: string
@@ -52,6 +58,14 @@ export async function enemSourceQuestionsEntry(
     )
   }
 
+  function isDifficulty(value: unknown): value is Difficulty | null {
+    return value === null || DIFFICULTIES.some((difficulty) => difficulty === value)
+  }
+
+  function isSubject(value: unknown): value is Subject | null {
+    return value === null || SUBJECTS.some((subject) => subject === value)
+  }
+
   function isSourceQuestion(value: unknown): value is SourceQuestion {
     if (!isRecord(value)) return false
 
@@ -59,8 +73,8 @@ export async function enemSourceQuestionsEntry(
       typeof value.title === 'string' &&
       Number.isInteger(value.index) &&
       Number.isInteger(value.year) &&
-      value.difficulty === null &&
-      value.subject === null &&
+      isDifficulty(value.difficulty) &&
+      isSubject(value.subject) &&
       (typeof value.context === 'string' || value.context === null) &&
       Array.isArray(value.files) &&
       value.files.every((file) => typeof file === 'string') &&

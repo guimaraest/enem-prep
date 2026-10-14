@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "npm run build && tsx --test tests/*.test.ts",
+    "test": "tsx --test tests/*.test.ts",
     "build": "tsx scripts/build.ts",
     "lint": "tsc --noEmit"
   },

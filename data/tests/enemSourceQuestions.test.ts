@@ -19,6 +19,8 @@ test('normalizes source questions without filtering by discipline or number', as
   const writeSourceQuestion = async (
     directory: string,
     titleNumber: number,
+    difficulty: number | null,
+    subject: string | null,
   ): Promise<void> => {
     const questionDir = path.join(questions, directory)
     await mkdir(questionDir, { recursive: true })
@@ -28,8 +30,8 @@ test('normalizes source questions without filtering by discipline or number', as
         title: `Questão ${titleNumber} - ENEM 2024`,
         index: titleNumber,
         year: 2024,
-        difficulty: null,
-        subject: null,
+        difficulty,
+        subject,
         context: 'Question text',
         files: [],
         correctAlternative: 'A',
@@ -42,9 +44,14 @@ test('normalizes source questions without filtering by discipline or number', as
     )
   }
 
-  await writeSourceQuestion('135', 135)
-  await writeSourceQuestion('136', 136)
-  await writeSourceQuestion('181', 181)
+  await writeSourceQuestion('135', 135, null, null)
+  await writeSourceQuestion(
+    '136',
+    136,
+    2,
+    'statistics_and_data_interpretation',
+  )
+  await writeSourceQuestion('181', 181, null, null)
 
   await enemSourceQuestionsEntry(inputDir, outputDir, logPath)
 
@@ -52,6 +59,8 @@ test('normalizes source questions without filtering by discipline or number', as
 
   const acceptedQuestion = JSON.parse(
     await readFile(path.join(outputDir, '2024-136', 'question.json'), 'utf8'),
-  ) as { title: string }
+  ) as { title: string; difficulty: number | null; subject: string | null }
   assert.equal(acceptedQuestion.title, 'Questão 136 - ENEM 2024')
+  assert.equal(acceptedQuestion.difficulty, 2)
+  assert.equal(acceptedQuestion.subject, 'statistics_and_data_interpretation')
 })
