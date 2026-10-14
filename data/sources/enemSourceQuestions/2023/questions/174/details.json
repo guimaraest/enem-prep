@@ -42,6 +42,6 @@
             "isCorrect": true
         }
     ],
-    "difficulty": null,
-    "subject": null
+    "difficulty": 1,
+    "subject": "plane_geometry"
 }

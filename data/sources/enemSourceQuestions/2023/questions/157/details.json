@@ -42,6 +42,6 @@
             "isCorrect": false
         }
     ],
-    "difficulty": null,
-    "subject": null
+    "difficulty": 1,
+    "subject": "statistics_and_data_interpretation"
 }
