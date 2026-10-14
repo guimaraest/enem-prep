@@ -6,9 +6,21 @@ import { UserControls } from './UserControls';
 import { QuestionNav } from './QuestionNav';
 
 import * as constants from '../constants';
-import type { Question, Alternative } from '../models';
+import type { Question, Alternative, QuestionId } from '../models';
 
-function QuestionHeader({ question }: { question: Question }) {
+interface QuestionContainerProps {
+    question: Question;
+    bookmarked: boolean;
+    savingBookmark: boolean;
+    bookmarkError: string | null;
+    onToggleBookmark: () => void;
+    previousId?: QuestionId;
+    nextId?: QuestionId;
+    navigationLoading: boolean;
+    navigationError: boolean;
+}
+
+function QuestionHeader({ question, bookmarked, savingBookmark, bookmarkError, onToggleBookmark }: Pick<QuestionContainerProps, 'question' | 'bookmarked' | 'savingBookmark' | 'bookmarkError' | 'onToggleBookmark'>) {
     const difficulty =
         question.difficulty !== null
             ? constants.difficultyMap[question.difficulty]
@@ -25,7 +37,7 @@ function QuestionHeader({ question }: { question: Question }) {
                 <h1 className="question-title">
                     <span className='question-label'>{question.label} - </span>{question.title}
                 </h1>
-                <UserControls questionId={question.id} />
+                <UserControls bookmarked={bookmarked} saving={savingBookmark} error={bookmarkError} onToggleBookmark={onToggleBookmark} />
             </div>
             <div className="row" style={{ gap: 'var(--space-2)' }}>
                 {question.source && (
@@ -50,7 +62,7 @@ function QuestionHeader({ question }: { question: Question }) {
     );
 }
 
-export function QuestionContainer({ question }: { question: Question }) {
+export function QuestionContainer({ question, previousId, nextId, navigationLoading, navigationError, ...userControls }: QuestionContainerProps) {
     const [selectedIndex, setSelectedIndex] =
         useState<Alternative['index'] | null>(null);
 
@@ -67,7 +79,7 @@ export function QuestionContainer({ question }: { question: Question }) {
 
     return (
         <>
-            <QuestionHeader question={question} />
+            <QuestionHeader question={question} {...userControls} />
 
             <div>
                 <p className="content">{question.content.problem}</p>
@@ -101,7 +113,7 @@ export function QuestionContainer({ question }: { question: Question }) {
                     onPress={checkAnswer}
                 />
 
-                <QuestionNav questionId={question.id} />
+                <QuestionNav previousId={previousId} nextId={nextId} loading={navigationLoading} error={navigationError} />
             </div>
         </>
     );
