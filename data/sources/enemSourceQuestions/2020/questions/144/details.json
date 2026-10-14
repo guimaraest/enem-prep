@@ -2,11 +2,44 @@
     "title": "Questão 144 - ENEM 2020",
     "index": 144,
     "year": 2020,
-    "difficulty": null,
-    "subject": null,
-    "context": "",
+    "language": null,
+    "discipline": "matematica",
+    "context": "Uma torneira está gotejando água em um balde\ncom capacidade de 18 litros. No instante atual, o\nbalde se encontra com ocupação de 50% de sua\ncapacidade. A cada segundo caem 5 gotas de água\nda torneira, e uma gota é formada, em média, por\n5 × 10−2 mL de água.",
     "files": [],
-    "correctAlternative": "",
-    "alternativesIntroduction": "",
-    "alternatives": []
+    "correctAlternative": "B",
+    "alternativesIntroduction": "Quanto tempo, em hora, será necessário para encher\ncompletamente o balde, partindo do instante atual?",
+    "alternatives": [
+        {
+            "letter": "A",
+            "text": "2 × 10^1",
+            "file": null,
+            "isCorrect": false
+        },
+        {
+            "letter": "B",
+            "text": "1 × 10^1",
+            "file": null,
+            "isCorrect": true
+        },
+        {
+            "letter": "C",
+            "text": "2 × 10^−2",
+            "file": null,
+            "isCorrect": false
+        },
+        {
+            "letter": "D",
+            "text": "1 × 10^−2",
+            "file": null,
+            "isCorrect": false
+        },
+        {
+            "letter": "E",
+            "text": "1 × 10^−3",
+            "file": null,
+            "isCorrect": false
+        }
+    ],
+    "difficulty": null,
+    "subject": null
 }
