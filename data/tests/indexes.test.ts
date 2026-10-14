@@ -22,7 +22,7 @@ test('generates question files and deterministic summary indexes', async (t) => 
     source: 'enem 2023',
     difficulty: 2,
     percentCorrectRate: null,
-    subject: 'algebra',
+    subject: 'algebra_and_equations',
     content: {
       files: [],
       problem: 'What is 1 + 1?',
@@ -68,7 +68,7 @@ test('generates question files and deterministic summary indexes', async (t) => 
       source: 'enem 2023',
       difficulty: 2,
       percentCorrectRate: null,
-      subject: 'algebra',
+      subject: 'algebra_and_equations',
       isMissed: false,
       isBookmarked: false,
     },
