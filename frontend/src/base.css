@@ -58,7 +58,7 @@
 
 @media (max-width: 768px) {
   :root {
-    --section-padding-horizontal: 20px;
+    --section-padding-horizontal: 32px;
     --section-padding-vertical: 40px;
     --section-max-width: 720px;
     --header-height: 60px;
