@@ -37,7 +37,7 @@ function QuestionHeader({ question, bookmarked, savingBookmark, bookmarkError, o
         <div className="question-header">
             <div className="row top-row">
                 <h1 className="question-title">
-                    <span className='question-label'>{question.label} - </span>{question.title}
+                    <span className='question-label oldstyle'>{question.label} - </span>{question.title}
                 </h1>
                 <UserControls bookmarked={bookmarked} saving={savingBookmark} error={bookmarkError} onToggleBookmark={onToggleBookmark} />
             </div>

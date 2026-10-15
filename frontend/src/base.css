@@ -79,6 +79,11 @@ body {
   text-transform: lowercase;
 }
 
+.oldstyle {
+  font-family: "Roboto", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-variant-numeric: oldstyle-nums;
+}
+
 *,
 *::before,
 *::after {

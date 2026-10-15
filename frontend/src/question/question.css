@@ -6,10 +6,6 @@
 
 /* header */
 
-.question-label {
-    font-variant-numeric: oldstyle-nums;
-}
-
 .question-title {
     color: var(--text-muted);
     font-size: 1.5rem;
@@ -221,8 +217,6 @@
 
 .alternative-index {
     color: var(--text-muted);
-
-    font-variant-numeric: oldstyle-nums;
 
     user-select: none;
 }

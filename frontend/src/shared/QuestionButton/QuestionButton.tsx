@@ -10,7 +10,7 @@ interface QuestionButtonProps {
 export function QuestionButton({ questionId, label }: QuestionButtonProps) {
     return (
         <Link
-            className="question hover"
+            className="question hover oldstyle"
             to={`/perguntas/${questionId}`}
         >
             {label}
