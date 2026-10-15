@@ -47,20 +47,21 @@ export function QuestionRoute() {
 
       try {
         const questionId = parseUUID(id)
-        const [result, userData] = await Promise.all([
+        api.questionsContext.setCurrentQuestion(questionId)
+        const [result, questionData] = await Promise.all([
           api.questions.getById(questionId),
           api.userQuestions.getById(questionId),
         ])
 
         if (!cancelled) {
           setQuestion(result)
-          setBookmarked(userData.isBookmarked)
+          setBookmarked(questionData.isBookmarked)
         }
 
         try {
           const [previous, next] = await Promise.all([
-            api.previousQuestion(),
-            api.nextQuestion(),
+            api.questionsContext.previousQuestion(),
+            api.questionsContext.nextQuestion(),
           ])
           if (!cancelled) {
             setPreviousId(previous)
@@ -109,7 +110,7 @@ export function QuestionRoute() {
   const onAttempt = useCallback(async (selectedAlternativeIndex: Alternative['index'], isCorrect: boolean) => {
     if (!question) return
     try {
-      await api.attempts.record(question.id, { selectedAlternativeIndex, isCorrect })
+      await api.userQuestions.attempts.record(question.id, { selectedAlternativeIndex, isCorrect })
     } catch (cause) {
       console.error('failed to record question attempt:', cause)
     }

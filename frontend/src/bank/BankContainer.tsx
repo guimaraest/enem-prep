@@ -14,19 +14,19 @@ const filterOptions: DropdownOption[] = [
 
 export function BankContainer() {
   const context = useSyncExternalStore(
-    api.context.subscribe,
-    api.context.getSnapshot,
-    api.context.getSnapshot,
+    api.questionsContext.subscribe,
+    api.questionsContext.getSnapshot,
+    api.questionsContext.getSnapshot,
   )
 
   function handleFilterChange(value: string) {
     if (!isFilterSetting(value)) return
 
-    api.context.setFilterSetting(value)
+    api.questionsContext.setFilterSetting(value)
   }
 
   useEffect(() => {
-    void api.context.initialize(true).catch((cause: unknown) => {
+    void api.questionsContext.initialize(true).catch((cause: unknown) => {
       console.error('failed to load question context:', cause)
     })
   }, [])

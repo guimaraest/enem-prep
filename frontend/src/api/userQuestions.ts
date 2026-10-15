@@ -106,7 +106,7 @@ export function setQuestionBookmarked(
     });
 }
 
-export function getBookmarkedQuestions(): Promise<QuestionId[]> {
+export function getBookmarkedQuestionIds(): Promise<QuestionId[]> {
     const userQuestions = readUserQuestions();
 
     return Promise.resolve(
@@ -116,7 +116,7 @@ export function getBookmarkedQuestions(): Promise<QuestionId[]> {
     );
 }
 
-export function getMissedQuestions(): Promise<QuestionId[]> {
+export function getMissedQuestionIds(): Promise<QuestionId[]> {
     const userQuestions = readUserQuestions();
 
     return Promise.resolve(

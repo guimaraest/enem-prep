@@ -1,5 +1,5 @@
-import * as questionsImpl from './staticData';
-import * as userDataImpl from './userData.ts';
+import * as questionsImpl from './questions';
+import * as userQuestionsImpl from './userQuestions.ts';
 import { DIFFICULTIES, SUBJECTS } from '../models';
 import type { QuestionId, QuestionSummary, Subject, Difficulty } from '../models';
 import { difficultyMap, subjectMap } from '../constants';
@@ -11,7 +11,7 @@ export interface QuestionGroup {
     questions: QuestionSummary[];
 }
 
-export interface ContextSnapshot {
+export interface QuestionsContextSnapshot {
     filterSetting: FilterSetting;
     fullContext: QuestionSummary[];
     filteredContext: QuestionGroup[];
@@ -26,7 +26,7 @@ const filterSettings: FilterSetting[] = [
     'bookmarked',
 ];
 
-let snapshot: ContextSnapshot = {
+let snapshot: QuestionsContextSnapshot = {
     filterSetting: 'subject',
     fullContext: [],
     filteredContext: [],
@@ -85,7 +85,7 @@ function getFilteredContext(
     }
 }
 
-function updateSnapshot(update: Partial<ContextSnapshot>): void {
+function updateSnapshot(update: Partial<QuestionsContextSnapshot>): void {
     const filterSetting = update.filterSetting ?? snapshot.filterSetting;
     const fullContext = update.fullContext ?? snapshot.fullContext;
 
@@ -102,11 +102,11 @@ export function isFilterSetting(value: string): value is FilterSetting {
     return filterSettings.includes(value as FilterSetting);
 }
 
-export function getContextSnapshot(): ContextSnapshot {
+export function getQuestionsContextSnapshot(): QuestionsContextSnapshot {
     return snapshot;
 }
 
-export function subscribeToContext(listener: () => void): () => void {
+export function subscribeToQuestionsContext(listener: () => void): () => void {
     listeners.add(listener);
     return () => listeners.delete(listener);
 }
@@ -120,7 +120,7 @@ export function setCurrentQuestion(questionId: QuestionId): void {
     currentQuestion = questionId;
 }
 
-export function initializeContext(force = false): Promise<void> {
+export function initializeQuestionsContext(force = false): Promise<void> {
     if (loadPromise) return loadPromise;
     if (hasLoaded && !force) return Promise.resolve();
 
@@ -130,8 +130,8 @@ export function initializeContext(force = false): Promise<void> {
         try {
             const [questions, bookmarkedQuestions, missedQuestions] = await Promise.all([
                 questionsImpl.getAllQuestions(),
-                userDataImpl.getBookmarkedQuestions(),
-                userDataImpl.getMissedQuestions(),
+                userQuestionsImpl.getBookmarkedQuestionIds(),
+                userQuestionsImpl.getMissedQuestionIds(),
             ]);
             const bookmarkedIds = new Set(bookmarkedQuestions);
             const missedIds = new Set(missedQuestions);
@@ -162,7 +162,7 @@ async function getCurrentQuestionGroupIndex(): Promise<{
     groupIndex: number;
     questionIndex: number;
 } | undefined> {
-    if (!hasLoaded) await initializeContext();
+    if (!hasLoaded) await initializeQuestionsContext();
     if (!currentQuestion) return undefined;
 
     const groupIndex = snapshot.filteredContext.findIndex((group) =>

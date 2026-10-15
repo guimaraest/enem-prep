@@ -1,6 +1,8 @@
-import * as questionsImpl from './staticData';
-import * as userDataImpl from './userData.ts';
-import * as contextImpl from './context';
+import * as questionsImpl from './questions';
+import * as userQuestionsImpl from './userQuestions.ts';
+import * as contextImpl from './questionsContext';
+import * as userExamsContextImpl from './userExamsContext';
+import * as userExamsImpl from './userExams';
 import type {
     Question,
     QuestionId,
@@ -14,59 +16,74 @@ export interface Api {
         getAll: () => Promise<QuestionSummary[]>;
         getById: (id: QuestionId) => Promise<Question | undefined>;
     };
-    readonly context: {
+    readonly questionsContext: {
         initialize: (force?: boolean) => Promise<void>;
-        getSnapshot: typeof contextImpl.getContextSnapshot;
-        subscribe: typeof contextImpl.subscribeToContext;
+        getSnapshot: typeof contextImpl.getQuestionsContextSnapshot;
+        subscribe: typeof contextImpl.subscribeToQuestionsContext;
         setFilterSetting: typeof contextImpl.setFilterSetting;
+        setCurrentQuestion: typeof contextImpl.setCurrentQuestion;
+        nextQuestion: typeof contextImpl.nextQuestion;
+        previousQuestion: typeof contextImpl.previousQuestion;
     };
-    readonly nextQuestion: typeof contextImpl.nextQuestion;
-    readonly previousQuestion: typeof contextImpl.previousQuestion;
     readonly userQuestions: {
         getAll: () => Promise<UserQuestionData[]>;
         getById: (id: QuestionId) => Promise<UserQuestionData>;
         setBookmarked: (id: QuestionId, isBookmarked: boolean) => Promise<void>;
+        getBookmarkedIds: () => Promise<QuestionId[]>;
+        getMissedIds: () => Promise<QuestionId[]>;
+        readonly attempts: {
+            record: (
+                id: QuestionId,
+                attempt: Pick<QuestionAttempt, 'selectedAlternativeIndex' | 'isCorrect'>,
+            ) => Promise<QuestionAttempt>;
+            getByQuestionId: (id: QuestionId) => Promise<QuestionAttempt[]>;
+        };
     };
-    readonly userIndexes: {
-        getBookmarkedQuestions: () => Promise<QuestionId[]>;
-        getMissedQuestions: () => Promise<QuestionId[]>;
-    };
-    readonly attempts: {
-        record: (
-            id: QuestionId,
-            attempt: Pick<QuestionAttempt, 'selectedAlternativeIndex' | 'isCorrect'>,
-        ) => Promise<QuestionAttempt>;
-        getByQuestionId: (id: QuestionId) => Promise<QuestionAttempt[]>;
+    readonly userExams: {
+        readonly context: {
+            initialize: () => Promise<void>;
+            getSnapshot: typeof userExamsContextImpl.getUserExamsSnapshot;
+            subscribe: typeof userExamsContextImpl.subscribeToUserExams;
+        };
+        getAll: typeof userExamsImpl.getAllUserExams;
+        save: typeof userExamsImpl.saveUserExam;
+        remove: typeof userExamsImpl.removeUserExam;
     };
 }
 
 export const api: Api = {
     questions: {
         getAll: questionsImpl.getAllQuestions,
-        getById: (id) => {
-            contextImpl.setCurrentQuestion(id);
-            return questionsImpl.getQuestionById(id);
+        getById: questionsImpl.getQuestionById,
+    },
+    questionsContext: {
+        initialize: contextImpl.initializeQuestionsContext,
+        getSnapshot: contextImpl.getQuestionsContextSnapshot,
+        subscribe: contextImpl.subscribeToQuestionsContext,
+        setFilterSetting: contextImpl.setFilterSetting,
+        setCurrentQuestion: contextImpl.setCurrentQuestion,
+        nextQuestion: contextImpl.nextQuestion,
+        previousQuestion: contextImpl.previousQuestion,
+    },
+    userQuestions: {
+        getAll: userQuestionsImpl.getAllUserQuestionData,
+        getById: userQuestionsImpl.getUserQuestionData,
+        setBookmarked: userQuestionsImpl.setQuestionBookmarked,
+        getBookmarkedIds: userQuestionsImpl.getBookmarkedQuestionIds,
+        getMissedIds: userQuestionsImpl.getMissedQuestionIds,
+        attempts: {
+            record: userQuestionsImpl.recordAttempt,
+            getByQuestionId: userQuestionsImpl.getAttemptsByQuestionId,
         },
     },
-    context: {
-        initialize: contextImpl.initializeContext,
-        getSnapshot: contextImpl.getContextSnapshot,
-        subscribe: contextImpl.subscribeToContext,
-        setFilterSetting: contextImpl.setFilterSetting,
-    },
-    nextQuestion: contextImpl.nextQuestion,
-    previousQuestion: contextImpl.previousQuestion,
-    userQuestions: {
-        getAll: userDataImpl.getAllUserQuestionData,
-        getById: userDataImpl.getUserQuestionData,
-        setBookmarked: userDataImpl.setQuestionBookmarked,
-    },
-    userIndexes: {
-        getBookmarkedQuestions: userDataImpl.getBookmarkedQuestions,
-        getMissedQuestions: userDataImpl.getMissedQuestions,
-    },
-    attempts: {
-        record: userDataImpl.recordAttempt,
-        getByQuestionId: userDataImpl.getAttemptsByQuestionId,
+    userExams: {
+        context: {
+            initialize: userExamsContextImpl.initializeUserExamsContext,
+            getSnapshot: userExamsContextImpl.getUserExamsSnapshot,
+            subscribe: userExamsContextImpl.subscribeToUserExams,
+        },
+        getAll: userExamsImpl.getAllUserExams,
+        save: userExamsImpl.saveUserExam,
+        remove: userExamsImpl.removeUserExam,
     },
 };
