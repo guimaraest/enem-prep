@@ -49,20 +49,22 @@ export function BankContainer() {
           onChange={handleFilterChange}
         />
       </div>
-      {context.filteredContext.map((group) => (
-        <div className="bank-group" key={group.label}>
-          <h2>{group.label}</h2>
-          <div className="bank-grid">
-            {group.questions.map((question) => (
-              <QuestionButton
-                key={question.id}
-                questionId={question.id}
-                label={question.label}
-              />
-            ))}
+      <div className="bank-groups">
+        {context.filteredContext.map((group) => (
+          <div className="bank-group" key={group.label}>
+            <h2>{group.label}</h2>
+            <div className="bank-grid">
+              {group.questions.map((question) => (
+                <QuestionButton
+                  key={question.id}
+                  questionId={question.id}
+                  label={question.label}
+                />
+              ))}
+            </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   )
 }
