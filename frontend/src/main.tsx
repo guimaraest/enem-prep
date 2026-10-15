@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router";
 
 import { QuestionRoute } from "./question";
 import { BankRoute } from "./bank";
+import { ExamsRoute } from './exams';
 
 import { Nav } from './shared/Nav/Nav'
 
@@ -16,6 +17,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <Nav
         items={[
           { label: 'perguntas', url: '/perguntas' },
+          { label: 'exams', url: '/exams' },
         ]}
       />
       <main>
@@ -42,6 +44,12 @@ function AppRoutes() {
                             <QuestionRoute />
                           </Layout>
                         } 
+                      />
+                    <Route path="/exams" element={
+                          <Layout>
+                            <ExamsRoute />
+                          </Layout>
+                        }
                       />
                 </Routes>
             </BrowserRouter> 
