@@ -18,8 +18,10 @@ export function ExamsRoute() {
     }, []);
 
     return (
-        <section className="section">
-            <ExamsContainer exams={context.exams} />
+        <section>
+            <div>
+                <ExamsContainer exams={context.exams} />
+            </div>
         </section>
     );
 }

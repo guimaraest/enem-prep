@@ -1,6 +1,6 @@
 import { useEffect, useSyncExternalStore } from 'react'
 import { api } from '../api'
-import { isFilterSetting } from '../api/context'
+import { isFilterSetting } from '../api/questionsContext'
 import { Dropdown } from '../shared/Dropdown/Dropdown'
 import type { DropdownOption } from '../shared/Dropdown/Dropdown'
 import { QuestionButton } from '../shared/QuestionButton/QuestionButton'

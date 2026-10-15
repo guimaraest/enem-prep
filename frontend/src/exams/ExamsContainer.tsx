@@ -5,5 +5,7 @@ interface ExamsContainerProps {
 }
 
 export function ExamsContainer({ exams }: ExamsContainerProps) {
-    return <div className="exams-container" data-exam-count={exams.length} />;
+    return (
+        <div> stub exams {exams.length} </div> 
+    )
 }
