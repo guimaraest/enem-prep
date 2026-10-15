@@ -58,10 +58,10 @@
 
 @media (max-width: 768px) {
   :root {
-    --section-padding-horizontal: 100px;
+    --section-padding-horizontal: 20px;
     --section-padding-vertical: 40px;
     --section-max-width: 720px;
-    --header-height: 40px;
+    --header-height: 60px;
   }
 }
 
@@ -261,4 +261,40 @@ button:hover,
 
 .link:active {
   color: var(--primary);
+}
+
+
+
+@media (max-width: 768px) {
+  body {
+    line-height: 1.55;
+  }
+
+  .heading-big,
+  h1 {
+    font-size: 2.75rem;
+    line-height: 1.15;
+  }
+
+  .heading-medium,
+  h2 {
+    font-size: 2.25rem;
+    line-height: 1.2;
+  }
+
+  .heading-small,
+  h3 {
+    font-size: 1.4rem;
+    line-height: 1.3;
+  }
+
+  p,
+  ul li {
+    font-size: 0.9375rem;
+    line-height: 1.6;
+  }
+
+  small {
+    line-height: 1.4;
+  }
 }
