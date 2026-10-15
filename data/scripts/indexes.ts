@@ -11,9 +11,11 @@ import path from 'node:path'
 import type {
   Question,
   QuestionSummary,
+  Exam,
   Subject,
   Difficulty,
 } from '../../frontend/src/models.js'
+import { createExamUUID } from './uuid-factory.js'
 import {
   SUBJECTS,
   DIFFICULTIES,
@@ -151,7 +153,7 @@ export async function generateIndexes({
   // Sort consistently so generated indexes are deterministic.
   summaries.sort((a, b) => a.id.localeCompare(b.id))
 
-  const exams = new Map<string, QuestionSummary[]>()
+  const exams = new Map<string, Exam>()
 
   for (const question of summaries) {
     if (!question.source.startsWith('enem ')) continue
@@ -163,9 +165,14 @@ export async function generateIndexes({
     }
 
     const examFile = `enem-${year}.json`
-    const group = exams.get(examFile) ?? []
-    group.push(question)
-    exams.set(examFile, group)
+    const exam = exams.get(examFile) ?? {
+      examId: createExamUUID(`official-inep-${year}`),
+      type: 'official-inep',
+      year,
+      content: [],
+    } satisfies Exam
+    exam.content.push(question)
+    exams.set(examFile, exam)
   }
 
   const byDifficulty: Record<string, QuestionSummary[]> = {}
@@ -222,12 +229,21 @@ export async function generateIndexes({
     bySubject,
   )
 
-  for (const [filename, questions] of exams) {
+  const examFiles = [...exams.keys()].sort()
+
+  for (const [filename, exam] of exams) {
+    exam.content.sort((left, right) => {
+      const leftNumber = Number(left.title.match(/^Questão (\d+)\b/)?.[1] ?? left.label)
+      const rightNumber = Number(right.title.match(/^Questão (\d+)\b/)?.[1] ?? right.label)
+      return leftNumber - rightNumber
+    })
     await writeJson(
       path.join(indexesOutputDir, 'provas', filename),
-      questions,
+      exam,
     )
   }
+
+  await writeJson(path.join(indexesOutputDir, 'provas', 'index.json'), examFiles)
 
   await log(
     logPath,

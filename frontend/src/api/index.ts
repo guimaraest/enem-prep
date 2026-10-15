@@ -1,4 +1,5 @@
 import * as questionsImpl from './questions';
+import * as examsImpl from './exams';
 import * as userQuestionsImpl from './userQuestions.ts';
 import * as contextImpl from './questionsContext';
 import * as userExamsContextImpl from './userExamsContext';
@@ -84,6 +85,10 @@ export const api: Api = {
             record: userQuestionsImpl.recordAttempt,
             getByQuestionId: userQuestionsImpl.getAttemptsByQuestionId,
         },
+    },
+    exams: {
+        getAll: examsImpl.getAllExams,
+        getById: examsImpl.getExamById,
     },
     userExams: {
         context: {

@@ -6,6 +6,9 @@ import test from 'node:test'
 import { generateIndexes } from '../scripts/indexes.js'
 import { parseUUID, type Question } from '../../frontend/src/models.js'
 
+const uuidPattern =
+  /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i
+
 test('generates question files and deterministic summary indexes', async (t) => {
   const tempDir = await mkdtemp(path.join(os.tmpdir(), 'enem-prep-indexes-'))
   t.after(() => rm(tempDir, { recursive: true, force: true }))
@@ -53,12 +56,20 @@ test('generates question files and deterministic summary indexes', async (t) => 
   const summary = JSON.parse(
     await readFile(path.join(indexesOutputDir, 'allQuestions.json'), 'utf8'),
   ) as Array<{ id: string; source: string }>
-  const examQuestions = JSON.parse(
+  const exam = JSON.parse(
     await readFile(
       path.join(indexesOutputDir, 'provas', 'enem-2023.json'),
       'utf8',
     ),
-  ) as Array<{ id: string }>
+  ) as {
+    examId: string
+    type: string
+    year: string | null
+    content: Array<{ id: string }>
+  }
+  const examFiles = JSON.parse(
+    await readFile(path.join(indexesOutputDir, 'provas', 'index.json'), 'utf8'),
+  ) as string[]
 
   assert.deepEqual(summary, [
     {
@@ -73,7 +84,11 @@ test('generates question files and deterministic summary indexes', async (t) => 
       isBookmarked: false,
     },
   ])
-  assert.deepEqual(examQuestions.map(({ id }) => id), [questionId])
+  assert.match(exam.examId, uuidPattern)
+  assert.equal(exam.type, 'official-inep')
+  assert.equal(exam.year, '2023')
+  assert.deepEqual(exam.content.map(({ id }) => id), [questionId])
+  assert.deepEqual(examFiles, ['enem-2023.json'])
   assert.deepEqual(
     await readdir(path.join(finalQuestionsDir, questionId)),
     ['question.json'],

@@ -1,9 +1,10 @@
 import { createHash } from 'node:crypto'
 import { appendFile, readFile, readdir, writeFile } from 'node:fs/promises'
 import path from 'node:path'
-import { parseUUID, type Question } from '../../frontend/src/models.js'
+import { parseUUID, type Question, type UUID } from '../../frontend/src/models.js'
 
 const UUID_NAMESPACE = '5db4f1aa-9899-4faf-a3f1-14c85e8f6481'
+const EXAM_UUID_NAMESPACE = '9f3a981b-e1c6-48a6-8d35-08d56d6cfd31'
 
 type QuestionForIdentity = Omit<Question, 'id'>
 
@@ -25,8 +26,8 @@ function canonicalQuestionKey(source: string, directoryName: string): string {
   return `${sourceSlug}-${directorySlug}`
 }
 
-export function createQuestionUUID(canonicalKey: string): Question['id'] {
-  const namespaceBytes = Buffer.from(UUID_NAMESPACE.replaceAll('-', ''), 'hex')
+function createNamespacedUUID(namespace: string, canonicalKey: string): Question['id'] {
+  const namespaceBytes = Buffer.from(namespace.replaceAll('-', ''), 'hex')
   const hash = createHash('sha1')
     .update(namespaceBytes)
     .update(canonicalKey, 'utf8')
@@ -45,6 +46,14 @@ export function createQuestionUUID(canonicalKey: string): Question['id'] {
   ].join('-')
 
   return parseUUID(uuid)
+}
+
+export function createQuestionUUID(canonicalKey: string): Question['id'] {
+  return createNamespacedUUID(UUID_NAMESPACE, canonicalKey)
+}
+
+export function createExamUUID(canonicalKey: string): UUID {
+  return createNamespacedUUID(EXAM_UUID_NAMESPACE, canonicalKey)
 }
 
 export async function assignQuestionUUIDs(
