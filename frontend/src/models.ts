@@ -100,3 +100,10 @@ export interface UserQuestionData {
     isBookmarked: boolean;
     attempts: QuestionAttempt[];
 }
+
+export interface Exam {
+  examId: UUID
+  type: 'autoral' | 'official-inep'
+  year: string | null
+  content: QuestionSummary[]
+}

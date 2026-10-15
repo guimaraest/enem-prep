@@ -3,12 +3,17 @@ import * as userQuestionsImpl from './userQuestions.ts';
 import * as contextImpl from './questionsContext';
 import * as userExamsContextImpl from './userExamsContext';
 import * as userExamsImpl from './userExams';
+import type { FilterSetting, QuestionsContextSnapshot } from './questionsContext';
+import type { UserExamsSnapshot } from './userExamsContext';
+import type { UserExamRecord } from './userExams';
 import type {
+    UUID,
     Question,
     QuestionId,
     QuestionAttempt,
     QuestionSummary,
     UserQuestionData,
+    Exam,
 } from '../models';
 
 export interface Api {
@@ -18,12 +23,12 @@ export interface Api {
     };
     readonly questionsContext: {
         initialize: (force?: boolean) => Promise<void>;
-        getSnapshot: typeof contextImpl.getQuestionsContextSnapshot;
-        subscribe: typeof contextImpl.subscribeToQuestionsContext;
-        setFilterSetting: typeof contextImpl.setFilterSetting;
-        setCurrentQuestion: typeof contextImpl.setCurrentQuestion;
-        nextQuestion: typeof contextImpl.nextQuestion;
-        previousQuestion: typeof contextImpl.previousQuestion;
+        getSnapshot: () => QuestionsContextSnapshot;
+        subscribe: (listener: () => void) => () => void;
+        setFilterSetting: (filterSetting: FilterSetting) => void;
+        setCurrentQuestion: (questionId: QuestionId) => void;
+        nextQuestion: () => Promise<QuestionId | undefined>;
+        previousQuestion: () => Promise<QuestionId | undefined>;
     };
     readonly userQuestions: {
         getAll: () => Promise<UserQuestionData[]>;
@@ -39,15 +44,19 @@ export interface Api {
             getByQuestionId: (id: QuestionId) => Promise<QuestionAttempt[]>;
         };
     };
+    readonly exams: {
+        getAll: () => Promise<Exam[]>;
+        getById: (id: UUID) => Promise<Exam | undefined>;
+    };
     readonly userExams: {
         readonly context: {
             initialize: () => Promise<void>;
-            getSnapshot: typeof userExamsContextImpl.getUserExamsSnapshot;
-            subscribe: typeof userExamsContextImpl.subscribeToUserExams;
+            getSnapshot: () => UserExamsSnapshot;
+            subscribe: (listener: () => void) => () => void;
         };
-        getAll: typeof userExamsImpl.getAllUserExams;
-        save: typeof userExamsImpl.saveUserExam;
-        remove: typeof userExamsImpl.removeUserExam;
+        getAll: () => Promise<UserExamRecord[]>;
+        save: (exam: UserExamRecord) => Promise<void>;
+        remove: (id: string) => Promise<void>;
     };
 }
 
