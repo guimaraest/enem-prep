@@ -124,7 +124,7 @@ export function QuestionRoute() {
       loadingMessage="Carregando questão"
       emptyMessage="Questão não encontrada"
     >
-      <section>
+      <section className="question-page">
         <div className="question-parent">
           <QuestionContainer
             question={question!}
