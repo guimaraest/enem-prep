@@ -40,6 +40,6 @@
             "isCorrect": true
         }
     ],
-    "difficulty": null,
-    "subject": null
+    "difficulty": 3,
+    "subject": "combinatorics_and_probability"
 }

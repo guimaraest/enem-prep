@@ -43,6 +43,6 @@
             "isCorrect": false
         }
     ],
-    "difficulty": null,
-    "subject": null
+    "difficulty": 3,
+    "subject": "arithmetic_and_fundamentals"
 }
