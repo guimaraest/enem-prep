@@ -10,18 +10,9 @@ import { BankRoute } from "./bank";
 import { Nav } from './shared/Nav/Nav'
 import { Footer } from './shared/Footer/Footer'
 import './shared/Footer/Footer.css'
-
-function StubPage({ title }: { title: string }) {
-  return (
-    <section className="section">
-      <div className="stub-page">
-        <h1 className="heading-small">{title}</h1>
-        <p>em breve</p>
-      </div>
-    </section>
-  )
-}
-
+import { PrivacyPolicyRoute } from './settings/PrivacyPolicyRoute'
+import { SettingsRoute } from './settings/SettingsRoute'
+import { ManageDataRoute } from './settings/ManageDataRoute'
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -58,13 +49,13 @@ function AppRoutes() {
                         } 
                       />
                     <Route path="/politica-de-privacidade" element={
-                          <Layout><StubPage title="política de privacidade" /></Layout>
+                          <Layout><PrivacyPolicyRoute /></Layout>
                       } />
                     <Route path="/configuracoes" element={
-                          <Layout><StubPage title="configurações" /></Layout>
+                          <Layout><SettingsRoute /></Layout>
                       } />
                     <Route path="/gerir-dados" element={
-                          <Layout><StubPage title="gerir dados" /></Layout>
+                          <Layout><ManageDataRoute /></Layout>
                       } />
                 </Routes>
             </BrowserRouter> 
