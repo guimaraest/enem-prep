@@ -1,10 +1,16 @@
+import './PrivacyPolicyRoute.css'
+
 export function PrivacyPolicyRoute() {
   return (
-    <article>
-      <h1>Política de Privacidade</h1>
-      <p><strong>Última atualização:</strong> 25 de outubro de 2026</p>
+    <section className="privacy-policy-section">
+      <article className="privacy-policy">
+        <header className="privacy-policy-header">
+          <p className="privacy-policy-eyebrow">enem prep · seus dados</p>
+          <h1>Política de Privacidade</h1>
+          <p className="privacy-policy-updated"><strong>Última atualização:</strong> 25 de outubro de 2026</p>
+        </header>
 
-      <p>
+      <p className="privacy-policy-intro">
         Esta Política de Privacidade explica como enem.thiguima.online
         trata informações durante o uso da plataforma. Nosso objetivo é
         respeitar a privacidade dos usuários, coletar apenas as informações
@@ -106,8 +112,8 @@ export function PrivacyPolicyRoute() {
       </p>
 
       <p>
-        Para mais informações, consulte a
-        <a href="https://umami.is/privacy-policy"
+        Para mais informações, consulte a 
+        <a href="https://umami.is/terms"
           target="_blank"
           rel="noopener noreferrer">
           Política de Privacidade do Umami
@@ -352,13 +358,6 @@ export function PrivacyPolicyRoute() {
         e adolescentes, quando pertinente.
       </p>
 
-      <p>
-        Não solicitamos intencionalmente informações pessoais além
-        das necessárias às funcionalidades oferecidas. Caso seja
-        identificado tratamento incompatível com as exigências legais,
-        serão adotadas as medidas cabíveis.
-      </p>
-
       <h2>11. Alterações nesta política</h2>
 
       <p>
@@ -371,6 +370,7 @@ export function PrivacyPolicyRoute() {
         A versão vigente será disponibilizada nesta página, com a
         respectiva data de atualização.
       </p>
-    </article>
+      </article>
+    </section>
   )
 }

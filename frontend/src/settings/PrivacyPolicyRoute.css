@@ -1,0 +1,109 @@
+.privacy-policy-section {
+  padding-inline: var(--section-padding-horizontal);
+}
+
+.privacy-policy {
+  width: 100%;
+  max-width: var(--section-max-width);
+  margin-inline: auto;
+}
+
+.privacy-policy-header {
+  margin-bottom: var(--space-6);
+  padding-bottom: var(--space-5);
+  border-bottom: 1px solid var(--bg-light);
+}
+
+.privacy-policy-eyebrow {
+  margin-bottom: var(--space-3);
+  color: var(--primary);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.privacy-policy-header h1 {
+  color: var(--text);
+  font-size: clamp(2rem, 5vw, 3rem);
+  line-height: 1.15;
+}
+
+.privacy-policy-updated {
+  margin-top: var(--space-3);
+  color: var(--text-muted);
+  font-size: 0.875rem;
+}
+
+.privacy-policy-updated strong {
+  color: var(--text);
+}
+
+.privacy-policy > p {
+  margin: 0 0 var(--space-4);
+  color: var(--text-muted);
+  line-height: inherit;
+}
+
+.privacy-policy-intro {
+  color: var(--text);
+  font-size: 1.0625rem;
+}
+
+.privacy-policy h2 {
+  margin: var(--space-7) 0 var(--space-3);
+  padding-bottom: var(--space-2);
+  border-bottom: 1px solid var(--bg-light);
+  color: var(--text);
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.privacy-policy ul {
+  margin: 0 0 var(--space-4);
+  padding-left: var(--space-5);
+  list-style: disc;
+}
+
+.privacy-policy li {
+  padding-left: var(--space-1);
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+.privacy-policy li + li {
+  margin-top: var(--space-1);
+}
+
+.privacy-policy strong {
+  color: var(--text);
+}
+
+.privacy-policy a {
+  color: var(--primary);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.privacy-policy code {
+  padding: 0.1em 0.35em;
+  border-radius: 4px;
+  background: var(--bg-light);
+  color: var(--text);
+  font-size: 0.9em;
+}
+
+@media (max-width: 768px) {
+  .privacy-policy-section {
+    padding-block: var(--space-5);
+  }
+
+  .privacy-policy {
+    padding: var(--space-4);
+  }
+
+  .privacy-policy h2 {
+    font-size: 1.125rem;
+  }
+}
