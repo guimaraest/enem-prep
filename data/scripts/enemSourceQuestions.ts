@@ -22,7 +22,7 @@ type SourceAlternative = {
 }
 
 type SourceQuestion = {
-  title: string
+  title: string | null
   index: number
   year: number
   difficulty: Difficulty | null
@@ -70,7 +70,7 @@ export async function enemSourceQuestionsEntry(
     if (!isRecord(value)) return false
 
     return (
-      typeof value.title === 'string' &&
+      (typeof value.title === 'string' || value.title === null) &&
       Number.isInteger(value.index) &&
       Number.isInteger(value.year) &&
       isDifficulty(value.difficulty) &&
@@ -152,6 +152,8 @@ export async function enemSourceQuestionsEntry(
       }
 
       const source = parsed
+
+      if (source.title === null) continue
 
       if (String(source.year) !== yearEntry.name) {
         await log(

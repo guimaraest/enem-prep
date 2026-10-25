@@ -21,13 +21,17 @@ test('normalizes source questions without filtering by discipline or number', as
     titleNumber: number,
     difficulty: number | null,
     subject: string | null,
+    title: string | null | undefined = undefined,
   ): Promise<void> => {
     const questionDir = path.join(questions, directory)
     await mkdir(questionDir, { recursive: true })
     await writeFile(
       path.join(questionDir, 'details.json'),
       JSON.stringify({
-        title: `Questão ${titleNumber} - ENEM 2024`,
+        title:
+          title === undefined
+            ? `Questão ${titleNumber} - ENEM 2024`
+            : title,
         index: titleNumber,
         year: 2024,
         difficulty,
@@ -52,6 +56,7 @@ test('normalizes source questions without filtering by discipline or number', as
     'statistics_and_data_interpretation',
   )
   await writeSourceQuestion('181', 181, null, null)
+  await writeSourceQuestion('137', 137, null, null, null)
 
   await enemSourceQuestionsEntry(inputDir, outputDir, logPath)
 
