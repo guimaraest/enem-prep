@@ -58,7 +58,6 @@
 }
 
 .nav li .nav-link:hover {
-  text-decoration: none;
   transform: translateY(-3px);
   cursor: pointer;
 }

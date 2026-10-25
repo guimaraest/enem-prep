@@ -8,11 +8,24 @@ import { QuestionRoute } from "./question";
 import { BankRoute } from "./bank";
 
 import { Nav } from './shared/Nav/Nav'
+import { Footer } from './shared/Footer/Footer'
+import './shared/Footer/Footer.css'
+
+function StubPage({ title }: { title: string }) {
+  return (
+    <section className="section">
+      <div className="stub-page">
+        <h1 className="heading-small">{title}</h1>
+        <p>em breve</p>
+      </div>
+    </section>
+  )
+}
 
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <>
+    <div className="app-layout">
       <Nav
         items={[
           { label: 'perguntas', url: '/perguntas' },
@@ -21,7 +34,8 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <main>
         {children}
       </main>
-    </>
+      <Footer />
+    </div>
   )
 }
 
@@ -43,6 +57,15 @@ function AppRoutes() {
                           </Layout>
                         } 
                       />
+                    <Route path="/politica-de-privacidade" element={
+                          <Layout><StubPage title="política de privacidade" /></Layout>
+                      } />
+                    <Route path="/configuracoes" element={
+                          <Layout><StubPage title="configurações" /></Layout>
+                      } />
+                    <Route path="/gerir-dados" element={
+                          <Layout><StubPage title="gerir dados" /></Layout>
+                      } />
                 </Routes>
             </BrowserRouter> 
         </>

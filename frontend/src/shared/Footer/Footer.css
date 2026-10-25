@@ -1,0 +1,54 @@
+.app-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.app-layout > main {
+  flex: 1;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  min-height: 280px;
+  padding: var(--space-9) var(--section-padding-horizontal) var(--space-5);
+  background: var(--bg);
+}
+
+.footer-container {
+  width: 100%;
+  max-width: var(--section-max-width);
+}
+
+.stub-page {
+  flex-direction: column;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-5);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer-links li {
+  position: relative;
+}
+
+.footer-link {
+  display: block;
+  color: var(--text);
+}
+
+.footer-link:visited {
+  color: var(--text);
+}
+
+@media (max-width: 768px) {
+  .footer {
+    min-height: 240px;
+  }
+}
