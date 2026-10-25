@@ -13,6 +13,15 @@ const filterOptions: DropdownOption[] = [
   { value: 'bookmarked', label: 'bookmarked' },
 ]
 
+const indicatorOptions: DropdownOption[] = [
+  { value: 'both', label: 'all indicators' },
+  { value: 'difficulty', label: 'difficulty' },
+  { value: 'user-state', label: 'user state' },
+  { value: 'none', label: 'no indicators' },
+]
+
+type IndicatorSetting = 'both' | 'difficulty' | 'user-state' | 'none'
+
 export function BankContainer() {
   const context = useSyncExternalStore(
     api.context.subscribe,
@@ -20,12 +29,30 @@ export function BankContainer() {
     api.context.getSnapshot,
   )
   const [userDataByQuestion, setUserDataByQuestion] = useState<Record<string, UserQuestionData>>({})
+  const [indicatorVisibility, setIndicatorVisibility] = useState({
+    difficulty: true,
+    userState: true,
+  })
 
   function handleFilterChange(value: string) {
     if (!isFilterSetting(value)) return
 
     api.context.setFilterSetting(value)
   }
+
+  function handleIndicatorChange(value: string) {
+    const setting = value as IndicatorSetting
+    if (!indicatorOptions.some((option) => option.value === setting)) return
+
+    setIndicatorVisibility({
+      difficulty: setting === 'both' || setting === 'difficulty',
+      userState: setting === 'both' || setting === 'user-state',
+    })
+  }
+
+  const indicatorSetting: IndicatorSetting = indicatorVisibility.difficulty
+    ? indicatorVisibility.userState ? 'both' : 'difficulty'
+    : indicatorVisibility.userState ? 'user-state' : 'none'
 
   useEffect(() => {
     void api.context.initialize(true).catch((cause: unknown) => {
@@ -63,6 +90,12 @@ export function BankContainer() {
           options={filterOptions}
           onChange={handleFilterChange}
         />
+        <Dropdown
+          label="show"
+          value={indicatorSetting}
+          options={indicatorOptions}
+          onChange={handleIndicatorChange}
+        />
       </div>
       <div className="bank-groups">
         {context.filteredContext.map((group) => (
@@ -81,6 +114,8 @@ export function BankContainer() {
                     isBookmarked: question.isBookmarked,
                     attempts: [],
                   }}
+                  showDifficulty={indicatorVisibility.difficulty}
+                  showUserState={indicatorVisibility.userState}
                 />
               ))}
             </div>

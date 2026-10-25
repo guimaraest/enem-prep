@@ -11,9 +11,18 @@ interface QuestionButtonProps {
     difficulty: Difficulty | null;
     subject: Subject | null;
     userdata: UserQuestionData;
+    showDifficulty?: boolean;
+    showUserState?: boolean;
 }
 
-export function QuestionButton({ questionId, label, difficulty, userdata }: QuestionButtonProps) {
+export function QuestionButton({
+    questionId,
+    label,
+    difficulty,
+    userdata,
+    showDifficulty,
+    showUserState,
+}: QuestionButtonProps) {
     const latestAttempt = userdata.attempts.reduce<QuestionAttempt | undefined>(
         (latest, attempt) => !latest || attempt.index > latest.index ? attempt : latest,
         undefined,
@@ -25,20 +34,23 @@ export function QuestionButton({ questionId, label, difficulty, userdata }: Ques
             to={`/perguntas/${questionId}`}
         >
             {label}
-            <span className="question-button-indicators" aria-hidden="true">
-                {(latestAttempt || userdata.isBookmarked) && (
-                    <span className="question-button-userstate">
-                        {latestAttempt
-                            ? latestAttempt.isCorrect
-                                ? <Check color="white" height={USER_STATE_ICON_SIZE} width={USER_STATE_ICON_SIZE} />
-                                : <Xmark color="white" height={USER_STATE_ICON_SIZE} width={USER_STATE_ICON_SIZE} />
-                            : <BookmarkSolid color="white" height={10} width={10} />}
-                    </span>
-                )}
-                {difficulty !== null && (
-                    <span className={`question-button-difficulty difficulty-${difficulty}`} />
-                )}
-            </span>
+            {((showDifficulty && difficulty !== null)
+                || (showUserState && (latestAttempt || userdata.isBookmarked))) && (
+                <span className="question-button-indicators" aria-hidden="true">
+                    {showUserState && (latestAttempt || userdata.isBookmarked) && (
+                        <span className="question-button-userstate">
+                            {latestAttempt
+                                ? latestAttempt.isCorrect
+                                    ? <Check color="white" height={USER_STATE_ICON_SIZE} width={USER_STATE_ICON_SIZE} />
+                                    : <Xmark color="white" height={USER_STATE_ICON_SIZE} width={USER_STATE_ICON_SIZE} />
+                                : <BookmarkSolid color="white" height={10} width={10} />}
+                        </span>
+                    )}
+                    {showDifficulty && difficulty !== null && (
+                        <span className={`question-button-difficulty difficulty-${difficulty}`} />
+                    )}
+                </span>
+            )}
         </Link>
     );
 }

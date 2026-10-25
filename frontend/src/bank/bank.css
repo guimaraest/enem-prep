@@ -13,6 +13,7 @@
 
 .bank-toolbar {
   display: flex;
+  gap: var(--space-3);
   justify-content: flex-end;
 }
 
