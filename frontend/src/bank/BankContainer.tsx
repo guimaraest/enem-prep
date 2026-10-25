@@ -1,9 +1,10 @@
-import { useEffect, useSyncExternalStore } from 'react'
+import { useEffect, useState, useSyncExternalStore } from 'react'
 import { api } from '../api'
 import { isFilterSetting } from '../api/context'
 import { Dropdown } from '../shared/Dropdown/Dropdown'
 import type { DropdownOption } from '../shared/Dropdown/Dropdown'
 import { QuestionButton } from '../shared/QuestionButton/QuestionButton'
+import type { UserQuestionData } from '../models'
 
 const filterOptions: DropdownOption[] = [
   { value: 'subject', label: 'subject' },
@@ -18,6 +19,7 @@ export function BankContainer() {
     api.context.getSnapshot,
     api.context.getSnapshot,
   )
+  const [userDataByQuestion, setUserDataByQuestion] = useState<Record<string, UserQuestionData>>({})
 
   function handleFilterChange(value: string) {
     if (!isFilterSetting(value)) return
@@ -30,6 +32,19 @@ export function BankContainer() {
       console.error('failed to load question context:', cause)
     })
   }, [])
+
+  useEffect(() => {
+    let cancelled = false
+    void Promise.all(context.fullContext.map((question) => api.userQuestions.getById(question.id)))
+      .then((userData) => {
+        if (cancelled) return
+        setUserDataByQuestion(Object.fromEntries(userData.map((data) => [data.questionId, data])))
+      })
+      .catch((cause: unknown) => {
+        console.error('failed to load question user data:', cause)
+      })
+    return () => { cancelled = true }
+  }, [context.fullContext])
 
   if (context.loading) {
     return <div className="bank-status">carregando seu progresso...</div>
@@ -59,6 +74,13 @@ export function BankContainer() {
                   key={question.id}
                   questionId={question.id}
                   label={question.label}
+                  difficulty={question.difficulty}
+                  subject={question.subject}
+                  userdata={userDataByQuestion[question.id] ?? {
+                    questionId: question.id,
+                    isBookmarked: question.isBookmarked,
+                    attempts: [],
+                  }}
                 />
               ))}
             </div>
