@@ -1,5 +1,6 @@
 import './Footer.css'
 import { Link } from 'react-router'
+import { Github } from 'iconoir-react'
 
 const footerLinks = [
   { label: 'política de privacidade', to: '/politica-de-privacidade' },
@@ -20,6 +21,21 @@ export function Footer() {
                 </Link>
               </li>
             ))}
+          </ul>
+        </nav>
+        <nav aria-label="GitHub">
+          <ul className="footer-links footer-social-links">
+            <li>
+              <a
+                className="link footer-link footer-github-link hover"
+                href="https://github.com/guimaraest"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Github aria-hidden="true" />
+                <span>github</span>
+              </a>
+            </li>
           </ul>
         </nav>
       </div>
