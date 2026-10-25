@@ -38,6 +38,12 @@
 
 .question-button-userstate {
   color: white;
+  overflow: visible;
+}
+
+.question-button-userstate svg {
+  flex: none;
+  max-width: none;
 }
 
 .difficulty-1::before,

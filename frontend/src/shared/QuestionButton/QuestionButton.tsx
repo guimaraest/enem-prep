@@ -32,7 +32,7 @@ export function QuestionButton({ questionId, label, difficulty, userdata }: Ques
                             ? latestAttempt.isCorrect
                                 ? <Check color="white" height={USER_STATE_ICON_SIZE} width={USER_STATE_ICON_SIZE} />
                                 : <Xmark color="white" height={USER_STATE_ICON_SIZE} width={USER_STATE_ICON_SIZE} />
-                            : <BookmarkSolid color="white" height={USER_STATE_ICON_SIZE} width={USER_STATE_ICON_SIZE} />}
+                            : <BookmarkSolid color="white" height={10} width={10} />}
                     </span>
                 )}
                 {difficulty !== null && (
