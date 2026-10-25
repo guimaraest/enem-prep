@@ -14,23 +14,23 @@ export function QuestionNav({ previousId, nextId, loading = false, error = false
         <nav className="question-nav" aria-label="navegação entre questões">
             {previousId ? (
                 <Link className="question-nav-link link hover" to={`/perguntas/${previousId}`}>
-                    previous
+                    anterior
                 </Link>
             ) : (
                 <span className="question-nav-link link hover question-nav-disabled" aria-disabled="true">
-                    previous
+                    anterior
                 </span>
             )}
             {nextId ? (
                 <Link className="question-nav-link link hover" to={`/perguntas/${nextId}`}>
-                    next
+                    próxima
                 </Link>
             ) : (
                 <span className="question-nav-link link hover question-nav-disabled" aria-disabled="true">
-                    next
+                    próxima
                 </span>
             )}
-            {loading && <span className="question-nav-status">loading</span>}
+            {loading && <span className="question-nav-status">carregando...</span>}
             {error && (
                 <span className="question-nav-status" role="status">
                     não foi possível carregar a navegação.

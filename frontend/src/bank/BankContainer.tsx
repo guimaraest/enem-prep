@@ -7,10 +7,10 @@ import { QuestionButton } from '../shared/QuestionButton/QuestionButton'
 import type { UserQuestionData } from '../models'
 
 const filterOptions: DropdownOption[] = [
-  { value: 'subject', label: 'subject' },
-  { value: 'difficulty', label: 'difficulty' },
-  { value: 'missed', label: 'missed' },
-  { value: 'bookmarked', label: 'bookmarked' },
+  { value: 'subject', label: 'matéria' },
+  { value: 'difficulty', label: 'dificuldade' },
+  { value: 'missed', label: 'erradas' },
+  { value: 'bookmarked', label: 'salvas' },
 ]
 
 export function BankContainer() {
@@ -59,7 +59,7 @@ export function BankContainer() {
     <div className="bank-container">
       <div className="bank-toolbar">
         <Dropdown
-          label="group by"
+          label="agrupar por"
           value={context.filterSetting}
           options={filterOptions}
           onChange={handleFilterChange}
