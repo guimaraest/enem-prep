@@ -130,6 +130,89 @@
     opacity: 0.6;
 }
 
+.report-issue {
+    position: relative;
+}
+
+.report-issue-trigger,
+.report-issue-close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-2);
+    border-radius: var(--radius-small);
+    color: var(--text-muted);
+    cursor: pointer;
+}
+
+.report-issue-popover {
+    position: absolute;
+    top: calc(100% + var(--space-2));
+    right: 0;
+    z-index: 10;
+    width: min(320px, calc(100vw - var(--space-6)));
+    padding: var(--space-4);
+    border-radius: var(--radius-small);
+    background: var(--bg-light);
+    box-shadow: var(--shadow);
+}
+
+.report-issue-heading,
+.report-issue-popover form {
+    display: flex;
+    flex-direction: column;
+}
+
+.report-issue-heading {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: var(--space-3);
+    font-weight: 600;
+}
+
+.report-issue-close {
+    padding: var(--space-1);
+}
+
+.report-issue-label {
+    margin-bottom: var(--space-2);
+    color: var(--text-muted);
+    font-size: 0.875rem;
+}
+
+.report-issue-popover textarea {
+    min-height: 120px;
+    padding: var(--space-2);
+    border: 1px solid var(--bg);
+    border-radius: var(--radius-small);
+    background: var(--bg-dark);
+    color: var(--text);
+    resize: vertical;
+}
+
+.report-issue-submit {
+    align-self: flex-end;
+    margin-top: var(--space-3);
+    padding: var(--space-2) var(--space-3);
+    border-radius: var(--radius-small);
+    background: var(--primary);
+    color: var(--text);
+    cursor: pointer;
+}
+
+.report-issue-submit:disabled {
+    cursor: wait;
+    opacity: 0.6;
+}
+
+.report-issue-status {
+    min-height: 1.5em;
+    margin: var(--space-2) 0 0;
+    color: var(--text-muted);
+    font-size: 0.875rem;
+}
+
 
 /* content */
 

@@ -1,4 +1,5 @@
 import { Bookmark, BookmarkSolid } from 'iconoir-react';
+import { ReportIssueForm } from './ReportIssueForm';
 
 interface UserControlsProps {
   bookmarked: boolean;
@@ -22,6 +23,8 @@ export function UserControls({ bookmarked, saving, error, onToggleBookmark }: Us
           ? <BookmarkSolid aria-hidden="true" />
           : <Bookmark aria-hidden="true" />}
       </button>
+
+      <ReportIssueForm />
 
       {error && (
         <span className="user-controls-error" role="status">

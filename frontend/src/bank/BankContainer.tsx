@@ -20,7 +20,7 @@ export function BankContainer() {
     api.context.getSnapshot,
   )
   const [userDataByQuestion, setUserDataByQuestion] = useState<Record<string, UserQuestionData>>({})
-  const [showUserState, setShowUserState] = useState(true)
+  const [showUserState] = useState(true)
 
   function handleFilterChange(value: string) {
     if (!isFilterSetting(value)) return
