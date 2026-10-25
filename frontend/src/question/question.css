@@ -10,7 +10,7 @@
 }
 
 .question-title-label {
-    color: var(--text-muted);
+    color: var(--text);
     font-size: 1.75rem;
     font-weight: 700;
     line-height: 1.35;
@@ -219,6 +219,7 @@
 .content {
     color: var(--text);
     line-height: 1.6;
+    text-align: justify;
 }
 
 .content p {
@@ -360,7 +361,6 @@
 
     .question-title-label {
         font-size: 1.5rem;
-        color: var(--text);
     }
 
     .question-header .top-row {
