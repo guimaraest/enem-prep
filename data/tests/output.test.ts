@@ -101,7 +101,7 @@ test('every indexed question UUID has a matching output question', async () => {
   }
 })
 
-test('every output question title has a question number from 136 to 180', async () => {
+test('every output question title is null', async () => {
   const questionsDir = path.join(outputDir, 'questions')
   const questionDirs = await readdir(questionsDir, { withFileTypes: true })
   const outputQuestionDirs = questionDirs.filter((entry) => entry.isDirectory())
@@ -115,14 +115,7 @@ test('every output question title has a question number from 136 to 180', async 
       typeof question === 'object' && question !== null && 'title' in question
         ? question.title
         : undefined
-    const match = typeof title === 'string' && title.match(/^Questão (\d+)\b/)
-
-    assert.ok(match, `${questionPath} must have a numbered question title`)
-    const number = Number(match[1])
-    assert.ok(
-      number >= 136 && number <= 180,
-      `${questionPath} has question number ${number}; expected 136–180`,
-    )
+    assert.equal(title, null, `${questionPath} must have a null title`)
   }
 })
 
@@ -148,24 +141,16 @@ test('warns when an ENEM year does not have all 45 mathematics questions', async
     if (!yearEntry.isDirectory() || !/^\d{4}$/.test(yearEntry.name)) continue
 
     const year = yearEntry.name
-    const numbers = new Set<number>()
+    let questionCount = 0
 
     for (const question of outputQuestions) {
       if (!isRecord(question) || question.source !== `enem ${year}`) continue
-      if (typeof question.title !== 'string') continue
-
-      const match = question.title.match(/^Questão (\d+)\b/)
-      if (match) numbers.add(Number(match[1]))
+      questionCount += 1
     }
 
-    const missing = Array.from({ length: 45 }, (_, index) => index + 136)
-      .filter((number) => !numbers.has(number))
-
-    if (missing.length > 0 || numbers.size !== 45) {
+    if (questionCount !== 45) {
       t.diagnostic(
-        `WARNING: ENEM ${year} has ${numbers.size}/45 mathematics questions; missing: ${
-          missing.length > 0 ? missing.join(', ') : 'none'
-        }`,
+        `WARNING: ENEM ${year} has ${questionCount}/45 mathematics questions`,
       )
     }
   }

@@ -18,7 +18,7 @@ test('generates question files and deterministic summary indexes', async (t) => 
   const question: Question = {
     id: questionId,
     label: 1,
-    title: 'Fixture question',
+    title: null,
     source: 'enem 2023',
     difficulty: 2,
     percentCorrectRate: null,
@@ -64,7 +64,7 @@ test('generates question files and deterministic summary indexes', async (t) => 
     {
       id: questionId,
       label: 1,
-      title: 'Fixture question',
+      title: null,
       source: 'enem 2023',
       difficulty: 2,
       percentCorrectRate: null,

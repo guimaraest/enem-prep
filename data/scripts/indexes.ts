@@ -47,7 +47,7 @@ function isIndexedQuestion(value: unknown): value is Question {
     typeof value.label === 'number' &&
     Number.isInteger(value.label) &&
     value.label > 0 &&
-    typeof value.title === 'string' &&
+    (typeof value.title === 'string' || value.title === null) &&
     typeof value.source === 'string' &&
     Array.isArray(value.content.files) &&
     typeof value.content.problem === 'string' &&

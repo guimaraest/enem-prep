@@ -75,7 +75,7 @@ export interface QuestionContent {
 export interface Question {
   id: UUID
   label: number
-  title: string
+  title: string | null
   source: QuestionSource
   difficulty: Difficulty | null
   percentCorrectRate: number | null

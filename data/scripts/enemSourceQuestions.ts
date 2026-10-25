@@ -153,8 +153,6 @@ export async function enemSourceQuestionsEntry(
 
       const source = parsed
 
-      if (source.title === null) continue
-
       if (String(source.year) !== yearEntry.name) {
         await log(
           `WARNING: Year mismatch in "${detailsPath}": directory=${yearEntry.name}, data=${source.year}`,
@@ -189,7 +187,7 @@ export async function enemSourceQuestionsEntry(
 
         const question: Omit<Question, 'id'> = {
           label: 0,
-          title: source.title,
+          title: null,
           source: `enem ${source.year}` as Question['source'],
           difficulty: source.difficulty,
           percentCorrectRate: null,

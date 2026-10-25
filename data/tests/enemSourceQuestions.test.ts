@@ -60,12 +60,22 @@ test('normalizes source questions without filtering by discipline or number', as
 
   await enemSourceQuestionsEntry(inputDir, outputDir, logPath)
 
-  assert.deepEqual(await readdir(outputDir), ['2024-135', '2024-136', '2024-181'])
+  assert.deepEqual(await readdir(outputDir), [
+    '2024-135',
+    '2024-136',
+    '2024-137',
+    '2024-181',
+  ])
 
   const acceptedQuestion = JSON.parse(
     await readFile(path.join(outputDir, '2024-136', 'question.json'), 'utf8'),
-  ) as { title: string; difficulty: number | null; subject: string | null }
-  assert.equal(acceptedQuestion.title, 'Questão 136 - ENEM 2024')
+  ) as { title: string | null; difficulty: number | null; subject: string | null }
+  assert.equal(acceptedQuestion.title, null)
   assert.equal(acceptedQuestion.difficulty, 2)
   assert.equal(acceptedQuestion.subject, 'statistics_and_data_interpretation')
+
+  const nullTitleQuestion = JSON.parse(
+    await readFile(path.join(outputDir, '2024-137', 'question.json'), 'utf8'),
+  ) as { title: string | null }
+  assert.equal(nullTitleQuestion.title, null)
 })
