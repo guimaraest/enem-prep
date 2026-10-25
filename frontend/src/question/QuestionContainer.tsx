@@ -9,6 +9,14 @@ import { QuestionImage } from './QuestionImage';
 import * as constants from '../constants';
 import type { Question, Alternative, QuestionId } from '../models';
 
+declare global {
+    interface Window {
+        umami?: {
+            track: (eventName: string, eventData?: Record<string, string | number | boolean>) => void;
+        };
+    }
+}
+
 interface QuestionContainerProps {
     question: Question;
     bookmarked: boolean;
@@ -73,7 +81,9 @@ export function QuestionContainer({ question, onAttempt, previousId, nextId, nav
     function checkAnswer(): void {
         setRevealedIndex(selectedIndex);
         if (selectedIndex !== null) {
-            onAttempt(selectedIndex, selectedIndex === question.content.correctAlternative);
+            const isCorrect = selectedIndex === question.content.correctAlternative;
+            window.umami?.track('answer-checked', { correct: isCorrect });
+            onAttempt(selectedIndex, isCorrect);
         }
     }
 

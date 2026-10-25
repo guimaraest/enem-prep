@@ -32,6 +32,7 @@ export function QuestionButton({
     return (
         <Link
             className={`question question-button hover oldstyle ${answerState}`}
+            data-umami-event="question-opened"
             to={`/perguntas/${questionId}`}
         >
             {label}
