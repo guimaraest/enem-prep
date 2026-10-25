@@ -7,3 +7,5 @@ build.log
 
 scripts/__pycache__
 scripts/ai_token.py
+
+ai-requests.jsonl
