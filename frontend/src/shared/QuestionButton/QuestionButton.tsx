@@ -1,9 +1,9 @@
 import './QuestionButton.css';
 import { Link } from 'react-router';
-import { BookmarkSolid, Check, Xmark } from 'iconoir-react';
+import { BookmarkSolid } from 'iconoir-react';
 import type { Difficulty, QuestionAttempt, QuestionId, Subject, UserQuestionData } from '../../models';
 
-const USER_STATE_ICON_SIZE = 12;
+const BOOKMARK_ICON_SIZE = 18;
 
 interface QuestionButtonProps {
     questionId: QuestionId;
@@ -11,16 +11,13 @@ interface QuestionButtonProps {
     difficulty: Difficulty | null;
     subject: Subject | null;
     userdata: UserQuestionData;
-    showDifficulty?: boolean;
     showUserState?: boolean;
 }
 
 export function QuestionButton({
     questionId,
     label,
-    difficulty,
     userdata,
-    showDifficulty,
     showUserState,
 }: QuestionButtonProps) {
     const latestAttempt = userdata.attempts.reduce<QuestionAttempt | undefined>(
@@ -28,27 +25,21 @@ export function QuestionButton({
         undefined,
     );
 
+    const answerState = showUserState && latestAttempt
+        ? latestAttempt.isCorrect ? 'is-correct' : 'is-incorrect'
+        : '';
+
     return (
         <Link
-            className="question question-button hover oldstyle"
+            className={`question question-button hover oldstyle ${answerState}`}
             to={`/perguntas/${questionId}`}
         >
             {label}
-            {((showDifficulty && difficulty !== null)
-                || (showUserState && (latestAttempt || userdata.isBookmarked))) && (
+            {showUserState && userdata.isBookmarked && (
                 <span className="question-button-indicators" aria-hidden="true">
-                    {showUserState && (latestAttempt || userdata.isBookmarked) && (
-                        <span className="question-button-userstate">
-                            {latestAttempt
-                                ? latestAttempt.isCorrect
-                                    ? <Check color="white" height={USER_STATE_ICON_SIZE} width={USER_STATE_ICON_SIZE} />
-                                    : <Xmark color="white" height={USER_STATE_ICON_SIZE} width={USER_STATE_ICON_SIZE} />
-                                : <BookmarkSolid color="white" height={10} width={10} />}
-                        </span>
-                    )}
-                    {showDifficulty && difficulty !== null && (
-                        <span className={`question-button-difficulty difficulty-${difficulty}`} />
-                    )}
+                    <span className="question-button-bookmark">
+                        <BookmarkSolid color="white" height={BOOKMARK_ICON_SIZE} width={BOOKMARK_ICON_SIZE} />
+                    </span>
                 </span>
             )}
         </Link>

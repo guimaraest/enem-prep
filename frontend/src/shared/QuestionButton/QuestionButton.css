@@ -19,56 +19,28 @@
 
 .question-button-indicators {
   position: absolute;
-  top: var(--space-2);
-  right: var(--space-2);
-  display: flex;
-  align-items: center;
-  gap: var(--space-1);
+  inset: 0;
+  pointer-events: none;
 }
 
-.question-button-userstate,
-.question-button-difficulty {
+.question-button.is-correct {
+  background-color: color-mix(in srgb, var(--correct) 24%, var(--bg-light));
+}
+
+.question-button.is-incorrect {
+  background-color: color-mix(in srgb, var(--incorrect) 24%, var(--bg-light));
+}
+
+.question-button-bookmark {
+  position: absolute;
+  top: var(--space-2);
+  right: var(--space-2);
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  flex: 0 0 var(--space-2);
-  width: var(--space-2);
-  height: var(--space-2);
 }
 
-.question-button-userstate {
-  color: white;
-  overflow: visible;
-}
-
-.question-button-userstate svg {
+.question-button-bookmark svg {
   flex: none;
   max-width: none;
-}
-
-.difficulty-1::before,
-.difficulty-2::before,
-.difficulty-3::before,
-.difficulty-4::before {
-  content: '';
-  display: inline-block;
-  width: var(--space-2);
-  height: var(--space-2);
-  border-radius: 50%;
-}
-
-.difficulty-1::before {
-  background: var(--difficulty-1);
-}
-
-.difficulty-2::before {
-  background: var(--difficulty-2);
-}
-
-.difficulty-3::before {
-  background: var(--difficulty-3);
-}
-
-.difficulty-4::before {
-  background: var(--difficulty-4);
 }
