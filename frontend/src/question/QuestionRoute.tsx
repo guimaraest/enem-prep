@@ -30,6 +30,7 @@ export function QuestionRoute() {
     let cancelled = false
 
     async function loadQuestion() {
+      let loadingStage = 'validating question id'
       setLoading(true)
       setError(null)
       setQuestion(undefined)
@@ -47,10 +48,18 @@ export function QuestionRoute() {
 
       try {
         const questionId = parseUUID(id)
+        loadingStage = 'loading question data and saved progress'
         const [result, userData] = await Promise.all([
           api.questions.getById(questionId),
           api.userQuestions.getById(questionId),
         ])
+
+        if (!result) {
+          console.warn('question is not present in the question index:', {
+            requestedId: id,
+            normalizedId: questionId,
+          })
+        }
 
         if (!cancelled) {
           setQuestion(result)
@@ -58,6 +67,7 @@ export function QuestionRoute() {
         }
 
         try {
+          loadingStage = 'loading question navigation'
           const [previous, next] = await Promise.all([
             api.previousQuestion(),
             api.nextQuestion(),
@@ -72,7 +82,12 @@ export function QuestionRoute() {
         } finally {
           if (!cancelled) setNavigationLoading(false)
         }
-      } catch {
+      } catch (cause) {
+        console.error('failed to load individual question:', {
+          requestedId: id,
+          stage: loadingStage,
+          cause,
+        })
         if (!cancelled) {
           setError('não foi possível carregar a questão.')
         }

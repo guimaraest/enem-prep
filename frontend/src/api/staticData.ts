@@ -46,12 +46,27 @@ export async function getQuestionById(
 
 async function fetchJson<T>(url: string): Promise<T> {
   const response = await fetch(url)
+  const responseBody = await response.text()
+  const contentType = response.headers.get('content-type') ?? 'unknown'
+  const responseDetails = [
+    `requested URL: ${url}`,
+    `response URL: ${response.url || 'unknown'}`,
+    `status: ${response.status} ${response.statusText}`,
+    `content-type: ${contentType}`,
+  ].join(', ')
 
   if (!response.ok) {
     throw new Error(
-      `Failed to fetch ${url}: ${response.status} ${response.statusText}`,
+      `Failed to fetch JSON (${responseDetails}); response body: ${responseBody.slice(0, 200)}`,
     )
   }
 
-  return response.json() as Promise<T>
+  try {
+    return JSON.parse(responseBody) as T
+  } catch (cause) {
+    throw new Error(
+      `Invalid JSON response (${responseDetails}); response body: ${responseBody.slice(0, 200)}`,
+      { cause },
+    )
+  }
 }
