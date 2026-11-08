@@ -34,7 +34,7 @@ function sitemapPlugin(): Plugin {
       }
 
       const urls = [
-        `${SITE_URL}/perguntas`,
+        SITE_URL,
         `${SITE_URL}/politica-de-privacidade`,
         ...index.map(({ id }) => `${SITE_URL}/perguntas/${id}`),
       ]

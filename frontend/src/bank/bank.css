@@ -1,3 +1,7 @@
+.bank-title {
+  font-size: 1.5rem;
+}
+
 .bank-container {
   display: flex;
   flex-direction: column;

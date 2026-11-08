@@ -47,7 +47,9 @@ function QuestionHeader({ question, bookmarked, savingBookmark, bookmarkError, o
                 <span className="question-label question-title-label oldstyle">{question.label}</span>
                 <UserControls bookmarked={bookmarked} saving={savingBookmark} error={bookmarkError} onToggleBookmark={onToggleBookmark} />
             </div>
-            <h1 className="question-title">{question.title}</h1>
+            <h1 className="question-title">
+                {question.title || `questão ${question.label} - ${question.source}`}
+            </h1>
             <div className="row" style={{ gap: 'var(--space-2)' }}>
                 {question.source && (
                     <span className="chip">

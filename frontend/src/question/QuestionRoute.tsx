@@ -6,9 +6,11 @@ import { useParams } from 'react-router';
 import { Loading } from '../shared/Loading/Loading'
 
 import { api } from '../api';
+import { subjectMap } from '../constants'
 import { parseUUID } from '../models'
 import type { Alternative, Question, QuestionId } from '../models'
 import { QuestionContainer } from './QuestionContainer';
+import { updatePageMetadata } from '../shared/pageMetadata'
 
 
 
@@ -104,6 +106,21 @@ export function QuestionRoute() {
       cancelled = true
     }
   }, [id])
+
+  useEffect(() => {
+    if (!question) return
+
+    const questionTitle = question.title?.trim() ||
+      `Questão ${question.label} - ${question.source.toUpperCase()}`
+    const subjectDescription = question.subject
+      ? ` de ${subjectMap[question.subject].label}`
+      : ''
+    updatePageMetadata({
+      title: `${questionTitle} | Questões do ENEM | ENEM Prep`,
+      description: `Resolva a questão ${question.label} do ${question.source.toUpperCase()}${subjectDescription}. Pratique e acompanhe seu progresso no ENEM Prep.`,
+      canonicalPath: `/perguntas/${question.id}`,
+    })
+  }, [question])
 
   const onToggleBookmark = useCallback(async () => {
     if (!question || savingBookmark) return
