@@ -22,8 +22,6 @@ SOURCE_QUESTIONS_DIR = (
     Path(__file__).resolve().parents[1] / "sources" / "enemSourceQuestions"
 )
 DATA_DIR = SOURCE_QUESTIONS_DIR.parent.parent
-RUN_LOG_PATH = DATA_DIR / "ai.log"
-REQUEST_LOG_PATH = DATA_DIR / "ai-requests.jsonl"
 ENRICHED_QUESTIONS_PATH = DATA_DIR / "ai-enriched-questions.json"
 
 SUBJECTS = (
@@ -71,25 +69,11 @@ def utc_timestamp() -> str:
     return datetime.now(timezone.utc).isoformat()
 
 
-def append_jsonl(path: Path, record: dict[str, Any]) -> None:
-    with path.open("a", encoding="utf-8") as log_file:
-        log_file.write(json.dumps(record, ensure_ascii=False) + "\n")
-        log_file.flush()
-
-
 def initialize_logging() -> None:
-    DATA_DIR.mkdir(parents=True, exist_ok=True)
     logging.basicConfig(
         level=logging.INFO,
         format="%(asctime)s %(levelname)s %(message)s",
-        handlers=[
-            logging.StreamHandler(),
-            logging.FileHandler(RUN_LOG_PATH, encoding="utf-8"),
-        ],
     )
-    logger.info("Run started; log file: %s", RUN_LOG_PATH)
-    logger.info("Detailed request log: %s", REQUEST_LOG_PATH)
-    logger.info("Enrichment registry: %s", ENRICHED_QUESTIONS_PATH)
 
 
 def read_enriched_questions() -> dict[str, Any]:
@@ -235,8 +219,6 @@ def request_labels(
     file_path: Path,
 ) -> tuple[str, int, str]:
     request_id = str(uuid4())
-    started_at = utc_timestamp()
-    start_time = time.monotonic()
     request_body = {
         "model": MODEL,
         "messages": [
@@ -248,16 +230,6 @@ def request_labels(
         "response_format": {"type": "json_object"},
     }
     question_path = file_path.relative_to(SOURCE_QUESTIONS_DIR).as_posix()
-    append_jsonl(
-        REQUEST_LOG_PATH,
-        {
-            "event": "request_started",
-            "request_id": request_id,
-            "timestamp": started_at,
-            "question_file": question_path,
-            "request": request_body,
-        },
-    )
     logger.info(
         "Request %s started for %s (model=%s, temperature=%s)",
         request_id,
@@ -266,7 +238,6 @@ def request_labels(
         TEMPERATURE,
     )
 
-    status_code = None
     try:
         with requests.post(
             API_URL,
@@ -278,23 +249,11 @@ def request_labels(
             timeout=60,
             stream=True,
         ) as response:
-            status_code = response.status_code
             logger.info(
                 "Request %s received HTTP %s", request_id, response.status_code
             )
             if not response.ok:
                 response_body = response.text
-                append_jsonl(
-                    REQUEST_LOG_PATH,
-                    {
-                        "event": "response_http_error",
-                        "request_id": request_id,
-                        "timestamp": utc_timestamp(),
-                        "question_file": question_path,
-                        "status_code": response.status_code,
-                        "body": response_body,
-                    },
-                )
                 try:
                     error_detail = response.json()
                 except ValueError:
@@ -317,43 +276,14 @@ def request_labels(
                     continue
                 data = line.removeprefix("data:").strip()
                 if data == "[DONE]":
-                    append_jsonl(
-                        REQUEST_LOG_PATH,
-                        {
-                            "event": "response_stream_done",
-                            "request_id": request_id,
-                            "timestamp": utc_timestamp(),
-                            "question_file": question_path,
-                        },
-                    )
                     break
 
                 try:
                     chunk = json.loads(data)
                 except json.JSONDecodeError as error:
-                    append_jsonl(
-                        REQUEST_LOG_PATH,
-                        {
-                            "event": "response_chunk_invalid",
-                            "request_id": request_id,
-                            "timestamp": utc_timestamp(),
-                            "question_file": question_path,
-                            "raw_data": data,
-                        },
-                    )
                     raise ValueError(
                         "OpenRouter returned an invalid stream chunk"
                     ) from error
-                append_jsonl(
-                    REQUEST_LOG_PATH,
-                    {
-                        "event": "response_chunk",
-                        "request_id": request_id,
-                        "timestamp": utc_timestamp(),
-                        "question_file": question_path,
-                        "data": chunk,
-                    },
-                )
                 if "error" in chunk:
                     raise ValueError(f"OpenRouter stream error: {chunk['error']}")
                 try:
@@ -387,18 +317,6 @@ def request_labels(
         ):
             raise ValueError(f"OpenRouter returned invalid question labels: {content!r}")
     except Exception as error:
-        append_jsonl(
-            REQUEST_LOG_PATH,
-            {
-                "event": "request_failed",
-                "request_id": request_id,
-                "timestamp": utc_timestamp(),
-                "question_file": question_path,
-                "status_code": status_code,
-                "duration_seconds": round(time.monotonic() - start_time, 3),
-                "error": f"{type(error).__name__}: {error}",
-            },
-        )
         if isinstance(error, (requests.RequestException, ValueError)):
             logger.warning(
                 "Request %s failed for %s: %s: %s",
@@ -411,19 +329,6 @@ def request_labels(
             logger.exception("Request %s failed for %s", request_id, question_path)
         raise
 
-    append_jsonl(
-        REQUEST_LOG_PATH,
-        {
-            "event": "request_succeeded",
-            "request_id": request_id,
-            "timestamp": utc_timestamp(),
-            "question_file": question_path,
-            "status_code": status_code,
-            "duration_seconds": round(time.monotonic() - start_time, 3),
-            "completion": content,
-            "labels": labels,
-        },
-    )
     logger.info(
         "Request %s succeeded for %s: subject=%s difficulty=%s",
         request_id,
@@ -467,17 +372,6 @@ def request_labels_with_rate_limit_retry(
                 error,
                 retry_delay,
                 retry_number,
-            )
-            append_jsonl(
-                REQUEST_LOG_PATH,
-                {
-                    "event": "request_retry_scheduled",
-                    "timestamp": utc_timestamp(),
-                    "question_file": question_path,
-                    "retry_number": retry_number,
-                    "retry_after_seconds": retry_delay,
-                    "error": f"{type(error).__name__}: {error}",
-                },
             )
             time.sleep(retry_delay)
 
